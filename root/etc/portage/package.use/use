@@ -12,7 +12,7 @@ media-fonts/noto-emoji icons
 sys-auth/elogind policykit
 sys-auth/polkit -kde
 
-app-editors/emacs gui gtk xft gif harfbuzz jpeg pngsound svg tiff webp png dynamic-loading -jit
+app-editors/emacs gui gtk xft gif harfbuzz jpeg pngsound svg tiff webp png dynamic-loading -jit libxml2 sound gpm sqlite
 
 # net-p2p/transmission gtk appindicator
 # app-emulation/qemu gtk usbredir
