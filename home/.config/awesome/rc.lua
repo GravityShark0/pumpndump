@@ -69,11 +69,12 @@ file_manager = "jo"
 file_manager_cmd = terminal .. " -e " .. file_manager
 -- launcher = 'rofi -show run'
 -- alt_launcher = 'rofi -show drun'
-launcher = "$HOME/.scripts/runner"
+launcher = "runner"
 alt_launcher = "$HOME/.scripts/launcher"
 -- script that opens a rofi powermenu
-powermenu = "$HOME/.scripts/powermenu"
-screenshot = "$HOME/.scripts/screenshot"
+powermenu = "powermenu"
+screenshot = "screenshot"
+screenshot_short = "ss"
 browser = "firefox-bin"
 
 lightdecrease = "monitorlight +-5"
@@ -447,22 +448,25 @@ globalkeys = gears.table.join(
 		awful.spawn(file_manager_cmd)
 	end, { description = "open a file manager", group = "launcher" }),
 	awful.key({ modkey, "Shift" }, "s", function()
-		awful.spawn.with_shell(screenshot)
+		awful.spawn(screenshot)
 	end, { description = "open a screenshot tool", group = "launcher" }),
+	awful.key({ modkey }, "s", function()
+		awful.spawn(screenshot_short)
+	end, { description = "take a selection screenshot", group = "launcher" }),
 	awful.key({ modkey }, "r", function()
 		awful.spawn(browser)
 	end, { description = "open a browser", group = "launcher" }),
 	awful.key({ modkey }, "w", function()
-		awful.spawn.with_shell(launcher)
+		awful.spawn(launcher)
 	end, { description = "open a launcher", group = "launcher" }),
 	awful.key({ modkey, "Shift" }, "w", function()
-		awful.spawn.with_shell(alt_launcher)
+		awful.spawn(alt_launcher)
 	end, { description = "open an alternate launcher", group = "launcher" }),
 
 	-- System
 	awful.key({ modkey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
 	awful.key({ modkey }, "Escape", function()
-		awful.spawn.with_shell(powermenu)
+		awful.spawn(powermenu)
 	end, { description = "quit awesome", group = "awesome" }),
 	awful.key({ modkey, "Shift" }, "Escape", awesome.quit, { description = "quit awesome", group = "awesome" }),
 	-- Brightness

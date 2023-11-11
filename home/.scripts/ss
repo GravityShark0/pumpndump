@@ -1,9 +1,17 @@
-#!/bin/sh
+#!/usr/bin/env sh
+time=`date +%Y-%m-%d-%I-%M-%S`
+geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
 
-if [ $(pgrep picom) ]; then
-    pkill picom
-    maim -s | xclip -selection clipbaord -t image/png -i
-    picom &
-else
-    maim -s | xclip -selection clipbaord -t image/png -i
-fi
+dir="`xdg-user-dir PICTURES`/Screenshots"
+file="Screenshot_${time}_${geometry}.png"
+
+# if [ $(pgrep picom) ]; then
+# 	cd ${dir} && maim -u -f png -s -b 0 -c 0.35,0.55,0.85,0.0 -l | tee "$file" | xclip -selection clipboard -t image/png
+# else
+#
+cd ${dir} && maim -u -f png -s -b 0 | tee "$file" | xclip -selection clipboard -t image/png
+
+time=`date +%Y-%m-%d-%I-%M-%S`
+geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
+    # maim -s | xclip -selection clipbaord -t image/png -i
+# fi
