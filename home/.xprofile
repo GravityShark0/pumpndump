@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# feh Pictures/Wallpapers/purp1.jpg --bg-scale &
+# dash ~/.bin/clockskewcheck &
+feh ~/Media/Wallpapers/minimalistic/minimalistic/unicat.png --bg-scale &
+# nitrogen --restore &
+# xmodmap ~/.keymaps/tarmak_2b_dh.xmodmap &
+xrdb ~/.config/suckless/catppuccin/mocha &
+pkill volumeicon; volumeicon &
+# pkill picom; picom &

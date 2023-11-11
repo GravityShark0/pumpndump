@@ -1,0 +1,16 @@
+! dmenu
+dmenu.font:           UbuntuMono Nerd Font:pixelsize=20:style=Regular
+dmenu.background:     #0a060f
+dmenu.foreground:     #fdeffd
+dmenu.selbackground:  #191c25
+dmenu.selforeground:  #dfd1df
+dmenu.outbackground:  #0F0B14
+dmenu.outforeground:  #f3e5f3
+dmenu.midbackground:  #0F0B14
+dmenu.midforeground:  #f3e5f3
+dmenu.selhlbackground:#1e1a23
+dmenu.selhlforeground:#e9dbe9
+dmenu.hlbackground:   #0F0B14
+dmenu.hlforeground:   #f3e5f3
+dmenu.hpbackground:   #0F0B14
+dmenu.hpforeground:   #f3e5f3

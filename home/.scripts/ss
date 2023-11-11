@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ $(pgrep picom) ]; then
+    pkill picom
+    maim -s | xclip -selection clipbaord -t image/png -i
+    picom &
+else
+    maim -s | xclip -selection clipbaord -t image/png -i
+fi

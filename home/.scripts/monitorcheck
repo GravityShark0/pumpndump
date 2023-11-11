@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# SCREEN_LEFT=DP2
+# SCREEN_RIGHT=eDP1
+# START_DELAY=5
+
+renice +19 $$ >/dev/null
+
+# sleep $START_DELAY
+xrandr --setprovideroutputsource modesetting NVIDIA-0 
+
+OLD_HDMI="dummy"
+
+while [ 1 ]; do
+    HDMI=$(cat /sys/class/drm/card1-HDMI-A-2/status)
+
+    # if [ "$OLD_HDMI" != "$HDMI" ]; then
+        if [ "$HDMI" = "connected" ]; then
+            echo 'Presentation monitor setup'
+            xrandr --output HDMI-0 --primary --mode 1440x900 --pos 0x0 --rotate normal --output eDP-1-1 --off
+        else
+            echo 'Single monitor setup'
+            xrandr --output --off --output eDP-1-1 --mode 1600x900 --pos 1440x0 --rotate normal
+        fi
+    #
+    #     OLD_HDMI="$HDMI"
+    # fi
+
+    inotifywait -q -e close /sys/class/drm/card1-HDMI-A-2/status >/dev/null
+done
+
