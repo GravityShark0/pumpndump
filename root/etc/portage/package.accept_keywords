@@ -1,0 +1,27 @@
+media-video/pipewire **
+media-video/wireplumber **
+x11-drivers/nvidia-drivers **
+media-libs/mesa ** 
+media-libs/libdisplay-info **
+x11-libs/libdrm **
+x11-libs/libxkbcommon **
+x11-libs/pixman **
+# media-video/ffmpeg **
+dev-libs/libinput **
+virtual/rust **
+media-video/mpv **
+# dev-qt/qtgui **
+# dev-qt/qtchooser **
+# dev-qt/qtdbus **
+# dev-qt/qtcore **
+# dev-qt/qtbase **
+# dev-qt/qtdeclarative **
+# dev-qt/qtshadertools **
+# dev-qt/qtsvg **
+# dev-qt/qttools **
+# dev-qt/qt5compat **
+# dev-qt/qtimageformats **
+# net-p2p/qbittorrent **
+media-libs/libplacebo **
+
+*/*::steam-overlay
