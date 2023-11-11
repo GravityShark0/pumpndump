@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 rofi_command="rofi -theme $HOME/.config/rofi/config/powermenu.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
 
 # Options
-if [[ "$DIR" == "powermenus" ]]; then
+if [ "$DIR" = "powermenus" ]; then
 	shutdown=""
 	reboot=""
 	lock=""
@@ -17,7 +17,7 @@ else
 
 	# Buttons
 	layout=`cat $HOME/.config/rofi/config/powermenu.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
-	if [[ "$layout" == "TRUE" ]]; then
+	if [ "$layout" = "TRUE" ]; then
   # Section 1
 
 		shutdown=""
