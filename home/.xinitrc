@@ -21,6 +21,5 @@ picom &
 
 # $(xrdb ~/.config/suckless/catppuccin/mocha && st -e nvim $HOME/Notes) &
 # feh ~/Media/Wallpapers/minimalistic/minimalistic/unicat.png --bg-scale &
-nohup volumeicon > /dev/null &
 exec dbus-launch --sh-syntax --exit-with-session awesome
 
