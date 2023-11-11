@@ -22,6 +22,7 @@ just don't forget the things like doing <prefix> + I in tmux to update packages
 ### Everysingle thingy ma doodle you should have installed
 - awesomewm / hyprland (kinda not used)
     - [ picom-ftlabs-generalanimation ](https://github.com/FT-Labs/picom/tree/generalanimation)
+- betterlockscreen
 - doom emacs
 - eza
 - firefox
@@ -32,15 +33,17 @@ just don't forget the things like doing <prefix> + I in tmux to update packages
 - joshuto
 - neofetch
 - neovim
+- pulsemixer
 - st
 - tmux
 - volumeicon
 - ~~dmenu~~ rofi
+- wpa_cli
 
 ### shit that's in also
 - gtk-3.0
 - X11 shit like .xinitrc
-- some random scripts (you should set /bin/sh to /bin/dash)
+- some random scripts
 
 #### the roots
 - gentoo
