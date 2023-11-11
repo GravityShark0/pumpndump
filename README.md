@@ -16,9 +16,11 @@ stow home --target=$HOME
 # to sync root/ to /
 stow root --target=/
 ```
+and it should be done!
+just don't forget the things like doing <prefix> + I in tmux to update packages
 
 ### Everysingle thingy ma doodle
-- awesomewm / hyprland
+- awesomewm / hyprland (kinda not used)
     - [ picom-ftlabs-generalanimation ](https://github.com/FT-Labs/picom/tree/generalanimation) cause it kinda works better than
 - doom emacs
 - eza
