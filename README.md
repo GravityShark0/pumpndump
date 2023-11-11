@@ -1,12 +1,12 @@
 > im tired
-#### This is a solution made by me to just "pump n' dump" my dot files and not doing anything after
+## This is a solution made by me to just "pump n' dump" my dot files and not doing anything after
 > i dont know what pump n dump actually means but it sounds cool
 
 
 ### How 3 install
-```
-$ git clone https://github.com/GravityShark02/pumpndump
-$ cd pumpndump
+```bash
+git clone https://github.com/GravityShark0/pumpndump
+cd pumpndump
 ```
 #### GNU Stow
 ```bash
@@ -16,30 +16,32 @@ stow home --target=$HOME
 # to sync root/ to /
 stow root --target=/
 ```
-and it should be done!
+and it should be done,
 just don't forget the things like doing <prefix> + I in tmux to update packages
 
-### Everysingle thingy ma doodle
+### Everysingle thingy ma doodle you should have installed
 - awesomewm / hyprland (kinda not used)
-    - [ picom-ftlabs-generalanimation ](https://github.com/FT-Labs/picom/tree/generalanimation) cause it kinda works better than
+    - [ picom-ftlabs-generalanimation ](https://github.com/FT-Labs/picom/tree/generalanimation)
 - doom emacs
 - eza
 - firefox
 - fish
     - mksh so fish can also get env variables
     - zoxide
+- htop
 - joshuto
+- neofetch
 - neovim
-- some lesser ones like 
-- some random scripts (you should set /bin/sh to /bin/dash)
 - st
 - tmux
+- volumeicon
 - ~~dmenu~~ rofi
-    - gtk-3.0
-    - htop
-    - neofetch
-    - volumeicon
+
+### shit that's in also
+- gtk-3.0
 - X11 shit like .xinitrc
+- some random scripts (you should set /bin/sh to /bin/dash)
+
 #### the roots
 - gentoo
 - keyd
