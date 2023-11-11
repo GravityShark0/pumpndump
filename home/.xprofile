@@ -5,6 +5,6 @@
 feh ~/Media/Wallpapers/minimalistic/minimalistic/unicat.png --bg-scale &
 # nitrogen --restore &
 # xmodmap ~/.keymaps/tarmak_2b_dh.xmodmap &
-xrdb ~/.config/suckless/catppuccin/mocha &
+$(xrdb ~/.config/suckless/catppuccin/mocha && kill -USR1 $(pidof st)) &
 pkill volumeicon; volumeicon &
 # pkill picom; picom &
