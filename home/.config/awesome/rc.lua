@@ -356,10 +356,12 @@ globalkeys = gears.table.join(
 
 		local clients = tag:clients()
 
+		local align = (awful.placement.centered + awful.placement.no_overlap)
 		if clients then
 			-- client.border_color = beautiful.border_scratch
 			for i = 1, #clients do
-				local c = clients[i]
+				-- local c = clients[#clients - i + 1]
+				local c = clients[#clients - i + 1]
 
 				-- c.useless_gap = 5
 				-- naughty.notify({ text = tostring(c) })
@@ -367,7 +369,6 @@ globalkeys = gears.table.join(
 
 				-- awful.placement.maximize(c)
 				-- c.maximized = false
-				local align = (awful.placement.centered + awful.placement.no_overlap)
 
 				align(c)
 

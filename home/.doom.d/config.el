@@ -29,6 +29,7 @@
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
 (setq doom-font (font-spec :family "FiraCode Nerd Font"))
 (setq doom-symbol-font (font-spec :family "FiraCode Nerd Font"))
+(doom/set-frame-opacity 25)
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
