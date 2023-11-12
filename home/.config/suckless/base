@@ -26,7 +26,7 @@ st.font:            FiraCode Nerd Font:pixelsize=16:style=Retina
 st.borderpx:		6
 
 ! transparency 0.0-1.0
-st.alpha:	        0.9	
+st.alpha:	        0.69	
 
 !st.tabspaces:		4
 !st.chscale:		1.0
