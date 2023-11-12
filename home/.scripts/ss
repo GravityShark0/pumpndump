@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
-time=`date +%Y-%m-%d-%I-%M-%S`
-geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
-
-dir="`xdg-user-dir PICTURES`/Screenshots"
+time=$(date +%Y-%m-%d-%I-%M-%S)
+geometry=$(xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current')
+dir=$(xdg-user-dir PICTURES)
+dir="${dir}/Screenshots"
 file="Screenshot_${time}_${geometry}.png"
 
 cd ${dir} && maim -u -f png -s -b 0 | tee "$file" | xclip -selection clipboard -t image/png

@@ -414,11 +414,10 @@ app-editors/emacs gui gtk xft
 >=dev-qt/qtbase-6.6.0-r1 -opengl
 
 net-p2p/transmission gtk appindicator
-app-emulation/qemu gtk usbredir
-
+app-emulation/qemu gtk usbredir spice
 # required by gnome-extra/gnome-boxes-45.0::gentoo
 # required by gnome-boxes (argument)
->=net-misc/spice-gtk-0.42-r3 smartcard usbredir vala
+>=net-misc/spice-gtk-0.42-r3 usbredir smartcard vala
 # required by gnome-extra/gnome-boxes-45.0::gentoo
 # required by gnome-boxes (argument)
 >=app-emulation/spice-0.15.2 smartcard
@@ -442,16 +441,10 @@ app-emulation/qemu gtk usbredir
 # required by gnome-boxes (argument)
 >=net-libs/gnutls-3.8.1-r1 tools pkcs11
 # required by net-libs/gnutls-3.8.1-r1::gentoo[pkcs11]
-# required by app-crypt/swtpm-0.8.1-r2::gentoo
-# required by app-emulation/libvirt-9.8.0::gentoo[qemu]
-# required by app-emulation/libvirt-glib-4.0.0::gentoo
+# required by x11-libs/vte-0.74.1::gentoo[crypt]
 # required by gnome-extra/gnome-boxes-45.0::gentoo
 # required by gnome-boxes (argument)
 >=app-crypt/p11-kit-0.25.1-r1 abi_x86_32
 # required by app-misc/tracker-miners-3.6.2::gentoo[pdf]
 # required by app-misc/tracker-3.6.0::gentoo[miners]
 >=app-text/poppler-23.11.0 cairo
-
-app-emulation/libvirt pcap virt-network numa fuse macvtap vepa qemu
-
-app-emulation/virt-manager gui
