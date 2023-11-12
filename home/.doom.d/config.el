@@ -95,6 +95,6 @@
 ;; they are implemented.
 
 ;; Transparency
-(set-frame-parameter nil 'alpha-background 50)
+(set-frame-parameter nil 'alpha-background 69)
 
-(add-to-list 'default-frame-alist '(alpha-background . 50))
+(add-to-list 'default-frame-alist '(alpha-background . 69))
