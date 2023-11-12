@@ -70,7 +70,7 @@ file_manager_cmd = terminal .. " -e " .. file_manager
 -- launcher = 'rofi -show run'
 -- alt_launcher = 'rofi -show drun'
 launcher = "runner"
-alt_launcher = "$HOME/.scripts/launcher"
+alt_launcher = "launcher"
 -- script that opens a rofi powermenu
 powermenu = "powermenu"
 screenshot = "screenshot"

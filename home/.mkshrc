@@ -1,8 +1,7 @@
 # source /usr/share/bash-completion/completions/fzf
 # source /usr/share/fzf/key-bindings.bash
 
-export PATH=$PATH:~/.bin
-export PATH=$PATH:~/.scripts
+export PATH=$PATH:~/.bin:~/.scripts
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx

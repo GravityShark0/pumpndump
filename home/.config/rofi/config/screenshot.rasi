@@ -9,6 +9,7 @@ configuration {
 
 @import "font.rasi"
 @import "colors.rasi"
+@import "keymaps.rasi"
 
 /* Line Responsible For Button Layouts */
 /* BUTTON = FALSE */
