@@ -455,3 +455,5 @@ app-emulation/qemu gtk usbredir
 app-emulation/libvirt pcap virt-network numa fuse macvtap vepa qemu
 
 app-emulation/virt-manager gui
+
+media-video/obs-studio lua nvenc pulseaudio speex v4l lua_single_target_luajit
