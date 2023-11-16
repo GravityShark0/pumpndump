@@ -95,6 +95,19 @@
 ;; they are implemented.
 
 ;; Transparency
-(set-frame-parameter nil 'alpha-background 69)
+(set-frame-parameter nil 'alpha-background 80)
 
-(add-to-list 'default-frame-alist '(alpha-background . 69))
+(add-to-list 'default-frame-alist '(alpha-background . 80))
+
+(setq org-todo-keywords
+      '((sequence "TODO"
+        "MAYBE"
+        "NEXT"
+        "STARTED"
+        "WAIT"
+        "DELEGATED"
+        "INC"
+        "|"
+        "DONE"
+        "DEFERRED"
+        "CANCEL")))
