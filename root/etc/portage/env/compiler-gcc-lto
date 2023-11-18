@@ -1,0 +1,8 @@
+COMMON_FLAGS="${COMMON_FLAGS} -flto=8"
+
+CC="gcc"
+CPP="cpp"
+CXX="g++"
+AR="ar"
+NM="nm"
+RANLIB="ranlib"
