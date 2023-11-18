@@ -4,7 +4,7 @@ x11-drivers/nvidia-drivers abi_x86_32
 
 x11-base/xorg-server -minimal
 
-net-im/discord appindicator
+net-im/discord appindicator 
 
 media-fonts/noto-emoji icons
 

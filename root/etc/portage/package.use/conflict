@@ -1,10 +1,6 @@
 sys-libs/gdbm berkdb
 
 
-# required by dev-qt/qtwayland-6.9999::gentoo
-# required by gui-libs/xdg-desktop-portal-hyprland-9999::wayland-desktop
-# required by xdg-desktop-portal-hyprland (argument)
->=dev-qt/qtbase-6.9999 opengl
 # required by x11-misc/xdg-utils-1.1.3_p20210805-r1::gentoo
 # required by x11-misc/dunst-1.9.2::gentoo
 # required by virtual/notification-daemon-0::gentoo[-gnome,-kde]
@@ -513,3 +509,7 @@ sys-libs/gdbm berkdb
 >=sys-libs/readline-8.2_p1 abi_x86_32
 
 
+# required by dev-qt/qttools-6.9999::gentoo[widgets]
+# required by net-p2p/qbittorrent-9999::gentoo[qt6]
+# required by qbittorrent (argument)
+>=dev-qt/qtbase-6.9999 -opengl
