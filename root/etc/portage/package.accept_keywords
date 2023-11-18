@@ -23,5 +23,6 @@ media-video/mpv **
 # dev-qt/qtimageformats **
 # net-p2p/qbittorrent **
 media-libs/libplacebo **
+# net-misc/curl **
 
 */*::steam-overlay

@@ -8,6 +8,7 @@ net-misc/dhcpcd embedded # for minimal dhcpcd
 app-arch/xz-utils extra-filters	# needed for kernel
 sys-firmware/intel-microcode split-ucode # needed for microcode
 sys-kernel/linux-firmware savedconfig redistributable compress-xz # needed for nvidia-firmware
+#sys-kernel/linux-firmware redistributable compress-xz # needed for nvidia-firmware
 sys-kernel/gentoo-sources symlink experimental # needed to optimize for our cpu
 media-video/pipewire pipewire-alsa sound-server # needed for sound to work
 sys-auth/seatd server # for wayland login
