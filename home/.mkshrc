@@ -2,6 +2,8 @@
 # source /usr/share/fzf/key-bindings.bash
 
 export PATH=~/.bin:~/.scripts:$PATH
+export CCACHE_DIR="/var/cache/ccache"
+
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx
 fi

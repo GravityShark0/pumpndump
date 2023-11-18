@@ -1,9 +1,5 @@
 app-admin/doas persist
 
-dev-lang/perl -minimal
-
-sys-kernel/linux-firmware savedconfig redistributable compress-xz
-
 x11-drivers/nvidia-drivers abi_x86_32
 
 x11-base/xorg-server -minimal
@@ -30,7 +26,8 @@ net-p2p/transmission gtk appindicator
 
 media-video/obs-studio lua nvenc pulseaudio speex v4l lua_single_target_luajit
 
-net-misc/curl static-libs
 >=net-misc/curl-8.4.0 -adns
 
 app-text/aspell l10n_en l10n_tl
+
+www-client/firefox hwaccel screencast system-png 

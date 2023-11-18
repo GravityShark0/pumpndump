@@ -11,7 +11,7 @@ sys-kernel/linux-firmware savedconfig redistributable compress-xz # needed for n
 #sys-kernel/linux-firmware redistributable compress-xz # needed for nvidia-firmware
 sys-kernel/gentoo-sources symlink experimental # needed to optimize for our cpu
 media-video/pipewire pipewire-alsa sound-server # needed for sound to work
-sys-auth/seatd server # for wayland login
+# sys-auth/seatd server # for wayland login
 sys-apps/util-linux su pam suid # for root login
 x11-drivers/nvidia-drivers driver modules static-libs # all of them needed
 sys-fs/ntfs3g fuse mount-ntfs # for external hdd
@@ -54,9 +54,9 @@ dev-lua/lua-cjson internal-fpconv
 
 # packages we install # 
 sys-apps/xdg-desktop-portal screencast
-media-gfx/imv freeimage jpeg png
+# media-gfx/imv freeimage jpeg png
 media-libs/freeimage webp
-media-sound/mpd ffmpeg
+# media-sound/mpd ffmpeg
 media-video/ffmpeg dav1d vpx opus encode libass sdl x264 gpl X pulseaudio
 media-libs/libvpx postproc highbitdepth
 media-libs/dav1d 10bit 8bit

@@ -437,14 +437,6 @@ sys-libs/gdbm berkdb
 # required by virtual/wine-0-r10::gentoo
 # required by virtual/wine (argument)
 >=net-libs/libasyncns-0.8-r4 abi_x86_32
-# required by dev-qt/qttools-6.9999::gentoo[widgets]
-# required by net-p2p/qbittorrent-9999::gentoo[qt6]
-# required by qbittorrent (argument)
->=dev-qt/qtbase-6.9999 -opengl
-# required by dev-qt/qttools-6.6.0::gentoo[widgets]
-# required by net-p2p/qbittorrent-4.6.0::gentoo[qt6]
-# required by qbittorrent (argument)
->=dev-qt/qtbase-6.6.0-r1 -opengl
 
 # required by games-util/steam-client-meta-0-r20230821::steam-overlay
 # required by games-util/steam-meta-0-r20220320::steam-overlay
