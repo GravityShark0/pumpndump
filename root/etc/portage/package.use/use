@@ -1,30 +1,36 @@
 app-admin/doas persist
+
 dev-lang/perl -minimal
+
 sys-kernel/linux-firmware savedconfig redistributable compress-xz
+
 x11-drivers/nvidia-drivers abi_x86_32
+
 x11-base/xorg-server -minimal
+
 net-im/discord appindicator
+
 media-fonts/noto-emoji icons
+
 x11-wm/awesome lua_single_target_lua5-3
 
 sys-auth/elogind policykit
+
 sys-auth/polkit -kde
+
 app-editors/emacs gui gtk xft
+
 net-p2p/transmission gtk appindicator
-app-emulation/qemu gtk usbredir
 
+# app-emulation/qemu gtk usbredir
 
-app-emulation/libvirt pcap virt-network numa fuse macvtap vepa qemu
+# app-emulation/libvirt pcap virt-network numa fuse macvtap vepa qemu
 
-app-emulation/virt-manager gui
+# app-emulation/virt-manager gui
 
 media-video/obs-studio lua nvenc pulseaudio speex v4l lua_single_target_luajit
 
 net-misc/curl static-libs
 >=net-misc/curl-8.4.0 -adns
-
-sys-apps/pciutils -static-libs
-net-misc/openssh -static
-
 
 app-text/aspell l10n_en l10n_tl
