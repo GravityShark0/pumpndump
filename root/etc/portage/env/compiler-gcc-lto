@@ -11,4 +11,4 @@ AR="ar"
 NM="nm"
 RANLIB="ranlib"
 
-FEATURES="${FEATURES} candy"
+FEATURES="${FEATURES}"

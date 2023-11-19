@@ -792,7 +792,7 @@ awful.rules.rules = {
 
 	-- Put emacs in scratch
 	{
-		rule_any = { class = { 'emacs', 'Emacs' } },
+		rule_any = { class = { 'emacs', 'Emacs', 'xclipboard', 'XClipboard' } },
 		properties = { tag = '6', floating = true },
 	},
 }

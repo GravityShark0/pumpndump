@@ -513,3 +513,9 @@ sys-libs/gdbm berkdb
 # required by net-p2p/qbittorrent-9999::gentoo[qt6]
 # required by qbittorrent (argument)
 >=dev-qt/qtbase-6.9999 -opengl
+
+# required by sys-devel/clang-common-17.0.5::gentoo[llvm-libunwind,default-compiler-rt]
+# required by sys-devel/clang-17.0.5::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/llvm-libunwind-17.0.5 static-libs

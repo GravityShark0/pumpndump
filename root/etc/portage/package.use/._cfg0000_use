@@ -37,3 +37,8 @@ virtual/wine staging
 
 sys-devel/clang llvm-libunwind
 sys-devel/clang-common llvm-libunwind
+# required by sys-devel/clang-common-17.0.5::gentoo[llvm-libunwind,default-compiler-rt]
+# required by sys-devel/clang-17.0.5::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/llvm-libunwind-17.0.5 static-libs
