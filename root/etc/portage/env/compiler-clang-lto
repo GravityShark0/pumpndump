@@ -15,7 +15,4 @@ RANLIB="llvm-ranlib"
 
 FEATURES="${FEATURES} candy"
 
-# this is added to make options by linux-mod.eclass
-build_fixes="llvm=1 llvm_ias=1"
-
-# cc/ccx and other tools must match genkernel config
+BUILD_FIXES="LLVM=1 LLVM_IAS=1"
