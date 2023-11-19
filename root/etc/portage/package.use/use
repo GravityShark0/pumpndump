@@ -31,3 +31,6 @@ media-video/obs-studio lua nvenc pulseaudio speex v4l lua_single_target_luajit
 app-text/aspell l10n_en l10n_tl
 
 www-client/firefox hwaccel screencast system-png 
+
+app-emulation/wine* -unwind
+virtual/wine staging
