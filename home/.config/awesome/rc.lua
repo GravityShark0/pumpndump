@@ -75,7 +75,7 @@ alt_launcher = 'launcher'
 powermenu = 'powermenu'
 screenshot = 'ss'
 screenshot_menu = 'screenshot'
-browser = 'firefox-bin'
+browser = 'firefox'
 
 lightdecrease = 'monitorlight +-5'
 lightincrease = 'monitorlight +5'
