@@ -18,7 +18,7 @@ picom &
 # qownnotes &
 # st -e nvim ~/Notes/index.norg &
 # xscreensaver --no-splash &
-xclipboard &
+# xclipboard &
 
 # $(xrdb ~/.config/suckless/catppuccin/mocha && st -e nvim $HOME/Notes) &
 # feh ~/Media/Wallpapers/minimalistic/minimalistic/unicat.png --bg-scale &

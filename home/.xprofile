@@ -2,11 +2,12 @@
 
 # background="~/Media/Wallpapers/minimalistic/minimalistic/unicat.png"
 background="$HOME/Media/Wallpapers/dt/0001.jpg"
+
 # feh Pictures/Wallpapers/purp1.jpg --bg-scale &
 # dash ~/.bin/clockskewcheck &
 feh --bg-scale $background &
 # nitrogen --restore &
 # xmodmap ~/.keymaps/tarmak_2b_dh.xmodmap &
 $(xrdb ~/.config/suckless/catppuccin/mocha && kill -USR1 $(pidof st)) &
-pkill volumeicon; volumeicon &
+# pkill volumeicon; volumeicon &
 # pkill picom; picom &

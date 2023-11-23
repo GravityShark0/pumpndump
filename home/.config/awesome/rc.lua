@@ -162,20 +162,6 @@ mytextclock:connect_signal('button::press', function(_, _, _, button)
 	end
 end)
 
--- Wired/Wireless widget on tab
-local net_widgets = require('net_widgets')
-
-net_wired = net_widgets.indicator({
-	interface = 'eth0',
-	popup_position = 'bottom_right',
-})
-net_wireless = net_widgets.wireless({
-	interface = 'wlan0',
-	popup_position = 'bottom_right',
-	onclick = terminal .. ' -e wpa_cli',
-})
-
--- net_wireless = net_widgets.wired({ interface = 'eth0' })
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -235,6 +221,7 @@ local tasklist_buttons = gears.table.join(
 -- -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 -- screen.connect_signal('property::geometry', set_wallpaper)
 
+local volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
 awful.screen.connect_for_each_screen(function(s)
 	-- Wallpaper
 	-- set_wallpaper(s)
@@ -280,21 +267,74 @@ awful.screen.connect_for_each_screen(function(s)
 	))
 	-- Create a taglist widget
 	s.mytaglist = awful.widget.taglist({
-		screen = s,
-		filter = awful.widget.taglist.filter.all,
+		screen  = s,
+		filter  = awful.widget.taglist.filter.all,
 		buttons = taglist_buttons,
+		-- style   = {
+		-- 	shape = gears.shape.rounded_bar
+		-- },
+		-- layout  = {
+		-- 	spacing        = 20,
+		-- 	spacing_widget = {
+		-- 		color = '#dddddd',
+		-- 		shape = gears.shape.rounded_bar,
+		-- 	},
+		-- 	layout         = wibox.layout.fixed.horizontal
+		-- },
 	})
 
 	-- Create a tasklist widget
 	s.mytasklist = awful.widget.tasklist({
-		screen = s,
-		filter = awful.widget.tasklist.filter.currenttags,
+		screen  = s,
+		filter  = awful.widget.tasklist.filter.currenttags,
 		buttons = tasklist_buttons,
+		style   = {
+			shape = gears.shape.rounded_bar,
+		},
+		layout  = {
+			spacing        = 10,
+			spacing_widget = {
+				{
+					forced_width = 5,
+					-- shape        = gears.shape.circle,
+					widget       = wibox.widget.separator,
+					color        = beautiful.bg_normal
+				},
+				valign = 'center',
+				halign = 'center',
+				widget = wibox.container.place,
+			},
+			layout         = wibox.layout.flex.horizontal
+		},
 	})
 
+	s.seperator = wibox.widget {
+		widget = wibox.widget.separator,
+		orientation = "vertical",
+		forced_width = 10,
+		color = beautiful.border_focus,
+		visible = true
+	}
+
+	s.empty_seperator = function(width)
+		return wibox.widget {
+			widget = wibox.widget.separator,
+			orientation = "vertical",
+			forced_width = width,
+			color = beautiful.bg_normal,
+			visible = true
+		}
+	end
+
+	s.net_wired = require('net_widgets').indicator({
+		-- interface = 'eth0',
+		popup_position = 'bottom_right',
+		onclick = terminal .. ' -e wpa_cli',
+	})
+
+	-- net_wireless = net_widgets.wired({ interface = 'eth0' })
 	-- Create the wibox
 	s.mywibox = awful.wibar({ position = 'bottom', screen = s })
-
 	-- Add widgets to the wibox
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
@@ -303,16 +343,24 @@ awful.screen.connect_for_each_screen(function(s)
 			-- mylauncher,
 			s.mytaglist,
 			-- s.mypromptbox,
+			s.empty_seperator(10),
 		},
 		s.mytasklist, -- Middle widget
 		{       -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
+
 			-- mykeyboardlayout,
+			s.empty_seperator(10),
 			wibox.widget.systray(),
-			net_wireless,
-			net_wired,
+			s.empty_seperator(10),
+			volume_widget {
+				widget_type = 'arc',
+				mixer_cmd = 'st -e pulsemixer',
+				tooltip = true
+			},
+			s.net_wired,
 			mytextclock,
-			s.mylayoutbox,
+			-- s.mylayoutbox,
 		},
 	})
 end)
@@ -485,7 +533,11 @@ globalkeys = gears.table.join(
 		if c then
 			c:emit_signal('request::activate', 'key.unminimize', { raise = true })
 		end
-	end, { description = 'restore minimized', group = 'client' })
+	end, { description = 'restore minimized', group = 'client' }),
+	awful.key({}, "XF86AudioRaiseVolume", function() volume_widget:inc(5) end),
+	awful.key({}, "XF86AudioLowerVolume", function() volume_widget:dec(5) end),
+	awful.key({}, "XF86AudioMute", function() volume_widget:toggle() end)
+
 )
 -- }}}
 
