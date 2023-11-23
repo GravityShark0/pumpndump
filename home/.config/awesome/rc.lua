@@ -292,19 +292,19 @@ awful.screen.connect_for_each_screen(function(s)
 			shape = gears.shape.rounded_bar,
 		},
 		layout  = {
-			spacing        = 10,
-			spacing_widget = {
-				{
-					forced_width = 5,
-					-- shape        = gears.shape.circle,
-					widget       = wibox.widget.separator,
-					color        = beautiful.bg_normal
-				},
-				valign = 'center',
-				halign = 'center',
-				widget = wibox.container.place,
-			},
-			layout         = wibox.layout.flex.horizontal
+			spacing = 3,
+			-- spacing_widget = {
+			-- 	{
+			-- 		forced_width = 1,
+			-- 		-- shape        = gears.shape.circle,
+			-- 		widget       = wibox.widget.separator,
+			-- 		color        = beautiful.bg_normal
+			-- 	},
+			-- 	valign = 'center',
+			-- 	halign = 'center',
+			-- 	widget = wibox.container.place,
+			-- },
+			layout  = wibox.layout.flex.horizontal
 		},
 	})
 

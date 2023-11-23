@@ -15,6 +15,7 @@ sys-auth/elogind policykit
 sys-auth/polkit -kde
 
 app-editors/emacs gui gtk xft
+app-editors/emacs gif harfbuzz jpeg pngsound svg tiff webp
 
 net-p2p/transmission gtk appindicator
 
