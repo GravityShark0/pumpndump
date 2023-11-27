@@ -30,3 +30,19 @@ virtual/wine staging proton
 
 # to allow for some other networks
 net-wireless/wpa_supplicant tkip
+# required by app-emulation/wine-proton-8.0.4::gentoo
+# required by virtual/wine-0-r10::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libgcrypt-1.10.3 abi_x86_32
+# required by app-emulation/wine-proton-8.0.4::gentoo[usb]
+# required by virtual/wine-0-r10::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libusb-1.0.26 abi_x86_32
+# required by dev-libs/libgcrypt-1.10.3::gentoo
+# required by app-emulation/wine-proton-8.0.4::gentoo
+# required by virtual/wine-0-r10::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libgpg-error-1.47-r1 abi_x86_32

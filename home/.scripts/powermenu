@@ -90,7 +90,8 @@ case $chosen in
         fi
         ;;
     $lock)
-	betterlockscreen
+	# betterlockscreen
+	i3lock
         # sh $HOME/.local/bin/lock
         ;;
     $suspend)
@@ -100,7 +101,8 @@ case $chosen in
 			# amixer set Master mute
 			pulsemixer --mute
 			# sh $HOME/.local/bin/lock
-			betterlockscreen
+			# betterlockscreen
+			i3lock
 			loginctl suspend
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
 			exit

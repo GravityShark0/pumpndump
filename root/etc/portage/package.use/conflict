@@ -1,6 +1,5 @@
 sys-libs/gdbm berkdb
 
-
 # required by x11-misc/xdg-utils-1.1.3_p20210805-r1::gentoo
 # required by x11-misc/dunst-1.9.2::gentoo
 # required by virtual/notification-daemon-0::gentoo[-gnome,-kde]
@@ -508,7 +507,6 @@ sys-libs/gdbm berkdb
 # required by @world (argument)
 >=sys-libs/readline-8.2_p1 abi_x86_32
 
-
 # required by dev-qt/qttools-6.9999::gentoo[widgets]
 # required by net-p2p/qbittorrent-9999::gentoo[qt6]
 # required by qbittorrent (argument)
@@ -519,3 +517,26 @@ sys-libs/gdbm berkdb
 # required by @selected
 # required by @world (argument)
 >=sys-libs/llvm-libunwind-17.0.5 static-libs
+
+# required by app-emulation/wine-staging-8.21::gentoo[samba]
+# required by @selected
+# required by @world (argument)
+>=net-fs/samba-4.19.2 winbind
+
+
+# required by app-emulation/wine-proton-8.0.4::gentoo
+# required by virtual/wine-0-r10::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libgcrypt-1.10.3 abi_x86_32
+# required by app-emulation/wine-proton-8.0.4::gentoo[usb]
+# required by virtual/wine-0-r10::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libusb-1.0.26 abi_x86_32
+# required by dev-libs/libgcrypt-1.10.3::gentoo
+# required by app-emulation/wine-proton-8.0.4::gentoo
+# required by virtual/wine-0-r10::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libgpg-error-1.47-r1 abi_x86_32

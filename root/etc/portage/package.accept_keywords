@@ -26,3 +26,8 @@ media-libs/libplacebo **
 # net-misc/curl **
 
 */*::steam-overlay
+
+# games-util/vinegar **
+# app-emulation/wine-vanilla -~amd64
+# x11-misc/picom-ftlabs **
+# x11-misc/picom-ftlabs-generalanimation **

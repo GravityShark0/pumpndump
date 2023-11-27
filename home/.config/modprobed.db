@@ -117,6 +117,7 @@ soundcore
 sparse_keymap
 stp
 ttm
+tun
 uas
 uinput
 usb_storage
