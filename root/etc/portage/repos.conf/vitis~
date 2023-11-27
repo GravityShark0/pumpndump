@@ -1,7 +1,0 @@
-[Vitis]
-location = /var/db/repos/Vitis
-sync-type = git
-sync-uri = https://github.com/etilton/Vitis.git
-clone-depth = 1
-sync-depth = 1
-auto-sync = yes
