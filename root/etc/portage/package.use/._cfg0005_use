@@ -1,0 +1,38 @@
+app-admin/doas persist
+
+# latest lua is needed
+x11-wm/awesome lua_single_target_lua5-3
+x11-drivers/nvidia-drivers abi_x86_32
+x11-base/xorg-server -minimal
+net-im/discord appindicator 
+www-client/firefox hwaccel screencast system-png 
+media-fonts/noto-emoji icons
+
+sys-auth/elogind policykit
+sys-auth/polkit -kde
+
+app-editors/emacs gui gtk xft
+app-editors/emacs gif harfbuzz jpeg pngsound svg tiff webp
+
+# net-p2p/transmission gtk appindicator
+# app-emulation/qemu gtk usbredir
+# app-emulation/libvirt pcap virt-network numa fuse macvtap vepa qemu
+# app-emulation/virt-manager gui
+
+media-video/obs-studio lua nvenc pulseaudio speex v4l lua_single_target_luajit
+
+>=net-misc/curl-8.4.0 -adns
+
+app-text/aspell l10n_en l10n_tl
+
+app-emulation/wine* usb
+virtual/wine staging proton
+
+# to allow for some other networks
+net-wireless/wpa_supplicant tkip
+# required by media-gfx/krita-5.1.5::gentoo
+# required by krita (argument)
+>=dev-libs/quazip-1.4-r1 qt5
+# required by media-gfx/krita-5.1.5::gentoo[python_single_target_python3_11]
+# required by krita (argument)
+>=dev-python/PyQt5-5.15.10-r1 gui declarative widgets

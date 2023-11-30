@@ -53,3 +53,14 @@ SETUVAR fish_pager_color_progress:6c7086
 SETUVAR fish_pager_color_prefix:f5c2e7
 SETUVAR fish_pager_color_completion:cdd6f4
 SETUVAR fish_pager_color_description:6c7086
+
+SETUVAR __fish_git_prompt_hide_untrackedfiles:1
+SETUVAR __fish_git_prompt_show_informative_status:1
+SETUVAR __fish_git_prompt_color_branch:magenta --bold
+SETUVAR __fish_git_prompt_showupstream:informative
+SETUVAR __fish_git_prompt_color_dirtystate:blue
+SETUVAR __fish_git_prompt_color_stagedstate:yellow
+SETUVAR __fish_git_prompt_color_invalidstate:red
+SETUVAR __fish_git_prompt_color_cleanstate:green --bold
+
+SETUVAR __fish_git_prompt_color_untrackedfiles:cdd6f4
