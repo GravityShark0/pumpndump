@@ -21,6 +21,7 @@ theme.bg_systray = theme.bg_normal
 
 theme.fg_cosmic = '#fff8e7'
 theme.fg_medium = '#c9cbff'
+theme.fg_light = '#646583'
 theme.fg_normal = theme.fg_medium
 theme.fg_focus = theme.fg_cosmic
 -- theme.fg_urgent = '#fff8e7'
@@ -45,7 +46,7 @@ theme.border_marked = '#91231c'
 -- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
 -- Example:
 -- theme.taglist_fg_focus = "#ff0000"
-theme.taglist_fg_occupied = theme.fg_medium
+theme.taglist_fg_occupied = theme.fg_light
 theme.taglist_fg_empty = theme.bg_normal
 
 -- Generate taglist squares:
