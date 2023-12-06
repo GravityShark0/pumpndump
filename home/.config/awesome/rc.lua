@@ -127,17 +127,17 @@ awful.layout.layouts = {
 --
 mymainmenu = awful.menu({
 	items = {
-		{ 'awesome',       myawesomemenu, beautiful.awesome_icon },
+		-- { 'awesome',       myawesomemenu, beautiful.awesome_icon },
 		{ 'open terminal', terminal },
 		{ 'open runner',   launcher },
 		{ 'open launcher', alt_launcher }
 	},
 })
 
-mylauncher = awful.widget.launcher({
-	image = beautiful.awesome_icon,
-	menu = mymainmenu,
-})
+-- mylauncher = awful.widget.launcher({
+-- 	image = beautiful.awesome_icon,
+-- 	menu = mymainmenu,
+-- })
 
 -- Menubar configuration
 -- menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -275,9 +275,9 @@ awful.screen.connect_for_each_screen(function(s)
 		screen  = s,
 		filter  = awful.widget.taglist.filter.all,
 		buttons = taglist_buttons,
-		-- style   = {
-		-- 	shape = gears.shape.rounded_bar
-		-- },
+		style   = {
+			shape = gears.shape.rounded_bar
+		},
 		-- layout  = {
 		-- 	spacing        = 20,
 		-- 	spacing_widget = {
