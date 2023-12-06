@@ -145,7 +145,7 @@ mymainmenu = awful.menu({
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock("%b %d, %H:%M ")
 
 local calendar_widget = require('awesome-wm-widgets.calendar-widget.calendar')
 
@@ -339,7 +339,12 @@ awful.screen.connect_for_each_screen(function(s)
 
 	-- net_wireless = net_widgets.wired({ interface = 'eth0' })
 	-- Create the wibox
-	s.mywibox = awful.wibar({ position = 'bottom', screen = s })
+	function custom_shape(cr, width, height)
+		gears.shape.rounded_rect(cr, width, height, 12)
+	end
+
+	s.mywibox = awful.wibar({
+		position = 'bottom', screen = s, shape = custom_shape })
 	-- Add widgets to the wibox
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
