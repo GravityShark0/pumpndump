@@ -1,13 +1,16 @@
 ! Styling
-! Xft.antialias:         1
-! Xft.hinting:           1
-! Xft.autohint:          1
-! Xft.hintstyle:         hintslight
-! Xft.rgba:              rgb
-! Xft.lcdfilter:         lcdefault
+! 1440x900
+Xft.dpi: 89
+
+Xft.antialias:         1
+Xft.autohint:          0
+Xft.hinting:           1
+Xft.hintstyle:         hintfull
+Xft.lcdfilter:         lcdefault
+Xft.rgba:              rgb
 
 !dmenu if you want to have dmenu
-#include "dmenu"
+! #include "dmenu"
 
 ! st
 

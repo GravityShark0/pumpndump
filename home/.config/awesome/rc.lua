@@ -126,7 +126,12 @@ awful.layout.layouts = {
 -- }
 --
 mymainmenu = awful.menu({
-	items = { { 'awesome', myawesomemenu, beautiful.awesome_icon }, { 'open terminal', terminal } },
+	items = {
+		{ 'awesome',       myawesomemenu, beautiful.awesome_icon },
+		{ 'open terminal', terminal },
+		{ 'open runner',   launcher },
+		{ 'open launcher', alt_launcher }
+	},
 })
 
 mylauncher = awful.widget.launcher({
@@ -220,29 +225,29 @@ local tasklist_buttons = gears.table.join(
 --
 -- -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 -- screen.connect_signal('property::geometry', set_wallpaper)
-
+SCRATCH_ICON = ''
 local volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
 awful.screen.connect_for_each_screen(function(s)
 	-- Wallpaper
 	-- set_wallpaper(s)
 
 	-- Each screen has its own tag table.
-	awful.tag({ '1', '2', '3', '4', '5' }, s, awful.layout.layouts[1])
+	awful.tag({ '1', '2', '3', '4', '5', SCRATCH_ICON }, s, awful.layout.layouts[1])
 
-	awful.tag.add('6', { s, layout = awful.layout.suit.floating })
+	-- awful.tag.add('6', { s, layout = awful.layout.suit.floating })
 
 	-- Hides tag 6
-	local original_taglist_label = awful.widget.taglist.taglist_label
-	function awful.widget.taglist.taglist_label(tag, args, tb)
-		local text, bg, bg_image, icon, other_args = original_taglist_label(tag, args, tb)
-
-		-- Hide tags 11 and 12
-		if tag.index == 6 or tag.index == 12 then
-			text = ''
-		end
-
-		return text, bg, bg_image, icon, other_args
-	end
+	-- local original_taglist_label = awful.widget.taglist.taglist_label
+	-- function awful.widget.taglist.taglist_label(tag, args, tb)
+	-- 	local text, bg, bg_image, icon, other_args = original_taglist_label(tag, args, tb)
+	--
+	-- 	-- Hide tags 11 and 12
+	-- 	if tag.index == 6 or tag.index == 12 then
+	-- 		text = ''
+	-- 	end
+	--
+	-- 	return text, bg, bg_image, icon, other_args
+	-- end
 
 	-- Create a promptbox for each screen
 	--- promptbox kinda sucks
@@ -346,7 +351,7 @@ awful.screen.connect_for_each_screen(function(s)
 			s.empty_seperator(10),
 		},
 		s.mytasklist, -- Middle widget
-		{       -- Right widgets
+		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
 
 			-- mykeyboardlayout,
@@ -400,30 +405,44 @@ globalkeys = gears.table.join(
 -- Scratchpad
 	awful.key({ modkey }, '`', function()
 		local tag = awful.screen.focused().tags[6]
-		awful.tag.viewtoggle(tag)
-
+		local selected = tag.selected
 		local clients = tag:clients()
 
-		local align = (awful.placement.centered + awful.placement.no_overlap)
-		if clients then
-			-- client.border_color = beautiful.border_scratch
-			for i = 1, #clients do
-				-- local c = clients[#clients - i + 1]
-				local c = clients[#clients - i + 1]
+		if tag.selected == false then
+			awful.tag.viewtoggle(tag)
 
-				-- c.useless_gap = 5
-				-- naughty.notify({ text = tostring(c) })
-				c.border_color = beautiful.border_scratch
+			local align = (awful.placement.centered + awful.placement.no_overlap)
+			if clients then
+				-- client.border_color = beautiful.border_scratch
+				for i = 1, #clients do
+					-- local c = clients[#clients - i + 1]
+					local c = clients[#clients - i + 1]
 
-				-- awful.placement.maximize(c)
-				-- c.maximized = false
+					-- c.useless_gap = 5
+					-- naughty.notify({ text = tostring(c) })
+					c.border_color = beautiful.border_scratch
 
-				align(c)
+					-- awful.placement.maximize(c)
+					-- c.maximized = false
 
-				c:emit_signal('request::activate', 'scratchpad')
+					align(c)
+
+					c:emit_signal('request::activate', 'scratchpad')
+				end
 			end
+		else
+			-- for i = 1, #clients do
+			-- 	local c = clients[#clients - i + 1]
+			--
+			-- 	naughty.notify({ text = tostring(c) })
+			--
+			-- 	awful.placement.bottom(c)
+			--
+			-- 	-- c.geometry.y = -1000
+			-- end
+			--
+			awful.tag.viewtoggle(tag)
 		end
-		-- client.tag.
 	end, { description = 'toggle scratchpad', group = 'client' }),
 
 	awful.key({ modkey }, 'b', function()
@@ -465,7 +484,8 @@ globalkeys = gears.table.join(
 	end, { description = 'focus the previous screen', group = 'screen' }),
 
 	-- Layout manipulation
-	awful.key({ modkey }, 'u', awful.client.urgent.jumpto, { description = 'jump to urgent client', group = 'client' }),
+	awful.key({ modkey }, 'u', awful.client.urgent.jumpto,
+		{ description = 'jump to urgent client', group = 'client' }),
 	-- awful.key({ modkey, }, 'l', function() awful.tag.incmwfact(0.05) end,
 	--     { description = 'increase master width factor', group = 'layout' }),
 	-- awful.key({ modkey, }, 'h', function() awful.tag.incmwfact(-0.05) end,
@@ -601,7 +621,7 @@ clientkeys = gears.table.join(
 			if tag then
 				local screen = awful.screen.focused()
 				local scratch = screen.tags[6]
-				if client.focus.first_tag.name == '6' then
+				if client.focus.first_tag.index == 6 then
 					client.focus:move_to_tag(awful.screen.focused().selected_tag)
 					c.floating = false
 
@@ -670,7 +690,8 @@ clientkeys = gears.table.join(
 	awful.key({ modkey }, 'c', function(c)
 		c:kill()
 	end, { description = 'close', group = 'client' }),
-	awful.key({ modkey }, 'space', awful.client.floating.toggle, { description = 'toggle floating', group = 'client' }),
+	awful.key({ modkey }, 'space', awful.client.floating.toggle,
+		{ description = 'toggle floating', group = 'client' }),
 	awful.key({ modkey }, 'Return', function(c)
 		c:swap(awful.client.getmaster())
 	end, { description = 'move to master', group = 'client' }),
@@ -845,7 +866,7 @@ awful.rules.rules = {
 	-- Put emacs in scratch
 	{
 		rule_any = { class = { 'emacs', 'Emacs', 'xclipboard', 'XClipboard' } },
-		properties = { tag = '6', floating = true },
+		properties = { tag = SCRATCH_ICON, floating = true },
 	},
 }
 -- }}}
@@ -885,7 +906,7 @@ end)
 
 -- Focus Color
 client.connect_signal('focus', function(c)
-	if c.first_tag and c.first_tag.name == '6' then
+	if c.first_tag and c.first_tag.index == 6 then
 		c.border_color = beautiful.border_scratch
 	else
 		c.border_color = beautiful.border_focus

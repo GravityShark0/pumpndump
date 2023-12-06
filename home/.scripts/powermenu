@@ -90,9 +90,7 @@ case $chosen in
         fi
         ;;
     $lock)
-	# betterlockscreen
-	i3lock
-        # sh $HOME/.local/bin/lock
+	betterlockscreen -u "/home/gravity/Media/Wallpapers/dt/" --lock --fx
         ;;
     $suspend)
 		ans=$(rdialog &)
@@ -100,9 +98,7 @@ case $chosen in
 			# mpc -q pause
 			# amixer set Master mute
 			pulsemixer --mute
-			# sh $HOME/.local/bin/lock
-			# betterlockscreen
-			i3lock
+			betterlockscreen -u "/home/gravity/Media/Wallpapers/dt/" --lock --fx &
 			loginctl suspend
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
 			exit

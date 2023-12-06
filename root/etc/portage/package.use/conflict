@@ -540,3 +540,7 @@ sys-libs/gdbm berkdb
 # required by @selected
 # required by @world (argument)
 >=dev-libs/libgpg-error-1.47-r1 abi_x86_32
+
+# required by xfce-base/tumbler-4.19.0::gentoo[raw]
+# required by tumbler (argument)
+>=media-libs/libopenraw-0.3.7 gtk

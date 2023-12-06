@@ -10,6 +10,7 @@ btintel
 btmtk
 btrtl
 btusb
+cdc_ether
 cec
 cfg80211
 cifs
@@ -64,6 +65,7 @@ mei
 mei_hdcp
 mei_me
 mei_pxp
+mii
 mmc_core
 mrp
 mxm_wmi
@@ -87,9 +89,12 @@ processor_thermal_rfim
 r8169
 rapl
 rfkill
+rndis_host
 rtsx_pci
 rtsx_pci_sdmmc
 serio_raw
+sha1_ssse3
+sha256_ssse3
 sha512_ssse3
 snd
 snd_compress
@@ -122,6 +127,7 @@ uas
 uinput
 usb_storage
 usbhid
+usbnet
 uvc
 uvcvideo
 vfat

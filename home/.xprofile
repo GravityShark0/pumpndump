@@ -1,7 +1,9 @@
 #!/bin/sh
 
 # background="~/Media/Wallpapers/minimalistic/minimalistic/unicat.png"
-background="$HOME/Media/Wallpapers/dt/0001.jpg"
+random=$(fish --command "random 0 310")
+background="$HOME/Media/Wallpapers/dt/0${random}.jpg"
+echo "balls ${random} ${background}"
 
 # feh Pictures/Wallpapers/purp1.jpg --bg-scale &
 # dash ~/.bin/clockskewcheck &

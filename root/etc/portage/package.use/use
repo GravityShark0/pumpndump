@@ -30,3 +30,12 @@ virtual/wine staging proton
 
 # to allow for some other networks
 net-wireless/wpa_supplicant tkip
+
+xfce-base/thunar exif introspection libnotify -udisks pcre
+# media-gfx/imagemagick fontconfig hdri heif raw svg xml tiff
+xfce-extra/thunar-vcs-plugin -subversion
+xfce-base/tumbler epub ffmpeg gstreamer odf jpeg pdf raw
+
+www-client/w3m imlib
+
+dev-util/stylua lua54
