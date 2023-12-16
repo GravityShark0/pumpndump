@@ -1,11 +1,14 @@
 #!/bin/sh
 
 # background="~/Media/Wallpapers/minimalistic/minimalistic/unicat.png"
+# background="~/Pictures/Wallpapers/purp1.jpg"
 random=$(fish --command "random 0 310")
-background="$HOME/Media/Wallpapers/dt/0${random}.jpg"
-echo "balls ${random} ${background}"
+if [ "$random" -ge 100 ]; then prezero='0'; else prezero='00'; fi
+background="$HOME/Media/Wallpapers/dt/${prezero}${random}.jpg"
 
-# feh Pictures/Wallpapers/purp1.jpg --bg-scale &
+# echo $prezero $random
+# echo "balls ${random} ${background}"
+
 # dash ~/.bin/clockskewcheck &
 feh --bg-scale $background &
 # nitrogen --restore &
