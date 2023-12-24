@@ -7,20 +7,20 @@ dir="`xdg-user-dir PICTURES`/Screenshots"
 file="Screenshot_${time}_${geometry}.png"
 
 # Buttons
-layout=`cat $HOME/.config/rofi/config/screenshot.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
-if [ "$layout" = "TRUE" ]; then
-	screen=""
-	area=""
-	window="缾"
-	infive="靖"
-	inten="福"
-else
+# layout=`cat $HOME/.config/rofi/config/screenshot.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
+# if [ "$layout" = "TRUE" ]; then
+# 	screen=""
+# 	area=""
+# 	window="缾"
+# 	infive="靖"
+# 	inten="福"
+# else
 	screen=" Capture Desktop"
 	area=" Capture Area"
 	window="缾 Capture Window"
 	infive="靖 Take in 3s"
 	inten="福 Take in 10s"
-fi
+# fi
 
 # Notify and view screenshot
 notify_view () {
