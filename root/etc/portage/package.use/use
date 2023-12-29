@@ -39,3 +39,4 @@ xfce-base/tumbler epub ffmpeg gstreamer odf jpeg pdf raw
 www-client/w3m imlib
 
 dev-util/stylua lua54
+www-client/luakit lua_single_target_luajit
