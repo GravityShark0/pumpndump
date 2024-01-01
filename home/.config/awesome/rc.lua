@@ -130,7 +130,7 @@ mymainmenu = awful.menu({
 		-- { 'awesome',       myawesomemenu, beautiful.awesome_icon },
 		{ 'open terminal', terminal },
 		{ 'open runner',   launcher },
-		{ 'open launcher', alt_launcher }
+		{ 'open launcher', alt_launcher },
 	},
 })
 
@@ -145,7 +145,7 @@ mymainmenu = awful.menu({
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock("%b %d, %H:%M ")
+mytextclock = wibox.widget.textclock('%b %d, %H:%M ')
 
 local calendar_widget = require('awesome-wm-widgets.calendar-widget.calendar')
 
@@ -166,7 +166,6 @@ mytextclock:connect_signal('button::press', function(_, _, _, button)
 		awful.spawn(terminal .. ' -e syncclock')
 	end
 end)
-
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -272,11 +271,11 @@ awful.screen.connect_for_each_screen(function(s)
 	))
 	-- Create a taglist widget
 	s.mytaglist = awful.widget.taglist({
-		screen  = s,
-		filter  = awful.widget.taglist.filter.all,
+		screen = s,
+		filter = awful.widget.taglist.filter.all,
 		buttons = taglist_buttons,
-		style   = {
-			shape = gears.shape.rounded_bar
+		style = {
+			shape = gears.shape.rounded_bar,
 		},
 		-- layout  = {
 		-- 	spacing        = 20,
@@ -290,13 +289,13 @@ awful.screen.connect_for_each_screen(function(s)
 
 	-- Create a tasklist widget
 	s.mytasklist = awful.widget.tasklist({
-		screen  = s,
-		filter  = awful.widget.tasklist.filter.currenttags,
+		screen = s,
+		filter = awful.widget.tasklist.filter.currenttags,
 		buttons = tasklist_buttons,
-		style   = {
+		style = {
 			shape = gears.shape.rounded_bar,
 		},
-		layout  = {
+		layout = {
 			spacing = 3,
 			-- spacing_widget = {
 			-- 	{
@@ -309,26 +308,26 @@ awful.screen.connect_for_each_screen(function(s)
 			-- 	halign = 'center',
 			-- 	widget = wibox.container.place,
 			-- },
-			layout  = wibox.layout.flex.horizontal
+			layout = wibox.layout.flex.horizontal,
 		},
 	})
 
-	s.seperator = wibox.widget {
+	s.seperator = wibox.widget({
 		widget = wibox.widget.separator,
-		orientation = "vertical",
+		orientation = 'vertical',
 		forced_width = 10,
 		color = beautiful.border_focus,
-		visible = true
-	}
+		visible = true,
+	})
 
 	s.empty_seperator = function(width)
-		return wibox.widget {
+		return wibox.widget({
 			widget = wibox.widget.separator,
-			orientation = "vertical",
+			orientation = 'vertical',
 			forced_width = width,
 			color = beautiful.bg_normal,
-			visible = true
-		}
+			visible = true,
+		})
 	end
 
 	s.net_wired = require('net_widgets').indicator({
@@ -339,12 +338,15 @@ awful.screen.connect_for_each_screen(function(s)
 
 	-- net_wireless = net_widgets.wired({ interface = 'eth0' })
 	-- Create the wibox
-	function custom_shape(cr, width, height)
-		gears.shape.rounded_rect(cr, width, height, 12)
-	end
+	-- function custom_shape(cr, width, height)
+	-- 	gears.shape.rounded_rect(cr, width, height, 12)
+	-- end
 
 	s.mywibox = awful.wibar({
-		position = 'bottom', screen = s, shape = custom_shape })
+		position = 'bottom',
+		screen = s,
+	})
+	-- position = 'bottom', screen = s, shape = custom_shape })
 	-- Add widgets to the wibox
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
@@ -363,11 +365,11 @@ awful.screen.connect_for_each_screen(function(s)
 			s.empty_seperator(10),
 			wibox.widget.systray(),
 			s.empty_seperator(10),
-			volume_widget {
+			volume_widget({
 				widget_type = 'arc',
 				mixer_cmd = 'st -e pulsemixer',
-				tooltip = true
-			},
+				tooltip = true,
+			}),
 			s.net_wired,
 			mytextclock,
 			-- s.mylayoutbox,
@@ -559,10 +561,15 @@ globalkeys = gears.table.join(
 			c:emit_signal('request::activate', 'key.unminimize', { raise = true })
 		end
 	end, { description = 'restore minimized', group = 'client' }),
-	awful.key({}, "XF86AudioRaiseVolume", function() volume_widget:inc(5) end),
-	awful.key({}, "XF86AudioLowerVolume", function() volume_widget:dec(5) end),
-	awful.key({}, "XF86AudioMute", function() volume_widget:toggle() end)
-
+	awful.key({}, 'XF86AudioRaiseVolume', function()
+		volume_widget:inc(5)
+	end),
+	awful.key({}, 'XF86AudioLowerVolume', function()
+		volume_widget:dec(5)
+	end),
+	awful.key({}, 'XF86AudioMute', function()
+		volume_widget:toggle()
+	end)
 )
 -- }}}
 

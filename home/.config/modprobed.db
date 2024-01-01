@@ -88,6 +88,7 @@ processor_thermal_rapl
 processor_thermal_rfim
 r8169
 rapl
+razermouse
 rfkill
 rndis_host
 rtsx_pci

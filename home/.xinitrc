@@ -1,6 +1,6 @@
 #!/bin/sh
 
-(emacs --daemon && emacsclient -nc) &
+# (emacs --daemon && emacsclient -nc) &
 # xrandr --setprovideroutputsource modesetting NVIDIA-0
 # xrandr --auto
 ~/.scripts/monitor/auto.sh
@@ -10,7 +10,7 @@
 gentoo-pipewire-launcher &
 
 # xset -dpms &
-picom &
+# picom &
 # discord &
 # st -e syncclock &
 # tmux new-session -d -s "gravity" &
