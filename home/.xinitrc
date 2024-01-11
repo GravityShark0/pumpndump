@@ -10,7 +10,7 @@
 gentoo-pipewire-launcher &
 
 # xset -dpms &
-# picom &
+picom &
 # discord &
 # st -e syncclock &
 # tmux new-session -d -s "gravity" &
