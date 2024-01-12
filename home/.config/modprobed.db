@@ -23,7 +23,6 @@ drm_display_helper
 ee1004
 efivarfs
 exfat
-ext4
 fat
 fuse
 garp
