@@ -544,3 +544,8 @@ sys-libs/gdbm berkdb
 # required by xfce-base/tumbler-4.19.0::gentoo[raw]
 # required by tumbler (argument)
 >=media-libs/libopenraw-0.3.7 gtk
+
+# required by sys-fs/dwarfs-0.7.4-r3::guru
+# required by dwarfs (argument)
+>=dev-cpp/glog-0.6.0 gflags
+

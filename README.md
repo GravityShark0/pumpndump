@@ -2,12 +2,19 @@
 ## This is a solution made by me to just "pump n' dump" my dot files and not doing anything after
 > i dont know what pump n dump actually means but it sounds cool
 
+>to send all selected packages in gentoo
+>```bash
+>eix --format '<installedversions:NAMESLOT>' --selected-file > selected-packages.txt
+>```
+
 
 ### How 3 install
 ```bash
 git clone https://github.com/GravityShark0/pumpndump
 cd pumpndump
 ```
+
+
 #### GNU Stow
 ```bash
 # to sync home/ to ~/ (/home/$USER/)

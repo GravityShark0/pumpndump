@@ -63,7 +63,7 @@ media-libs/dav1d 10bit 8bit
 media-video/mpv cli -vulkan egl libplacebo lua nvenc rubberband uchardet iconv lua_single_target_luajit
 media-libs/libplacebo -vulkan opengl # opengl is better with mpv
 net-vpn/openvpn openssl
-net-p2p/qbittorrent qt6 gui
+net-p2p/qbittorrent qt6 gui webui
 net-libs/libtorrent-rasterbar dht
 media-gfx/imagemagick corefonts truetype jpeg opencl pango png webp
 www-client/firefox eme-free jumbo-build openh264 dbus

@@ -40,5 +40,6 @@ www-client/w3m imlib
 
 dev-util/stylua lua54
 www-client/luakit lua_single_target_luajit
-
-dev-cpp/glog -libunwind
+# required by sys-fs/dwarfs-0.7.4-r3::guru
+# required by dwarfs (argument)
+>=dev-cpp/glog-0.6.0 gflags
