@@ -18,8 +18,8 @@ SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/gravity/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/gravity/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/home/gravity\x24
-SETUVAR --export __ABBR_TIPS_KEYS:a__del\x1ea__ls\x1ea__nano\x1ea__rm\x1ea__z\x1ea__zi
-SETUVAR --export __ABBR_TIPS_VALUES:safe\x2drm\x1eeza\x20\x2d\x2dicons\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dsort\x3dname\x1elvim\x1esafe\x2drm\x1e__zoxide_z\x1e__zoxide_zi
+SETUVAR --export __ABBR_TIPS_KEYS:a__del\x1ea__ls\x1ea__nano\x1ea__rm\x1ea__z\x1ea__zi\x1ea__ll\x1ea__lg\x1ea__le\x1ea__lt\x1ea__lc\x1ea__lo\x1ea__lo\x1ea__lt\x1ea__lt\x1ea__lg\x1ea__lg\x1ea__le\x1ea__lg
+SETUVAR --export __ABBR_TIPS_VALUES:safe\x2drm\x1eeza\x20\x2d\x2dicons\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dsort\x3dname\x1elvim\x1esafe\x2drm\x1e__zoxide_z\x1e__zoxide_zi\x1e\x1els\x1els\x1els\x1els\x1els\x1els\x1els\x1els\x1els\x1ell\x1ell\x1e
 SETUVAR __fish_git_prompt_color_branch:brmagenta
 SETUVAR __fish_git_prompt_color_cleanstate:brgreen
 SETUVAR __fish_git_prompt_color_dirtystate:blue
@@ -30,9 +30,7 @@ SETUVAR __fish_git_prompt_hide_untrackedfiles:1
 SETUVAR __fish_git_prompt_show_informative_status:1
 SETUVAR __fish_git_prompt_showupstream:informative
 SETUVAR __fish_initialized:3400
-SETUVAR _hydro_git_20675:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x202\x1b\x5b0m\x29\x20
-SETUVAR _hydro_git_24668:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x201\x1b\x5b0m\x29\x20
-SETUVAR _hydro_git_32068:\x28\x1b\x5b95mmain\x1b\x5b0m\x29\x20
+SETUVAR _hydro_git_24545:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x205\x1b\x5b0m\x29\x20
 SETUVAR _hydro_git_8201:\x28\x1b\x5b95mmain\x1b\x5bm\x0f\x7c\x1b\x5b34m\uf457\x202\x1b\x5bm\x0f\x29\x20
 SETUVAR fish_color_autosuggestion:6c7086
 SETUVAR fish_color_cancel:f38ba8

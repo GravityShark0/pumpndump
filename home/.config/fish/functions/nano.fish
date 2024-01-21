@@ -1,4 +1,4 @@
-function nano --wraps=lvim --description 'alias nano=lvim'
-  lvim $argv
+function nano --wraps=vi
+  vi $argv
         
 end

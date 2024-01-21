@@ -14,7 +14,7 @@ dev-qt/qtgui **
 dev-qt/qtchooser **
 dev-qt/qtdbus **
 dev-qt/qtcore **
-dev-qt/qtbase **
+# dev-qt/qtbase **
 dev-qt/qtdeclarative **
 dev-qt/qtshadertools **
 dev-qt/qtsvg **
