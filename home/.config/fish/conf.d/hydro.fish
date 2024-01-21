@@ -1,4 +1,5 @@
-# By https://github.com/jorgebucaran/hydro
+# Originally from https://github.com/jorgebucaran/hydro
+# Modified by me
 status is-interactive || exit
 
 set --global _hydro_git _hydro_git_$fish_pid
@@ -87,11 +88,11 @@ function _hydro_prompt --on-event fish_prompt
             switch \"\$dirty \$cached\"
                 case \" \" \"0 0\"
                 case \"* 0\"
-                    set info \"\$(set_color $__fish_git_prompt_color_dirtystate)$hydro_symbol_git_dirty\$dirty\$(set_color normal)\"
+                    set info \"|\$(set_color $__fish_git_prompt_color_dirtystate)$hydro_symbol_git_dirty\$dirty\$(set_color normal)\"
                 case \"0 *\"
-                    set info \"\$(set_color $__fish_git_prompt_color_stagedstate)$hydro_symbol_git_cached\$cached\$(set_color normal)\"
+                    set info \"|\$(set_color $__fish_git_prompt_color_stagedstate)$hydro_symbol_git_cached\$cached\$(set_color normal)\"
                 case \*
-                    set info \"\$(set_color $__fish_git_prompt_color_dirtystate)$hydro_symbol_git_dirty\$dirty \$(set_color $__fish_git_prompt_color_stagedstate)$hydro_symbol_git_cached\$cached\$(set_color normal)\"
+                    set info \"|\$(set_color $__fish_git_prompt_color_dirtystate)$hydro_symbol_git_dirty\$dirty \$(set_color $__fish_git_prompt_color_stagedstate)$hydro_symbol_git_cached\$cached\$(set_color normal)\"
             end
         end
 
@@ -109,7 +110,7 @@ function _hydro_prompt --on-event fish_prompt
                     set upstream \" $hydro_symbol_git_ahead\$ahead $hydro_symbol_git_behind\$behind\"
             end
 
-            set --universal $_hydro_git \"(\$branch|\$info\$upstream) \"
+            set --universal $_hydro_git \"(\$branch\$info\$upstream) \"
 
             test \$fetch = true && command git fetch --no-tags 2>/dev/null
         end
@@ -148,6 +149,7 @@ end
 
 set --global hydro_color_pwd $fish_color_cwd
 set --global hydro_color_duration $fish_color_gray
+
 set --query hydro_color_error || set --global hydro_color_error $fish_color_error
 set --query hydro_symbol_prompt || set --global hydro_symbol_prompt ❱
 set --query hydro_symbol_git_dirty || set --global hydro_symbol_git_dirty ' '
