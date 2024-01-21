@@ -4,6 +4,7 @@
 source $__fish_user_data_dir/plugins/plug.fish/conf.d/plugin_load.fish
 
 if status is-interactive
+    fzf_key_bindings        
     zoxide init fish | source
     # alias cd="echo pls use 'z' instead thx :3"
 end

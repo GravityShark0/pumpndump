@@ -4,6 +4,11 @@ SETUVAR --export ABBR_TIPS_PROMPT:\x5cn\U0001f4a1\x20\x5ce\x5b1m\x7b\x7b\x20\x2e
 SETUVAR --export ABBR_TIPS_REGEXES:\x28\x5e\x28\x5cw\x2b\x5cs\x2b\x29\x2b\x28\x2d\x7b1\x2c2\x7d\x29\x5cw\x2b\x29\x28\x5cs\x5cS\x2b\x29\x1e\x28\x5e\x28\x5cs\x3f\x28\x5cw\x2d\x3f\x29\x2b\x29\x7b3\x7d\x29\x2e\x2a\x1e\x28\x5e\x28\x5cs\x3f\x28\x5cw\x2d\x3f\x29\x2b\x29\x7b2\x7d\x29\x2e\x2a\x1e\x28\x5e\x28\x5cs\x3f\x28\x5cw\x2d\x3f\x29\x2b\x29\x7b1\x7d\x29\x2e\x2a
 SETUVAR --export EDITOR:nvim
 SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dcolor\x3dbg\x2b\x3a\x23313244\x2cbg\x3a\x231e1e2e\x2cspinner\x3a\x23f5e0dc\x2chl\x3a\x23f38ba8\x20\x2d\x2dcolor\x3dfg\x3a\x23cdd6f4\x2cheader\x3a\x23f38ba8\x2cinfo\x3a\x23cba6f7\x2cpointer\x3a\x23f5e0dc\x20\x2d\x2dcolor\x3dmarker\x3a\x23f5e0dc\x2cfg\x2b\x3a\x23cdd6f4\x2cprompt\x3a\x23cba6f7\x2chl\x2b\x3a\x23f38ba8
+SETUVAR FZF_DISABLE_KEYBINDINGS:1
+SETUVAR FZF_LEGACY_KEYBINDINGS:1
+SETUVAR FZF_PREVIEW_DIR_CMD:ls
+SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
+SETUVAR FZF_TMUX_HEIGHT:80\x25
 SETUVAR --path GOPATH:/home/gravity/Other/go
 SETUVAR --export PAGER:less\x1e\x2d\x2dRAW\x2dCONTROL\x2dCHARS
 SETUVAR --export SYNCTHING_GROUP:wheel
@@ -13,8 +18,8 @@ SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/gravity/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/gravity/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/home/gravity\x24
-SETUVAR --export __ABBR_TIPS_KEYS:a__del\x1ea__ls\x1ea__nano\x1ea__rm
-SETUVAR --export __ABBR_TIPS_VALUES:safe\x2drm\x1eeza\x20\x2d\x2dicons\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dsort\x3dname\x1elvim\x1esafe\x2drm
+SETUVAR --export __ABBR_TIPS_KEYS:a__del\x1ea__ls\x1ea__nano\x1ea__rm\x1ea__z\x1ea__zi
+SETUVAR --export __ABBR_TIPS_VALUES:safe\x2drm\x1eeza\x20\x2d\x2dicons\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dsort\x3dname\x1elvim\x1esafe\x2drm\x1e__zoxide_z\x1e__zoxide_zi
 SETUVAR __fish_git_prompt_color_branch:brmagenta
 SETUVAR __fish_git_prompt_color_cleanstate:brgreen
 SETUVAR __fish_git_prompt_color_dirtystate:blue
@@ -25,7 +30,10 @@ SETUVAR __fish_git_prompt_hide_untrackedfiles:1
 SETUVAR __fish_git_prompt_show_informative_status:1
 SETUVAR __fish_git_prompt_showupstream:informative
 SETUVAR __fish_initialized:3400
-SETUVAR _hydro_git_22003:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x204\x20\x1b\x5b33m\uf459\x202\x1b\x5b0m\x29\x20
+SETUVAR _hydro_git_20675:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x202\x1b\x5b0m\x29\x20
+SETUVAR _hydro_git_24668:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x201\x1b\x5b0m\x29\x20
+SETUVAR _hydro_git_32068:\x28\x1b\x5b95mmain\x1b\x5b0m\x29\x20
+SETUVAR _hydro_git_8201:\x28\x1b\x5b95mmain\x1b\x5bm\x0f\x7c\x1b\x5b34m\uf457\x202\x1b\x5bm\x0f\x29\x20
 SETUVAR fish_color_autosuggestion:6c7086
 SETUVAR fish_color_cancel:f38ba8
 SETUVAR fish_color_command:89b4fa
