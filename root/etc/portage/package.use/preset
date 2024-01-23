@@ -81,7 +81,7 @@ x11-libs/gtk+ X introspection
 dev-libs/libpcre2 unicode pcre16
 
 # all of qt packages are needed for hyprland and xdg-portal #
-dev-qt/qtbase gui egl -eglfs libinput udev opengl widgets network dbus ssl xml sql sqlite
+dev-qt/qtbase gui egl -eglfs libinput udev -opengl widgets network dbus ssl xml sql sqlite
 dev-qt/qtgui egl eglfs dbus libinput udev png X
 dev-qt/qtnetwork ssl
 dev-qt/qtsql sqlite

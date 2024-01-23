@@ -10,24 +10,18 @@ x11-libs/pixman **
 dev-libs/libinput **
 virtual/rust **
 media-video/mpv **
-dev-qt/qtgui **
-dev-qt/qtchooser **
-dev-qt/qtdbus **
-dev-qt/qtcore **
-# dev-qt/qtbase **
-dev-qt/qtdeclarative **
-dev-qt/qtshadertools **
-dev-qt/qtsvg **
-dev-qt/qttools **
-dev-qt/qt5compat **
-dev-qt/qtimageformats **
-net-p2p/qbittorrent **
 media-libs/libplacebo **
-# net-misc/curl **
+# dev-qt/qtgui **
+# dev-qt/qtchooser **
+# dev-qt/qtdbus **
+# dev-qt/qtcore **
+# dev-qt/qtbase **
+# dev-qt/qtdeclarative **
+# dev-qt/qtshadertools **
+# dev-qt/qtsvg **
+# dev-qt/qttools **
+# dev-qt/qt5compat **
+# dev-qt/qtimageformats **
+# net-p2p/qbittorrent **
 
 */*::steam-overlay
-
-# games-util/vinegar **
-# app-emulation/wine-vanilla -~amd64
-# x11-misc/picom-ftlabs **
-# x11-misc/picom-ftlabs-generalanimation **

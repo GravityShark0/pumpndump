@@ -1,3 +1,3 @@
-function lg --wraps='ll --git --git-ignore'
-  ll --git --git-ignore $argv
+function lg 
+  eza --icons --group-directories-first --sort=name --git --git-ignore $argv
 end
