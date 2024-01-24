@@ -1,3 +1,6 @@
+numbered_command = false
+focus_on_create = true
+
 # This is for configuring how many items to reach before 'scrolling' the view
 scroll_offset = 8
 

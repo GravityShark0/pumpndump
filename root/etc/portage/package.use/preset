@@ -10,7 +10,7 @@ sys-firmware/intel-microcode split-ucode # needed for microcode
 sys-kernel/linux-firmware savedconfig redistributable compress-xz # needed for nvidia-firmware
 #sys-kernel/linux-firmware redistributable compress-xz # needed for nvidia-firmware
 sys-kernel/gentoo-sources symlink experimental # needed to optimize for our cpu
-media-video/pipewire pipewire-alsa sound-server # needed for sound to work
+media-video/pipewire pipewire-alsa sound-server flatpak # needed for sound to work
 # sys-auth/seatd server # for wayland login
 sys-apps/util-linux su pam suid # for root login
 x11-drivers/nvidia-drivers driver modules static-libs # all of them needed

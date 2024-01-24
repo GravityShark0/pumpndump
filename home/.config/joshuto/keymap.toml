@@ -130,7 +130,6 @@ keymap = [
   { keys = ["g", "d"], commands = ["cd ~/Downloads"] },
   { keys = ["g", "e"], commands = ["cd /etc"] },
   { keys = ["g", "h"], commands = ["cd ~/"] },
-  { keys = ["g", "m"], commands = ["cd /run/media/"] },
   { keys = ["?"], commands = ["help"] },
 ]
 

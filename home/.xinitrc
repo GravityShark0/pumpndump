@@ -3,7 +3,10 @@
 # (emacs --daemon && emacsclient -nc) &
 # xrandr --setprovideroutputsource modesetting NVIDIA-0
 # xrandr --auto
+
 ~/.scripts/monitor/auto.sh
+# ~/.scripts/monitor/dual.sh
+# dash ~/.s/single.sh
 # xrandr --output HDMI-0 --auto --output eDP-1-1 --auto
 # dash ~/.screenlayout/single.sh
 

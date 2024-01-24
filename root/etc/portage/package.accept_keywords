@@ -6,7 +6,7 @@ media-libs/libdisplay-info **
 x11-libs/libdrm **
 x11-libs/libxkbcommon **
 x11-libs/pixman **
-# media-video/ffmpeg **
+media-video/ffmpeg **
 dev-libs/libinput **
 virtual/rust **
 media-video/mpv **
