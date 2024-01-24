@@ -2,7 +2,6 @@ app-admin/doas
 app-admin/eclean-kernel
 app-admin/stow
 app-admin/sysklogd
-app-arch/deb2targz
 app-arch/p7zip
 app-arch/unrar
 app-editors/emacs:29
@@ -63,6 +62,7 @@ sys-apps/lm-sensors
 sys-apps/mlocate
 sys-apps/razer-cli
 sys-apps/ripgrep
+sys-auth/rtkit
 sys-boot/grub
 sys-devel/clang:17
 sys-firmware/intel-microcode
@@ -74,7 +74,8 @@ sys-fs/fuse:3
 sys-fs/fuse-overlayfs
 sys-fs/ntfs3g
 sys-fs/xfsprogs
-sys-kernel/gentoo-kernel-bin:6.6.12
+sys-kernel/gentoo-kernel-bin:6.6.13
+sys-kernel/gentoo-kernel-bin:6.7.1
 sys-kernel/linux-firmware
 sys-power/thermald
 sys-process/dcron
