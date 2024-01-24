@@ -1,5 +1,5 @@
-media-video/pipewire **
-media-video/wireplumber **
+# media-video/pipewire **
+# media-video/wireplumber **
 x11-drivers/nvidia-drivers **
 media-libs/mesa ** 
 media-libs/libdisplay-info **
