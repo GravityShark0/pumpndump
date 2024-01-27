@@ -43,7 +43,7 @@ just don't forget the things like doing <prefix> + I in tmux to update packages
 - pulsemixer
 - st
 - tmux
-- volumeicon
+- ~~volumeicon~~
 - ~~dmenu~~ rofi
 - wpa_cli
 
