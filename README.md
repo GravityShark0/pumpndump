@@ -67,3 +67,7 @@ just don't forget the things like doing <prefix> + I in tmux to update packages
 - volumeicon
 - openntpd from gentoo
 - der fonts
+- use grub
+- using my specfic fstab config
+
+> other stuff that you may see like, a4 and tlp.conf are old shit that i never use anymore cause its not mentioned here
