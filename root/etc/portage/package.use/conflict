@@ -549,3 +549,6 @@ sys-libs/gdbm berkdb
 # required by dwarfs (argument)
 >=dev-cpp/glog-0.6.0 gflags
 
+# required by sys-kernel/gentoo-kernel-bin-6.7.2-r1::gentoo[initramfs,-generic-uki]
+# required by virtual/dist-kernel-6.7.2::gentoo
+>=sys-kernel/installkernel-18-r1 dracut
