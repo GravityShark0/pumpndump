@@ -23,5 +23,6 @@ media-libs/libplacebo **
 # dev-qt/qt5compat **
 # dev-qt/qtimageformats **
 # net-p2p/qbittorrent **
+=net-dns/libidn2-2.3.7 -~amd64
 
 */*::steam-overlay

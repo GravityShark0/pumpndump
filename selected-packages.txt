@@ -6,7 +6,6 @@ app-arch/p7zip
 app-arch/unrar
 app-editors/emacs:29
 app-editors/neovim
-app-emulation/wine-staging:9.0
 app-eselect/eselect-repository
 app-misc/neofetch
 app-misc/tmux
@@ -74,8 +73,7 @@ sys-fs/fuse:3
 sys-fs/fuse-overlayfs
 sys-fs/ntfs3g
 sys-fs/xfsprogs
-sys-kernel/gentoo-kernel-bin:6.6.13
-sys-kernel/gentoo-kernel-bin:6.7.1
+sys-kernel/gentoo-kernel-bin:6.7.2
 sys-kernel/linux-firmware
 sys-power/thermald
 sys-process/dcron
