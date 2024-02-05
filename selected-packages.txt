@@ -17,6 +17,8 @@ app-shells/fzf
 app-shells/mksh
 app-shells/zoxide
 dev-java/openjdk-jre-bin:21
+dev-libs/libconfig
+dev-libs/uthash
 dev-util/ccache
 dev-vcs/git
 games-util/gamemode
