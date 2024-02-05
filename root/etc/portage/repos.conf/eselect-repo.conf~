@@ -30,3 +30,7 @@ location = /var/db/repos/agam778-overlay
 sync-type = git
 sync-uri = https://github.com/agam778/agam778-overlay.git
 
+[dlang]
+location = /var/db/repos/dlang
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/dlang.git

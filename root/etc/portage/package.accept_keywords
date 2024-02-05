@@ -1,5 +1,5 @@
-# media-video/pipewire **
-# media-video/wireplumber **
+media-video/pipewire **
+media-video/wireplumber **
 x11-drivers/nvidia-drivers **
 media-libs/mesa ** 
 media-libs/libdisplay-info **
@@ -24,5 +24,7 @@ media-libs/libplacebo **
 # dev-qt/qtimageformats **
 # net-p2p/qbittorrent **
 =net-dns/libidn2-2.3.7 -~amd64
+sys-kernel/gentoo-kernel-bin -~amd64
+virtual/dist-kernel -~amd64
 
 */*::steam-overlay

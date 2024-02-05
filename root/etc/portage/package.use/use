@@ -42,3 +42,5 @@ dev-util/stylua lua54
 www-client/luakit lua_single_target_luajit
 
 dev-cpp/glog -libunwind
+
+sys-fs/android-file-transfer-linux fuse
