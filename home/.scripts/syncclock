@@ -4,10 +4,10 @@
 # doas rfkill unblock wlan && 
 timeout 60 ping -q -c 1 -W 10 google.com >/dev/null 2>&1
 
-if [ $? -eq 124 ]; then
+if [ $? -eq 124 ] && [ $? -eq 2 ]; then
     notify-send "No internet connection."
-	echo "No internet connection."
-	exit 1
+    echo "No internet connection."
+    exit 1
 fi
 
 
@@ -17,12 +17,14 @@ echo "Internet is available, Attempting Clock Sync"
 # doas rc-service chrony stop
 # doas chronyd -q
 #doas rc-service ntp-client restart
+# doas $(ntpd -svd; read \n)
 doas ntpd -svd
 if [ $? -eq 1 ]; then
     notify-send "Sync Failed"
     echo "Sync Failed"
     exit 2
 else
+    read \n
     notify-send "Sync Succesful"
     echo "Sync Succesful"
 fi

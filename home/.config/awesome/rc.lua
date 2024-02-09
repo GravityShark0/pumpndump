@@ -129,7 +129,7 @@ mymainmenu = awful.menu({
 	items = {
 		-- { 'awesome',       myawesomemenu, beautiful.awesome_icon },
 		{ 'open terminal', terminal },
-		{ 'open runner',   launcher },
+		{ 'open runner', launcher },
 		{ 'open launcher', alt_launcher },
 	},
 })
@@ -383,8 +383,8 @@ root.buttons(gears.table.join(
 	awful.button({}, 3, function()
 		mymainmenu:toggle()
 	end)
--- awful.button({}, 4, awful.tag.viewnext),
--- awful.button({}, 5, awful.tag.viewprev)
+	-- awful.button({}, 4, awful.tag.viewnext),
+	-- awful.button({}, 5, awful.tag.viewprev)
 ))
 -- }}}
 
@@ -409,7 +409,7 @@ end
 
 globalkeys = gears.table.join(
 
--- Scratchpad
+	-- Scratchpad
 	awful.key({ modkey }, '`', function()
 		local tag = awful.screen.focused().tags[6]
 		local selected = tag.selected
@@ -491,8 +491,7 @@ globalkeys = gears.table.join(
 	end, { description = 'focus the previous screen', group = 'screen' }),
 
 	-- Layout manipulation
-	awful.key({ modkey }, 'u', awful.client.urgent.jumpto,
-		{ description = 'jump to urgent client', group = 'client' }),
+	awful.key({ modkey }, 'u', awful.client.urgent.jumpto, { description = 'jump to urgent client', group = 'client' }),
 	-- awful.key({ modkey, }, 'l', function() awful.tag.incmwfact(0.05) end,
 	--     { description = 'increase master width factor', group = 'layout' }),
 	-- awful.key({ modkey, }, 'h', function() awful.tag.incmwfact(-0.05) end,
@@ -702,8 +701,7 @@ clientkeys = gears.table.join(
 	awful.key({ modkey }, 'c', function(c)
 		c:kill()
 	end, { description = 'close', group = 'client' }),
-	awful.key({ modkey }, 'space', awful.client.floating.toggle,
-		{ description = 'toggle floating', group = 'client' }),
+	awful.key({ modkey }, 'space', awful.client.floating.toggle, { description = 'toggle floating', group = 'client' }),
 	awful.key({ modkey }, 'Return', function(c)
 		c:swap(awful.client.getmaster())
 	end, { description = 'move to master', group = 'client' }),
@@ -722,24 +720,24 @@ clientkeys = gears.table.join(
 		-- minimized, since minimized clients can't have the focus.
 		c.minimized = true
 	end, { description = 'minimize', group = 'client' })
--- awful.key({ modkey, }, 'm',
---     function(c)
---         c.maximized = not c.maximized
---         c:raise()
---     end,
---     { description = '(un)maximize', group = 'client' }),
--- awful.key({ modkey, 'Control' }, 'm',
---     function(c)
---         c.maximized_vertical = not c.maximized_vertical
---         c:raise()
---     end,
---     { description = '(un)maximize vertically', group = 'client' }),
--- awful.key({ modkey, 'Shift' }, 'm',
---     function(c)
---         c.maximized_horizontal = not c.maximized_horizontal
---         c:raise()
---     end,
---     { description = '(un)maximize horizontally', group = 'client' })
+	-- awful.key({ modkey, }, 'm',
+	--     function(c)
+	--         c.maximized = not c.maximized
+	--         c:raise()
+	--     end,
+	--     { description = '(un)maximize', group = 'client' }),
+	-- awful.key({ modkey, 'Control' }, 'm',
+	--     function(c)
+	--         c.maximized_vertical = not c.maximized_vertical
+	--         c:raise()
+	--     end,
+	--     { description = '(un)maximize vertically', group = 'client' }),
+	-- awful.key({ modkey, 'Shift' }, 'm',
+	--     function(c)
+	--         c.maximized_horizontal = not c.maximized_horizontal
+	--         c:raise()
+	--     end,
+	--     { description = '(un)maximize horizontally', group = 'client' })
 )
 -- }}}
 
@@ -895,6 +893,7 @@ client.connect_signal('manage', function(c)
 		-- Prevent clients from being unreachable after screen count changes.
 		awful.placement.no_offscreen(c)
 	end
+	c:tags({ c.first_tag })
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
