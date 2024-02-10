@@ -1,4 +1,4 @@
-app-admin/doas persist
+app-admin/doas persist -pam
 
 # latest lua is needed
 x11-wm/awesome lua_single_target_lua5-3

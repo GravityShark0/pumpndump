@@ -65,12 +65,8 @@ sys-fs/android-file-transfer-linux
 sys-fs/btrfs-progs
 sys-fs/dosfstools
 sys-fs/dwarfs-bin
-sys-fs/fuse:0
-sys-fs/fuse:3
-sys-fs/fuse-overlayfs
 sys-fs/ntfs3g
 sys-fs/xfsprogs
-sys-kernel/gentoo-kernel-bin:6.7.3
 sys-kernel/linux-firmware
 sys-power/thermald
 sys-process/dcron

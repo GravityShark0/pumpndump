@@ -23,8 +23,10 @@ media-libs/libplacebo **
 # dev-qt/qt5compat **
 # dev-qt/qtimageformats **
 # net-p2p/qbittorrent **
-=net-dns/libidn2-2.3.7 -~amd64
-sys-kernel/gentoo-kernel-bin -~amd64
-virtual/dist-kernel -~amd64
+# =net-dns/libidn2-2.3.7 -~amd64
+ sys-kernel/gentoo-kernel-bin -~amd64
+ virtual/dist-kernel -~amd64
+# dev-libs/expat -~amd64
+# dev-lang/python -~amd64
 
 */*::steam-overlay
