@@ -4,7 +4,6 @@ app-admin/stow
 app-admin/sysklogd
 app-arch/p7zip
 app-arch/unrar
-app-editors/emacs:29
 app-editors/neovim
 app-eselect/eselect-repository
 app-misc/neofetch
@@ -71,12 +70,14 @@ sys-kernel/linux-firmware
 sys-power/thermald
 sys-process/dcron
 sys-process/htop
+virtual/editor
 virtual/wine
 www-client/firefox:rapid
 www-client/firefox-bin:rapid
 www-client/w3m
 x11-apps/mesa-progs
 x11-apps/xinit
+x11-apps/xinput
 x11-apps/xrandr
 x11-apps/xrdb
 x11-base/xorg-fonts
@@ -96,3 +97,7 @@ xfce-base/xfce4-settings
 xfce-extra/thunar-archive-plugin
 xfce-extra/thunar-media-tags-plugin
 xfce-extra/thunar-vcs-plugin
+[1] "guru" /var/db/repos/guru
+[2] "steam-overlay" /var/db/repos/steam-overlay
+
+Found 99 matches
