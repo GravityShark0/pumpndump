@@ -1,5 +1,6 @@
 app-admin/doas
 app-admin/eclean-kernel
+app-admin/pass
 app-admin/stow
 app-admin/sysklogd
 app-arch/p7zip
@@ -18,6 +19,7 @@ app-shells/zoxide
 dev-java/openjdk-jre-bin:21
 dev-libs/libconfig
 dev-libs/uthash
+dev-util/android-tools
 dev-util/ccache
 dev-vcs/git
 games-util/gamemode
@@ -41,6 +43,7 @@ media-video/obs-studio
 media-video/pipewire
 media-video/wireplumber
 net-libs/nodejs
+net-misc/aria2
 net-misc/curl
 net-misc/openntpd
 net-misc/yt-dlp
@@ -100,4 +103,4 @@ xfce-extra/thunar-vcs-plugin
 [1] "guru" /var/db/repos/guru
 [2] "steam-overlay" /var/db/repos/steam-overlay
 
-Found 99 matches
+Found 102 matches
