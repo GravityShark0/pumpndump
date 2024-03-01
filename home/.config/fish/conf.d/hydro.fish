@@ -2,7 +2,7 @@
 # Modified by me
 status is-interactive || exit
 
-set --global _hydro_git _hydro_git_$fish_pid
+set _hydro_git _hydro_git_$fish_pid
 
 function $_hydro_git --on-variable $_hydro_git
     commandline --function repaint
