@@ -26,8 +26,7 @@ SETUVAR __fish_git_prompt_hide_untrackedfiles:1
 SETUVAR __fish_git_prompt_show_informative_status:1
 SETUVAR __fish_git_prompt_showupstream:informative
 SETUVAR __fish_initialized:3400
-SETUVAR _hydro_git_24536:\x28\x1b\x5b95mmain\x1b\x5bm\x0f\x7c\x1b\x5b34m\uf457\x203\x1b\x5bm\x0f\x29\x20
-SETUVAR _hydro_git_2809:\x28\x1b\x5b95mmaster\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x201\x1b\x5b0m\x29\x20
+SETUVAR _hydro_git_18487:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x204\x1b\x5b0m\x29\x20
 SETUVAR fish_color_autosuggestion:6c7086
 SETUVAR fish_color_cancel:f38ba8
 SETUVAR fish_color_command:89b4fa

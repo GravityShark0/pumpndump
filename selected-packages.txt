@@ -73,7 +73,6 @@ sys-kernel/linux-firmware
 sys-power/thermald
 sys-process/dcron
 sys-process/htop
-virtual/editor
 virtual/wine
 www-client/firefox:rapid
 www-client/firefox-bin:rapid
@@ -100,7 +99,3 @@ xfce-base/xfce4-settings
 xfce-extra/thunar-archive-plugin
 xfce-extra/thunar-media-tags-plugin
 xfce-extra/thunar-vcs-plugin
-[1] "guru" /var/db/repos/guru
-[2] "steam-overlay" /var/db/repos/steam-overlay
-
-Found 102 matches

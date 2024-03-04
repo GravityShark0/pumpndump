@@ -24,7 +24,7 @@ theme.fg_medium = '#c9cbff'
 theme.fg_light = '#646583'
 theme.fg_normal = theme.fg_medium
 theme.fg_focus = theme.fg_cosmic
--- theme.fg_urgent = '#fff8e7'
+theme.fg_urgent = '#ff0000'
 theme.fg_minimize = theme.fg_medium
 
 theme.useless_gap = dpi(0)
