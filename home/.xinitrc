@@ -13,7 +13,7 @@
 gentoo-pipewire-launcher &
 
 # xset -dpms &
-picom &
+picom --animations -b
 # discord &
 # st -e syncclock &
 # tmux new-session -d -s "gravity" &
