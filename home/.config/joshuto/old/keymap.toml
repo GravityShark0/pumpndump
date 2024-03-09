@@ -12,8 +12,7 @@ keymap = [
   { keys = ["Q"], commands = ["quit --output-current-directory"] },
 
   { keys = ["R"], commands = ["reload_dirlist"] },
-  { keys = ["v", "h"], commands = ["toggle_hidden"] },
-  { keys = ["z"], commands = [":z "] },
+  { keys = ["z", "h"], commands = ["toggle_hidden"] },
   { keys = ["ctrl+h"], commands = ["toggle_hidden"] },
   { keys = ["\t"], commands = ["tab_switch 1"] },
   { keys = ["backtab"], commands = ["tab_switch -1"] },
@@ -87,16 +86,13 @@ keymap = [
   { keys = ["A"], commands = ["rename_prepend"] },
 
   { keys = ["f", "t"], commands = [":touch "] },
-  { keys = ["f", "r"], commands = ["bulk_rename"] },
-
-  { keys = ["b", "b"], commands = ["cd_bookmark"] },
-  { keys = ["b", "a"], commands = ["add_bookmark"] },
 
   { keys = [" "], commands = ["select --toggle=true"] },
   { keys = ["t"], commands = ["select --all=true --toggle=true"] },
   { keys = ["V"], commands = ["toggle_visual"] },
 
   { keys = ["w"], commands = ["show_tasks --exit-key=w"] },
+  { keys = ["b", "b"], commands = ["bulk_rename"] },
   { keys = ["="], commands = ["set_mode"] },
 
   { keys = [":"], commands = [":"] },
@@ -129,6 +125,11 @@ keymap = [
   { keys = ["m", "U"], commands = ["linemode user | group"] },
   { keys = ["m", "p"], commands = ["linemode perm"] },
 
+  { keys = ["g", "r"], commands = ["cd /"] },
+  { keys = ["g", "c"], commands = ["cd ~/.config"] },
+  { keys = ["g", "d"], commands = ["cd ~/Downloads"] },
+  { keys = ["g", "e"], commands = ["cd /etc"] },
+  { keys = ["g", "h"], commands = ["cd ~/"] },
   { keys = ["?"], commands = ["help"] },
 ]
 

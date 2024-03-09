@@ -1,0 +1,9 @@
+bookmark = [
+  { key = "r", path = "/" },
+  { key = "e", path = "/etc" },
+  { key = "m", path = "/media"},
+  { key = "h", path = "~/" },
+  { key = "o", path = "~/Other" },
+  { key = "d", path = "~/Desktop" },
+  { key = "s", path = "~/Pictures/Screenshots" },
+]

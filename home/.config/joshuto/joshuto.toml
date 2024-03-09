@@ -1,128 +1,55 @@
-numbered_command = false
+numbered_command = true
+
+mouse_support = true
 focus_on_create = true
-
-# This is for configuring how many items to reach before 'scrolling' the view
-scroll_offset = 8
-
-# If joshuto does not know how to open the file, it can resort to opening it via xdg settings
+use_trash = true
+watch_files = true
 xdg_open = true
-
-# Fork xdg_open so you can continue using joshuto with application open
 xdg_open_fork = true
 
-# Use system trash can instead of permanently removing files
-use_trash = true
+custom_commands = []
 
-# Watch for filesystem changes and update directory listings accordingly
-watch_files = true
-
-[preview]
-# The maximum file size to show a preview for
-max_preview_size = 2097152 # 2MB
-
-# This is the script that will be ran whenever a preview needs to be generated
-preview_script = "~/.config/joshuto/preview_file.sh"
-
-preview_shown_hook_script = "~/.config/joshuto/on_preview_shown.sh"
-
-# This script is ran whenever the preview selection changes.
-# Usually used to cleanup the old preview.
-preview_removed_hook_script = "~/.config/joshuto/on_preview_removed.sh"
-
-# Configurations related to the display
 [display]
-# Different view layouts
-# Options include
-# - default
-# - hsplit
+# default, hsplit
 mode = "default"
 
-# Collapse the preview window when there is no preview available
-collapse_preview = true
-
-# Ratios for parent view, current view and preview. You can specify 0 for
-# parent view or omit it (So there are only 2 nums) and it won't be displayed
-column_ratio = [1, 3, 4]
-
-# Show borders around different views
-show_borders = true
-
-# Show hidden files
+automatically_count_files = false
+collapse_preview = false
+# ratios for parent view (optional), current view and preview
+column_ratio = [0, 4, 2]
+scroll_offset = 8
+show_borders = false
 show_hidden = false
-
-# Show file icons (requires a supporting font)
 show_icons = true
-
-# Shorten /home/$USER to ~
-tilde_in_titlebar = true
-
-# Options include
-# - none
-# - absolute
-# - relative
+# none, absolute, relative
 line_number_style = "relative"
 
-# Options include
-# - size
-# - mtime
-# - user
-# - group
-# - perm
-# - none (can't be combined with other options)
-# - all (can't be combined with other options)
+# size, mtime, user, gourp, perm. can be combined with |.
+# `none` to disable, `all` to enable all
+# all and none can't be combined with other options
 linemode = "size"
 
-# Configurations related to file sorting
 [display.sort]
-# Options include
-# - lexical  (10.txt comes before 2.txt)
-# - natural  (2.txt comes before 10.txt)
-# - mtime
-# - size
-# - ext
+# lexical, mtime, natural, size, ext
 sort_method = "natural"
-
-# case sensitive sorting
 case_sensitive = false
-
-# show directories first
 directories_first = true
-
-# sort in reverse
 reverse = false
 
-# Configurations related to searching and selecting files
+[preview]
+max_preview_size = 2097152                           # 2MB
+preview_script = "~/.config/joshuto/preview_file.sh" # make sure it's marked as executable
+
 [search]
-# Different case sensitivities for operations using substring matching
-# - insensitive
-# - sensitive
-# - smart: when the pattern contains at least one uppercase letter, joshuto can search
-#   files case-sensitively, otherwise it will ignore the difference between lowercase
-#   and uppercase
-# Note that to apply changes after changing configurations at runtime, re-executing
-# the search command is required.
-# For substring matching
+# insensitive, sensitive, smart
 string_case_sensitivity = "insensitive"
-# For glob matching
+# see above
 glob_case_sensitivity = "sensitive"
-# For regex matching
+# see above
 regex_case_sensitivity = "sensitive"
-# For matching with fzf
+# see above
 fzf_case_sensitivity = "insensitive"
 
-# Optional list of command aliases (empty by default)
-[cmd_aliases]
-# q = "quit"
-# ...
-
 [tab]
-
-# Options include
-# - num
-# - dir
-# - all
-# also can be changed with the 'tab_bar_mode' command
-display_mode = "all"
-
 # inherit, home, root
 home_page = "home"
