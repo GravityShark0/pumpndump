@@ -27,7 +27,8 @@ SETUVAR __fish_git_prompt_show_informative_status:1
 SETUVAR __fish_git_prompt_showupstream:informative
 SETUVAR __fish_initialized:3400
 SETUVAR _hydro_git_6180:\x28\x1b\x5b95mmain\x1b\x5b0m\x29\x20
-SETUVAR _hydro_git_7647:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x2010\x1b\x5b0m\x29\x20
+SETUVAR _hydro_git_6342:\x28\x1b\x5b95mmain\x1b\x5b0m\x29\x20
+SETUVAR _hydro_git_7328:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x202\x1b\x5b0m\x29\x20
 SETUVAR fish_color_autosuggestion:6c7086
 SETUVAR fish_color_cancel:f38ba8
 SETUVAR fish_color_command:89b4fa
