@@ -2,15 +2,23 @@
 
 # background="~/Media/Wallpapers/minimalistic/minimalistic/unicat.png"
 # background="~/Pictures/Wallpapers/purp1.jpg"
-random=$(fish --command "random 0 310")
-if [ "$random" -ge 100 ]; then prezero='0'; else prezero='00'; fi
-background="$HOME/Media/Wallpapers/dt/${prezero}${random}.jpg"
+random=$(fish --command "random 0 320")
+# random="312"
+# if [ "$random" -lt 9 ]; then
+#         prezero='000'
+# elif [ "$random" -lt 99 ]; then
+#         prezero='00'
+# elif [ "$random" -lt 999 ]; then
+#         prezero='0'
+# else
+#         prezero=''
+# fi
 
-# echo $prezero $random
-# echo "balls ${random} ${background}"
+# background="$HOME/Media/Wallpapers/dt/${prezero}${random}"
+background="$HOME/Media/Wallpapers/dt/${random}"
+echo "$random" >> .recent_wallpapers.txt
 
-# dash ~/.bin/clockskewcheck &
-feh --bg-scale $background &
+feh --bg-scale "$background".* &
 # nitrogen --restore &
 # xmodmap ~/.keymaps/tarmak_2b_dh.xmodmap &
 $(xrdb ~/.config/suckless/catppuccin/mocha && kill -USR1 $(pidof st)) &

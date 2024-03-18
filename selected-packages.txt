@@ -62,6 +62,7 @@ sys-apps/ripgrep
 sys-auth/rtkit
 sys-boot/grub
 sys-devel/clang:17
+sys-devel/clang:18
 sys-firmware/intel-microcode
 sys-fs/android-file-transfer-linux
 sys-fs/btrfs-progs

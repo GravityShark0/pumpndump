@@ -111,6 +111,7 @@ snd_intel_dspcfg
 snd_intel_sdw_acpi
 snd_pcm
 snd_pcm_dmaengine
+snd_rawmidi
 snd_seq
 snd_seq_device
 snd_seq_dummy
@@ -118,6 +119,9 @@ snd_soc_avs
 snd_soc_core
 snd_soc_hda_codec
 snd_timer
+snd_ump
+snd_usb_audio
+snd_usbmidi_lib
 soundcore
 sparse_keymap
 stp
