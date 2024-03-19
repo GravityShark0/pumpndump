@@ -16,6 +16,7 @@ app-shells/fish
 app-shells/fzf
 app-shells/mksh
 app-shells/zoxide
+app-text/pdfarranger
 dev-java/openjdk-jre-bin:21
 dev-libs/libconfig
 dev-libs/uthash
@@ -54,7 +55,6 @@ net-wireless/iw
 net-wireless/wpa_supplicant
 sys-apps/eza
 sys-apps/fd
-sys-apps/flatpak
 sys-apps/lm-sensors
 sys-apps/mlocate
 sys-apps/razer-cli
