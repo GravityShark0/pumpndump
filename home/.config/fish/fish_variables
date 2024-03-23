@@ -26,10 +26,12 @@ SETUVAR __fish_git_prompt_hide_untrackedfiles:1
 SETUVAR __fish_git_prompt_show_informative_status:1
 SETUVAR __fish_git_prompt_showupstream:informative
 SETUVAR __fish_initialized:3400
+SETUVAR _hydro_git_18736:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x201\x1b\x5b0m\x29\x20
+SETUVAR _hydro_git_19169:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x201\x1b\x5b0m\x29\x20
 SETUVAR _hydro_git_20374:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x201\x1b\x5b0m\x29\x20
-SETUVAR _hydro_git_22294:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x202\x1b\x5b0m\x29\x20
 SETUVAR _hydro_git_2837:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x201\x1b\x5b0m\x29\x20
 SETUVAR _hydro_git_6644:\x28\x1b\x5b95mmain\x1b\x5b0m\x7c\x1b\x5b34m\uf457\x201\x1b\x5b0m\x29\x20
+SETUVAR _hydro_git_744:\x28\x1b\x5b95mmain\x1b\x5bm\x0f\x7c\x1b\x5b34m\uf457\x204\x1b\x5bm\x0f\x29\x20
 SETUVAR fish_color_autosuggestion:6c7086
 SETUVAR fish_color_cancel:f38ba8
 SETUVAR fish_color_command:89b4fa
@@ -71,4 +73,4 @@ SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR fish_user_paths:/home/gravity/\x2etmux/plugins/t\x2dsmart\x2dtmux\x2dsession\x2dmanager/bin
-SETUVAR plugins:https\x3a//github\x2ecom/kidonng/plug\x2efish\x1ehttps\x3a//github\x2ecom/franciscolourenco/done\x1ehttps\x3a//github\x2ecom/fishingline/safe\x2drm\x1ehttps\x3a//github\x2ecom/nickeb96/puffer\x2dfish\x1ehttps\x3a//github\x2ecom/paysonwallach/fish\x2dyou\x2dshould\x2duse
+SETUVAR plugins:https\x3a//github\x2ecom/kidonng/plug\x2efish\x1ehttps\x3a//github\x2ecom/franciscolourenco/done\x1ehttps\x3a//github\x2ecom/fishingline/safe\x2drm\x1ehttps\x3a//github\x2ecom/nickeb96/puffer\x2dfish\x1ehttps\x3a//github\x2ecom/paysonwallach/fish\x2dyou\x2dshould\x2duse\x1ehttps\x3a//github\x2ecom/edc/bass

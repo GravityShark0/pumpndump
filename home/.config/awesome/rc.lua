@@ -834,6 +834,7 @@ awful.rules.rules = {
 	},
 
 	-- Floating clients.
+	--[[
 	{
 		rule_any = {
 			instance = {
@@ -867,6 +868,12 @@ awful.rules.rules = {
 				'pop-up', -- e.g. Google Chrome's (detached) Developer Tools.
 			},
 		},
+		properties = { floating = true },
+	},
+	]]
+	--
+	{
+		rule_any = { class = { 'update' } },
 		properties = { floating = true },
 	},
 
@@ -926,7 +933,10 @@ end)
 -- All floating are on top
 client.connect_signal('property::floating', function(c)
 	if c.floating then
+		-- local align = (awful.placement.centered + awful.placement.no_overlap)
+		local align = awful.placement.centered
 		c.ontop = true
+		align(c)
 	else
 		c.ontop = false
 	end
