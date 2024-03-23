@@ -231,7 +231,7 @@ awful.screen.connect_for_each_screen(function(s)
 	-- set_wallpaper(s)
 
 	-- Each screen has its own tag table.
-	awful.tag({ '1', '2', '3', '4', '5', SCRATCH_ICON }, s, awful.layout.layouts[1])
+	awful.tag({ '1', '2', '3', '4', '5', '6', '7', SCRATCH_ICON }, s, awful.layout.layouts[1])
 
 	-- awful.tag.add('6', { s, layout = awful.layout.suit.floating })
 
@@ -411,7 +411,7 @@ globalkeys = gears.table.join(
 
 	-- Scratchpad
 	awful.key({ modkey }, '`', function()
-		local tag = awful.screen.focused().tags[6]
+		local tag = awful.screen.focused().tags[8]
 		local selected = tag.selected
 		local clients = tag:clients()
 
@@ -628,11 +628,11 @@ end
 clientkeys = gears.table.join(
 	awful.key({ modkey, 'Shift' }, '`', function(c)
 		if client.focus then
-			local tag = client.focus.screen.tags[6]
+			local tag = client.focus.screen.tags[8]
 			if tag then
 				local screen = awful.screen.focused()
-				local scratch = screen.tags[6]
-				if client.focus.first_tag.index == 6 then
+				local scratch = screen.tags[8]
+				if client.focus.first_tag.index == 8 then
 					client.focus:move_to_tag(awful.screen.focused().selected_tag)
 					c.floating = false
 
@@ -770,7 +770,7 @@ for i = 1, 9 do
 			local screen = awful.screen.focused()
 			local tag = screen.tags[i]
 
-			local scratch = screen.tags[6]
+			local scratch = screen.tags[8]
 			if tag then
 				if scratch.selected then
 					tag:view_only()
@@ -852,6 +852,8 @@ awful.rules.rules = {
 				'Wpa_gui',
 				'veromix',
 				'xtightvncviewer',
+
+				'update',
 			},
 
 			-- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -869,13 +871,33 @@ awful.rules.rules = {
 	},
 
 	{
+		rule_any = { class = { 'firefox' } },
+		properties = { tag = '1' },
+	},
+
+	-- {
+	-- 	rule_any = {},
+	-- 	properties = { tag = '4' },
+	-- },
+
+	{
 		rule_any = { class = { 'discord', 'armcord', 'ArmCord' } },
 		properties = { tag = '5' },
 	},
 
+	{
+		rule_any = { class = { 'anki', 'Anki' }, icon_name = { 'GIMP Startup', 'GNU Image Manipulation Program' } },
+		properties = { tag = '6' },
+	},
+
+	{
+		rule_any = { class = { 'obs' } },
+		properties = { tag = '7' },
+	},
+
 	-- Put emacs in scratch
 	{
-		rule_any = { class = { 'emacs', 'Emacs', 'xclipboard', 'XClipboard' } },
+		rule_any = { class = { 'emacs', 'Emacs', 'xclipboard', 'XClipboard', 'scratchy' } },
 		properties = { tag = SCRATCH_ICON, floating = true },
 	},
 }
@@ -917,7 +939,7 @@ end)
 
 -- Focus Color
 client.connect_signal('focus', function(c)
-	if c.first_tag and c.first_tag.index == 6 then
+	if c.first_tag and c.first_tag.index == 8 then
 		c.border_color = beautiful.border_scratch
 	else
 		c.border_color = beautiful.border_focus
