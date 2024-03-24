@@ -55,7 +55,9 @@ net-wireless/iw
 net-wireless/wpa_supplicant
 sys-apps/eza
 sys-apps/fd
+sys-apps/flatpak
 sys-apps/lm-sensors
+sys-apps/merge-usr
 sys-apps/mlocate
 sys-apps/razer-cli
 sys-apps/ripgrep
@@ -100,3 +102,7 @@ xfce-base/xfce4-settings
 xfce-extra/thunar-archive-plugin
 xfce-extra/thunar-media-tags-plugin
 xfce-extra/thunar-vcs-plugin
+[1] "guru" /var/db/repos/guru
+[2] "steam-overlay" /var/db/repos/steam-overlay
+
+Found 103 matches

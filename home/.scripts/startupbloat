@@ -4,6 +4,7 @@
 st -g 140x40 -c scratchy -e dash -c "echo ' oaa' | nvim ~/Notes/index.org -s -;" &
 
 firefox &
-flatpak run org.gimp.GIMP &
+# flatpak run org.gimp.GIMP &
+gimp &
 flatpak run net.ankiweb.Anki &
 flatpak run xyz.armcord.ArmCord &
