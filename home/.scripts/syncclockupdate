@@ -2,4 +2,4 @@ trap 'echo "Starting update..."' INT
 
 syncclock
 
-tmux new-session -s Update '(yes | doas emerge --sync ) && ( yes | doas emerge -avuDN --with-bdeps=y @world ) && ( yes | doas emerge --depclean ) && ( yes | flatpak update )'
+tmux new-session -s Update 'doas emerge --sync && doas emerge -avuDN --with-bdeps=y @world && doas emerge --depclean && flatpak update'

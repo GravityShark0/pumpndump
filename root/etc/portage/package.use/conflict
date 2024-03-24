@@ -552,3 +552,13 @@ sys-libs/gdbm berkdb
 # required by sys-kernel/gentoo-kernel-bin-6.7.2-r1::gentoo[initramfs,-generic-uki]
 # required by virtual/dist-kernel-6.7.2::gentoo
 >=sys-kernel/installkernel-18-r1 dracut
+
+# required by dev-libs/elfutils-0.191::gentoo[lzma]
+# required by virtual/libelf-3-r1::gentoo
+# required by dev-libs/glib-2.78.4-r1::gentoo
+# required by dev-qt/qtbase-6.6.2::gentoo
+# required by dev-qt/qttools-6.6.2::gentoo[qdbus]
+# required by net-p2p/qbittorrent-4.6.3::gentoo[qt6]
+# required by @selected
+# required by @world (argument)
+>=app-arch/xz-utils-5.6.1 abi_x86_32
