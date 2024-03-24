@@ -2,8 +2,7 @@
 
 # background="~/Media/Wallpapers/minimalistic/minimalistic/unicat.png"
 # background="~/Pictures/Wallpapers/purp1.jpg"
-random=$(fish --command "random 0 320")
-# random="312"
+random=$(fish --command "random 0 321")
 # if [ "$random" -lt 9 ]; then
 #         prezero='000'
 # elif [ "$random" -lt 99 ]; then
