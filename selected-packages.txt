@@ -35,6 +35,7 @@ media-fonts/symbola
 media-fonts/ubuntu-font-family
 media-fonts/ubuntumono-nerdfont
 media-gfx/feh
+media-gfx/gimp
 media-gfx/maim
 media-libs/nvidia-vaapi-driver
 media-libs/vulkan-loader
@@ -105,4 +106,4 @@ xfce-extra/thunar-vcs-plugin
 [1] "guru" /var/db/repos/guru
 [2] "steam-overlay" /var/db/repos/steam-overlay
 
-Found 103 matches
+Found 104 matches

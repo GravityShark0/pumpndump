@@ -1,3 +1,11 @@
 [[bookmark]]
+key = "r"
+path = "/home/gravity/Notes/assets"
+
+[[bookmark]]
 key = "m"
 path = "/mnt/media"
+
+[[bookmark]]
+key = "escape"
+path = "/home"
