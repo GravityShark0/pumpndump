@@ -31,7 +31,8 @@ sync-type = git
 sync-uri = https://github.com/agam778/agam778-overlay.git
 
 
-[loatchi]
-location = /var/db/repos/loatchi
+
+[librewolf]
+location = /var/db/repos/librewolf
 sync-type = git
-sync-uri = https://github.com/gentoo-mirror/loatchi.git
+sync-uri = https://codeberg.org/librewolf/gentoo.git

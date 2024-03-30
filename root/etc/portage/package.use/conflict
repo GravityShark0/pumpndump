@@ -566,3 +566,7 @@ sys-libs/gdbm berkdb
 # required by media-gfx/gimp-2.10.36-r2::gentoo
 # required by gimp (argument)
 >=media-libs/gegl-0.4.48 cairo
+
+# required by www-client/librewolf-124.0.1_p1::librewolf[X,pgo]
+# required by www-client/librewolf (argument)
+>=x11-base/xorg-server-21.1.11 xvfb

@@ -878,16 +878,6 @@ awful.rules.rules = {
 	},
 
 	{
-		rule_any = { class = { 'firefox' } },
-		properties = { tag = '1' },
-	},
-
-	-- {
-	-- 	rule_any = {},
-	-- 	properties = { tag = '4' },
-	-- },
-
-	{
 		rule_any = { class = { 'discord', 'armcord', 'ArmCord' } },
 		properties = { tag = '5' },
 	},
@@ -896,11 +886,6 @@ awful.rules.rules = {
 		rule_any = { class = { 'anki', 'Anki' }, icon_name = { 'GIMP Startup', 'GNU Image Manipulation Program' } },
 		except_any = { name = { 'Choose Note Type', 'Choose Deck', 'Add' } },
 		properties = { tag = '6' },
-	},
-
-	{
-		rule_any = { class = { 'obs' } },
-		properties = { tag = '7' },
 	},
 
 	-- Put emacs in scratch

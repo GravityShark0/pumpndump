@@ -33,6 +33,7 @@ just don't forget the things like doing <prefix> + I in tmux to update packages
 - doom emacs
 - eza
 - firefox
+    > btw you have to install arkenfox on your own
 - fish
     - mksh so fish can also get env variables
     - zoxide
@@ -69,5 +70,8 @@ just don't forget the things like doing <prefix> + I in tmux to update packages
 - der fonts
 - use grub
 - using my specfic fstab config
+
+
+
 
 > other stuff that you may see like, a4 and tlp.conf are old shit that i never use anymore cause its not mentioned here

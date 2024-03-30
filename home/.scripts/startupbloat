@@ -1,5 +1,5 @@
 #!/bin/sh
-(st -c update -e timeout 10 ~/.scripts/syncclockupdate) &
+(st -c update -e timeout 10 ~/.scripts/syncclockupdate) && flatpak run xyz.armcord.ArmCord &
 
 st -g 140x40 -c scratchy -e dash -c "echo ' oaa' | nvim ~/Notes/index.org -s -;" &
 
@@ -7,4 +7,3 @@ firefox &
 # flatpak run org.gimp.GIMP &
 gimp &
 flatpak run net.ankiweb.Anki &
-flatpak run xyz.armcord.ArmCord &
