@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Courtesy of shit gippity
+
+# Check if correct number of arguments are passed
+if [ "$#" -ne 3 ]; then
+    echo "Usage: $0 input_video.mp4 target_size_in_MB output_video.mp4"
+    exit 1
+fi
+
+input_file="$1"
+target_size_MB="$2"
+output_file="$3"
+
+# Calculate duration of the input video
+duration=$(ffprobe -i "$input_file" -show_entries format=duration -v quiet -of csv="p=0")
+
+# Calculate target bitrate
+target_bitrate=$(echo "scale=0; ($target_size_MB * 8 * 1024 * 1024) / $duration" | bc)
+
+# Compress video using ffmpeg
+ffmpeg -i "$input_file" -b:v "$target_bitrate" -minrate "$target_bitrate" -maxrate "$target_bitrate" -bufsize "$((target_bitrate/2))" "$output_file"

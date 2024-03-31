@@ -17,6 +17,7 @@ Xft.rgba:              rgb
 ! i like this font now :)
 ! st.fontalt0:            FiraCode Nerd Font:pixelsize=16:style=Retina
 ! st.font:        Fira Mono for Powerline:pixelsize=16:style=Medium
+! st.font:            nasin-nanpa:pixelsize=16:style=Regular
 st.font:            FiraCode Nerd Font:pixelsize=16:style=Retina
 
 ! Reversed since UbuntuMono Nerd Font already has Powerline
