@@ -18,10 +18,10 @@ local naughty = require('naughty')
 -- Bottom_right
 naughty.config.defaults.position = 'bottom_right'
 -- local menubar = require('menubar')
--- local hotkeys_popup = require('awful.hotkeys_popup')
+local hotkeys_popup = require('awful.hotkeys_popup')
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
--- require('awful.hotkeys_popup.keys')
+require('awful.hotkeys_popup.keys')
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -127,10 +127,22 @@ awful.layout.layouts = {
 --
 mymainmenu = awful.menu({
 	items = {
-		-- { 'awesome',       myawesomemenu, beautiful.awesome_icon },
 		{ 'open terminal', terminal },
 		{ 'open runner', launcher },
 		{ 'open launcher', alt_launcher },
+		{
+			'hotkeys',
+			function()
+				hotkeys_popup.show_help(nil, awful.screen.focused())
+			end,
+		},
+		{ 'restart', awesome.restart },
+		{
+			'quit',
+			function()
+				awesome.quit()
+			end,
+		},
 	},
 })
 
@@ -418,7 +430,8 @@ globalkeys = gears.table.join(
 		if tag.selected == false then
 			awful.tag.viewtoggle(tag)
 
-			local align = (awful.placement.centered + awful.placement.no_overlap)
+			-- local align = (awful.placement.centered + awful.placement.no_overlap)
+			-- local align = (awful.placement.centered + awful.placement.no_overlap)
 			if clients then
 				-- client.border_color = beautiful.border_scratch
 				for i = 1, #clients do
@@ -432,7 +445,7 @@ globalkeys = gears.table.join(
 					-- awful.placement.maximize(c)
 					-- c.maximized = false
 
-					align(c)
+					-- awful.placement.centered(c)
 
 					c:emit_signal('request::activate', 'scratchpad')
 				end
@@ -456,7 +469,7 @@ globalkeys = gears.table.join(
 		myscreen = awful.screen.focused()
 		myscreen.mywibox.visible = not myscreen.mywibox.visible
 	end, { description = 'toggle statusbar', group = 'awesome' }),
-	-- awful.key({ modkey }, 's', hotkeys_popup.show_help, { description = 'show help', group = 'awesome' }),
+	awful.key({ modkey }, 'g', hotkeys_popup.show_help, { description = 'show help', group = 'awesome' }),
 	awful.key({ modkey }, 'Left', awful.tag.viewprev, { description = 'view previous', group = 'tag' }),
 	awful.key({ modkey }, 'Right', awful.tag.viewnext, { description = 'view next', group = 'tag' }),
 	-- awful.key({ modkey }, 'Escape', awful.tag.history.restore, { description = 'go back', group = 'tag' }),
@@ -919,10 +932,8 @@ end)
 -- All floating are on top
 client.connect_signal('property::floating', function(c)
 	if c.floating then
-		-- local align = (awful.placement.centered + awful.placement.no_overlap)
-		local align = awful.placement.centered
 		c.ontop = true
-		align(c)
+		awful.placement.centered(c)
 	else
 		c.ontop = false
 	end
