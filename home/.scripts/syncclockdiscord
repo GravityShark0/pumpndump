@@ -1,0 +1,5 @@
+trap 'echo "Starting update..."' INT
+
+syncclock
+
+nohup flatpak run xyz.armcord.ArmCord &

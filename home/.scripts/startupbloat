@@ -1,9 +1,16 @@
 #!/bin/sh
-(st -c update -e timeout 10 ~/.scripts/syncclockupdate) && flatpak run xyz.armcord.ArmCord &
+trap 'echo "Starting update..."' INT
 
-st -g 140x40 -c scratchy -e dash -c "echo ' oaa' | nvim ~/Notes/index.org -s -;" &
+st -c update -e timeout --signal=INT 10 syncclock
 
-firefox &
+nohup st -g 140x40 -c scratchy -e dash -c "echo ' oaa' | nvim ~/Notes/index.org -s -;" > /dev/null &
+
+
+# nohup firefox > /dev/null &
+nohup librewolf > /dev/null &
 # flatpak run org.gimp.GIMP &
-gimp &
-flatpak run net.ankiweb.Anki &
+nohup gimp > /dev/null &
+nohup flatpak run net.ankiweb.Anki > /dev/null &
+nohup flatpak run xyz.armcord.ArmCord > /dev/null &
+
+update

@@ -1,0 +1,44 @@
+{
+  "timeStamp": 1712203616387,
+  "version": "1.57.0",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "colorBlindFriendly": true,
+    "uiAccentCustom": true,
+    "importedLists": [],
+    "popupPanelSections": 63
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-unbreak",
+    "ublock-quick-fixes",
+    "easylist",
+    "adguard-spyware-url",
+    "easyprivacy",
+    "urlhaus-1",
+    "curben-phishing",
+    "plowe-0",
+    "LegitimateURLShortener",
+    "bpc-paywall-filter",
+    "AntiPaywall"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "about-scheme",
+    "chrome-extension-scheme",
+    "chrome-scheme",
+    "edge-scheme",
+    "gravityshark.com",
+    "moz-extension-scheme",
+    "opera-scheme",
+    "vivaldi-scheme",
+    "wyciwyg-scheme"
+  ],
+  "dynamicFilteringString": "* * 3p-script block\n* * 3p-frame block\ngithub.com githubassets.com * noop\naccounts.firefox.com d2pp80vsjn2e6y.cloudfront.net * noop\naccounts.firefox.com mozilla.net * noop\nwww.instagram.com cdninstagram.com * noop\nwww.messenger.com fbcdn.net * noop\nwww.facebook.com fbcdn.net * noop\nwww.threads.net cdninstagram.com * noop\naccounts.google.com accounts.google.com * noop\naccounts.google.com gstatic.com * noop\nwww.youtube.com gstatic.com * noop\nwww.reddit.com redditstatic.com * noop\nwww.reddit.com reddit.map.fastly.net * noop\ngds.google.com gstatic.com * noop\nwww.facebook.com fbsbx.com * noop\nwww.whatismyip.com cloudflare.com * noop\nchat.openai.com oaistatic.com * noop\nchromereleases.googleblog.com gstatic.com * noop\ntranslate.google.com gstatic.com * noop\ndocs.google.com gstatic.com * noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-cosmetic-filtering: * true\nno-csp-reports: * true\nno-large-media: behind-the-scene false",
+  "userFilters": ""
+}

@@ -846,6 +846,7 @@ awful.rules.rules = {
 		},
 	},
 
+
 	-- Floating clients.
 	--[[
 	{
@@ -891,6 +892,13 @@ awful.rules.rules = {
 	},
 
 	{
+		rule = { floating = true },
+		properties = {
+			placement = awful.placement.centered,
+		},
+	},
+
+	{
 		rule_any = { class = { 'discord', 'armcord', 'ArmCord' } },
 		properties = { tag = '5' },
 	},
@@ -921,6 +929,7 @@ client.connect_signal('manage', function(c)
 		-- Prevent clients from being unreachable after screen count changes.
 		awful.placement.no_offscreen(c)
 	end
+	-- To stop clients from getting included in the scratch tag when the scratch tag is open and a client is opened
 	c:tags({ c.first_tag })
 end)
 
