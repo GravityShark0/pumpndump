@@ -10,6 +10,7 @@
 
 gentoo-pipewire-launcher &
 picom --animations -b
+ibus-daemon -d
 
 # ( sleep 1 && dash ~/.scripts/bloatedrun.sh ) &
 (sleep 3 && timeout 10 st -c update -g 43x1 -e dash ~/.scripts/bloatprompt) &

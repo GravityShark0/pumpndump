@@ -1,15 +1,12 @@
-/* @import url(theming/color-alt.css); */
 @import url(sidebar.css);
 
-/* MY CUSTOMS */
+/* remove the fullscreen hover */
+*|div#fullscr-toggler {
+  display: none !important;
+}
 
-.Tab:not([data-lvl="0"]) > .lvl-wrapper {
-  background-image: linear-gradient(currentcolor, currentcolor);
-  background-position-y: center;
-  background-repeat: no-repeat;
-  background-size: 1.1em 1px;
-  border-left: 1px solid;
-  padding-left: 1.1em;
+.titlebar-buttonbox-container {
+  display: none !important;
 }
 
 /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/hide_tabs_toolbar.css made available under Mozilla Public License v. 2.0
@@ -100,28 +97,20 @@ Window controls will be all wrong without it
   margin-left: var(--uc-window-drag-space-pre, 0px);
 }
 
+/*
 @-moz-document url("chrome://global/content/alerts/alert.xhtml")
 {
-  /* Color scheme definitions
-   * Intentionally let Firefox override these on Windows10
-   */
 
-  /* :root { */
-  /*   --menu-border-color: #5b5b66; */
-  /*   --menu-color: #fbfbfe; */
-  /*   --menu-background-color: #2b2a33; */
-  /*   --menuitem-hover-background-color: #52525e; */
-  /* } */
   #alertSourceLabel {
     color: rgb(5, 209, 241) !important;
   }
 
-  /* The line below removes background "layer" from the notification on linux, Windows and macOS don't have that layer in the first place */
+  The line below removes background "layer" from the notification on linux, Windows and macOS don't have that layer in the first place
   :root {
     background: transparent !important;
   }
 
-  /* Make Firefox actually use the colors set above */
+  Make Firefox actually use the colors set above
   #alertBox {
     color: var(--menu-color) !important;
     padding: 6px !important;
@@ -148,7 +137,7 @@ Window controls will be all wrong without it
     background-color: var(--menuitem-hover-background-color);
   }
 
-  /* Reshape and move the buttons a bit */
+  Reshape and move the buttons a bit
   .close-icon > .toolbarbutton-icon,
   #alertSettings > .button-box > .box-inherit {
     border-radius: 4px !important;
@@ -162,3 +151,5 @@ Window controls will be all wrong without it
     padding: 1px;
   }
 }
+
+*/

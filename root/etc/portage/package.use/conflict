@@ -570,3 +570,11 @@ sys-libs/gdbm berkdb
 # required by www-client/librewolf-124.0.1_p1::librewolf[X,pgo]
 # required by www-client/librewolf (argument)
 >=x11-base/xorg-server-21.1.11 xvfb
+
+# required by app-emulation/wine-proton-8.0.5c::gentoo[gstreamer]
+# required by virtual/wine-0-r10::gentoo[proton]
+# required by @selected
+# required by @world (argument)
+>=media-libs/gst-plugins-base-1.22.11 opengl
+#
+>=media-libs/gst-plugins-bad-1.22.11 opengl
