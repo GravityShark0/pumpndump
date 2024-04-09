@@ -47,3 +47,5 @@ dev-cpp/glog -libunwind
 sys-fs/android-file-transfer-linux fuse
 
 media-video/ffmpeg vorbis mp3 webp
+
+net-print/cups ssl usb

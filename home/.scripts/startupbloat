@@ -1,15 +1,13 @@
 #!/bin/sh
-trap 'echo "Starting update..."' INT
+trap 'echo "Starting update..."' SIGINT
 
-nohup gimp > /dev/null &
-st -c update -e timeout --signal=INT 10 syncclock
+st -c update -e timeout --signal=SIGINT 10 syncclock
 
 nohup st -g 140x40 -c scratchy -e dash -c "echo ' oaa' | nvim ~/Notes/index.org -s -;" > /dev/null &
 
 
-# nohup firefox > /dev/null &
 nohup librewolf > /dev/null &
-# flatpak run org.gimp.GIMP &
+nohup gimp > /dev/null &
 nohup flatpak run net.ankiweb.Anki > /dev/null &
 nohup flatpak run xyz.armcord.ArmCord > /dev/null &
 
