@@ -1,2 +1,2 @@
 #!/bin/sh
-st -g 140x40 -c scratchy -e dash -c "echo ' oaa' | nvim ~/Notes/index.org -s -;" &
+nohup st -g 140x40 -c scratchy -e dash -c "echo 'e oaa' | nvim ~/Notes/index.org -s -;" > /dev/null &

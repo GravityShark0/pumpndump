@@ -3,8 +3,7 @@ trap 'echo "Starting update..."' SIGINT
 
 st -c update -e timeout --signal=SIGINT 10 syncclock
 
-nohup st -g 140x40 -c scratchy -e dash -c "echo ' oaa' | nvim ~/Notes/index.org -s -;" > /dev/null &
-
+org
 
 nohup librewolf > /dev/null &
 nohup gimp > /dev/null &

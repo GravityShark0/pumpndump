@@ -12,4 +12,4 @@ yes_or_no() {
 
 message="Do you want to start bloated?"
 
-yes_or_no "$message" && nohup ~/.scripts/startupbloat > /dev/null
+yes_or_no "$message" && ( nohup ~/.scripts/startupbloat > /dev/null &)

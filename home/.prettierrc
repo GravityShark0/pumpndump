@@ -1,0 +1,12 @@
+semi: false
+overrides:
+  - files: "*.js"
+    options:
+      semi: true
+      tabWidth: 8
+  - files:
+      - "*.html"
+      - "*.css"
+    options:
+      tabWidth: 2
+      printWidth: 120
