@@ -1,0 +1,14 @@
+# GIMP user context
+
+(tool "gimp-move-tool")
+(paint-info "gimp-paintbrush")
+(brush "2. Hardness 075")
+(dynamics "Pressure Opacity")
+(mybrush "100% Opaque")
+(pattern "Pine")
+(gradient "Aneurism")
+(palette "Color History")
+(font "Verdana")
+(tool-preset "Core Pointer")
+
+# end of user context

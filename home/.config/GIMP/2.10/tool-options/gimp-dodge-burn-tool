@@ -1,0 +1,10 @@
+# GIMP gimp-dodge-burn-tool options
+
+(brush "2. Hardness 075")
+(dynamics "Dynamics Off")
+(palette "Color History")
+(brush-size 13)
+(brush-hardness 0.75)
+(brush-force 1)
+
+# end of gimp-dodge-burn-tool options

@@ -576,5 +576,8 @@ sys-libs/gdbm berkdb
 # required by @selected
 # required by @world (argument)
 >=media-libs/gst-plugins-base-1.22.11 opengl
-#
->=media-libs/gst-plugins-bad-1.22.11 opengl
+
+# required by app-text/pdfarranger-1.10.1-r2::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/pillow-10.3.0 lcms

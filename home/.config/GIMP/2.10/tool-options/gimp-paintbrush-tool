@@ -1,0 +1,13 @@
+# GIMP gimp-paintbrush-tool options
+
+(brush "2. Hardness 075")
+(dynamics "Pressure Opacity")
+(gradient "Aneurism")
+(palette "Color History")
+(brush-size 10)
+(brush-hardness 0.75)
+(jitter-amount 0.34999999999999998)
+(fade-length 150)
+(fade-unit percent)
+
+# end of gimp-paintbrush-tool options
