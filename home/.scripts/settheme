@@ -1,0 +1,22 @@
+#!/bin/sh
+
+error() {
+        echo "File/theme not found"
+        tree ~/.config/suckless
+}
+
+if [ ! $1 ]; then
+    error
+    return
+fi
+
+if [ ! -f $1 ]; then
+        if [ ! -f  ~/.config/suckless/$1 ]; then
+            error
+            return
+        fi
+        xrdb ~/.config/suckless/$1 && kill -USR1 $(pidof st)
+        return
+fi
+
+xrdb $1 && kill -USR1 $(pidof st)
