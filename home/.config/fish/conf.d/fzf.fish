@@ -142,13 +142,13 @@ function fzf_key_bindings
     end
   end
 
-  bind \ct fzf-file-widget
+  bind \cf fzf-file-widget
   bind \ca fzf-file-widget-all
   bind \cr fzf-history-widget
   bind \cz fzf-cd-widget
 
   if bind -M insert > /dev/null 2>&1
-    bind -M insert \ct fzf-file-widget
+    bind -M insert \cf fzf-file-widget
     bind -M insert \ca fzf-file-widget-all
     bind -M insert \cr fzf-history-widget
     bind -M insert \cz fzf-cd-widget

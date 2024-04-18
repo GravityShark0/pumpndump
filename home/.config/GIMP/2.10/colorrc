@@ -4,8 +4,8 @@
 
 (color-history
     (color-rgba 1 0 0 1)
-    (color-rgba 0 0 0 1)
     (color-rgba 1 1 1 1)
+    (color-rgba 0 0 0 1)
     (color-rgba 0 0.36065573770491799 1 1)
     (color-rgba 0.69803923368453979 0.69803923368453979 0.69803923368453979 1)
     (color-rgba 0.98039215803146362 0 0 1)

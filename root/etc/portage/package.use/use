@@ -6,7 +6,7 @@ x11-drivers/nvidia-drivers abi_x86_32
 x11-base/xorg-server -minimal
 net-im/discord appindicator 
 www-client/firefox hwaccel screencast system-png hardened pgo libproxy -telemetry 
-www-client/librewolf eme-free openh264 hwaccel screencast system-png hardened pgo libproxy -telemetry 
+www-client/librewolf eme-free hwaccel screencast system-png hardened pgo libproxy -telemetry 
 media-fonts/noto-emoji icons
 
 sys-auth/elogind policykit
