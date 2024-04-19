@@ -211,6 +211,10 @@ local tasklist_buttons = gears.table.join(
 			c:emit_signal('request::activate', 'tasklist', { raise = true })
 		end
 	end),
+	awful.button({}, 2, function(c)
+		c:kill()
+	end),
+
 	awful.button({}, 3, function()
 		awful.menu.client_list({ theme = { width = 250 } })
 	end),
@@ -266,21 +270,21 @@ awful.screen.connect_for_each_screen(function(s)
 
 	-- Create an imagebox widget which will contain an icon indicating which layout we're using.
 	-- We need one layoutbox per screen.
-	s.mylayoutbox = awful.widget.layoutbox(s)
-	s.mylayoutbox:buttons(gears.table.join(
-		awful.button({}, 1, function()
-			awful.layout.inc(1)
-		end),
-		awful.button({}, 3, function()
-			awful.layout.inc(-1)
-		end),
-		awful.button({}, 4, function()
-			awful.layout.inc(1)
-		end),
-		awful.button({}, 5, function()
-			awful.layout.inc(-1)
-		end)
-	))
+	-- s.mylayoutbox = awful.widget.layoutbox(s)
+	-- s.mylayoutbox:buttons(gears.table.join(
+	-- 	awful.button({}, 1, function()
+	-- 		awful.layout.inc(1)
+	-- 	end),
+	-- 	awful.button({}, 3, function()
+	-- 		awful.layout.inc(-1)
+	-- 	end),
+	-- 	awful.button({}, 4, function()
+	-- 		awful.layout.inc(1)
+	-- 	end),
+	-- 	awful.button({}, 5, function()
+	-- 		awful.layout.inc(-1)
+	-- 	end)
+	-- ))
 	-- Create a taglist widget
 	s.mytaglist = awful.widget.taglist({
 		screen = s,
@@ -350,13 +354,14 @@ awful.screen.connect_for_each_screen(function(s)
 
 	-- net_wireless = net_widgets.wired({ interface = 'eth0' })
 	-- Create the wibox
-	-- function custom_shape(cr, width, height)
-	-- 	gears.shape.rounded_rect(cr, width, height, 12)
-	-- end
+	local function custom_shape(cr, width, height)
+		gears.shape.partially_rounded_rect(cr, width, height, true, true, false, false, 14)
+	end
 
 	s.mywibox = awful.wibar({
 		position = 'bottom',
 		screen = s,
+		shape = custom_shape,
 	})
 	-- position = 'bottom', screen = s, shape = custom_shape })
 	-- Add widgets to the wibox
@@ -700,16 +705,7 @@ clientkeys = gears.table.join(
 		awful.client.swap.byidx(-1)
 	end, { description = 'swap with previous client by index', group = 'client' }),
 	awful.key({ modkey }, 'f', function(c)
-		if c.floating then
-			c.floating = true
-			c.fullscreen = not c.fullscreen
-		elseif not c.floating then
-			c.floating = false
-			c.fullscreen = not c.fullscreen
-		else
-			c.fullscreen = not c.fullscreen
-		end
-		c:raise()
+		c.fullscreen = not c.fullscreen
 	end, { description = 'toggle fullscreen', group = 'client' }),
 	awful.key({ modkey }, 'c', function(c)
 		c:kill()
@@ -846,7 +842,6 @@ awful.rules.rules = {
 		},
 	},
 
-
 	-- Floating clients.
 	{
 		rule_any = {
@@ -864,10 +859,10 @@ awful.rules.rules = {
 				-- 'Sxiv',
 				'Tor Browser', -- Needs a fixed window size to avoid fingerprinting by screen size.
 				-- 'Wpa_gui',
-				'veromix',
+				-- 'veromix',
 				-- 'xtightvncviewer',
 
-				'update',
+				'float',
 			},
 
 			-- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -938,6 +933,13 @@ client.connect_signal('property::floating', function(c)
 		awful.placement.centered(c)
 	else
 		c.ontop = false
+	end
+end)
+
+-- Make floating clients stay on top even after exiting fullscreen
+client.connect_signal('property::fullscreen', function(c)
+	if not c.fullscreen and c.floating then
+		c.ontop = true
 	end
 end)
 
