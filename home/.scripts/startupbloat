@@ -1,13 +1,11 @@
 #!/bin/sh
 trap 'echo "Starting update..."' SIGINT
 
-st -c update -e timeout --signal=SIGINT 10 syncclock
+st -c float -e timeout --signal=SIGINT 10 syncclock
 
-org
-
+org &
+st -c float -e update &
 nohup librewolf > /dev/null &
 nohup gimp > /dev/null &
 nohup flatpak run net.ankiweb.Anki > /dev/null &
 nohup flatpak run xyz.armcord.ArmCord > /dev/null &
-
-update
