@@ -49,3 +49,7 @@ sys-fs/android-file-transfer-linux fuse
 media-video/ffmpeg vorbis mp3 webp
 
 net-print/cups ssl usb
+
+x11-libs/gtk+ wayland
+
+net-fs/samba acl cups -system-mitkrb5 client zeroconf regedit

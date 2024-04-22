@@ -705,7 +705,16 @@ clientkeys = gears.table.join(
 		awful.client.swap.byidx(-1)
 	end, { description = 'swap with previous client by index', group = 'client' }),
 	awful.key({ modkey }, 'f', function(c)
-		c.fullscreen = not c.fullscreen
+		if c.floating then
+			c.floating = true
+			c.fullscreen = not c.fullscreen
+		elseif not c.floating then
+			c.floating = false
+			c.fullscreen = not c.fullscreen
+		else
+			c.fullscreen = not c.fullscreen
+		end
+		c:raise()
 	end, { description = 'toggle fullscreen', group = 'client' }),
 	awful.key({ modkey }, 'c', function(c)
 		c:kill()
@@ -940,6 +949,8 @@ end)
 client.connect_signal('property::fullscreen', function(c)
 	if not c.fullscreen and c.floating then
 		c.ontop = true
+	else
+		c.ontop = false
 	end
 end)
 
