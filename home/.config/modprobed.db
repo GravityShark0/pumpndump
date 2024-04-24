@@ -48,6 +48,9 @@ intel_rapl_msr
 intel_soc_dts_iosf
 intel_tcc_cooling
 intel_uncore
+intel_uncore_frequency
+intel_uncore_frequency_common
+intel_vsec
 intel_wmi_thunderbolt
 isofs
 iwlmvm
@@ -73,6 +76,7 @@ nvidia_drm
 nvidia_modeset
 nvidia_uvm
 nvme
+nvme_auth
 nvme_common
 nvme_core
 pcspkr
@@ -83,11 +87,15 @@ polyval_generic
 processor_thermal_device
 processor_thermal_device_pci_legacy
 processor_thermal_mbox
+processor_thermal_power_floor
 processor_thermal_rapl
 processor_thermal_rfim
+processor_thermal_wt_hint
+processor_thermal_wt_req
 r8169
 rapl
 razermouse
+realtek
 rfkill
 rndis_host
 rtsx_pci

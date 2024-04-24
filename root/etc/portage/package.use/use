@@ -5,8 +5,8 @@ x11-wm/awesome lua_single_target_lua5-3
 x11-drivers/nvidia-drivers abi_x86_32
 x11-base/xorg-server -minimal
 net-im/discord appindicator 
-www-client/firefox hwaccel screencast system-png hardened pgo libproxy -telemetry 
-www-client/librewolf eme-free hwaccel screencast system-png hardened pgo libproxy -telemetry 
+www-client/firefox hwaccel screencast system-png -hardened pgo libproxy -telemetry 
+www-client/librewolf -eme-free hwaccel screencast system-1v1 system-png -hardened pgo libproxy -telemetry 
 media-fonts/noto-emoji icons
 
 sys-auth/elogind policykit
@@ -35,7 +35,7 @@ net-wireless/wpa_supplicant tkip
 xfce-base/thunar exif introspection libnotify -udisks pcre
 # media-gfx/imagemagick fontconfig hdri heif raw svg xml tiff
 xfce-extra/thunar-vcs-plugin -subversion
-xfce-base/tumbler epub ffmpeg gstreamer odf jpeg pdf raw
+xfce-base/tumbler epub ffmpeg gstreamer odf jpeg pdf raw vaapi cuda hardcoded-tables kvazaar libaom
 
 www-client/w3m imlib
 
@@ -46,10 +46,10 @@ dev-cpp/glog -libunwind
 
 sys-fs/android-file-transfer-linux fuse
 
-media-video/ffmpeg vorbis mp3 webp
+media-video/ffmpeg vorbis mp3 webp vaapi cuda hardcoded-tables kvazaar libaom
 
 net-print/cups ssl usb
 
-x11-libs/gtk+ wayland
-
 net-fs/samba acl cups -system-mitkrb5 client zeroconf regedit
+
+dev-perl/JSON -xs

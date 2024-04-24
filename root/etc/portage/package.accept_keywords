@@ -6,7 +6,7 @@ media-libs/libdisplay-info **
 x11-libs/libdrm **
 x11-libs/libxkbcommon **
 x11-libs/pixman **
-media-video/ffmpeg **
+# media-video/ffmpeg **
 dev-libs/libinput **
 virtual/rust **
 media-video/mpv **
@@ -24,8 +24,8 @@ media-libs/libplacebo **
 # dev-qt/qtimageformats **
 # net-p2p/qbittorrent **
 # =net-dns/libidn2-2.3.7 -~amd64
- sys-kernel/gentoo-kernel-bin -~amd64
- virtual/dist-kernel -~amd64
+#sys-kernel/gentoo-kernel-bin -~amd64
+#virtual/dist-kernel -~amd64
 # dev-libs/expat -~amd64
 # dev-lang/python -~amd64
 

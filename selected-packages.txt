@@ -9,17 +9,20 @@ app-editors/neovim
 app-eselect/eselect-repository
 app-i18n/ibus
 app-i18n/ibus-libpinyin
+app-misc/joshuto
+app-misc/keyd
 app-misc/neofetch
 app-misc/tmux
-app-portage/eix
 app-portage/emlop
+app-portage/gentoolkit
 app-shells/dash
 app-shells/fish
 app-shells/fzf
 app-shells/mksh
 app-shells/zoxide
 app-text/pdfarranger
-dev-java/openjdk-jre-bin:21
+dev-debug/gdb
+dev-java/openjdk-jre-bin
 dev-libs/libconfig
 dev-libs/uthash
 dev-util/android-tools
@@ -29,16 +32,16 @@ games-util/gamemode
 games-util/steam-launcher
 lxde-base/lxappearance
 media-fonts/corefonts
-media-fonts/firacode-nerdfont
 media-fonts/fonts-meta
+media-fonts/nerdfonts
 media-fonts/noto-emoji
 media-fonts/powerline-symbols
 media-fonts/symbola
 media-fonts/ubuntu-font-family
-media-fonts/ubuntumono-nerdfont
 media-gfx/feh
 media-gfx/gimp
 media-gfx/maim
+media-libs/gd
 media-libs/nvidia-vaapi-driver
 media-libs/vulkan-loader
 media-sound/pulsemixer
@@ -46,6 +49,7 @@ media-video/mpv
 media-video/obs-studio
 media-video/pipewire
 media-video/wireplumber
+net-ftp/filezilla
 net-libs/nodejs
 net-misc/aria2
 net-misc/curl
@@ -66,13 +70,13 @@ sys-apps/razer-cli
 sys-apps/ripgrep
 sys-auth/rtkit
 sys-boot/grub
-sys-devel/clang:17
-sys-devel/clang:18
+sys-devel/clang
 sys-firmware/intel-microcode
 sys-fs/android-file-transfer-linux
 sys-fs/btrfs-progs
 sys-fs/dosfstools
 sys-fs/dwarfs-bin
+sys-fs/fuse-overlayfs
 sys-fs/ntfs3g
 sys-fs/xfsprogs
 sys-kernel/linux-firmware
@@ -80,7 +84,8 @@ sys-power/thermald
 sys-process/dcron
 sys-process/htop
 virtual/wine
-www-client/firefox-bin:rapid
+www-client/firefox-bin
+www-client/librewolf
 www-client/w3m
 x11-apps/mesa-progs
 x11-apps/xinit
@@ -105,7 +110,3 @@ xfce-base/xfce4-settings
 xfce-extra/thunar-archive-plugin
 xfce-extra/thunar-media-tags-plugin
 xfce-extra/thunar-vcs-plugin
-[1] "guru" /var/db/repos/guru
-[2] "steam-overlay" /var/db/repos/steam-overlay
-
-Found 106 matches

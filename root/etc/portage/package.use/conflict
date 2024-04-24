@@ -588,3 +588,24 @@ sys-libs/gdbm berkdb
 
 # required by nerdfonts[firacode] (argument)
 >=media-fonts/nerdfonts-3.2.0 firacode ubuntumono
+
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by app-emulation/wine-proton-8.0.5c::gentoo[gstreamer]
+# required by virtual/wine-0-r10::gentoo[proton]
+# required by @selected
+# required by @world (argument)
+>=media-plugins/gst-plugins-vaapi-1.22.11 abi_x86_32
+# required by media-plugins/gst-plugins-vaapi-1.22.11::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by app-emulation/wine-proton-8.0.5c::gentoo[gstreamer]
+# required by virtual/wine-0-r10::gentoo[proton]
+# required by @selected
+# required by @world (argument)
+>=media-libs/gst-plugins-bad-1.22.11-r1 abi_x86_32
+# required by media-plugins/gst-plugins-vaapi-1.22.11::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by app-emulation/wine-proton-8.0.5c::gentoo[gstreamer]
+# required by virtual/wine-0-r10::gentoo[proton]
+# required by @selected
+# required by @world (argument)
+>=media-libs/libva-2.21.0 abi_x86_32
