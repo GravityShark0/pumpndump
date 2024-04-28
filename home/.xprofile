@@ -1,5 +1,6 @@
 #!/bin/sh
 
+~/.scripts/monitor/auto.sh
 # background="~/Media/Wallpapers/minimalistic/minimalistic/unicat.png"
 # background="~/Pictures/Wallpapers/purp1.jpg"
 random=$(fish --command "random 0 321")
@@ -20,6 +21,15 @@ echo "$random" >> .recent_wallpapers.txt
 feh --bg-scale "$background".* &
 # nitrogen --restore &
 # xmodmap ~/.keymaps/tarmak_2b_dh.xmodmap &
+nohup gentoo-pipewire-launcher restart /dev/null &
+if pidof picom; then
+        pkill picom
+        picom --animations -b
+else
+        picom --animations -b
+fi
+
+ibus-daemon -d -r
 $(xrdb ~/.config/suckless/catppuccin/mocha && kill -USR1 $(pidof st)) &
 # pkill volumeicon; volumeicon &
 # pkill picom; picom &

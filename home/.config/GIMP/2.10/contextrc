@@ -1,8 +1,8 @@
 # GIMP user context
 
-(tool "gimp-crop-tool")
+(tool "gimp-brightness-contrast-tool")
 (paint-info "gimp-paintbrush")
-(foreground (color-rgb 0 1 0.33606557377049207))
+(foreground (color-rgb 1 0 0))
 (brush "2. Hardness 075")
 (dynamics "Pressure Opacity")
 (mybrush "100% Opaque")
