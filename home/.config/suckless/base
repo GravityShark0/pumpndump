@@ -1,6 +1,8 @@
 ! Styling
 ! 1440x900
-Xft.dpi: 89
+! use (xdpyinfo | grep -B 2 resolution) to get what dpi you need to use
+! Xft.dpi: 87
+Xft.dpi: 87 
 
 Xft.antialias:         1
 Xft.autohint:          0
@@ -26,7 +28,7 @@ st.fontalt0: Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true
 st.borderpx:		6
 
 ! transparency 0.0-1.0
-!st.alpha:	        0.8	
+st.alpha:	        0.9
 
 !st.termname:		st-256color
 !st.shell: 		/bin/sh

@@ -53,3 +53,5 @@ net-print/cups ssl usb
 net-fs/samba acl cups -system-mitkrb5 client zeroconf regedit
 
 dev-perl/JSON -xs
+
+net-ftp/gftp gtk

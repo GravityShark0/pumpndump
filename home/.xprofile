@@ -29,7 +29,7 @@ else
         picom --animations -b
 fi
 
-ibus-daemon -d -r
+# ibus-daemon -d -r
 $(xrdb ~/.config/suckless/catppuccin/mocha && kill -USR1 $(pidof st)) &
 # pkill volumeicon; volumeicon &
 # pkill picom; picom &

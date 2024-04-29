@@ -1,12 +1,10 @@
 com.github.tchx84.Flatseal
-com.google.Chrome
 com.heroicgameslauncher.hgl
 com.leinardi.gwe
 com.usebottles.bottles
 net.ankiweb.Anki
 org.audacityteam.Audacity
 org.blender.Blender
-org.gimp.GIMP
 org.inkscape.Inkscape
 org.jamovi.jamovi
 org.kde.krita
