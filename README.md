@@ -59,6 +59,7 @@ and just installing selected-packages.txt
    - betterlockscreen
    - maim
    - tesseract
+     > currently tesseract doesnt work in gentoo so i use a binary instead
    - fzf
    - xrdb
    - openntpd
@@ -93,4 +94,4 @@ and just installing selected-packages.txt
     - Alternative could be [minemacs](https://github.com/abougouffa/minemacs)
   - hyprwm
 
-> cat /var/lib/portage/world >selected-packages.txt
+> cat /var/lib/portage/world > selected-packages.txt

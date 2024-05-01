@@ -612,3 +612,7 @@ sys-libs/gdbm berkdb
 # required by app-text/tesseract-5.3.4::gentoo
 # required by tesseract (argument)
 >=media-libs/leptonica-1.84.1-r2 tiff png jpeg webp static-libs
+# required by app-emacs/pdf-tools-1.1.0::gentoo
+# required by pdf-tools (argument)
+>=app-text/poppler-24.04.0 png
+
