@@ -1237,7 +1237,7 @@
   <resource identifier="${gimp_data_dir}/gradients/Yellow_Orange.ggr" checksum="428584726006e23e260baa2a7d79f295">
   </resource>
 
-  <resource identifier="gimp-palette-color-history" checksum="75c511cfc6322c7d09c47339c214a518">
+  <resource identifier="gimp-palette-color-history" checksum="287b34c4681657bb6aef4e315b1fc04c">
   </resource>
 
   <resource identifier="${gimp_data_dir}/palettes/Bears.gpl" checksum="e82e818c20ac12bdd21049924ea2d1e7">
@@ -10649,6 +10649,9 @@
   </resource>
 
   <resource identifier="Symbola Semi-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Symbols Nerd Font Mono" checksum="(null)">
   </resource>
 
   <resource identifier="TF2" checksum="(null)">

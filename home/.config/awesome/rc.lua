@@ -68,7 +68,7 @@ bling.module.flash_focus.enable()
 -- This is used later as the default terminal and file manager to run.
 Terminal = 'st'
 -- Jo is a shell script that runs joshuto
-File_manager = 'jo'
+File_manager = 'joshuto'
 File_manager_cmd = Terminal .. ' -e ' .. File_manager
 -- launcher = 'rofi -show run'
 -- alt_launcher = 'rofi -show drun'

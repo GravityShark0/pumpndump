@@ -19,6 +19,9 @@ stow home --target=$HOME
 
 # to sync root/ to /
 stow root --target=/
+
+# doas.conf needs to be owned by root for it to work
+chown root:root /etc/doas.conf
 ```bash
 # to stop fish_variables from constantly updating
 git update-index --skip-worktree home/.config/fish/fish_variables
