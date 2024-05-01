@@ -102,9 +102,7 @@
   display: none !important;
 }
 
-#main-window[titlepreface*="[S] "]
-  #urlbar[breakout][breakout-extend]
-  > #urlbar-input-container {
+#main-window[titlepreface*="[S] "] #urlbar[breakout][breakout-extend] > #urlbar-input-container {
   height: 50px !important;
   font-size: 16px !important;
   padding: 0px 25px !important;
@@ -114,9 +112,7 @@
   width: 96% !important;
 }
 
-#main-window[titlepreface*="[S] "]
-  #urlbar:is([focused="true"], [open])
-  > #urlbar-background,
+#main-window[titlepreface*="[S] "] #urlbar:is([focused="true"], [open]) > #urlbar-background,
 #searchbar:focus-within {
   background-color: var(--toolbar-bgcolor) !important;
 }
@@ -165,9 +161,7 @@
     position: fixed !important;
     left: calc(var(--theme-sidebar-width) + var(--theme-spacing));
     top: var(--theme-spacing);
-    width: calc(
-      100% - var(--theme-sidebar-width) - var(--theme-spacing) * 2
-    ) !important;
+    width: calc(100% - var(--theme-sidebar-width) - var(--theme-spacing) * 2) !important;
     background-color: var(--toolbar-field-background-color);
     background-clip: border-box;
     border: 1px solid var(--toolbar-field-border-color);
@@ -218,9 +212,7 @@
 #main-window[titlepreface*="[S] "] #identity-icon-box,
 #main-window[titlepreface*="[S] "] #star-button,
 #main-window[titlepreface*="[S] "] .urlbar-page-action,
-#main-window[titlepreface*="[S] "]
-  #main-window[titlepreface*="[S] "]
-  #urlbar-go-button,
+#main-window[titlepreface*="[S] "] #main-window[titlepreface*="[S] "] #urlbar-go-button,
 #main-window[titlepreface*="[S] "] .search-go-button,
 #main-window[titlepreface*="[S] "] #identity-box,
 #main-window[titlepreface*="[S] "] #tracking-protection-icon-container {
@@ -242,9 +234,7 @@
 }
 
 #main-window[titlepreface*="[S] "] .titlebar-buttonbox-container,
-#main-window[titlepreface*="[S] "]
-  #TabsToolbar
-  > .titlebar-buttonbox-container {
+#main-window[titlepreface*="[S] "] #TabsToolbar > .titlebar-buttonbox-container {
   -moz-window-dragging: drag;
 }
 

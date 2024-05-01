@@ -50,7 +50,7 @@ media-video/mpv
 media-video/obs-studio
 media-video/pipewire
 media-video/wireplumber
-net-ftp/ftp
+net-ftp/gftp
 net-libs/nodejs
 net-misc/aria2
 net-misc/curl

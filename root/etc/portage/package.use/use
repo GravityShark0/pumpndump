@@ -12,8 +12,8 @@ media-fonts/noto-emoji icons
 sys-auth/elogind policykit
 sys-auth/polkit -kde
 
-app-editors/emacs gui gtk xft
-app-editors/emacs gif harfbuzz jpeg pngsound svg tiff webp
+app-editors/emacs gui gtk xft #Minimum
+app-editors/emacs gif harfbuzz jpeg pngsound svg tiff webp png dynamic-loading
 
 # net-p2p/transmission gtk appindicator
 # app-emulation/qemu gtk usbredir
@@ -55,3 +55,5 @@ net-fs/samba acl cups -system-mitkrb5 client zeroconf regedit
 dev-perl/JSON -xs
 
 net-ftp/gftp gtk
+
+app-text/tesseract doc jpeg opencl png tiff webp static-libs

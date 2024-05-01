@@ -151,7 +151,8 @@ set --global hydro_color_pwd $fish_color_cwd
 set --global hydro_color_duration $fish_color_gray
 
 set --query hydro_color_error || set --global hydro_color_error $fish_color_error
-set --query hydro_symbol_prompt || set --global hydro_symbol_prompt ❱
+# set --query hydro_symbol_prompt || set --global hydro_symbol_prompt ❱
+set --query hydro_symbol_prompt || set --global hydro_symbol_prompt 
 set --query hydro_symbol_git_dirty || set --global hydro_symbol_git_dirty ' '
 set --query hydro_symbol_git_cached || set --global hydro_symbol_git_cached ' '
 set --query hydro_symbol_git_ahead || set --global hydro_symbol_git_ahead ↑

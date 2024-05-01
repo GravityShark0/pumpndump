@@ -1,77 +1,95 @@
 > im tired
+
 ## This is a solution made by me to just "pump n' dump" my dot files and not doing anything after
+
 > i dont know what pump n dump actually means but it sounds cool
 
->to send all selected packages in gentoo
->```bash
->eix --format '<installedversions:NAMESLOT>' --selected-file > selected-packages.txt
->```
-
-
 ### How 3 install
+
 ```bash
 git clone https://github.com/GravityShark0/pumpndump
 cd pumpndump
 ```
 
-
 #### GNU Stow
-```bash
+
+````bash
 # to sync home/ to ~/ (/home/$USER/)
 stow home --target=$HOME
 
 # to sync root/ to /
 stow root --target=/
-```
+```bash
+# to stop fish_variables from constantly updating
+git update-index --skip-worktree home/.config/fish/fish_variables
+````
+
 and it should be done,
 just don't forget the things like doing <prefix> + I in tmux to update packages
 
-### Everysingle thingy ma doodle you should have installed
-- awesomewm / hyprland (kinda not used)
-    - [ picom-ftlabs-generalanimation ](https://github.com/FT-Labs/picom/tree/generalanimation)
-- betterlockscreen
-- doom emacs
-- eza
-- firefox
-    > btw you have to install arkenfox on your own
-- fish
-    - mksh so fish can also get env variables
-    - zoxide
-- htop
-- joshuto
-- neofetch
-- neovim
-- pulsemixer
-- st
-- tmux
-- ~~volumeicon~~
-- ~~dmenu~~ rofi
-- wpa_cli
+### Root Requirements
 
-### shit that's in also
-- gtk-3.0
-- X11 shit like .xinitrc
-- some random scripts
+1. Gentoo (amd64 openrc)
+   - Profile (default/linux/amd64/23.0)
+2. Nvidia GPU (GTX 1050ti Mobile)
+3. Use X11
+4. Exact same fstab
 
-#### the roots
-- gentoo
-- keyd
-- elogind
-- gamemoded
-- X11 shit
+```
+/dev/sda2		/efi		vfat
+/dev/nvme0n1p1		/		xfs
+/dev/nvme0n1p2		none		swap
+/dev/sda1		/home		btrfs
+```
 
-#### other stuff i expect you to have
-- a working breathing X11 config with nvidia
-- dash or /bin/sh -> dash
-- pipewire
-- feh 
-- volumeicon
-- openntpd from gentoo
-- der fonts
-- use grub
-- using my specfic fstab config
+4. Grub
+5. keyd, elogind and others that is in the selected-packages.txt
 
+### Home Requirements
 
+1. Applications used in scripts and such (in the selected anywas)
 
+   - dash and /bin/sh -> dash
+   - ffmpeg (compress)
+   - pipewire
+   - xrandr
+   - libnotify
+   - pulsemixer
+   - betterlockscreen
+   - maim
+   - tesseract
+   - fzf
+   - xrdb
+   - openntpd
+   - [sesh][https://github.com/joshmedeski/sesh]
+     > this one is kinda important cause there is no gentoo ebuild for it
+   - modprobed
 
-> other stuff that you may see like, a4 and tlp.conf are old shit that i never use anymore cause its not mentioned here
+2. fish shell
+   - mksh to allow for Gentoo exports to work
+   - zoxide
+3. awesomeWM
+4. GIMP
+5. tmux
+6. LibreWolf (browser)
+7. htop
+8. GTK
+   - [Catppuccin-Mocha-Standard-Mauve-Dark][https://github.com/catppuccin/gtk]
+9. neovim
+10. [my suckless terminal][https://github.com/GravityShark0/st-grav-flexipatch]
+11. joshuto
+12. rofi
+13. [picom-ft-labs][https://github.com/FT-Labs/picom]
+    - animation support in the [future][https://github.com/yshui/picom/pull/1219]
+
+### Stuff not used but still there just incase
+
+- Root
+  - tlp
+  - genkernel.conf
+- Home
+  - Doom Emacs
+    - Alternative could be [minemacs][https://github.com/abougouffa/minemacs]
+  - hyprwm
+
+> cat /var/lib/portage/world >selected-packages.txt
