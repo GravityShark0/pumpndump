@@ -26,6 +26,7 @@ git update-index --skip-worktree home/.config/fish/fish_variables
 
 and it should be done,
 just don't forget the things like doing <prefix> + I in tmux to update packages
+and just installing selected-packages.txt
 
 ### Root Requirements
 
@@ -61,7 +62,7 @@ just don't forget the things like doing <prefix> + I in tmux to update packages
    - fzf
    - xrdb
    - openntpd
-   - [sesh][https://github.com/joshmedeski/sesh]
+   - [sesh](https://github.com/joshmedeski/sesh)
      > this one is kinda important cause there is no gentoo ebuild for it
    - modprobed
 
@@ -74,13 +75,13 @@ just don't forget the things like doing <prefix> + I in tmux to update packages
 6. LibreWolf (browser)
 7. htop
 8. GTK
-   - [Catppuccin-Mocha-Standard-Mauve-Dark][https://github.com/catppuccin/gtk]
+   - [Catppuccin-Mocha-Standard-Mauve-Dark](https://github.com/catppuccin/gtk)
 9. neovim
-10. [my suckless terminal][https://github.com/GravityShark0/st-grav-flexipatch]
+10. [my suckless terminal([https://github.com/GravityShark0/st-grav-flexipatch)
 11. joshuto
 12. rofi
-13. [picom-ft-labs][https://github.com/FT-Labs/picom]
-    - animation support in the [future][https://github.com/yshui/picom/pull/1219]
+13. [picom-ft-labs](https://github.com/FT-Labs/picom)
+    - animation support in the [future](https://github.com/yshui/picom/pull/1219)
 
 ### Stuff not used but still there just incase
 
@@ -89,7 +90,7 @@ just don't forget the things like doing <prefix> + I in tmux to update packages
   - genkernel.conf
 - Home
   - Doom Emacs
-    - Alternative could be [minemacs][https://github.com/abougouffa/minemacs]
+    - Alternative could be [minemacs](https://github.com/abougouffa/minemacs)
   - hyprwm
 
 > cat /var/lib/portage/world >selected-packages.txt
