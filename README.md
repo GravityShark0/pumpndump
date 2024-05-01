@@ -77,7 +77,7 @@ and just installing selected-packages.txt
 8. GTK
    - [Catppuccin-Mocha-Standard-Mauve-Dark](https://github.com/catppuccin/gtk)
 9. neovim
-10. [my suckless terminal([https://github.com/GravityShark0/st-grav-flexipatch)
+10. [my suckless terminal](https://github.com/GravityShark0/st-grav-flexipatch)
 11. joshuto
 12. rofi
 13. [picom-ft-labs](https://github.com/FT-Labs/picom)
