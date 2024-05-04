@@ -19,9 +19,13 @@ stow home --target=$HOME
 
 # to sync root/ to /
 stow root --target=/
+# this is dangerous cause people could edit it that dont have the correct permissions (duh)
 
 # doas.conf needs to be owned by root for it to work
 chown root:root /etc/doas.conf
+
+# fstab cant be used as a symlink for obvious reasons
+cp ./root/etc/fstab.bak /etc/fstab
 ```bash
 # to stop fish_variables from constantly updating
 git update-index --skip-worktree home/.config/fish/fish_variables
