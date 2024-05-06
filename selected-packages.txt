@@ -29,6 +29,7 @@ dev-libs/libconfig
 dev-libs/uthash
 dev-util/android-tools
 dev-util/ccache
+dev-util/vulkan-tools
 dev-vcs/git
 games-util/gamemode
 games-util/steam-launcher
@@ -82,6 +83,7 @@ sys-fs/fuse-overlayfs
 sys-fs/ntfs3g
 sys-fs/xfsprogs
 sys-kernel/linux-firmware
+sys-power/powerstat
 sys-power/thermald
 sys-process/dcron
 sys-process/htop
@@ -99,6 +101,7 @@ x11-base/xorg-server
 x11-drivers/nvidia-drivers
 x11-libs/libnotify
 x11-misc/betterlockscreen
+x11-misc/prime-run
 x11-misc/rofi
 x11-misc/screenkey
 x11-misc/xclip
