@@ -1237,7 +1237,7 @@
   <resource identifier="${gimp_data_dir}/gradients/Yellow_Orange.ggr" checksum="428584726006e23e260baa2a7d79f295">
   </resource>
 
-  <resource identifier="gimp-palette-color-history" checksum="287b34c4681657bb6aef4e315b1fc04c">
+  <resource identifier="gimp-palette-color-history" checksum="27e970701a2f65b7eb7813a9f90609c1">
   </resource>
 
   <resource identifier="${gimp_data_dir}/palettes/Bears.gpl" checksum="e82e818c20ac12bdd21049924ea2d1e7">
@@ -4471,106 +4471,106 @@
   <resource identifier="Noto Sans Hebrew Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Sans Hebrew Condensed, Bold Condensed" checksum="(null)">
+  <resource identifier="Noto Sans Hebrew Bold Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Sans Hebrew Condensed, Condensed" checksum="(null)">
+  <resource identifier="Noto Sans Hebrew Bold Extra-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Sans Hebrew Condensed, Heavy Condensed" checksum="(null)">
+  <resource identifier="Noto Sans Hebrew Bold Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Sans Hebrew Condensed, Light Condensed" checksum="(null)">
+  <resource identifier="Noto Sans Hebrew Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Sans Hebrew Condensed, Medium Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew Condensed, Semi-Bold Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew Condensed, Thin Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew Condensed, Ultra-Bold Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew Condensed, Ultra-Light Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew ExtraCondensed, Bold Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew ExtraCondensed, Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew ExtraCondensed, Heavy Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew ExtraCondensed, Light Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew ExtraCondensed, Medium Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew ExtraCondensed, Semi-Bold Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew ExtraCondensed, Thin Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew ExtraCondensed, Ultra-Bold Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew ExtraCondensed, Ultra-Light Extra-Condensed" checksum="(null)">
+  <resource identifier="Noto Sans Hebrew Extra-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Hebrew Heavy" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Sans Hebrew Heavy Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Heavy Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Heavy Semi-Condensed" checksum="(null)">
+  </resource>
+
   <resource identifier="Noto Sans Hebrew Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Light Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Light Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Light Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Hebrew Medium" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Sans Hebrew Medium Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Medium Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Medium Semi-Condensed" checksum="(null)">
+  </resource>
+
   <resource identifier="Noto Sans Hebrew Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Sans Hebrew SemiCondensed, Bold Semi-Condensed" checksum="(null)">
+  <resource identifier="Noto Sans Hebrew Semi-Bold Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Sans Hebrew SemiCondensed, Heavy Semi-Condensed" checksum="(null)">
+  <resource identifier="Noto Sans Hebrew Semi-Bold Extra-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Sans Hebrew SemiCondensed, Light Semi-Condensed" checksum="(null)">
+  <resource identifier="Noto Sans Hebrew Semi-Bold Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Sans Hebrew SemiCondensed, Medium Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew SemiCondensed, Semi-Bold Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew SemiCondensed, Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew SemiCondensed, Thin Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew SemiCondensed, Ultra-Bold Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Hebrew SemiCondensed, Ultra-Light Semi-Condensed" checksum="(null)">
+  <resource identifier="Noto Sans Hebrew Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Hebrew Thin" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Sans Hebrew Thin Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Thin Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Thin Semi-Condensed" checksum="(null)">
+  </resource>
+
   <resource identifier="Noto Sans Hebrew Ultra-Bold" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Sans Hebrew Ultra-Bold Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Ultra-Bold Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Ultra-Bold Semi-Condensed" checksum="(null)">
+  </resource>
+
   <resource identifier="Noto Sans Hebrew Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Ultra-Light Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Ultra-Light Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Hebrew Ultra-Light Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Imperial Aramaic" checksum="(null)">
@@ -5891,9 +5891,6 @@
   </resource>
 
   <resource identifier="Noto Sans Pau Cin Hau" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Phags-Pa" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans PhagsPa" checksum="(null)">
@@ -8011,106 +8008,106 @@
   <resource identifier="Noto Serif Hebrew Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Serif Hebrew Condensed, Bold Condensed" checksum="(null)">
+  <resource identifier="Noto Serif Hebrew Bold Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Serif Hebrew Condensed, Condensed" checksum="(null)">
+  <resource identifier="Noto Serif Hebrew Bold Extra-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Serif Hebrew Condensed, Heavy Condensed" checksum="(null)">
+  <resource identifier="Noto Serif Hebrew Bold Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Serif Hebrew Condensed, Light Condensed" checksum="(null)">
+  <resource identifier="Noto Serif Hebrew Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Serif Hebrew Condensed, Medium Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew Condensed, Semi-Bold Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew Condensed, Thin Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew Condensed, Ultra-Bold Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew Condensed, Ultra-Light Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew ExtraCondensed, Bold Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew ExtraCondensed, Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew ExtraCondensed, Heavy Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew ExtraCondensed, Light Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew ExtraCondensed, Medium Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew ExtraCondensed, Semi-Bold Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew ExtraCondensed, Thin Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew ExtraCondensed, Ultra-Bold Extra-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew ExtraCondensed, Ultra-Light Extra-Condensed" checksum="(null)">
+  <resource identifier="Noto Serif Hebrew Extra-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Serif Hebrew Heavy" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Serif Hebrew Heavy Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Heavy Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Heavy Semi-Condensed" checksum="(null)">
+  </resource>
+
   <resource identifier="Noto Serif Hebrew Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Light Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Light Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Light Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Serif Hebrew Medium" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Serif Hebrew Medium Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Medium Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Medium Semi-Condensed" checksum="(null)">
+  </resource>
+
   <resource identifier="Noto Serif Hebrew Semi-Bold" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Serif Hebrew SemiCondensed, Bold Semi-Condensed" checksum="(null)">
+  <resource identifier="Noto Serif Hebrew Semi-Bold Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Serif Hebrew SemiCondensed, Heavy Semi-Condensed" checksum="(null)">
+  <resource identifier="Noto Serif Hebrew Semi-Bold Extra-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Serif Hebrew SemiCondensed, Light Semi-Condensed" checksum="(null)">
+  <resource identifier="Noto Serif Hebrew Semi-Bold Semi-Condensed" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Serif Hebrew SemiCondensed, Medium Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew SemiCondensed, Semi-Bold Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew SemiCondensed, Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew SemiCondensed, Thin Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew SemiCondensed, Ultra-Bold Semi-Condensed" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Serif Hebrew SemiCondensed, Ultra-Light Semi-Condensed" checksum="(null)">
+  <resource identifier="Noto Serif Hebrew Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Serif Hebrew Thin" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Serif Hebrew Thin Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Thin Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Thin Semi-Condensed" checksum="(null)">
+  </resource>
+
   <resource identifier="Noto Serif Hebrew Ultra-Bold" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Serif Hebrew Ultra-Bold Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Ultra-Bold Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Ultra-Bold Semi-Condensed" checksum="(null)">
+  </resource>
+
   <resource identifier="Noto Serif Hebrew Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Ultra-Light Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Ultra-Light Extra-Condensed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Serif Hebrew Ultra-Light Semi-Condensed" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Serif Italic" checksum="(null)">

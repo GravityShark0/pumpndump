@@ -5,6 +5,7 @@
     (name "Core Pointer")
     (tool-options "GimpPaintOptions"
         (tool "gimp-paintbrush-tool")
+        (foreground (color-rgb 1 0 0))
         (brush "2. Hardness 075")
         (dynamics "Pressure Opacity")
         (gradient "Aneurism")
