@@ -6,10 +6,10 @@
 # export QT_IM_MODULE=ibus
 
 # export VDPAU_DRIVER=nvidia
-export LIBVA_DRIVER_NAME=nvidia
+# export LIBVA_DRIVER_NAME=nvidia
 # ~/.local/bin is where you would put your installed binaries
 export PATH=~/.local/bin:~/.scripts:$PATH
-export CCACHE_DIR="/var/cache/ccache"
+# export CCACHE_DIR="/var/cache/ccache"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
   exec startx

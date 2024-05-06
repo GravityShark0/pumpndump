@@ -10,13 +10,11 @@ background="$HOME/Media/Pictures/Wallpapers/main/${random}"
 echo "$random" >> .recent_wallpapers.txt
 feh --bg-scale "$background".* &
 
-# ibus-daemon -d -r
-nohup gentoo-pipewire-launcher restart > /dev/null &
 if pidof picom; then
         pkill picom
-        picom --animations -b
-else
-        picom --animations -b
 fi
+picom --animations -b
+nohup gentoo-pipewire-launcher restart > /dev/null &
+# ibus-daemon -d -r
 
 $(xrdb ~/.config/suckless/catppuccin/mocha && kill -USR1 $(pidof st)) &

@@ -616,3 +616,5 @@ sys-libs/gdbm berkdb
 # required by pdf-tools (argument)
 >=app-text/poppler-24.04.0 png
 
+# required by www-client/luakit-2.3.6::gentoo[lua_single_target_luajit]
+>=dev-lua/luafilesystem-1.8.0-r101 lua_targets_luajit

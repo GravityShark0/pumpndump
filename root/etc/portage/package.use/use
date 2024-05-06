@@ -57,3 +57,5 @@ dev-perl/JSON -xs
 net-ftp/gftp gtk
 
 app-text/tesseract doc jpeg opencl png tiff webp static-libs
+
+dev-util/vulkan-tools cube
