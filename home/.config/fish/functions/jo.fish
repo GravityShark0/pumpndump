@@ -1,4 +1,4 @@
-function jo --wraps=joshuto --description 'alias jo=joshuto'
+function jo --wraps=joshuto --description 'alias jo=joshuto with joshuto-cwd support'
   mkdir -p /tmp/$USER
   set OUTPUT_FILE "/tmp/$USER/joshuto-cwd-$fish_pid"
   env joshuto --output-file "$OUTPUT_FILE" $argv

@@ -13,7 +13,7 @@
 # ibus-daemon -d
 
 # ( sleep 1 && dash ~/.scripts/bloatedrun.sh ) &
-(sleep 3 && timeout 10 st -c float -g 43x1 -e dash ~/.scripts/bloatprompt) &
+(sleep 3 && timeout 60 st -c float -g 43x1 -e dash ~/.scripts/bloatprompt) &
 
 exec dbus-launch --exit-with-session awesome
 # exec dbus-launch --sh-syntax --exit-with-session awesome

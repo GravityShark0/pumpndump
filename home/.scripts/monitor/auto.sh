@@ -8,7 +8,7 @@ if [ $DISPLAY ]; then
     lid_status=$(cat /proc/acpi/button/lid/LID0/state | cut -d ':' -f 2 | xargs)
 
     xrandr --setprovideroutputsource modesetting NVIDIA-0
-    xrandr --auto
+    # xrandr --auto
     if [ "$hdmi_status" = "connected" ]; then
         if [ "$lid_status" = "open" ]; then
             xrandr --output HDMI-0 --primary --mode 1440x900 --pos 0x0 --rotate normal --output eDP-1-1 --mode 1600x900 --pos 1440x0 --rotate normal

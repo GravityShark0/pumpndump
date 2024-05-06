@@ -897,7 +897,7 @@ awful.rules.rules = {
 	{
 		rule_any = { class = { 'anki', 'Anki' }, icon_name = { 'GIMP Startup', 'GNU Image Manipulation Program' } },
 		except_any = { name = { 'Choose Note Type', 'Choose Deck', 'Add' } },
-		properties = { tag = '6' },
+		properties = { tag = '3' },
 	},
 
 	-- Put emacs in scratch
