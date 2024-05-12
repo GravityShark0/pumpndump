@@ -7,6 +7,7 @@
 
 # ~/.local/bin is where you would put your installed binaries
 export PATH=~/.local/bin:~/.scripts:$PATH
+# export GOROOT=~/Other/go
 # export CCACHE_DIR="/var/cache/ccache"
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
