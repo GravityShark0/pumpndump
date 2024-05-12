@@ -859,7 +859,7 @@ awful.rules.rules = {
 	},
 
 	{
-		rule_any = { class = { 'discord', 'armcord', 'ArmCord' } },
+		rule_any = { class = { 'discord', 'armcord', 'ArmCord', 'WebCord', 'webcord' } },
 		properties = { tag = '5' },
 	},
 

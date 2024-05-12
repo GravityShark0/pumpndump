@@ -11,5 +11,9 @@ yes_or_no() {
 }
 
 message="Do you want to start bloated?"
-
-yes_or_no "$message" && ( nohup ~/.scripts/startupbloat > /dev/null &)
+if yes_or_no "$message"; then
+    notify-send "Bloating"
+    (nohup sh -e ~/.scripts/bloatstartup > /dev/null &) && sleep 0.5
+else
+    notify-send "Not Blatoing"
+fi

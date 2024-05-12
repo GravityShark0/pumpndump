@@ -1,0 +1,2 @@
+#/bin/sh
+(nohup timeout 60 st -c float -g 43x1 sh -e ~/.scripts/bloatprompt > /dev/null) &

@@ -1,7 +1,5 @@
 #!/bin/sh
-trap 'echo "Starting update..."' SIGINT
-
-st -c float -e timeout --signal=SIGINT 10 syncclock
+st -c float -e syncclock
 
 org &
 st -c float -e update &

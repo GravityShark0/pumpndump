@@ -18,13 +18,12 @@ echo "Internet is available, Attempting Clock Sync"
 # doas chronyd -q
 #doas rc-service ntp-client restart
 # doas $(ntpd -svd; read \n)
-doas ntpd -svd
+doas timeout --signal=SIGINT 15 ntpd -svd
 if [ $? -eq 1 ]; then
     notify-send "Sync Failed"
     echo "Sync Failed"
     exit 2
 else
-    read \n
     notify-send "Sync Succesful"
     echo "Sync Succesful"
 fi
