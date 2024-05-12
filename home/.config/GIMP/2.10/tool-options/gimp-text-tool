@@ -3,6 +3,6 @@
 (foreground (color-rgb 1 0 0))
 (palette "Color History")
 (font "Verdana")
-(font-size 90)
+(font-size 16)
 
 # end of gimp-text-tool options

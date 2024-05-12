@@ -1,3 +1,3 @@
 #!/bin/sh
 cd ~/Notes
-nohup st -g 140x40 -c scratchy -e dash -c "echo 'e oaa' | nvim ~/Notes/index.org -s -;" > /dev/null &
+nohup st -g 130x37 -c scratchy -e sh -c "echo 'e oaa' | nvim ~/Notes/index.org -s -;" > /dev/null &

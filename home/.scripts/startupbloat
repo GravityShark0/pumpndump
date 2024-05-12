@@ -7,5 +7,5 @@ org &
 st -c float -e update &
 nohup librewolf > /dev/null &
 # nohup gimp > /dev/null &
-nohup flatpak run net.ankiweb.Anki > /dev/null &
-nohup flatpak run xyz.armcord.ArmCord > /dev/null &
+# nohup flatpak run net.ankiweb.Anki > /dev/null &
+nohup flatpak run io.github.spacingbat3.webcord > /dev/null &

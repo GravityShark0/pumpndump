@@ -11,11 +11,14 @@ if [ $DISPLAY ]; then
     # xrandr --auto
     if [ "$hdmi_status" = "connected" ]; then
         if [ "$lid_status" = "open" ]; then
+            # Dual
             xrandr --output HDMI-0 --primary --mode 1440x900 --pos 0x0 --rotate normal --output eDP-1-1 --mode 1600x900 --pos 1440x0 --rotate normal
         else
+            # Singular external monitor
             xrandr --output HDMI-0 --primary --mode 1440x900 --pos 0x0 --rotate normal --output eDP-1-1 --off
         fi
     else
+        # Singular laptop monitor
         xrandr --output eDP-1-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-0 --off
     fi
 fi

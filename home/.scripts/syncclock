@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 # Check internet connection
 # doas rfkill unblock wlan && 

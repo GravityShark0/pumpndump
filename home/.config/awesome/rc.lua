@@ -430,43 +430,14 @@ globalkeys = gears.table.join(
 	-- Scratchpad
 	awful.key({ Modkey }, '`', function()
 		local tag = awful.screen.focused().tags[8]
-		local selected = tag.selected
 		local clients = tag:clients()
-
-		if tag.selected == false then
+		if clients[1] then
 			awful.tag.viewtoggle(tag)
-
-			-- local align = (awful.placement.centered + awful.placement.no_overlap)
-			-- local align = (awful.placement.centered + awful.placement.no_overlap)
-			if clients then
-				-- client.border_color = beautiful.border_scratch
-				for i = 1, #clients do
-					-- local c = clients[#clients - i + 1]
-					local c = clients[#clients - i + 1]
-
-					-- c.useless_gap = 5
-					-- naughty.notify({ text = tostring(c) })
-					c.border_color = beautiful.border_scratch
-
-					-- awful.placement.maximize(c)
-					-- c.maximized = false
-
-					-- awful.placement.centered(c)
-
-					c:emit_signal('request::activate', 'scratchpad')
-				end
-			end
-		else
-			-- for i = 1, #clients do
-			-- 	local c = clients[#clients - i + 1]
-			--
-			-- 	naughty.notify({ text = tostring(c) })
-			--
-			-- 	awful.placement.bottom(c)
-			--
-			-- 	-- c.geometry.y = -1000
+			clients[#clients]:emit_signal('request::activate', { raise = true })
+			-- for _, c in pairs(clients) do
+			-- 	c:emit_signal('request::activate', { raise = true })
 			-- end
-			--
+		elseif tag.selected == true then
 			awful.tag.viewtoggle(tag)
 		end
 	end, { description = 'toggle scratchpad', group = 'client' }),
@@ -646,27 +617,24 @@ end
 
 clientkeys = gears.table.join(
 	awful.key({ Modkey, 'Shift' }, '`', function(c)
-		if client.focus then
-			local tag = client.focus.screen.tags[8]
-			if tag then
-				local screen = awful.screen.focused()
-				local scratch = screen.tags[8]
-				if client.focus.first_tag.index == 8 then
-					client.focus:move_to_tag(awful.screen.focused().selected_tag)
-					c.floating = false
+		local tag = client.focus.screen.tags[8]
+		local screen = awful.screen.focused()
+		local scratch = screen.tags[8]
+		if client.focus.first_tag.index == 8 then
+			c:move_to_tag(awful.screen.focused().selected_tag)
+			c.floating = false
 
-					if scratch.selected then
-						awful.tag.viewtoggle(scratch)
-					end
-				else
-					client.focus:move_to_tag(tag)
-					if not scratch.selected then
-						awful.tag.viewtoggle(scratch)
-					end
-					c.floating = true
-					c.border_color = beautiful.border_scratch
-				end
+			if scratch.selected then
+				awful.tag.viewtoggle(scratch)
 			end
+		else
+			awful.placement.maximize(c, { honor_workarea = true, margins = 50 })
+			c:move_to_tag(tag)
+			if not scratch.selected then
+				awful.tag.viewtoggle(scratch)
+			end
+			c.floating = true
+			c.border_color = beautiful.border_scratch
 		end
 	end, { description = 'toggle client to scratchpad', group = 'client' }),
 
@@ -725,11 +693,11 @@ clientkeys = gears.table.join(
 		c:swap(awful.client.getmaster())
 	end, { description = 'move to master', group = 'client' }),
 	awful.key({ Modkey, 'Shift' }, ',', function(c)
-		c:move_to_screen(-1)
+		c:move_to_screen(1)
 		awful.screen.focus_relative(1)
 	end, { description = 'move to screen', group = 'client' }),
 	awful.key({ Modkey, 'Shift' }, '.', function(c)
-		c:move_to_screen(1)
+		c:move_to_screen(-1)
 		awful.screen.focus_relative(-1)
 	end, { description = 'move to screen', group = 'client' }),
 	-- awful.key({ modkey, }, 't', function(c) c.ontop = not c.ontop end,
@@ -791,6 +759,7 @@ for i = 1, 9 do
 
 			local scratch = screen.tags[8]
 			if tag then
+				-- Allow scratchpad to remain visible while changing tags
 				if scratch.selected then
 					tag:view_only()
 					awful.tag.viewtoggle(scratch)
@@ -955,7 +924,7 @@ end)
 
 -- Focus Color
 client.connect_signal('focus', function(c)
-	if c.first_tag and c.first_tag.index == 8 then
+	if c.first_tag.index == 8 then
 		c.border_color = beautiful.border_scratch
 	else
 		c.border_color = beautiful.border_focus
@@ -967,3 +936,4 @@ client.connect_signal('unfocus', function(c)
 end)
 
 -- }}}
+--
