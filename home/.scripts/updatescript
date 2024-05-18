@@ -1,0 +1,12 @@
+#!/bin/sh
+doas emerge --sync && doas emerge -avuDN --with-bdeps=y @world && doas emerge --depclean && flatpak update
+if [ $? == 0 ]; then
+        notify-send "Updating successful"
+        echo "\n\nUpdate successful. Press any key to close."
+        read a
+
+else
+        notify-send "Updating unsuccessful"
+        echo "\n\nUpdating unsuccessful. Press any key to close."
+        read a
+fi
