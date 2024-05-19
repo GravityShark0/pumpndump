@@ -1,8 +1,8 @@
 # GIMP action-history
 
 (history-item "file-quit" 5)
-(history-item "select-all" 0)
 (history-item "edit-paste-as-new-image" 1)
+(history-item "select-all" 1)
 (history-item "image-new" 3)
 (history-item "edit-paste" 1)
 (history-item "layers-new" 1)

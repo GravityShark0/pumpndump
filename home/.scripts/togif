@@ -1,0 +1,25 @@
+#!/bin/sh
+
+if [ -z "$1" ] ; then
+    echo 'togif [INPUT] <FPS> <OUTPUT>\n[required] <optional>'
+    echo 'input file needed'
+    exit 1
+fi
+if [ -z "$2" ] ; then
+    fps="fps=${2},"
+else
+    echo "Using the fps from metadata"
+    fps=""
+fi
+if [ -z "$3" ] ; then
+    out="${1}-OUT.gif"
+else
+    out=$3
+fi
+
+
+ffmpeg -i $1 \
+    -vf "${fps}split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" \
+    -loop 0 $out
+
+echo "Outputted to ${out}"
