@@ -61,3 +61,5 @@ app-text/tesseract doc jpeg opencl png tiff webp static-libs
 dev-util/vulkan-tools cube
 
 media-video/wireplumber
+
+media-fonts/nerd-fonts firacode ubuntumono iosevkaterm hack jetbrainsmono

@@ -18,7 +18,8 @@ Xft.rgba:              rgb
 ! font (default: mono) (mono uses the default monspaced font in your system)
 !   default:  st.font: mono:pixelsize=12:antialias=true:autohint=true
 
-st.font:            FiraCode Nerd Font:pixelsize=16:style=Retina
+! st.font:            FiraCode Nerd Font:pixelsize=16:style=Retina
+st.font:            IosevkaTerm Nerd Font:pixelsize=20
 
 ! Extra fonts that can be installed for things like powerline symbols
 st.fontalt0: Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true

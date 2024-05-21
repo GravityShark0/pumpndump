@@ -587,7 +587,7 @@ sys-libs/gdbm berkdb
 >=media-libs/mesa-9999 wayland
 
 # required by nerdfonts[firacode] (argument)
->=media-fonts/nerdfonts-3.2.0 firacode ubuntumono
+# >=media-fonts/nerdfonts-3.2.0 firacode ubuntumono
 
 # required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
 # required by app-emulation/wine-proton-8.0.5c::gentoo[gstreamer]

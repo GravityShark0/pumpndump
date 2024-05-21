@@ -5,7 +5,7 @@
   --theme-border-radius: 5px;
 }
 :root[titlepreface*="[S] "] {
-  --theme-sidebar-width: 250px !important;
+  --theme-sidebar-width: 187px !important;
   --theme-button-size: calc(var(--theme-icon-size) + var(--theme-icon-pad) * 2);
   --theme-urlbar-height: 40px !important;
   --toolbarbutton-inner-padding: 2.5px !important;
@@ -79,7 +79,7 @@
   --urlbar-container-padding: 0 var(--theme-spacing);
   --urlbar-margin-inline: 0px;
   --urlbar-height: var(--theme-urlbar-height) !important;
-  left: 43px !important;
+  left: 0px !important;
   top: 0 !important;
   width: 200px !important;
   box-shadow:
@@ -90,10 +90,10 @@
 }
 
 #main-window[titlepreface*="[S] "] #urlbar[breakout][breakout-extend] {
-  width: 200% !important;
+  width: 500% !important;
   border: 0px solid yellow !important;
   box-shadow: none !important;
-  margin-left: -60vw !important;
+  margin-left: -69vw !important;
   margin-top: 20vh !important;
   transition: 0.2s all;
 }
@@ -133,7 +133,7 @@
 
 #main-window[titlepreface*="[S] "] #urlbar-container {
   top: var(--blah);
-  margin-left: 25px !important;
+  /* margin-left: 25px !important; */
 }
 #main-window[titlepreface*="[S] "] #urlbar-input-container {
   padding: var(--urlbar-container-padding) !important;
@@ -172,7 +172,7 @@
   }
 }
 #main-window[titlepreface*="[S] "] #sidebar {
-  margin-top: 110px !important;
+  margin-top: 60px !important;
   /* width: var( --theme-sidebar-width) !important;
   min-width: var( --theme-sidebar-width) !important;
   max-width: var( --theme-sidebar-width) !important; */
@@ -202,9 +202,9 @@
 }
 
 #main-window[titlepreface*="[S] "] #urlbar-container {
-  margin-left: -30px !important;
+  /* margin-left: -30px !important; */
   /* left: 30px !important; */
-  width: 230px !important;
+  width: 187px !important;
 }
 
 #main-window[titlepreface*="[S] "] #tracking-protection-icon-container,

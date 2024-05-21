@@ -60,6 +60,9 @@ function _hydro_postexec --on-event fish_postexec
 end
 
 function _hydro_prompt --on-event fish_prompt
+    if set -q TMUX
+        set hydro_symbol_prompt $hydro_symbol_prompt_tmux
+    end
     set --query _hydro_status || set --global _hydro_status "$_hydro_newline$_hydro_color_prompt$hydro_symbol_prompt"
     set --query _hydro_pwd || _hydro_pwd
 
@@ -151,8 +154,8 @@ set --global hydro_color_pwd $fish_color_cwd
 set --global hydro_color_duration $fish_color_gray
 
 set --query hydro_color_error || set --global hydro_color_error $fish_color_error
-# set --query hydro_symbol_prompt || set --global hydro_symbol_prompt ❱
-set --query hydro_symbol_prompt || set --global hydro_symbol_prompt 
+set --query hydro_symbol_prompt || set --global hydro_symbol_prompt '❱ '
+set --query hydro_symbol_prompt_tmux || set --global hydro_symbol_prompt_tmux '❰ '
 set --query hydro_symbol_git_dirty || set --global hydro_symbol_git_dirty ' '
 set --query hydro_symbol_git_cached || set --global hydro_symbol_git_cached ' '
 set --query hydro_symbol_git_ahead || set --global hydro_symbol_git_ahead ↑

@@ -1,4 +1,5 @@
 #!/bin/sh
 cd ~/Notes
-st -g 130x37 -c scratchy -e sh -c "echo 'e oaa' | nvim ~/Notes/index.org -s -;" &
+# st -g 130x37 -c scratchy -e sh -c "echo 'e oaa' | nvim ~/Notes/index.org -s -;" &
+st -g 130x37 -c scratchy -e sh -c "nvim ~/Notes/index.org" &
 disown

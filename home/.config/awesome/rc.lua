@@ -100,7 +100,7 @@ awful.layout.layouts = {
 	-- awful.layout.suit.spiral.dwindle,
 	-- awful.layout.suit.max,
 	-- awful.layout.suit.max.fullscreen,
-	awful.layout.suit.magnifier,
+	-- awful.layout.suit.magnifier,
 	-- awful.layout.suit.corner.nw,
 	--
 	bling.layout.mstab,
@@ -465,18 +465,18 @@ globalkeys = gears.table.join(
 		awful.client.focus.bydirection('right')
 	end, { description = 'focus client towards right', group = 'client' }),
 	-- Backup
-	awful.key({ Modkey, 'Mod1' }, 'j', function()
+	awful.key({ Modkey }, '.', function()
 		awful.client.focus.byidx(1)
 	end, { description = 'focus next by index', group = 'client' }),
-	awful.key({ Modkey, 'Mod1' }, 'k', function()
+	awful.key({ Modkey }, ',', function()
 		awful.client.focus.byidx(-1)
 	end, { description = 'focus previous by index', group = 'client' }),
 
 	-- Monitors
-	awful.key({ Modkey }, '.', function()
+	awful.key({ Modkey }, ']', function()
 		awful.screen.focus_relative(1)
 	end, { description = 'focus the next screen', group = 'screen' }),
-	awful.key({ Modkey }, ',', function()
+	awful.key({ Modkey }, '[', function()
 		awful.screen.focus_relative(-1)
 	end, { description = 'focus the previous screen', group = 'screen' }),
 
@@ -667,10 +667,10 @@ clientkeys = gears.table.join(
 	end, { description = 'decrease client width factor', group = 'client' }),
 
 	-- Backup
-	awful.key({ Modkey, 'Shift', 'Mod1' }, 'j', function()
+	awful.key({ Modkey, 'Shift' }, '.', function()
 		awful.client.swap.byidx(1)
 	end, { description = 'swap with next client by index', group = 'client' }),
-	awful.key({ Modkey, 'Shift', 'Mod1' }, 'k', function()
+	awful.key({ Modkey, 'Shift' }, ',', function()
 		awful.client.swap.byidx(-1)
 	end, { description = 'swap with previous client by index', group = 'client' }),
 	awful.key({ Modkey }, 'f', function(c)
@@ -692,11 +692,11 @@ clientkeys = gears.table.join(
 	awful.key({ Modkey }, 'Return', function(c)
 		c:swap(awful.client.getmaster())
 	end, { description = 'move to master', group = 'client' }),
-	awful.key({ Modkey, 'Shift' }, ',', function(c)
+	awful.key({ Modkey, 'Shift' }, ']', function(c)
 		c:move_to_screen(1)
 		awful.screen.focus_relative(1)
 	end, { description = 'move to screen', group = 'client' }),
-	awful.key({ Modkey, 'Shift' }, '.', function(c)
+	awful.key({ Modkey, 'Shift' }, '[', function(c)
 		c:move_to_screen(-1)
 		awful.screen.focus_relative(-1)
 	end, { description = 'move to screen', group = 'client' }),

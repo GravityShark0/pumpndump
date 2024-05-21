@@ -8,3 +8,7 @@ if status is-interactive
     zoxide init fish | source
     # alias cd="echo pls use 'z' instead thx :3"
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

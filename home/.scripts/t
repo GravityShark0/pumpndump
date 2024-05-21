@@ -1,12 +1,13 @@
 #!/bin/sh
-sesh connect \"$(
-	sesh list -t -z --hide-attached | fzf-tmux -p 80%,80% \
-		--no-sort --border-label ' sesh ' --prompt 'all>  '\
-		--header '  ^a all ^t sessions ^x zoxide ^f find ^d tmux kill' \
+sesh connect "$(
+	sesh list -i -H | fzf-tmux --ansi -p 80%,80% \
+		--no-sort --border-label ' sesh ' --prompt '⚡ '\
+		--header '  ^a all ^t sessions ^c configs ^z zoxide ^f find ^d delete selected session' \
 		--bind 'tab:down,btab:up' \
-		--bind 'ctrl-a:change-prompt(all>  )+reload(sesh list -t -z --hide-attached)' \
-		--bind 'ctrl-t:change-prompt(sessions>  )+reload(sesh list -t)' \
-		--bind 'ctrl-x:change-prompt(zoxide>  )+reload(sesh list -z)' \
-		--bind 'ctrl-f:change-prompt(find>  )+reload(fd -t d -E .local/share/Trash . ~ ~/.config)' \
-		--bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(all>  )+reload(sesh list -t -z --hide-attached)'
-)\"
+		--bind 'ctrl-a:change-prompt(⚡ )+reload(sesh list -i -H)' \
+		--bind 'ctrl-t:change-prompt(  )+reload(sesh list -i -t)' \
+		--bind 'ctrl-c:change-prompt(󰢻  )+reload(sesh list -i -c)' \
+		--bind 'ctrl-z:change-prompt(  )+reload(sesh list -i -z)' \
+		--bind 'ctrl-f:change-prompt(  )+reload(fd -t d -E .local/share/Trash . ~ ~/.config)' \
+		--bind 'ctrl-d:execute(tmux kill-session -t $(echo {} | cut -c 5-))+change-prompt(⚡ )+reload(sesh list -i -H)'
+)"

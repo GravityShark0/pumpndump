@@ -1,8 +1,8 @@
 #!/bin/sh
 
 if [ -z "$1" ] ; then
-    echo 'togif [INPUT] <FPS> <OUTPUT>\n[required] <optional>'
-    echo 'input file needed'
+    echo 'togif [INPUT] <FPS> <OUTPUT>\n    [required] <optional>'
+    echo 'ERR 1: input file needed'
     exit 1
 fi
 if [ -z "$2" ] ; then

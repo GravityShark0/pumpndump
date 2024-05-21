@@ -1,0 +1,53 @@
+[default_session]
+startup_command = "nvim -c ':Telescope find_files find_command=fd'"
+
+[[session]]
+name = "Code 💻"
+path = "~/Code"
+startup_command = "l"
+
+[[session]]
+name = "sesh config"
+path = "~/.config/sesh"
+startup_command = "nvim sesh.toml"
+
+[[session]]
+name = "neovim config"
+path = "~/.config/nvim"
+startup_command = "nvim -c ':SessionLoad'"
+
+[[session]]
+name = "Scripts 📜"
+path = "~/.scripts"
+
+[[session]]
+name = "pumpndump 🧴"
+path = "~/Other/pumpndump"
+startup_command = "git status"
+
+[[session]]
+name = "portage config 🧴"
+path = "/etc/portage/"
+startup_command = "git status"
+
+[[session]]
+name = "tmux config"
+path = "~/.tmux"
+startup_command = "nvim ~/.tmux.conf"
+
+[[session]]
+name = "Notes 📝"
+path = "~/Notes"
+startup_command = "nvim index.org"
+
+# [[session]]
+# name = "Downloads 📥"
+# path = "~/Downloads"
+# startup_command = "jo"
+
+[[session]]
+# TODO: update the name fo the session to "update done ✅" when the u script ends
+name = "Update" 
+startup_command = "updatescript"
+# TODO: implement "detatched feature"
+# detached = true # never attach to this session, just create it in the background
