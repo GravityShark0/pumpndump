@@ -1,12 +1,12 @@
 # GIMP action-history
 
 (history-item "file-quit" 5)
-(history-item "edit-paste-as-new-image" 1)
-(history-item "select-all" 1)
-(history-item "image-new" 3)
+(history-item "edit-paste-as-new-image" 2)
+(history-item "select-all" 3)
+(history-item "image-new" 2)
+(history-item "edit-copy" 1)
 (history-item "edit-paste" 1)
-(history-item "layers-new" 1)
-(history-item "edit-copy" 3)
+(history-item "layers-new" 3)
 (history-item "dockable-close-tab" 1)
 (history-item "file-export-as" 2)
 (history-item "file-open" 2)
@@ -25,7 +25,8 @@
 (history-item "layers-merge-down" 0)
 (history-item "tools-rotate" 0)
 (history-item "tools-size-set-to-default" 0)
-(history-item "tools-rect-select" 1)
+(history-item "tools-rect-select" 0)
+(history-item "filters-pixelize" 1)
 (history-item "dialogs-document-history" 0)
 (history-item "dialogs-vectors" 0)
 (history-item "vectors-new" 0)
@@ -99,6 +100,5 @@
 (history-item "layers-flatten-image" 0)
 (history-item "tools-warp" 0)
 (history-item "tools-airbrush" 0)
-(history-item "file-open-recent-02" 0)
 
 # end of action-history

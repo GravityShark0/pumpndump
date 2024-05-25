@@ -1,5 +1,5 @@
 [default_session]
-startup_command = "nvim -c ':Telescope find_files find_command=fd'"
+startup_command = "l"
 
 [[session]]
 name = "Code 💻"
@@ -14,7 +14,7 @@ startup_command = "nvim sesh.toml"
 [[session]]
 name = "neovim config"
 path = "~/.config/nvim"
-startup_command = "nvim -c ':SessionLoad'"
+startup_command = "vis"
 
 [[session]]
 name = "Scripts 📜"
@@ -27,8 +27,8 @@ startup_command = "git status"
 
 [[session]]
 name = "portage config 🧴"
-path = "/etc/portage/"
-startup_command = "git status"
+path = "~/Other/pumpndump/root/etc/portage/"
+startup_command = "l"
 
 [[session]]
 name = "tmux config"

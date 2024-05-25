@@ -12,7 +12,7 @@
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
     (position 0 0)
-    (size 716 864)
+    (size 1436 864)
     (open-on-exit)
     (aux-info
         (left-docks-width "209")
@@ -83,7 +83,7 @@
     (size 1008 745))
 (session-info "toplevel"
     (factory-entry "gimp-operation-tool-dialog")
-    (position 172 0))
+    (position 737 278))
 (session-info "toplevel"
     (factory-entry "gimp-transform-3d-tool-dialog")
     (position 544 584))
