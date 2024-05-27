@@ -51,3 +51,9 @@ name = "Update"
 startup_command = "updatescript"
 # TODO: implement "detatched feature"
 # detached = true # never attach to this session, just create it in the background
+
+
+[[session]]
+# name = "coollittlewebsite"
+path = "~/Code/coollittlewebsite"
+startup_script = "~/.config/sesh/scripts/coollittlewebsite.sh"
