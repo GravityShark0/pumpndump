@@ -77,10 +77,6 @@ sys-kernel/linux-firmware
 sys-power/thermald
 sys-process/htop
 virtual/wine
-www-client/firefox-bin
-www-client/librewolf-bin
-x11-apps/mesa-progs
-x11-apps/xinit
 x11-apps/xrandr
 x11-apps/xrdb
 x11-base/xorg-fonts
@@ -91,8 +87,6 @@ x11-misc/betterlockscreen
 x11-misc/rofi
 x11-misc/screenkey
 x11-misc/xclip
-x11-misc/xdg-user-dirs
-x11-misc/xdotool
 x11-terms/st-grav-flexipatch
 x11-wm/awesome
 xfce-base/thunar

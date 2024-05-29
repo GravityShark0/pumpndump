@@ -32,3 +32,5 @@ virtual/dist-kernel -~amd64
 */*::steam-overlay
 games-util/game-device-udev-rules
 sys-libs/libudev-compat
+
+=x11-misc/picom-ftlabs-generalanimation-9999 **

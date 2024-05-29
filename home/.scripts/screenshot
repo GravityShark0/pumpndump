@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 rofi_command="rofi -theme $HOME/.config/rofi/config/screenshot.rasi"
-time=`date +%Y-%m-%d-%I-%M-%S`
-dir="`xdg-user-dir PICTURES`/Screenshots"
-file="Screenshot_${time}.png"
+dir="/home/gravity/Pictures/Screenshots"
+file="Screenshot_$(date +%Y-%m-%d-%H-%M-%S).png"
 
 # Buttons
 	screen=" Capture Desktop"
@@ -16,10 +15,11 @@ file="Screenshot_${time}.png"
 notify_view () {
 	notify-send "Copied to clipboard."
 	feh ${dir}/"$file"
-	if [ -e "$dir/$file" ]; then
+	if [ -s "$dir/$file" ]; then
 		notify-send "Screenshot Saved."
 	else
-		notify-send "Screenshot Deleted."
+		rm "$dir/$file"
+		notify-send "Screenshot Failed."
 	fi
 }
 
