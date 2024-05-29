@@ -6,7 +6,6 @@ app-arch/p7zip
 app-arch/unrar
 app-editors/emacs
 app-editors/neovim
-app-emacs/pdf-tools
 app-eselect/eselect-repository
 app-misc/joshuto
 app-misc/keyd
@@ -19,7 +18,6 @@ app-shells/fish
 app-shells/fzf
 app-shells/mksh
 app-shells/zoxide
-app-text/pdfarranger
 dev-java/openjdk-jre-bin
 dev-util/ccache
 dev-vcs/git
@@ -32,10 +30,8 @@ media-fonts/nerd-fonts
 media-fonts/noto-emoji
 media-fonts/powerline-symbols
 media-fonts/symbola
-media-fonts/ubuntu-font-family
 media-gfx/feh
 media-gfx/gimp
-media-gfx/img2pdf
 media-gfx/maim
 media-libs/nvidia-vaapi-driver
 media-sound/pulsemixer
@@ -62,6 +58,7 @@ sys-apps/lm-sensors
 sys-apps/merge-usr
 sys-apps/razer-cli
 sys-apps/ripgrep
+sys-apps/xdg-desktop-portal-gtk
 sys-boot/grub
 sys-devel/clang
 sys-firmware/intel-microcode
@@ -77,6 +74,7 @@ sys-kernel/linux-firmware
 sys-power/thermald
 sys-process/htop
 virtual/wine
+www-client/librewolf-bin
 x11-apps/xrandr
 x11-apps/xrdb
 x11-base/xorg-fonts
@@ -84,6 +82,7 @@ x11-base/xorg-server
 x11-drivers/nvidia-drivers
 x11-libs/libnotify
 x11-misc/betterlockscreen
+x11-misc/picom-ftlabs-generalanimation
 x11-misc/rofi
 x11-misc/screenkey
 x11-misc/xclip

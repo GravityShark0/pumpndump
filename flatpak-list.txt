@@ -14,5 +14,5 @@ org.jamovi.jamovi
 org.kde.kdenlive
 org.kde.krita
 org.libreoffice.LibreOffice
-io.gitlab.librewolf-community
+com.github.jeromerobert.pdfarranger
 io.github.spacingbat3.webcord

@@ -78,7 +78,7 @@ Alt_launcher = 'launcher'
 Powermenu = 'Powermenu'
 Screenshot = 'ss'
 Screenshot_menu = 'screenshot'
-Browser = 'flatpak run io.gitlab.librewolf-community'
+Browser = 'librewolf-bin'
 
 Lightdecrease = 'monitorlight +-5'
 Lightincrease = 'monitorlight +5'
