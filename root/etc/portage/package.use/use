@@ -3,10 +3,10 @@ app-admin/doas persist -pam
 # lua jittin time
 x11-wm/awesome lua_single_target_luajit -lua_single_target_lua5-1
 x11-drivers/nvidia-drivers abi_x86_32
-x11-base/xorg-server -minimal
+x11-base/xorg-server -minimal udev
 net-im/discord appindicator 
 www-client/firefox hwaccel screencast system-png -hardened pgo libproxy -telemetry 
-www-client/librewolf -eme-free hwaccel screencast system-1v1 system-png -hardened pgo libproxy -telemetry 
+www-client/librewolf -eme-free hwaccel screencast system-1v1 system-png -hardened pgo libproxy -telemetry llvm_slot_17
 media-fonts/noto-emoji icons
 
 sys-auth/elogind policykit
@@ -27,7 +27,7 @@ media-video/obs-studio lua nvenc pulseaudio speex v4l lua_single_target_luajit p
 app-text/aspell l10n_en l10n_tl
 
 app-emulation/wine* usb
-virtual/wine staging -proton
+virtual/wine staging -proton abi_x86_32 abi_x86_32
 
 # to allow for some other networks
 net-wireless/wpa_supplicant tkip
@@ -63,3 +63,7 @@ dev-util/vulkan-tools cube
 media-video/wireplumber
 
 media-fonts/nerd-fonts firacode ubuntumono iosevkaterm hack jetbrainsmono
+
+app-alternatives/ninja reference
+
+media-libs/libsdl2 -haptic joystick

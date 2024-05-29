@@ -626,3 +626,10 @@ sys-libs/gdbm berkdb
 # required by games-util/lutris-0.5.17::gentoo
 # required by lutris (argument)
 >=x11-libs/gdk-pixbuf-2.42.10-r1 jpeg
+# required by media-libs/gst-plugins-bad-1.22.11-r1::gentoo[vaapi,udev]
+# required by media-plugins/gst-plugins-vaapi-1.22.11-r1::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.6::gentoo[vaapi]
+# required by xfce-base/tumbler-4.19.1::gentoo[gstreamer]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libgudev-238-r2 abi_x86_32
