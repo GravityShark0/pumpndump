@@ -22,7 +22,7 @@ stow root --target=/
 # this is dangerous cause people could edit it that dont have the correct permissions (duh)
 
 # doas.conf needs to be owned by root for it to work
-chown root:root /etc/doas.conf
+chown root /etc/doas.conf
 
 # fstab cant be used as a symlink for obvious reasons
 cp ./root/etc/fstab.bak /etc/fstab

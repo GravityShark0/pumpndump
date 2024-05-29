@@ -27,7 +27,7 @@ media-video/obs-studio lua nvenc pulseaudio speex v4l lua_single_target_luajit p
 app-text/aspell l10n_en l10n_tl
 
 app-emulation/wine* usb
-virtual/wine staging proton
+virtual/wine staging -proton
 
 # to allow for some other networks
 net-wireless/wpa_supplicant tkip

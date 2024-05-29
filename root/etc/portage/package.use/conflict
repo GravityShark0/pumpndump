@@ -615,14 +615,14 @@ sys-libs/gdbm berkdb
 # required by app-emacs/pdf-tools-1.1.0::gentoo
 # required by pdf-tools (argument)
 >=app-text/poppler-24.04.0 png
-
 # required by www-client/luakit-2.3.6::gentoo[lua_single_target_luajit]
 >=dev-lua/luafilesystem-1.8.0-r101 lua_targets_luajit
-
 # required by x11-misc/pcmanfm-1.3.2-r1::gentoo
 # required by pcmanfm (argument)
 >=x11-libs/libfm-1.3.2-r1 gtk
-
 # required by media-tv/v4l-utils-1.26::gentoo
 # required by v4l-utils (argument)
 >=media-libs/libv4l-1.26.1 bpf
+# required by games-util/lutris-0.5.17::gentoo
+# required by lutris (argument)
+>=x11-libs/gdk-pixbuf-2.42.10-r1 jpeg
