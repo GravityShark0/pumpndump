@@ -1,36 +1,30 @@
-# media-video/pipewire **
-# media-video/wireplumber **
-# x11-drivers/nvidia-drivers **
-# media-libs/mesa ** 
-# media-libs/libdisplay-info **
-# x11-libs/libdrm **
-# x11-libs/libxkbcommon **
-# x11-libs/pixman **
-# media-video/ffmpeg **
-# dev-libs/libinput **
-# virtual/rust **
-# media-video/mpv **
-# media-libs/libplacebo **
-# dev-qt/qtgui **
-# dev-qt/qtchooser **
-# dev-qt/qtdbus **
-# dev-qt/qtcore **
-# dev-qt/qtbase **
-# dev-qt/qtdeclarative **
-# dev-qt/qtshadertools **
-# dev-qt/qtsvg **
-# dev-qt/qttools **
-# dev-qt/qt5compat **
-# dev-qt/qtimageformats **
-# net-p2p/qbittorrent **
-# =net-dns/libidn2-2.3.7 -~amd64
 sys-kernel/gentoo-kernel-bin -~amd64
 virtual/dist-kernel -~amd64
-# dev-libs/expat -~amd64
-# dev-lang/python -~amd64
 
 */*::steam-overlay
 games-util/game-device-udev-rules
 sys-libs/libudev-compat
 
-=x11-misc/picom-ftlabs-generalanimation-9999 **
+x11-misc/picom-ftlabs-generalanimation **
+games-util/lutris **
+# x11-drivers/nvidia-drivers **
+
+media-libs/libplacebo **
+media-video/mpv **
+dev-qt/qtbase **
+dev-qt/qtdeclarative **
+dev-qt/qtsvg **
+dev-qt/qttools **
+net-p2p/qbittorrent **
+app-text/poppler **
+media-video/pipewire **
+media-video/wireplumber **
+# media-video/ffmpeg **
+dev-libs/libinput **
+media-libs/mesa ** # mesa-9999 now needs python3_12. So we disable it for now.
+media-libs/libdisplay-info **
+x11-libs/libdrm **
+x11-libs/libxkbcommon **
+x11-libs/pixman **
+virtual/rust **
+dev-lang/rust **

@@ -18,10 +18,12 @@ app-shells/fish
 app-shells/fzf
 app-shells/mksh
 app-shells/zoxide
+dev-debug/gdb
 dev-java/openjdk-jre-bin
 dev-util/ccache
 dev-vcs/git
 games-util/gamemode
+games-util/lutris
 games-util/steam-launcher
 lxde-base/lxappearance
 media-fonts/corefonts
@@ -75,6 +77,7 @@ sys-power/thermald
 sys-process/htop
 virtual/wine
 www-client/librewolf-bin
+www-client/luakit
 x11-apps/xrandr
 x11-apps/xrdb
 x11-base/xorg-fonts
