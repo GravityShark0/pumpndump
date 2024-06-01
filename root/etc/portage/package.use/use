@@ -59,8 +59,6 @@ app-text/tesseract doc jpeg opencl png tiff webp static-libs
 
 dev-util/vulkan-tools cube
 
-media-video/wireplumber
-
 media-fonts/nerd-fonts firacode ubuntumono iosevkaterm hack jetbrainsmono
 
 app-alternatives/ninja reference
@@ -70,3 +68,5 @@ sys-apps/xdg-desktop-portal flatpak
 net-libs/webkit-gtk jumbo-build examples -gamepad -aqua avif gstreamer introspection jpegxl -keyring lcms -pdf seccomp -spell -systemd -wayland X
 
 x11-misc/picom-ftlabs-generalanimation opengl
+
+xfce-base/xfce4-settings -xklavier 

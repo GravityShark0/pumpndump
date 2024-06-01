@@ -23,7 +23,6 @@ dev-java/openjdk-jre-bin
 dev-util/ccache
 dev-vcs/git
 games-util/gamemode
-games-util/lutris
 games-util/steam-launcher
 lxde-base/lxappearance
 media-fonts/corefonts
@@ -52,7 +51,6 @@ net-p2p/qbittorrent
 net-p2p/syncthing
 net-wireless/iw
 net-wireless/wpa_supplicant
-sys-apps/baobab
 sys-apps/eza
 sys-apps/fd
 sys-apps/flatpak
@@ -63,13 +61,13 @@ sys-apps/ripgrep
 sys-apps/xdg-desktop-portal-gtk
 sys-boot/grub
 sys-devel/clang
-sys-firmware/intel-microcode
 sys-fs/android-file-transfer-linux
 sys-fs/btrfs-progs
 sys-fs/dosfstools
 sys-fs/dwarfs-bin
 sys-fs/fuse-overlayfs
 sys-fs/fuse:0
+sys-fs/ncdu-bin
 sys-fs/ntfs3g
 sys-fs/xfsprogs
 sys-kernel/linux-firmware
@@ -77,7 +75,6 @@ sys-power/thermald
 sys-process/htop
 virtual/wine
 www-client/librewolf-bin
-www-client/luakit
 x11-apps/xrandr
 x11-apps/xrdb
 x11-base/xorg-fonts

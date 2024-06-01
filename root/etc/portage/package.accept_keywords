@@ -26,5 +26,5 @@ media-libs/libdisplay-info **
 x11-libs/libdrm **
 x11-libs/libxkbcommon **
 x11-libs/pixman **
-virtual/rust **
-dev-lang/rust **
+# virtual/rust **
+# dev-lang/rust **
