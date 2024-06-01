@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 rofi_command="rofi -theme $HOME/.config/rofi/config/screenshot.rasi"
-dir="/home/gravity/Pictures/Screenshots"
+dir="/home/gravity/Media/Pictures/Screenshots"
 file="Screenshot_$(date +%Y-%m-%d-%H-%M-%S).png"
 
 # Buttons
@@ -55,12 +55,12 @@ shotwin () {
 }
 
 shotarea () {
-	cd ${dir} && maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.0 -l | tee "$file" | xclip -selection clipboard -t image/png
+	cd ${dir} && maim -u -f png -s -b 1 -c 0.35,0.55,0.85,0 | tee "$file" | xclip -selection clipboard -t image/png
 	notify_view
 }
 
 copyshot () {
-	maim -u -f png -s -b 2 -c 0.35,0.55,0.85,0.0 -l | tesseract -l eng - - | xclip -selection clipboard
+	maim -u -f png -s -b 1 -c 0.35,0.55,0.85,0 | tesseract -l eng - - | xclip -selection clipboard
 	clip=$(xclip -o -selection clipboard)
 	notify-send "$clip"
 	notify-send "Copied to clipboard"
