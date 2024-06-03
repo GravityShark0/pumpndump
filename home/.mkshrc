@@ -14,8 +14,8 @@ export GOPROXY=https://proxy.golang.org
 export GOSUMDB=sum.golang.org
 # export CCACHE_DIR="/var/cache/ccache"
 
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-  exec startx
+if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+  exec niri
 fi
 
 [ -x /bin/fish ] && SHELL=/bin/fish exec fish
