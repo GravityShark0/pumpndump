@@ -3,10 +3,10 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
-LIBVA_DRIVER_NAME=nvidia
+# LIBVA_DRIVER_NAME=nvidia
 CCACHE_DIR="/var/cache/ccache"
-# EDITOR=nvim
-__NV_PRIME_RENDER_OFFLOAD=1
-__GLX_VENDOR_LIBRARY_NAME=nvidia
-NVD_BACKEND=direct
-MOZ_DISABLE_RDD_SANDBOX=1 
+EDITOR=nvim
+# __NV_PRIME_RENDER_OFFLOAD=1
+# __GLX_VENDOR_LIBRARY_NAME=nvidia
+# NVD_BACKEND=direct
+# MOZ_DISABLE_RDD_SANDBOX=1 

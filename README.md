@@ -1,3 +1,5 @@
+# BRANCH THAT IS FOR MY ARCH LAPTOP INSTEAD
+
 > im tired
 
 ## This is a solution made by me to just "pump n' dump" my dot files and not doing anything after
@@ -7,7 +9,7 @@
 ### How 3 install
 
 ```bash
-git clone https://github.com/GravityShark0/pumpndump
+git clone https://github.com/GravityShark0/pumpndump -b arch
 cd pumpndump
 ```
 
@@ -22,10 +24,10 @@ stow root --target=/
 # this is dangerous cause people could edit it that dont have the correct permissions (duh)
 
 # doas.conf needs to be owned by root for it to work
-chown root /etc/doas.conf
+# chown root /etc/doas.conf
 
 # fstab cant be used as a symlink for obvious reasons
-cp ./root/etc/fstab.bak /etc/fstab
+# cp ./root/etc/fstab.bak /etc/fstab
 ```bash
 # to stop fish_variables from constantly updating
 git update-index --skip-worktree home/.config/fish/fish_variables
@@ -37,23 +39,15 @@ and just installing selected-packages.txt
 
 ### Root Requirements
 
-1. Gentoo (amd64 openrc)
-   - Profile (default/linux/amd64/23.0)
-2. Nvidia GPU (GTX 1050ti Mobile)
-3. Use X11
-4. Exact same fstab
-
-```
-/dev/sda2		/efi		vfat
-/dev/nvme0n1p1		/		xfs
-/dev/nvme0n1p2		none		swap
-/dev/sda1		/home		btrfs
-```
-
-4. Grub
-5. keyd, elogind and others that is in the selected-packages.txt
+1. EnvdeavourOS with everything disabled
+2. Intel Laptop!?!
+3. Use Waylan!?!?
+4. Systemd Boot
+5. just install applications when you need it
 
 ### Home Requirements
+
+> Yeah im not updating this
 
 1. Applications used in scripts and such (in the selected anywas)
 
