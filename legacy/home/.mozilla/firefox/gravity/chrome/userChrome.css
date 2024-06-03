@@ -1,6 +1,0 @@
-#TabsToolbar {visibility: collapse !important;}
-#sidebar-header {visibility: collapse !important;}
-#sidebar-splitter {visibility: collapse !important;}
-#statuspanel[type="overLink"] #statuspanel-label {
- display:none!important;
-}
