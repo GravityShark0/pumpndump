@@ -14,7 +14,7 @@
     "opacity": 0.4,
     "key_mode": "composed",
     "bak_mode": "baked",
-    "mods_mode": "win",
+    "mods_mode": "normal",
     "mods_only": false,
     "multiline": false,
     "vis_shift": false,

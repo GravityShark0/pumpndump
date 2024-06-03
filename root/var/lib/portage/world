@@ -2,6 +2,7 @@ app-admin/doas
 app-admin/eclean-kernel
 app-admin/pass
 app-admin/stow
+app-arch/deb2targz
 app-arch/p7zip
 app-arch/unrar
 app-editors/emacs
@@ -71,7 +72,9 @@ sys-fs/ncdu-bin
 sys-fs/ntfs3g
 sys-fs/xfsprogs
 sys-kernel/linux-firmware
+sys-power/powerstat
 sys-power/thermald
+sys-power/tlp
 sys-process/htop
 virtual/wine
 www-client/librewolf-bin
