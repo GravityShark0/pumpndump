@@ -1,0 +1,11 @@
+#!/bin/sh
+# This script runs everytime niri starts and reloads i think
+~/.scripts/monitor/auto.sh
+
+#background="~/Media/Wallpapers/minimalistic/minimalistic/unicat.png"
+#background="~/Pictures/Wallpapers/purp1.jpg"
+
+random=$(fish --command "random 0 321")
+background="$HOME/Media/Pictures/Wallpapers/main/${random}"
+echo "$random" >> .recent_wallpapers.txt
+feh --bg-scale "$background".* &

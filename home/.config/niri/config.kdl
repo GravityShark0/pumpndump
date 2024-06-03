@@ -137,7 +137,7 @@ layout {
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
 
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        active-color "#ddb7f2"
 
         // Color of the ring on inactive monitors.
         inactive-color "#505050"
@@ -184,6 +184,8 @@ layout {
     }
 }
 
+spawn-at-startup "waybar"
+spawn-at-startup "/bin/sh ~/.wprofile"
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -223,8 +225,11 @@ window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    // match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
+
+    draw-border-with-background false
+    geometry-corner-radius 10 10 0 0
 }
 
 // Example: block out two password managers from screen capture.
@@ -258,8 +263,9 @@ binds {
     Mod+Q { spawn "alacritty"; }
     Mod+Shift+Q { spawn "alacritty jo"; }
     Mod+W { spawn "runner"; }
-    Mod+Shift+W { spawn "runner"; }
+    Mod+Shift+W { spawn "launcher"; }
     Super+Alt+L { spawn "swaylock"; }
+    Mod+T { spawn "brave"; }
 
     // You can also use a shell:
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }

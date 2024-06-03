@@ -1,8 +1,0 @@
-" General Settings
-" set update.lastchecktime 1712189497076
-set configversion 2.0
-set theme catppuccin
-
-" Binds
-bind J tabnext
-bind K tabprev

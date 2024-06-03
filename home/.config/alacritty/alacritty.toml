@@ -1,0 +1,11 @@
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[window]
+padding = {x = 6, y = 6}
+opacity = 0.9
+
+[font]
+
+normal = { family = "IosevkaTerm Nerd Font"}
+size = 16
+

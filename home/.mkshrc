@@ -15,7 +15,7 @@ export GOSUMDB=sum.golang.org
 # export CCACHE_DIR="/var/cache/ccache"
 
 if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-  exec niri
+  exec niri-session
 fi
 
 [ -x /bin/fish ] && SHELL=/bin/fish exec fish
