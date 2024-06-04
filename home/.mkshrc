@@ -12,6 +12,7 @@ export PATH=~/.local/bin:~/.scripts:$PATH
 export GOPATH=$HOME/Other/go
 export GOPROXY=https://proxy.golang.org
 export GOSUMDB=sum.golang.org
+GTK_THEME=Adwaita:dark 
 # export CCACHE_DIR="/var/cache/ccache"
 
 if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
