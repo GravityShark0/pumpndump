@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+cliphist list | \
+rofi \
+	-dmenu \
+	-scroll-method 0 \
+	-theme "$HOME"/.config/rofi/config/clipboard.rasi | \
+cliphist decode | \
+wl-copy

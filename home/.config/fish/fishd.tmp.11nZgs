@@ -1,0 +1,83 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export EDITOR:nvim
+SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dcolor\x3dbg\x2b\x3a\x23313244\x2cbg\x3a\x231e1e2e\x2cspinner\x3a\x23f5e0dc\x2chl\x3a\x23f38ba8\x20\x2d\x2dcolor\x3dfg\x3a\x23cdd6f4\x2cheader\x3a\x23f38ba8\x2cinfo\x3a\x23cba6f7\x2cpointer\x3a\x23f5e0dc\x20\x2d\x2dcolor\x3dmarker\x3a\x23f5e0dc\x2cfg\x2b\x3a\x23cdd6f4\x2cprompt\x3a\x23cba6f7\x2chl\x2b\x3a\x23f38ba8\x1e\x20\x2d\x2dborder\x20rounded\x20\x2d\x2dlayout\x20reverse
+SETUVAR FZF_DISABLE_KEYBINDINGS:1
+SETUVAR FZF_LEGACY_KEYBINDINGS:1
+SETUVAR FZF_PREVIEW_DIR_CMD:ls
+SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
+SETUVAR FZF_TMUX_HEIGHT:80\x25
+SETUVAR --path GOPATH:/home/gravity/Other/go
+SETUVAR --export PAGER:less\x1e\x2d\x2dRAW\x2dCONTROL\x2dCHARS
+SETUVAR --export SYNCTHING_GROUP:wheel
+SETUVAR --export SYNCTHING_USER:gravity
+SETUVAR ZO_CMD:zo
+SETUVAR Z_CMD:z
+SETUVAR Z_DATA:/home/gravity/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/home/gravity/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/home/gravity\x24
+SETUVAR __fish_git_prompt_color_branch:brmagenta
+SETUVAR __fish_git_prompt_color_cleanstate:brgreen
+SETUVAR __fish_git_prompt_color_dirtystate:blue
+SETUVAR __fish_git_prompt_color_invalidstate:red
+SETUVAR __fish_git_prompt_color_stagedstate:yellow
+SETUVAR __fish_git_prompt_color_untrackedfiles:cdd6f4
+SETUVAR __fish_git_prompt_hide_untrackedfiles:1
+SETUVAR __fish_git_prompt_show_informative_status:1
+SETUVAR __fish_git_prompt_showupstream:informative
+SETUVAR __fish_initialized:3400
+SETUVAR _hydro_git_17297:\x28\x1b\x5b95mwayland\x1b\x28B\x1b\x5bm\x7c\x1b\x5b33m\uf459\x204\x1b\x28B\x1b\x5bm\x29\x20
+SETUVAR _hydro_git_19202:\x28\x1b\x5b95mwayland\x1b\x28B\x1b\x5bm\x7c\x1b\x5b34m\uf457\x201\x20\x1b\x5b33m\uf459\x204\x1b\x28B\x1b\x5bm\x29\x20
+SETUVAR _hydro_git_19676:\x28\x1b\x5b95march\x1b\x28B\x1b\x5bm\x29\x20
+SETUVAR _hydro_git_2183:\x28\x1b\x5b95march\x1b\x5bm\x0f\x29\x20
+SETUVAR _hydro_git_29606:\x28\x1b\x5b95mmain\x1b\x5bm\x0f\x7c\x1b\x5b34m\uf457\x201\x1b\x5bm\x0f\x29\x20
+SETUVAR _hydro_git_29636:\x28\x1b\x5b95mmain\x1b\x5bm\x0f\x29\x20
+SETUVAR _hydro_git_29647:\x28\x1b\x5b95mmain\x1b\x5bm\x0f\x29\x20
+SETUVAR _hydro_git_31638:\x28\x1b\x5b95march\x1b\x28B\x1b\x5bm\x7c\x1b\x5b34m\uf457\x201\x1b\x28B\x1b\x5bm\x29\x20
+SETUVAR _hydro_git_39175:\x28\x1b\x5b95mmain\x1b\x5bm\x0f\x29\x20
+SETUVAR _hydro_git_40951:\x28\x1b\x5b95mmain\x1b\x5bm\x0f\x7c\x1b\x5b34m\uf457\x201\x1b\x5bm\x0f\x29\x20
+SETUVAR _hydro_git_4602:\x28\x1b\x5b95march\x1b\x5bm\x0f\x7c\x1b\x5b34m\uf457\x201\x1b\x5bm\x0f\x29\x20
+SETUVAR _hydro_git_46491:\x28\x1b\x5b95march\x1b\x5bm\x0f\x7c\x1b\x5b34m\uf457\x201\x1b\x5bm\x0f\x29\x20
+SETUVAR _hydro_git_47582:\x28\x1b\x5b95march\x1b\x5bm\x0f\x29\x20
+SETUVAR _hydro_git_69236:\x28\x1b\x5b95march\x1b\x28B\x1b\x5bm\x7c\x1b\x5b34m\uf457\x201\x1b\x28B\x1b\x5bm\x29\x20
+SETUVAR fish_color_autosuggestion:6c7086
+SETUVAR fish_color_cancel:f38ba8
+SETUVAR fish_color_command:89b4fa
+SETUVAR fish_color_comment:7f849c
+SETUVAR fish_color_cwd:brpurple
+SETUVAR fish_color_cwd_root:red
+SETUVAR fish_color_end:fab387
+SETUVAR fish_color_error:f38ba8
+SETUVAR fish_color_escape:eba0ac
+SETUVAR fish_color_gray:6c7086
+SETUVAR fish_color_history_current:\x2d\x2dbold
+SETUVAR fish_color_host:89b4fa
+SETUVAR fish_color_host_remote:a6e3a1
+SETUVAR fish_color_keyword:f38ba8
+SETUVAR fish_color_match:7cafc2
+SETUVAR fish_color_normal:cdd6f4
+SETUVAR fish_color_operator:f5c2e7
+SETUVAR fish_color_option:a6e3a1
+SETUVAR fish_color_param:f2cdcd
+SETUVAR fish_color_quote:a6e3a1
+SETUVAR fish_color_redirection:f5c2e7
+SETUVAR fish_color_search_match:\x2d\x2dbackground\x3d313244
+SETUVAR fish_color_selection:\x2d\x2dbackground\x3d313244
+SETUVAR fish_color_status:f38ba8
+SETUVAR fish_color_user:94e2d5
+SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_pager_color_background:\x1d
+SETUVAR fish_pager_color_completion:cdd6f4
+SETUVAR fish_pager_color_description:6c7086
+SETUVAR fish_pager_color_prefix:f5c2e7
+SETUVAR fish_pager_color_progress:6c7086
+SETUVAR fish_pager_color_secondary_background:\x1d
+SETUVAR fish_pager_color_secondary_completion:\x1d
+SETUVAR fish_pager_color_secondary_description:\x1d
+SETUVAR fish_pager_color_secondary_prefix:\x1d
+SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_pager_color_selected_completion:\x1d
+SETUVAR fish_pager_color_selected_description:\x1d
+SETUVAR fish_pager_color_selected_prefix:\x1d
+SETUVAR plugins:https\x3a//github\x2ecom/kidonng/plug\x2efish\x1ehttps\x3a//github\x2ecom/franciscolourenco/done\x1ehttps\x3a//github\x2ecom/fishingline/safe\x2drm\x1ehttps\x3a//github\x2ecom/nickeb96/puffer\x2dfish\x1ehttps\x3a//github\x2ecom/paysonwallach/fish\x2dyou\x2dshould\x2duse\x1ehttps\x3a//github\x2ecom/edc/bass

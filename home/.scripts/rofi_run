@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-rofi \
-	-show run \
-	-scroll-method 0 \
-	-terminal st \
-	-theme "$HOME"/.config/rofi/config/$1.rasi

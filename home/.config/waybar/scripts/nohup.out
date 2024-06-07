@@ -1,0 +1,33 @@
+[2024-06-04 19:12:05.203] [info] Using configuration file /home/gravity/.config/waybar/config.jsonc
+[2024-06-04 19:12:05.317] [info] Discovered appearance 'dark'
+[2024-06-04 19:12:05.318] [info] Using CSS file /home/gravity/.config/waybar/style.css
+basic_string::_M_create
+[2024-06-04 19:12:05.525] [info] Bar configured (width: 1366, height: 27) for output: eDP-1
+[2024-06-04 19:12:24.543] [info] Using configuration file /home/gravity/.config/waybar/config.jsonc
+[2024-06-04 19:12:24.548] [info] Discovered appearance 'dark'
+[2024-06-04 19:12:24.548] [info] Using CSS file /home/gravity/.config/waybar/style.css
+basic_string::_M_create
+[2024-06-04 19:12:24.740] [info] Bar configured (width: 1366, height: 27) for output: eDP-1
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'
+/home/gravity/.config/waybar/scripts/powerdraw.sh: line 7: unexpected EOF while looking for matching `"'

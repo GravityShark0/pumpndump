@@ -5,7 +5,8 @@
 #background="~/Media/Wallpapers/minimalistic/minimalistic/unicat.png"
 #background="~/Pictures/Wallpapers/purp1.jpg"
 
-random=$(fish --command "random 0 321")
+random=$(fish --command "random 1 323")
+# random=322
 background=$(fd "^$random\...." $HOME/Pictures/Wallpapers/main/)
 echo "$random" >> .recent_wallpapers.txt
 

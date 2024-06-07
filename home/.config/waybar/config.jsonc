@@ -1,7 +1,7 @@
 {
   "layer": "top", "position": "top",
-  "modules-left": ["custom/weather", "disk", "memory", "cpu", "temperature", "custom/powerDraw", "hyprland/window" ],
-  "modules-center": [ "clock"],
+  "modules-left": ["custom/weather", "disk", "memory", "cpu", "temperature", "custom/workspaces"],
+  "modules-center": ["clock"],
   "modules-right": ["tray",  "custom/clipboard", "backlight", "idle_inhibitor", "network",  "pulseaudio", "battery" ],
   "reload_style_on_change":true,
 
@@ -10,22 +10,13 @@
     "tooltip": true
   },
 
-  "workspaces": {
-	"format": "{icon}",
-	"format-icons": {
-		"1": "",
-		"2": "",
-		"3": "",
-		"4": "",
-		"5": "",
-		"6": "",
-		"active": "",
-		"default": "" 
-	},
-       "persistent-workspaces": {
-         "*": [ 2, 3, 4, 5, 6 ]
-       }
-},
+  "custom/workspaces": {
+      "format": "  {}",
+      //"return-type": "json",
+      "interval": 2,
+      "exec": "~/.config/waybar/scripts/workspaces.sh \"$WAYBAR_OUTPUT_NAME\"",
+      "signal": 8
+  },
 
 "idle_inhibitor":{
   "format": "<span font='12'>{icon} </span>",
@@ -45,7 +36,7 @@
 
 "custom/clipboard":{
   "format":"",
-  "on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy",
+  "on-click": "~/.scripts/show_clipboard",
   "interval":86400
 },
 
@@ -81,7 +72,7 @@
       "tooltip-format": "{ipaddr}",
       "tooltip-format-wifi": "{essid} ({signalStrength}%)  | {ipaddr}",
       "tooltip-format-ethernet": "{ifname} 🖧 | {ipaddr}",
-      "on-click": "networkmanager_dmenu"
+      "on-click": "alacritty nmtui"
     },
 
 "battery": {
@@ -164,7 +155,7 @@
   "format-critical": " {temperatureC}°C",
   "interval": 1,
   "critical-threshold": 80,
-  "on-click": "foot btop",
+  "on-click": "alacritty btop",
  },
 
 "pulseaudio": {
