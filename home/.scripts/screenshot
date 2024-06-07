@@ -1,25 +1,23 @@
-#!/usr/bin/env bash
+#!/bin/sh
 rofi_command="rofi -theme $HOME/.config/rofi/config/screenshot.rasi"
 dir="/home/gravity/Media/Pictures/Screenshots"
 file="Screenshot_$(date +%Y-%m-%d-%H-%M-%S).png"
 
-# Buttons
-	screen=" Capture Desktop"
-	area="󰒉 Capture Area"
-	window="󱂬 Capture Window"
-	inthree=" Take in 3s"
-	inten=" Take in 10s"
-	tesseract=" Copy Text"
+# Menus
+# screen=" Capture Desktop"
+# area="󰒉 Capture Area"
+# window="󱂬 Capture Window"
+inthree=" Take in 3s"
+inten=" Take in 10s"
+tesseract=" Copy Text"
 
 # Notify and view screenshot
 notify_view () {
-	notify-send "Copied to clipboard."
-	feh ${dir}/"$file"
 	if [ -s "$dir/$file" ]; then
-		notify-send "Screenshot Saved."
+		notify-send -i $dir/$file "Screenshot saved." "Copied to clipboard."
 	else
 		rm "$dir/$file"
-		notify-send "Screenshot Failed."
+		notify-send "Screenshot cancelled."
 	fi
 }
 
@@ -32,38 +30,37 @@ countdown () {
 }
 
 # take shots
-shotnow () {
-	cd ${dir} && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
-	notify_view
-}
+# shotnow () {
+# 	cd $dir && maim -u -f png | tee $file | xclip -selection clipboard -t image/png
+# 	notify_view
+# }
 
 shot3 () {
 	countdown '3'
-	sleep 0.1 cd ${dir} && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
+	sleep 0.1 cd $dir && maim -u -f png | tee $file | xclip -selection clipboard -t image/png
 	notify_view
 }
 
 shot10 () {
 	countdown '10'
-	sleep 0.1 && cd ${dir} && maim -u -f png | tee "$file" | xclip -selection clipboard -t image/png
+	sleep 0.1 && cd $dir && maim -u -f png | tee $file | xclip -selection clipboard -t image/png
 	notify_view
 }
 
-shotwin () {
-	cd ${dir} && maim -u -f png -i `xdotool getactivewindow` | tee "$file" | xclip -selection clipboard -t image/png
-	notify_view
-}
-
-shotarea () {
-	cd ${dir} && maim -u -f png -s -b 1 -c 0.35,0.55,0.85,0 | tee "$file" | xclip -selection clipboard -t image/png
-	notify_view
-}
+# shotwin () {
+# 	cd $dir && maim -u -f png -i `xdotool getactivewindow` | tee $file | xclip -selection clipboard -t image/png
+# 	notify_view
+# }
+#
+# shotarea () {
+# 	cd $dir && maim -u -f png -s -b 1 -c 0.35,0.55,0.85,0 | tee $file | xclip -selection clipboard -t image/png
+# 	notify_view
+# }
 
 copyshot () {
 	maim -u -f png -s -b 1 -c 0.35,0.55,0.85,0 | tesseract -l eng - - | xclip -selection clipboard
 	clip=$(xclip -o -selection clipboard)
-	notify-send "$clip"
-	notify-send "Copied to clipboard"
+	notify-send "Copied to clipboard" "<code>$clip</code>"
 }
 
 if [ ! -d "$dir" ]; then
@@ -71,27 +68,22 @@ if [ ! -d "$dir" ]; then
 fi
 
 # Variable passed to rofi
-options="$screen\n$area\n$window\n$inthree\n$inten\n$tesseract"
+# options="$screen\n$area\n$window\n$inthree\n$inten\n$tesseract"
+options="$inthree\n$inten\n$tesseract"
 
-chosen="$(echo -e "$options" | $rofi_command -p 'Take A Shot' -dmenu -selected-row 0)"
+chosen="$(echo "$options" | $rofi_command -p 'Take A Shot' -dmenu -selected-row 0)"
 case $chosen in
-    $screen)
-		shotnow
-        ;;
-    $area)
-		shotarea
-        ;;
-    $window)
-		shotwin
-		;;
-    $inthree)
-		shot3
-		;;
-    $inten)
-		shot10
-        ;;
-    $tesseract)
-		copyshot
-        ;;
+	# $screen)
+	# 	shotnow;;
+	# $area)
+	# 	shotarea;;
+	# $window)
+	# 	shotwin;;
+	$inthree)
+		shot3;;
+	$inten)
+		shot10;;
+	$tesseract)
+		copyshot;;
 esac
 

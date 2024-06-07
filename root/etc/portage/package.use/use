@@ -70,3 +70,5 @@ net-libs/webkit-gtk jumbo-build examples -gamepad -aqua avif gstreamer introspec
 x11-misc/picom-ftlabs-generalanimation opengl
 
 xfce-base/xfce4-settings -xklavier 
+
+x11-misc/clipmenu -dmenu rofi

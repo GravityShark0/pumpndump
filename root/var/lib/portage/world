@@ -85,6 +85,7 @@ x11-base/xorg-server
 x11-drivers/nvidia-drivers
 x11-libs/libnotify
 x11-misc/betterlockscreen
+x11-misc/clipmenu
 x11-misc/picom-ftlabs-generalanimation
 x11-misc/rofi
 x11-misc/screenkey

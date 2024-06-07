@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/sh
+wallpapers="/home/gravity/Media/Pictures/Wallpapers/main"
 rofi_command="rofi -theme $HOME/.config/rofi/config/powermenu.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
@@ -46,17 +47,17 @@ show_msg() {
 # Variable passed to rofi
 options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
-chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
+chosen="$(echo "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
 case $chosen in
 	$shutdown)
 		loginctl poweroff ;;
 	$reboot)
 		loginctl reboot ;;
 	$lock)
-		betterlockscreen -u "/home/gravity/Media/Wallpapers/dt/" --lock --fx ;;
+		betterlockscreen -u $wallpapers --lock --fx ;;
 	$suspend)
 		pulsemixer --mute
-		betterlockscreen -u "/home/gravity/Media/Wallpapers/dt/" --lock --fx &
+		betterlockscreen -u $wallpapers --lock --fx &
 		loginctl suspend
 		;;
 	$logout)

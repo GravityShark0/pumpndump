@@ -17,14 +17,11 @@ local wibox = require('wibox')
 local beautiful = require('beautiful')
 -- Notification library
 local naughty = require('naughty')
+-- Extra utilities https://blingcorp.github.io/bling/#/
+local bling = require('bling')
+bling.module.flash_focus.enable()
 -- Bottom_right
 naughty.config.defaults.position = 'bottom_right'
-
--- local menubar = require('menubar')
--- local hotkeys_popup = require('awful.hotkeys_popup')
--- Enable hotkeys help widget for VIM and other apps
--- when client with a matching name is opened:
--- require('awful.hotkeys_popup.keys')
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -61,27 +58,20 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. 'grav.lua')
 
--- Bling money
-local bling = require('bling')
-bling.module.flash_focus.enable()
-
--- This is used later as the default terminal and file manager to run.
 Terminal = 'st'
--- Jo is a shell script that runs joshuto
 File_manager = 'joshuto'
 File_manager_cmd = Terminal .. ' -e ' .. File_manager
--- launcher = 'rofi -show run'
--- alt_launcher = 'rofi -show drun'
 Launcher = 'runner'
 Alt_launcher = 'launcher'
--- script that opens a rofi powermenu
-Powermenu = 'Powermenu'
+Powermenu = 'powermenu'
 Screenshot = 'ss'
+Screenshot_window = 'ss-window'
+Screenshot_desktop = 'ss-desktop'
 Screenshot_menu = 'screenshot'
-Browser = 'librewolf-bin'
-
 Lightdecrease = 'monitorlight +-5'
 Lightincrease = 'monitorlight +5'
+
+Browser = 'librewolf-bin'
 
 -- Super key
 Modkey = 'Mod4'
@@ -114,48 +104,6 @@ awful.layout.layouts = {
 	-- awful.layout.suit.corner.sw,
 	-- awful.layout.suit.corner.se,
 }
--- }}}
-
--- {{{ X Menu
-
---- I don't like a launcher widget
--- Create a launcher widget and a main menu
--- myawesomemenu = {
---     { 'hotkeys',     function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
---     { 'manual',      terminal .. ' -e man awesome' },
---     { 'edit config', editor_cmd .. ' ' .. awesome.conffile },
---     { 'restart',     awesome.restart },
---     { 'quit',        function() awesome.quit() end },
--- }
---
--- mymainmenu = awful.menu({
--- 	items = {
--- 		{ 'open terminal', terminal },
--- 		{ 'open runner', launcher },
--- 		{ 'open launcher', alt_launcher },
--- 		-- {
--- 		-- 	'hotkeys',
--- 		-- 	function()
--- 		-- 		hotkeys_popup.show_help(nil, awful.screen.focused())
--- 		-- 	end,
--- 		-- },
--- 		{ 'restart', awesome.restart },
--- 		{
--- 			'quit',
--- 			function()
--- 				awesome.quit()
--- 			end,
--- 		},
--- 	},
--- })
-
--- mylauncher = awful.widget.launcher({
--- 	image = beautiful.awesome_icon,
--- 	menu = mymainmenu,
--- })
-
--- Menubar configuration
--- menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
 -- {{{ Wibar
@@ -396,16 +344,6 @@ awful.screen.connect_for_each_screen(function(s)
 end)
 -- }}}
 
--- {{{ X Mouse bindings
--- root.buttons(gears.table.join(
--- 	awful.button({}, 3, function()
--- 		mymainmenu:toggle()
--- 	end)
--- awful.button({}, 4, awful.tag.viewnext),
--- awful.button({}, 5, awful.tag.viewprev)
--- ))
--- }}}
-
 -- {{{ Key bindings
 
 -- Global Keys {{{
@@ -516,9 +454,15 @@ globalkeys = gears.table.join(
 		awful.spawn(Screenshot)
 	end, { description = 'take a selection screenshot', group = 'launcher' }),
 	awful.key({ Modkey, 'Shift' }, 's', function()
+		awful.spawn(Screenshot_window)
+	end, { description = 'take a window screenshot', group = 'launcher' }),
+	awful.key({ Modkey, 'Control' }, 's', function()
+		awful.spawn(Screenshot_desktop)
+	end, { description = 'take a desktop screenshot', group = 'launcher' }),
+	awful.key({ Modkey, 'Mod1' }, 's', function()
 		awful.spawn(Screenshot_menu)
-	end, { description = 'open a screenshot tool', group = 'launcher' }),
-	awful.key({ Modkey }, 'r', function()
+	end, { description = 'open screenshot menu', group = 'launcher' }),
+	awful.key({ Modkey }, 't', function()
 		awful.spawn(Browser)
 	end, { description = 'open a browser', group = 'launcher' }),
 	awful.key({ Modkey }, 'w', function()
@@ -530,7 +474,7 @@ globalkeys = gears.table.join(
 
 	-- System
 	awful.key({ Modkey, 'Control' }, 'r', awesome.restart, { description = 'reload awesome', group = 'awesome' }),
-	awful.key({ Modkey }, 'Escape', function()
+	awful.key({ Modkey, 'Shift' }, 'e', function()
 		awful.spawn(Powermenu)
 	end, { description = 'quit awesome', group = 'awesome' }),
 	awful.key({ Modkey, 'Shift' }, 'Escape', awesome.quit, { description = 'quit awesome', group = 'awesome' }),
@@ -824,29 +768,11 @@ awful.rules.rules = {
 	-- Floating clients.
 	{
 		rule_any = {
-			instance = {
-				-- 'DTA', -- Firefox addon DownThemAll.
-				'copyq', -- Includes session name in class.
-				-- 'pinentry',
-			},
+			-- instance = {},
 			class = {
-				-- 'Arandr',
-				'MessageWin', -- kalarm.
-				-- 'Sxiv',
-
 				'float',
 			},
-
-			-- Note that the name property shown in xprop might be set slightly after creation of the client
-			-- and the name shown there might not match defined rules here.
-			-- name = {
-			-- 	'Event Tester', -- xev.
-			-- },
-			role = {
-				'AlarmWindow', -- Thunderbird's calendar.
-				'ConfigManager', -- Thunderbird's about:config.
-				'pop-up', -- e.g. Google Chrome's (detached) Developer Tools.
-			},
+			-- role = {},
 		},
 		properties = { floating = true },
 	},
@@ -863,15 +789,9 @@ awful.rules.rules = {
 		properties = { tag = '5' },
 	},
 
+	-- Scratchpad applications
 	{
-		rule_any = { class = { 'anki', 'Anki' }, icon_name = { 'GIMP Startup', 'GNU Image Manipulation Program' } },
-		except_any = { name = { 'Choose Note Type', 'Choose Deck', 'Add' } },
-		properties = { tag = '3' },
-	},
-
-	-- Put emacs in scratch
-	{
-		rule_any = { class = { 'emacs', 'Emacs', 'xclipboard', 'XClipboard', 'scratchy' } },
+		rule_any = { class = { 'emacs', 'Emacs', 'scratchy' } },
 		properties = { tag = SCRATCH_ICON, floating = true },
 	},
 }
@@ -934,6 +854,4 @@ end)
 client.connect_signal('unfocus', function(c)
 	c.border_color = beautiful.border_normal
 end)
-
 -- }}}
---
