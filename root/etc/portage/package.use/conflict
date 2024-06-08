@@ -154,3 +154,8 @@
 # required by @selected
 # required by @world (argument)
 >=x11-libs/pixman-9999 abi_x86_32
+# required by sys-devel/clang-common-18.1.7::gentoo[default-compiler-rt,llvm-libunwind]
+# required by sys-devel/clang-18.1.7::gentoo
+# required by sys-libs/compiler-rt-18.1.7::gentoo[clang]
+# required by sys-devel/clang-runtime-18.1.7::gentoo[compiler-rt]
+>=sys-libs/llvm-libunwind-18.1.7 static-libs

@@ -36,6 +36,7 @@ media-gfx/feh
 media-gfx/gimp
 media-gfx/maim
 media-libs/nvidia-vaapi-driver
+media-sound/cava
 media-sound/pulsemixer
 media-video/guvcview
 media-video/mpv
@@ -59,6 +60,7 @@ sys-apps/lm-sensors
 sys-apps/merge-usr
 sys-apps/razer-cli
 sys-apps/ripgrep
+sys-apps/smartmontools
 sys-apps/xdg-desktop-portal-gtk
 sys-boot/grub
 sys-devel/clang

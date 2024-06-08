@@ -60,7 +60,7 @@ shot10 () {
 copyshot () {
 	maim -u -f png -s -b 1 -c 0.35,0.55,0.85,0 | tesseract -l eng - - | xclip -selection clipboard
 	clip=$(xclip -o -selection clipboard)
-	notify-send "Copied to clipboard" "<code>$clip</code>"
+	notify-send "Copied to clipboard" "$clip"
 }
 
 if [ ! -d "$dir" ]; then
