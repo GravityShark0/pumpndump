@@ -26,6 +26,7 @@ SETUVAR __fish_git_prompt_hide_untrackedfiles:1
 SETUVAR __fish_git_prompt_show_informative_status:1
 SETUVAR __fish_git_prompt_showupstream:informative
 SETUVAR __fish_initialized:3400
+SETUVAR _hydro_git_24161:\x28\x1b\x5b95mmain\x1b\x28B\x1b\x5bm\x7c\x1b\x5b34m\uf457\x201\x20\x1b\x5b33m\uf459\x201\x1b\x28B\x1b\x5bm\x29\x20
 SETUVAR fish_color_autosuggestion:6c7086
 SETUVAR fish_color_cancel:f38ba8
 SETUVAR fish_color_command:89b4fa
@@ -52,7 +53,7 @@ SETUVAR fish_color_selection:\x2d\x2dbackground\x3d313244
 SETUVAR fish_color_status:f38ba8
 SETUVAR fish_color_user:94e2d5
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
-SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_pager_color_background:\x1d
 SETUVAR fish_pager_color_completion:cdd6f4
 SETUVAR fish_pager_color_description:6c7086
@@ -66,4 +67,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR plugins:https\x3a//github\x2ecom/kidonng/plug\x2efish\x1ehttps\x3a//github\x2ecom/franciscolourenco/done\x1ehttps\x3a//github\x2ecom/fishingline/safe\x2drm\x1ehttps\x3a//github\x2ecom/nickeb96/puffer\x2dfish\x1ehttps\x3a//github\x2ecom/paysonwallach/fish\x2dyou\x2dshould\x2duse\x1ehttps\x3a//github\x2ecom/edc/bass
+SETUVAR plugins:https\x3a//github\x2ecom/kidonng/plug\x2efish\x1ehttps\x3a//github\x2ecom/franciscolourenco/done\x1ehttps\x3a//github\x2ecom/fishingline/safe\x2drm\x1ehttps\x3a//github\x2ecom/nickeb96/puffer\x2dfish\x1ehttps\x3a//github\x2ecom/edc/bass
