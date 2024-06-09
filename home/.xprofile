@@ -6,10 +6,10 @@
 #background="~/Media/Wallpapers/minimalistic/minimalistic/unicat.png"
 #background="~/Pictures/Wallpapers/purp1.jpg"
 
-random=$(fish --command "random 0 321")
-background="$HOME/Media/Pictures/Wallpapers/main/${random}"
-echo "$random" >> .recent_wallpapers.txt
-feh --bg-scale "$background".* &
+random=$(fish --command "random 1 321")
+background="$HOME/Media/Pictures/Wallpapers/main/$random"
+echo $random >> .recent_wallpapers.txt
+feh --bg-scale $background.* &
 
 # Replace picom if its open
 if pidof picom; then
