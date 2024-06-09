@@ -14,11 +14,13 @@
 #       the blkid(8) command.
 
 # <fs>			<mountpoint>	<type>		<opts>		<dump> <pass>
+/dev/sda2               /efi            vfat            defaults                        0 2
+/dev/nvme0n1p1          /               xfs             defaults,noatime                0 1
+/dev/nvme0n1p2          none            swap            sw                              0 0
+/dev/sda1               /home           btrfs           defaults,subvol=@		0 0
+/dev/sda1               /home/gravity   btrfs           defaults,subvol=gravity		0 0
 
-/dev/sda2		/efi		vfat		defaults	0 2
-/dev/nvme0n1p1		/		xfs		defaults,noatime		0 1
-/dev/nvme0n1p2		none		swap		sw		0 0
-/dev/sda1		/home		btrfs		defaults	0 0
 # tmpfs		/var/tmp/portage		tmpfs	size=4G,uid=portage,gid=portage,mode=775	0 0
 #/dev/cdrom		/mnt/cdrom	auto		noauto,ro	0 0
 
+# 192.168.100.97:/data   /data nfs4 _netdev,rw,rsize=1048576,wsize=1048576,vers=4
