@@ -52,7 +52,7 @@ and the world file should also be synced if you remove yuor original world file
 > Outside stuff that you can't really automate
 
 1. Applications used in scripts and such (in the selected anywas)
-   - tesseract
+   - [tesseract](https://github.com/tesseract-ocr/tesseract/releases/)
      > currently tesseract doesnt work in gentoo so i use a binary instead
    - [sesh](https://github.com/joshmedeski/sesh)
      > this one is kinda important cause there is no gentoo ebuild for it
@@ -62,18 +62,6 @@ go install github.com/joshmedeski/sesh@latest
 ```
 
 2. chsh -> /bin/mksh
-3. GTK
+3. GTK Theme
 
 - [Catppuccin-Mocha-Standard-Mauve-Dark](https://github.com/catppuccin/gtk)
-
-### Stuff not used but still there just incase
-
-- Root
-  - tlp
-  - genkernel.conf
-- Home
-  - Doom Emacs
-    - Alternative could be [minemacs](https://github.com/abougouffa/minemacs)
-  - hyprwm
-
-> cat /var/lib/portage/world > selected-packages.txt

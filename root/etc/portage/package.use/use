@@ -59,7 +59,7 @@ app-text/tesseract doc jpeg opencl png tiff webp static-libs
 
 dev-util/vulkan-tools cube
 
-media-fonts/nerd-fonts firacode ubuntumono iosevkaterm hack jetbrainsmono
+media-fonts/nerd-fonts firacode ubuntu ubuntumono iosevkaterm hack jetbrainsmono
 
 app-alternatives/ninja reference
 
