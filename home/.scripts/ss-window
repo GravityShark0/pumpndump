@@ -5,7 +5,7 @@ file="Screenshot_$(date +%Y-%m-%d-%H-%M-%S).png"
 cd $dir && maim -u -f png -i `xdotool getactivewindow` | tee $file | xclip -selection clipboard -t image/png
 
 if [ -s "$dir/$file" ]; then
-	notify-send -i $dir/$file "Screenshot saved." "Copied to clipboard."
+	notify-send.sh -i $dir/$file --default-action="feh $dir/$file" "Screenshot saved." "Copied to clipboard."
 else
 	rm "$dir/$file"
 	notify-send "Screenshot cancelled."
