@@ -36,7 +36,6 @@ media-gfx/feh
 media-gfx/gimp
 media-gfx/maim
 media-libs/nvidia-vaapi-driver
-media-sound/cava
 media-sound/pulsemixer
 media-video/guvcview
 media-video/mpv
