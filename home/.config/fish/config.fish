@@ -6,5 +6,4 @@ end
 if status is-interactive
     fzf_key_bindings        
     zoxide init fish | source
-    
 end
