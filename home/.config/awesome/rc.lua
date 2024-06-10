@@ -71,7 +71,7 @@ Screenshot_menu = 'screenshot'
 Lightdecrease = 'monitorlight +-5'
 Lightincrease = 'monitorlight +5'
 
-Browser = 'librewolf-bin'
+Browser = 'flatpak run com.brave.Browser'
 
 -- Super key
 Modkey = 'Mod4'

@@ -6,16 +6,11 @@ games-util/game-device-udev-rules
 sys-libs/libudev-compat
 
 x11-misc/picom-ftlabs-generalanimation **
-games-util/lutris **
-# x11-drivers/nvidia-drivers **
+x11-misc/picom-ftlabs **
 
+x11-drivers/nvidia-drivers **
 media-libs/libplacebo **
 media-video/mpv **
-dev-qt/qtbase **
-dev-qt/qtdeclarative **
-dev-qt/qtsvg **
-dev-qt/qttools **
-net-p2p/qbittorrent **
 app-text/poppler **
 media-video/pipewire **
 media-video/wireplumber **
@@ -25,6 +20,3 @@ media-libs/libdisplay-info **
 x11-libs/libdrm **
 x11-libs/libxkbcommon **
 x11-libs/pixman **
-# virtual/rust **
-# dev-lang/rust **
-# media-video/ffmpeg **

@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/gravity/.gtkrc-2.0.mine"
-gtk-theme-name="Catppuccin-Mocha-Standard-Mauve-Dark"
+gtk-theme-name="Adwaita-dark"
 gtk-icon-theme-name="Papirus"
 gtk-font-name="Ubuntu Nerd Font 12"
 gtk-cursor-theme-name="Posy_Cursor_Black"
