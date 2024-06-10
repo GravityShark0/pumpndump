@@ -52,10 +52,11 @@ and the world file should also be synced if you remove yuor original world file
 > Outside stuff that you can't really automate
 
 1. Applications used in scripts and such (in the selected anywas)
-   - [tesseract](https://github.com/tesseract-ocr/tesseract/releases/)
-     > currently tesseract doesnt work in gentoo so i use a binary instead
-   - [sesh](https://github.com/joshmedeski/sesh)
-     > this one is kinda important cause there is no gentoo ebuild for it
+
+- [tesseract](https://github.com/tesseract-ocr/tesseract/releases/)
+  > currently tesseract doesnt work in gentoo so i use a binary instead
+- [sesh](https://github.com/joshmedeski/sesh)
+  > this one is kinda important cause there is no gentoo ebuild for it
 
 ```bash
 go install github.com/joshmedeski/sesh@latest

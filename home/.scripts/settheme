@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 error() {
     echo "File '$1' not found in\n$(pwd)/$1 or ~/.config/st/$1"

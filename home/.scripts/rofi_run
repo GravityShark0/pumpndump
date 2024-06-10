@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 rofi \
 	-show run \
 	-scroll-method 0 \

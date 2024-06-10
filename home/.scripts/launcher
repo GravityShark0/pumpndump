@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 rofi \
 	-show drun \
 	-modi run,drun,ssh \
