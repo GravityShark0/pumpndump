@@ -8,6 +8,7 @@ sys-libs/libudev-compat
 x11-misc/picom-ftlabs-generalanimation **
 x11-misc/picom-ftlabs **
 
+x11-apps/xcur2png **
 x11-drivers/nvidia-drivers **
 media-libs/libplacebo **
 media-video/mpv **

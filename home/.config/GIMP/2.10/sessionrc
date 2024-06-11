@@ -11,12 +11,12 @@
     (size 640 480))
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
-    (position 720 0)
-    (size 716 864)
+    (position 0 0)
+    (size 1440 900)
     (open-on-exit)
     (aux-info
         (left-docks-width "209")
-        (right-docks-width "217")
+        (right-docks-width "213")
         (maximized "no"))
     (gimp-toolbox
         (side left)
@@ -68,8 +68,8 @@
     (position 0 0))
 (session-info "toplevel"
     (factory-entry "gimp-file-export-dialog")
-    (position 432 197)
-    (size 993 552))
+    (position 54 0)
+    (size 1010 746))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-dialog")
     (position 144 26)
@@ -80,16 +80,16 @@
 (session-info "toplevel"
     (factory-entry "gimp-file-save-dialog")
     (position 0 0)
-    (size 1008 745))
+    (size 1010 746))
 (session-info "toplevel"
     (factory-entry "gimp-operation-tool-dialog")
-    (position 737 278))
+    (position 857 403))
 (session-info "toplevel"
     (factory-entry "gimp-transform-3d-tool-dialog")
     (position 544 584))
 (session-info "toplevel"
     (factory-entry "gimp-preferences-dialog")
-    (position 295 175)
+    (position 293 173)
     (size 851 551))
 (session-info "toplevel"
     (factory-entry "gimp-unified-transform-tool-dialog")

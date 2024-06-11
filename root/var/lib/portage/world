@@ -7,6 +7,7 @@ app-arch/p7zip
 app-arch/unrar
 app-editors/emacs
 app-editors/neovim
+app-emulation/wine-vanilla
 app-eselect/eselect-repository
 app-misc/fastfetch
 app-misc/joshuto
@@ -47,7 +48,6 @@ net-misc/aria2
 net-misc/curl
 net-misc/openntpd
 net-misc/yt-dlp
-net-misc/zerotier
 net-p2p/qbittorrent
 net-p2p/syncthing
 net-wireless/iw
@@ -77,7 +77,6 @@ sys-power/powerstat
 sys-power/thermald
 sys-power/tlp
 sys-process/htop
-virtual/wine
 x11-apps/xrandr
 x11-apps/xrdb
 x11-base/xorg-fonts

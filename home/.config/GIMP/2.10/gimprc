@@ -14,7 +14,6 @@
 (monitor-xresolution 89)
 (monitor-yresolution 89)
 (move-tool-changes-active yes)
-(theme "System")
 (icon-theme "Symbolic-High-Contrast")
 (layer-add-mask-type black)
 (selection-grow-radius 2)

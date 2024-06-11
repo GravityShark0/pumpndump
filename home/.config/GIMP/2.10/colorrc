@@ -3,10 +3,10 @@
 # This file holds a list of recently used colors.
 
 (color-history
+    (color-rgba 0 0 0 1)
     (color-rgba 1 1 1 4.6505668554064535e-310)
     (color-rgba 1 1 1 1)
     (color-rgba 1 0 0 1)
-    (color-rgba 0 0 0 1)
     (color-rgba 0 0.87804878048780521 1 1)
     (color-rgba 0 1 0.53658536585365812 1)
     (color-rgba 0.34146341463414664 0 1 1)
