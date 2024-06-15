@@ -6,4 +6,6 @@ end
 if status is-interactive
     fzf_key_bindings        
     zoxide init fish | source
+    #starship init fish | source
+    #enable_transience
 end
