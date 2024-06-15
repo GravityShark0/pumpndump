@@ -19,7 +19,6 @@ app-shells/dash
 app-shells/fish
 app-shells/fzf
 app-shells/mksh
-app-shells/starship
 app-shells/zoxide
 dev-debug/gdb
 dev-java/openjdk-jre-bin
