@@ -31,6 +31,7 @@ eos-rankmirrors
 exfatprogs
 eza
 f2fs-tools
+fastfetch
 fd
 firefox
 fish
@@ -45,6 +46,7 @@ gst-plugin-pipewire
 gst-plugin-va
 guvcview
 htop
+hyfetch
 imagemagick
 imlib2
 imv
@@ -73,11 +75,11 @@ mdadm
 mksh
 mpv
 nano
-neofetch
 neovim
 netctl
 networkmanager
 niri
+nm-connection-editor
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
