@@ -8,16 +8,16 @@ sys-libs/libudev-compat
 x11-misc/picom-ftlabs-generalanimation **
 x11-misc/picom-ftlabs **
 
-x11-apps/xcur2png **
-x11-drivers/nvidia-drivers **
-media-libs/libplacebo **
-media-video/mpv **
-app-text/poppler **
-media-video/pipewire **
-media-video/wireplumber **
-dev-libs/libinput **
-media-libs/mesa ** # mesa-9999 now needs python3_12. So we disable it for now.
-media-libs/libdisplay-info **
-x11-libs/libdrm **
-x11-libs/libxkbcommon **
-x11-libs/pixman **
+# x11-apps/xcur2png **
+# x11-drivers/nvidia-drivers **
+# media-libs/libplacebo **
+# media-video/mpv **
+# app-text/poppler **
+# media-video/pipewire **
+# media-video/wireplumber **
+# dev-libs/libinput **
+# media-libs/mesa **
+# media-libs/libdisplay-info **
+# x11-libs/libdrm **
+# x11-libs/libxkbcommon **
+# x11-libs/pixman **

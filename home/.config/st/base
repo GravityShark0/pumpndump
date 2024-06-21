@@ -2,8 +2,8 @@
 ! 1440x900
 ! use (xdpyinfo | grep -B 2 resolution) to get what dpi you need to use
 ! Xft.dpi: 87
-Xft.dpi: 87 
-!Xft.dpi: 75 
+!Xft.dpi: 87 
+Xft.dpi: 112
 
 Xft.antialias:         1
 Xft.autohint:          0
@@ -19,7 +19,8 @@ Xft.rgba:              rgb
 !   default:  st.font: mono:pixelsize=12:antialias=true:autohint=true
 
 ! st.font:            FiraCode Nerd Font:pixelsize=16:style=Retina
-st.font:            IosevkaTerm Nerd Font:pixelsize=20
+!st.font:            IosevkaTerm Nerd Font:pixelsize=20
+st.font:            IosevkaTerm Nerd Font:pixelsize=28
 
 ! Extra fonts that can be installed for things like powerline symbols
 st.fontalt0: Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true

@@ -1,11 +1,11 @@
 # GIMP action-history
 
-(history-item "file-quit" 1)
+(history-item "file-quit" 2)
 (history-item "edit-paste-as-new-image" 0)
 (history-item "select-all" 2)
 (history-item "edit-paste" 2)
-(history-item "edit-copy" 4)
-(history-item "image-new" 0)
+(history-item "edit-copy" 3)
+(history-item "image-new" 1)
 (history-item "layers-new" 3)
 (history-item "dockable-close-tab" 0)
 (history-item "file-export-as" 3)
