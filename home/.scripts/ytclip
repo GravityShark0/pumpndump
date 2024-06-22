@@ -1,0 +1,28 @@
+#!/bin/sh
+help="$0 [-h] [-o output_name] [-s start_time] [-e end_time] URL [URL...]"
+if [ "$#" = 0 ]; then
+        echo $help
+        exit
+fi
+
+start="0:00"
+end="inf"
+command="yt-dlp -f 'bv*[ext=mp4]+ba*[ext=m4a]' -N 8"
+
+while getopts "hqvo:s:e:" opt; do
+        case "$opt" in
+        h)      echo $help; exit ;;
+        q)      command="$command -q"; shift ;;
+        v)      command="$command -v"; shift ;;
+        o)      command="$command -o '$OPTARG'"; shift 2 ;;
+        s)      start=$OPTARG; shift 2 ;;
+        e)      end=$OPTARG; shift 2 ;;
+        esac
+done
+
+if [ start != "0:00" ] || [ end != "inf" ]; then
+        command="$command --download-sections "*$start-$end" -S proto:https"
+fi
+
+command="$command '$@'"
+eval $command

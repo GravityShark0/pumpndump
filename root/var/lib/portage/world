@@ -93,6 +93,3 @@ x11-wm/awesome
 xfce-base/thunar
 xfce-base/tumbler
 xfce-base/xfce4-settings
-xfce-extra/thunar-archive-plugin
-xfce-extra/thunar-media-tags-plugin
-xfce-extra/thunar-vcs-plugin

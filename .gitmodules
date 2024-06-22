@@ -13,3 +13,6 @@
 [submodule "home/.tmux/plugins/tpm"]
 	path = home/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "home/.config/yazi/plugins/relative-motions.yazi"]
+	path = home/.config/yazi/plugins/relative-motions.yazi
+	url = https://github.com/dedukun/relative-motions.yazi.git

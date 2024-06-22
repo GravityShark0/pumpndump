@@ -1,8 +1,6 @@
 [Default Applications]
-inode/directory=thunar.desktop
+inode/directory=xfce4-file-manager.desktop
 x-scheme-handler/trash=xfce4-file-manager.desktop
-x-scheme-handler/http=xfce4-web-browser.desktop
-x-scheme-handler/https=xfce4-web-browser.desktop
 x-scheme-handler/chrome=firefox-bin.desktop
 text/html=librewolf-bin.desktop
 application/x-extension-htm=firefox-bin.desktop
@@ -79,12 +77,12 @@ text/css=librewolf-bin.desktop
 text/x-chdr=librewolf-bin.desktop
 text/x-java=librewolf-bin.desktop
 text/x-ooc=librewolf-bin.desktop
+x-scheme-handler/http=xfce4-web-browser.desktop
+x-scheme-handler/https=xfce4-web-browser.desktop
 
 [Added Associations]
-inode/directory=xfce4-file-manager.desktop;librewolf-bin.desktop;thunar.desktop;
+inode/directory=xfce4-file-manager.desktop;
 x-scheme-handler/trash=xfce4-file-manager.desktop;
-x-scheme-handler/http=xfce4-web-browser.desktop;
-x-scheme-handler/https=xfce4-web-browser.desktop;
 image/vnd.microsoft.icon=feh.desktop;
 image/jpeg=feh.desktop;
 video/mp4=mpv.desktop;
@@ -156,4 +154,6 @@ text/css=librewolf-bin.desktop;
 text/x-chdr=librewolf-bin.desktop;
 text/x-java=librewolf-bin.desktop;
 text/x-ooc=librewolf-bin.desktop;
+x-scheme-handler/http=xfce4-web-browser.desktop;
+x-scheme-handler/https=xfce4-web-browser.desktop;
 
