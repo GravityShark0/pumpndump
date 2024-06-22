@@ -33,3 +33,4 @@ sys-apps/xdg-desktop-portal flatpak
 net-libs/webkit-gtk jumbo-build examples -gamepad -aqua avif gstreamer introspection jpegxl -keyring lcms -pdf seccomp -spell -systemd -wayland X
 x11-misc/picom-ftlabs-generalanimation opengl
 xfce-base/xfce4-settings -xklavier 
+app-text/zathura synctex
