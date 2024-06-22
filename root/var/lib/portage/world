@@ -23,6 +23,7 @@ app-shells/zoxide
 app-text/zathura
 dev-debug/gdb
 dev-java/openjdk-jre-bin
+dev-tex/latexmk
 dev-util/ccache
 dev-vcs/git
 games-util/gamemode

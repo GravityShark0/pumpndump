@@ -5,47 +5,14 @@ rofi_command="rofi -theme $HOME/.config/rofi/config/powermenu.rasi"
 uptime=$(uptime -p | sed -e 's/up //g')
 
 # Options
-if [ "$DIR" = "powermenus" ]; then
-	shutdown=""
-	reboot=""
-	lock=""
-	suspend=""
-	logout=""
-	ddir="$HOME/.config/rofi/config"
-else
-	layout=`cat $HOME/.config/rofi/config/powermenu.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
-	if [ "$layout" = "TRUE" ]; then
-		shutdown=""
-		reboot=""
-		lock=""
-		suspend=""
-		logout=""
-	else
-		shutdown=" Shutdown"
-		reboot=" Restart"
-		lock=" Lock"
-		suspend=" Sleep"
-		logout=" Logout"
-	fi
-	ddir="$HOME/.config/rofi/config"
-fi
-
-# Ask for confirmation
-rdialog () {
-rofi -dmenu\
-	-i\
-	-no-fixed-num-lines\
-	-p "Are You Sure? : "\
-	-theme "$ddir/confirm.rasi"
-}
-
-# Display Help
-show_msg() {
-	rofi -theme "$ddir/askpass.rasi" -e "Options : yes / no / y / n"
-}
+# if [ "$DIR" = "powermenus" ]; then
+shutdown="󰐥"
+reboot="󰜉"
+logout="󰍃"
+ddir="$HOME/.config/rofi/config"
 
 # Variable passed to rofi
-options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+options="$logout\n$reboot\n$shutdown"
 
 chosen="$(echo "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
 case $chosen in
@@ -53,13 +20,6 @@ case $chosen in
 		loginctl poweroff ;;
 	$reboot)
 		loginctl reboot ;;
-	$lock)
-		betterlockscreen -u $wallpapers --lock --fx ;;
-	$suspend)
-		pulsemixer --mute
-		betterlockscreen -u $wallpapers --lock --fx &
-		loginctl suspend
-		;;
 	$logout)
 		awesome-client awesome.quit\(\) ;;
 esac
