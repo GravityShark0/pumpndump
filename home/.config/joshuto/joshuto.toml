@@ -2,10 +2,12 @@ numbered_command = true
 
 mouse_support = true
 focus_on_create = true
-use_trash = true
+use_trash = false
 watch_files = true
 xdg_open = true
 xdg_open_fork = true
+case_insensitive_ext = false
+zoxide_update = true
 
 custom_commands = []
 

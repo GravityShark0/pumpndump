@@ -135,6 +135,7 @@ vim.inherit = "text_default"
 xml.inherit = "text_default"
 yaml.inherit = "text_default"
 yml.inherit = "text_default"
+tex.inherit = "text_default"
 
 # archive formats
 7z.app_list = [
@@ -210,13 +211,6 @@ pdf.inherit = "reader_default"
 
 kra.app_list = [{ command = "flatpak run org.kde.krita", fork = true, silent = true }]
 kdenlive.app_list = [{ command = "flatpak run org.kde.kdenlive", fork = true, silent = true }]
-
-tex.app_list = [
-  # { command = "micro" },
-  # { command = "gedit", fork = true, silent = true },
-  # { command = "bat", confirm_exit = true },
-  # { command = "pdflatex" },
-]
 
 torrent.app_list = [{ command = "qbittorrent" }]
 

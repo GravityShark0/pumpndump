@@ -5,7 +5,6 @@ app-admin/stow
 app-arch/deb2targz
 app-arch/p7zip
 app-arch/unrar
-app-editors/emacs
 app-editors/neovim
 app-emulation/wine-vanilla
 app-eselect/eselect-repository
@@ -20,11 +19,12 @@ app-shells/fish
 app-shells/fzf
 app-shells/mksh
 app-shells/zoxide
-app-text/zathura
+app-text/zathura-meta
 dev-debug/gdb
 dev-java/openjdk-jre-bin
 dev-tex/latexmk
 dev-util/ccache
+dev-util/tree-sitter-cli
 dev-vcs/git
 games-util/gamemode
 games-util/steam-launcher
