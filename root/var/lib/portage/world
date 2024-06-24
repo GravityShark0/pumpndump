@@ -74,6 +74,7 @@ sys-fs/fuse:0
 sys-fs/ncdu-bin
 sys-fs/ntfs3g
 sys-fs/xfsprogs
+sys-kernel/gentoo-kernel-bin
 sys-kernel/linux-firmware
 sys-power/powerstat
 sys-power/thermald

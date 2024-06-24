@@ -159,3 +159,12 @@
 # required by sys-libs/compiler-rt-18.1.7::gentoo[clang]
 # required by sys-devel/clang-runtime-18.1.7::gentoo[compiler-rt]
 >=sys-libs/llvm-libunwind-18.1.7 static-libs
+# required by net-libs/gnutls-3.8.5-r1::gentoo
+# required by mail-mta/nullmailer-2.2-r2::gentoo
+# required by virtual/mta-1-r2::gentoo
+# required by net-mail/mailutils-3.17::gentoo
+# required by virtual/mailx-4::gentoo
+# required by sys-apps/smartmontools-7.4-r1::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/nettle-3.10 abi_x86_32

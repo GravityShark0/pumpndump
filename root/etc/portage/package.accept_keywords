@@ -1,5 +1,5 @@
-sys-kernel/gentoo-kernel-bin -~amd64
-virtual/dist-kernel -~amd64
+# sys-kernel/gentoo-kernel-bin -~amd64
+# virtual/dist-kernel -~amd64
 
 */*::steam-overlay
 games-util/game-device-udev-rules
