@@ -22,6 +22,7 @@ app-shells/zoxide
 app-text/zathura-meta
 dev-debug/gdb
 dev-java/openjdk-jre-bin
+dev-lang/sassc
 dev-tex/latexmk
 dev-util/ccache
 dev-util/tree-sitter-cli

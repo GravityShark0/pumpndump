@@ -21,5 +21,9 @@ picom --animations -b
 #nohup gentoo-pipewire-launcher restart > /dev/null &
 # To be able to type in chinese
 #ibus-daemon -d -r
-
+# For flatpaks to have integration usually dont need to enable
+# /usr/libexec/xdg-desktop-portal-gtk -r &
+# /usr/libexec/flatpak-portal -r &
+# sh -c 'sleep 5;exec /usr/libexec/xdg-desktop-portal -r' &
+#
 settheme catppuccin/mocha &
