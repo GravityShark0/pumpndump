@@ -31,6 +31,6 @@ media-fonts/nerd-fonts firacode ubuntu ubuntumono iosevkaterm hack jetbrainsmono
 app-alternatives/ninja reference
 sys-apps/xdg-desktop-portal flatpak
 net-libs/webkit-gtk jumbo-build examples -gamepad -aqua avif gstreamer introspection jpegxl -keyring lcms -pdf seccomp -spell -systemd -wayland X
-x11-misc/picom-ftlabs-generalanimation opengl
+# x11-misc/picom opengl -config-file
 xfce-base/xfce4-settings -xklavier 
 app-text/zathura synctex
