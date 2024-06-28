@@ -1,0 +1,12 @@
+# required by media-libs/libsdl2-2.30.3::gentoo[wayland]
+# required by app-emulation/wine-vanilla-9.11::gentoo[sdl]
+# required by @selected
+# required by @world (argument)
+>=gui-libs/libdecor-0.2.2-r1 abi_x86_32
+# required by media-libs/libsdl2-2.30.3::gentoo[wayland]
+# required by app-emulation/wine-vanilla-9.11::gentoo[sdl]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libxkbcommon-1.7.0 abi_x86_32
+# required by dev-qt/qtwayland-6.7.2::gentoo
+>=dev-qt/qtbase-6.7.2 opengl

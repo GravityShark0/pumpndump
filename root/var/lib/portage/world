@@ -29,6 +29,8 @@ dev-util/tree-sitter-cli
 dev-vcs/git
 games-util/gamemode
 games-util/steam-launcher
+gui-apps/foot
+gui-wm/cagebreak
 lxde-base/lxappearance
 media-fonts/corefonts
 media-fonts/fonts-meta
@@ -64,6 +66,7 @@ sys-apps/razer-cli
 sys-apps/ripgrep
 sys-apps/smartmontools
 sys-apps/xdg-desktop-portal-gtk
+sys-auth/seatd
 sys-boot/grub
 sys-devel/clang
 sys-fs/android-file-transfer-linux
@@ -81,6 +84,7 @@ sys-power/powerstat
 sys-power/thermald
 sys-power/tlp
 sys-process/htop
+www-client/uget
 x11-apps/xrandr
 x11-apps/xrdb
 x11-base/xorg-fonts
@@ -88,11 +92,15 @@ x11-base/xorg-server
 x11-drivers/nvidia-drivers
 x11-libs/libnotify
 x11-misc/betterlockscreen
+x11-misc/gammastep
 x11-misc/picom-ftlabs-generalanimation
 x11-misc/rofi
 x11-misc/screenkey
 x11-misc/xclip
+x11-terms/alacritty
+x11-terms/kitty
 x11-terms/st-grav-flexipatch
+x11-terms/wezterm
 x11-wm/awesome
 xfce-base/thunar
 xfce-base/tumbler

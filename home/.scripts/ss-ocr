@@ -1,0 +1,15 @@
+#!/bin/sh
+dir="/home/gravity/Media/Pictures/Screenshots"
+file="Screenshot_$(date +%Y-%m-%d-%H-%M-%S).png"
+
+cd $dir && maim -u -f png -s -b 1 -c 0.35,0.55,0.85,0 | tesseract -l eng - - | xclip -selection clipboard
+
+if [ $? -eq 0 ]; then
+    clip=$(xclip -o -selection clipboard)
+    notify-send "Copied to clipboard" "$clip"
+    exit 2
+else
+    notify-send "OCR cancelled"
+    return 1
+fi
+

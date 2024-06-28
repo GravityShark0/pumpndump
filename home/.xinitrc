@@ -1,6 +1,7 @@
 #!/bin/sh
 # This script runs once
 # (sleep 5 && bloatwindow) &
+gammastep &
 ~/.scripts/monitor/auto.sh
 gentoo-pipewire-launcher &
 exec dbus-launch --exit-with-session awesome

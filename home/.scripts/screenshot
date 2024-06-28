@@ -69,7 +69,7 @@ fi
 
 # Variable passed to rofi
 # options="$screen\n$area\n$window\n$inthree\n$inten\n$tesseract"
-options="$inthree\n$inten\n$tesseract"
+options="$tesseract\n$inthree\n$inten"
 
 chosen="$(echo "$options" | $rofi_command -p 'Take A Shot' -dmenu -selected-row 0)"
 case $chosen in

@@ -1,0 +1,2 @@
+#!/bin/sh
+flatpak run '--command=brave' 'com.brave.Browser' '--profile-directory=Guest' "-app=$1"

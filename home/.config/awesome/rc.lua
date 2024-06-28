@@ -67,6 +67,7 @@ Powermenu = 'powermenu'
 Screenshot = 'ss'
 Screenshot_window = 'ss-window'
 Screenshot_desktop = 'ss-desktop'
+Screenshot_ocr = 'ss-ocr'
 Screenshot_menu = 'screenshot'
 Lightdecrease = 'monitorlight +-5'
 Lightincrease = 'monitorlight +5'
@@ -460,6 +461,9 @@ globalkeys = gears.table.join(
 		awful.spawn(Screenshot_desktop)
 	end, { description = 'take a desktop screenshot', group = 'launcher' }),
 	awful.key({ Modkey, 'Mod1' }, 's', function()
+		awful.spawn(Screenshot_ocr)
+	end, { description = 'take a tesseract selection', group = 'launcher' }),
+	awful.key({ Modkey, 'Shift', 'Control' }, 's', function()
 		awful.spawn(Screenshot_menu)
 	end, { description = 'open screenshot menu', group = 'launcher' }),
 	awful.key({ Modkey }, 't', function()

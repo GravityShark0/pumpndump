@@ -11,8 +11,8 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
--- theme.font = 'Ubuntu ' .. dpi(16)
-theme.font = 'Ubuntu ' .. dpi(20)
+theme.font = 'Ubuntu ' .. dpi(16)
+--theme.font = 'Ubuntu ' .. dpi(20)
 theme.bg_normal = '#1b1a29'
 theme.bg_focus = '#302d41'
 theme.bg_urgent = '#ff0000'
