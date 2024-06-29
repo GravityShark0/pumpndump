@@ -34,4 +34,4 @@ net-libs/webkit-gtk jumbo-build examples -gamepad -aqua avif gstreamer introspec
 # x11-misc/picom opengl -config-file
 xfce-base/xfce4-settings -xklavier 
 app-text/zathura synctex
-sys-auth/seatd -elogind server
+# dev-qt/qtmultimedia opengl

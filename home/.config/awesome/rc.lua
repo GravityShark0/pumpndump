@@ -17,9 +17,6 @@ local wibox = require('wibox')
 local beautiful = require('beautiful')
 -- Notification library
 local naughty = require('naughty')
--- Extra utilities https://blingcorp.github.io/bling/#/
-local bling = require('bling')
-bling.module.flash_focus.enable()
 -- Bottom_right
 naughty.config.defaults.position = 'bottom_right'
 
@@ -58,6 +55,12 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. 'grav.lua')
 
+-- Extra utilities https://blingcorp.github.io/bling/#/
+local bling = require('bling')
+-- bling.module.flash_focus.enable()
+
+-- Terminal = '! (alacritty msg create-window) && alacritty'
+-- Terminal = 'kitty -1'
 Terminal = 'st'
 File_manager = 'joshuto'
 File_manager_cmd = Terminal .. ' -e ' .. File_manager
@@ -79,31 +82,35 @@ Modkey = 'Mod4'
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
+	-- Master and children type shit
 	awful.layout.suit.tile,
 	awful.layout.suit.tile.bottom,
-	awful.layout.suit.tile.left,
-	awful.layout.suit.tile.top,
-	-- awful.layout.suit.spiral,
-	awful.layout.suit.floating,
+	awful.layout.suit.magnifier,
+	awful.layout.suit.corner.nw,
 
-	-- awful.layout.suit.fair,
-	-- awful.layout.suit.fair.horizontal,
-	-- awful.layout.suit.spiral.dwindle,
-	-- awful.layout.suit.max,
-	-- awful.layout.suit.max.fullscreen,
-	-- awful.layout.suit.magnifier,
-	-- awful.layout.suit.corner.nw,
-	--
-	bling.layout.mstab,
-	-- bling.layout.centered,
-	-- bling.layout.vertical,
-	-- bling.layout.horizontal,
+	-- More fun stuff
+	awful.layout.suit.fair,
 	bling.layout.equalarea,
 	bling.layout.deck,
+	awful.layout.suit.floating,
 
+	-- Same as the first one but its on the other side so
+	-- Its easier to switch to it
+	bling.layout.mstab,
+
+	-- awful.layout.suit.spiral,
+	-- awful.layout.suit.spiral.dwindle,
+	-- awful.layout.suit.fair.horizontal,
+	-- awful.layout.suit.max,
+	-- awful.layout.suit.max.fullscreen,
+	-- awful.layout.suit.tile.left,
+	-- awful.layout.suit.tile.top,
 	-- awful.layout.suit.corner.ne,
 	-- awful.layout.suit.corner.sw,
 	-- awful.layout.suit.corner.se,
+	-- bling.layout.centered,
+	-- bling.layout.vertical,
+	-- bling.layout.horizontal,
 }
 -- }}}
 
