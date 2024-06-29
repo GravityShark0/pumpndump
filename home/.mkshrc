@@ -1,23 +1,23 @@
-# source /usr/share/bash-completion/completions/fzf
-# source /usr/share/fzf/key-bindings.bash
-
+# For when im using ibus
 # export GTK_IM_MODULE=ibus
 # export XMODIFIERS=@im=ibus
 # export QT_IM_MODULE=ibus
 
-# ~/.local/bin is where you would put your installed binaries
+# ~/.local/bin is where you would put your user binaries
 export PATH=~/.local/bin:~/.scripts:$PATH
+
+# Wouldn't work otherwise
 export GPG_TTY=$(tty)
+
+# I like my go tidy
 export GOPATH=$HOME/Other/go
 export GOPROXY=https://proxy.golang.org
 export GOSUMDB=sum.golang.org
 
-if [ -z "$DISPLAY" ]; then
-  if [ "$XDG_VTNR" -eq 1 ]; then
-    exec startx
-  elif [ "$XDG_VTNR" -eq 2 ]; then
-    exec dbus-launch --exit-with-session dwl
-  fi
-fi
+# If in the tty and also the first tty, then do startx
+[ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ] && exec startx
 
-[ -x /bin/fish ] && SHELL=/bin/fish exec fish
+# Fish shell is my actual shell
+# [ -x /bin/fish ] && SHELL=/bin/fish exec fish
+# I like to live dangerously
+SHELL=/bin/fish exec fish

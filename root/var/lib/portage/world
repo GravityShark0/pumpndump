@@ -59,7 +59,6 @@ sys-apps/razer-cli
 sys-apps/ripgrep
 sys-apps/smartmontools
 sys-apps/xdg-desktop-portal-gtk
-sys-auth/seatd
 sys-boot/grub
 sys-devel/clang
 sys-fs/android-file-transfer-linux

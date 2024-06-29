@@ -61,9 +61,10 @@ local bling = require('bling')
 
 -- Terminal = '! (alacritty msg create-window) && alacritty'
 -- Terminal = 'kitty -1'
+-- Terminal = 'st -e $SHELL'
 Terminal = 'st'
 File_manager = 'joshuto'
-File_manager_cmd = Terminal .. ' -e ' .. File_manager
+File_manager_cmd = Terminal .. ' -c ' .. File_manager
 Launcher = 'runner'
 Alt_launcher = 'launcher'
 Powermenu = 'powermenu'
@@ -134,7 +135,7 @@ Mytextclock:connect_signal('button::press', function(_, _, _, button)
 	if button == 1 then
 		cw.toggle()
 	elseif button == 3 then
-		awful.spawn(Terminal .. ' -e syncclock')
+		awful.spawn(Terminal .. ' -c syncclock')
 	end
 end)
 
@@ -308,7 +309,7 @@ awful.screen.connect_for_each_screen(function(s)
 	s.net_wired = require('net_widgets').indicator({
 		-- interface = 'eth0',
 		popup_position = 'bottom_right',
-		onclick = Terminal .. ' -e wpa_cli',
+		onclick = Terminal .. ' -c wpa_cli',
 	})
 
 	-- net_wireless = net_widgets.wired({ interface = 'eth0' })
