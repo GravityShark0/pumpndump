@@ -207,7 +207,7 @@ awful.screen.connect_for_each_screen(function(s)
 	-- set_wallpaper(s)
 
 	-- Each screen has its own tag table.
-	awful.tag({ '1', '2', '3', '4', '5', '6', '7', SCRATCH_ICON }, s, awful.layout.layouts[1])
+	awful.tag({ '1', '2', '3', '4', '5', '6', '7', '8', SCRATCH_ICON }, s, awful.layout.layouts[1])
 
 	-- awful.tag.add('6', { s, layout = awful.layout.suit.floating })
 
@@ -376,7 +376,7 @@ globalkeys = gears.table.join(
 
 	-- Scratchpad
 	awful.key({ Modkey }, '`', function()
-		local tag = awful.screen.focused().tags[8]
+		local tag = awful.screen.focused().tags[9]
 		local clients = tag:clients()
 		if clients[1] then
 			awful.tag.viewtoggle(tag)
@@ -573,10 +573,10 @@ end
 
 clientkeys = gears.table.join(
 	awful.key({ Modkey, 'Shift' }, '`', function(c)
-		local tag = client.focus.screen.tags[8]
+		local tag = client.focus.screen.tags[9]
 		local screen = awful.screen.focused()
-		local scratch = screen.tags[8]
-		if client.focus.first_tag.index == 8 then
+		local scratch = screen.tags[9]
+		if client.focus.first_tag.index == 9 then
 			c:move_to_tag(awful.screen.focused().selected_tag)
 			c.floating = false
 
@@ -713,7 +713,7 @@ for i = 1, 9 do
 			local screen = awful.screen.focused()
 			local tag = screen.tags[i]
 
-			local scratch = screen.tags[8]
+			local scratch = screen.tags[9]
 			if tag then
 				-- Allow scratchpad to remain visible while changing tags
 				if scratch.selected then
