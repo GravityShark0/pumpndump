@@ -4,7 +4,7 @@
     "recent_thr": 0.1,
     "compr_cnt": 5,
     "ignore": [],
-    "position": "bottom",
+    "position": "top",
     "persist": false,
     "window": false,
     "font_desc": "Ubuntu Nerd Font Propo Medium 10",

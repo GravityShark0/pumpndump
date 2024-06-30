@@ -629,7 +629,7 @@ clientkeys = gears.table.join(
 	awful.key({ Modkey, 'Shift' }, ',', function()
 		awful.client.swap.byidx(-1)
 	end, { description = 'swap with previous client by index', group = 'client' }),
-	awful.key({ Modkey }, 'f', function(c)
+	awful.key({ Modkey, 'Shift' }, 'f', function(c)
 		if c.floating then
 			c.floating = true
 			c.fullscreen = not c.fullscreen
