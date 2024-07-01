@@ -584,12 +584,13 @@ clientkeys = gears.table.join(
 				awful.tag.viewtoggle(scratch)
 			end
 		else
-			awful.placement.maximize(c, { honor_workarea = true, margins = beautiful.useless_gaps })
 			c:move_to_tag(tag)
 			if not scratch.selected then
 				awful.tag.viewtoggle(scratch)
 			end
 			c.floating = true
+
+			awful.placement.maximize(c, { honor_workarea = true, margins = beautiful.useless_gaps })
 			awful.placement.top(c)
 			c.border_color = beautiful.border_scratch
 		end
