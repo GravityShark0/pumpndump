@@ -130,9 +130,6 @@ theme.layout_cornernw = themes_path .. 'default/layouts/cornernww.png'
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
 -- theme.icon_theme = nil
 
-theme.flash_focus_start_opacity = 0.8 -- the starting opacity
--- theme.flash_focus_step = 0.01
-
 return theme
 
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
