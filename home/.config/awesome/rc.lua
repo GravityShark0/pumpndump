@@ -584,12 +584,13 @@ clientkeys = gears.table.join(
 				awful.tag.viewtoggle(scratch)
 			end
 		else
-			awful.placement.maximize(c, { honor_workarea = true, margins = 50 })
+			awful.placement.maximize(c, { honor_workarea = true, margins = beautiful.useless_gaps })
 			c:move_to_tag(tag)
 			if not scratch.selected then
 				awful.tag.viewtoggle(scratch)
 			end
 			c.floating = true
+			awful.placement.top(c)
 			c.border_color = beautiful.border_scratch
 		end
 	end, { description = 'toggle client to scratchpad', group = 'client' }),
@@ -856,7 +857,7 @@ end)
 
 -- Focus Color
 client.connect_signal('focus', function(c)
-	if c.first_tag.index == 8 then
+	if c.first_tag.index == 9 then
 		c.border_color = beautiful.border_scratch
 	else
 		c.border_color = beautiful.border_focus
