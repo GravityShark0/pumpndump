@@ -40,6 +40,10 @@ name = "Notes 📝"
 path = "~/Notes"
 startup_command = "nvim index.org"
 
+[[session]]
+name = "soosh"
+startup_command = "ssh gravity@192.168.100.97"
+
 # [[session]]
 # name = "Downloads 📥"
 # path = "~/Downloads"

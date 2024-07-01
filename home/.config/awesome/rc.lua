@@ -135,7 +135,7 @@ Mytextclock:connect_signal('button::press', function(_, _, _, button)
 	if button == 1 then
 		cw.toggle()
 	elseif button == 3 then
-		awful.spawn(Terminal .. ' -c syncclock')
+		awful.spawn(Terminal .. ' -e syncclock')
 	end
 end)
 
@@ -309,7 +309,7 @@ awful.screen.connect_for_each_screen(function(s)
 	s.net_wired = require('net_widgets').indicator({
 		-- interface = 'eth0',
 		popup_position = 'bottom_right',
-		onclick = Terminal .. ' -c wpa_cli',
+		onclick = Terminal .. ' -e wpa_cli',
 	})
 
 	-- net_wireless = net_widgets.wired({ interface = 'eth0' })
@@ -454,7 +454,7 @@ globalkeys = gears.table.join(
 
 	-- Standard program
 	awful.key({ Modkey }, 'q', function()
-		awful.spawn.with_shell(Terminal .. ' >> /tmp/st.log')
+		awful.spawn(Terminal)
 	end, { description = 'open a terminal', group = 'launcher' }),
 	awful.key({ Modkey, 'Shift' }, 'q', function()
 		awful.spawn(File_manager_cmd)
@@ -489,7 +489,7 @@ globalkeys = gears.table.join(
 	awful.key({ Modkey, 'Shift' }, 'e', function()
 		awful.spawn(Powermenu)
 	end, { description = 'quit awesome', group = 'awesome' }),
-	awful.key({ Modkey, 'Shift' }, 'Escape', awesome.quit, { description = 'quit awesome', group = 'awesome' }),
+	-- awful.key({ Modkey, 'Shift' }, 'Escape', awesome.quit, { description = 'quit awesome', group = 'awesome' }),
 	-- Brightness
 	awful.key({}, 'XF86MonBrightnessUp', function()
 		awful.spawn(Lightdecrease)

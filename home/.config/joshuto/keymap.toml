@@ -12,7 +12,7 @@ keymap = [
   { keys = ["Q"], commands = ["quit --output-current-directory"] },
 
   { keys = ["R"], commands = ["reload_dirlist"] },
-  { keys = ["v", "h"], commands = ["toggle_hidden"] },
+  { keys = ["s", "h"], commands = ["toggle_hidden"] },
   { keys = ["z"], commands = [":z "] },
   { keys = ["ctrl+h"], commands = ["toggle_hidden"] },
   { keys = ["\t"], commands = ["tab_switch 1"] },

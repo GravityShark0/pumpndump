@@ -2,7 +2,7 @@
 # This script runs once
 
 # Darker screen when night time
-gammastep &
+# gammastep &
 
 # Pipewire / Audio
 gentoo-pipewire-launcher &
