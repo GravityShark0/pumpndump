@@ -1,13 +1,18 @@
 #!/bin/sh
-[ -n "$TMUX" ] && prev_session=$(tmux display-message -p '#S') && sesh connect "$(
-	sesh list -i -H | fzf-tmux --ansi -p 80%,80% \
-		--no-sort --border-label ' sesh relinquish ' --prompt '⚡ '\
-		--header '  ^a all ^t sessions ^c configs ^z zoxide ^f find ^d delete selected session' \
-		--bind 'tab:down,btab:up' \
-		--bind 'ctrl-a:change-prompt(⚡ )+reload(sesh list -i -H)' \
-		--bind 'ctrl-t:change-prompt(  )+reload(sesh list -i -t)' \
-		--bind 'ctrl-c:change-prompt(󰢻  )+reload(sesh list -i -c)' \
-		--bind 'ctrl-z:change-prompt(  )+reload(sesh list -i -z)' \
-		--bind 'ctrl-f:change-prompt(  )+reload(fd -t d -E .local/share/Trash . ~ ~/.config)' \
-		--bind 'ctrl-d:execute(tmux kill-session -t $(echo {} | cut -c 5-))+change-prompt(⚡ )+reload(sesh list -i -H)'
-)" && tmux kill-session -t "$prev_session"
+set -e
+[ -n "$TMUX" ]
+prev_session=$(tmux display-message -p '#S')
+out=$(sesh list -i -H | fzf-tmux --ansi -p 80%,80% \
+	--no-sort --border-label ' sesh relinquish ' --prompt '⚡ '\
+	--header '  ^a all ^t sessions ^c configs ^z zoxide ^f find ^d delete selected session' \
+	--bind 'tab:down,btab:up' \
+	--bind 'ctrl-a:change-prompt(⚡ )+reload(sesh list -i -H)' \
+	--bind 'ctrl-t:change-prompt(  )+reload(sesh list -i -t)' \
+	--bind 'ctrl-c:change-prompt(󰢻  )+reload(sesh list -i -c)' \
+	--bind 'ctrl-z:change-prompt(  )+reload(sesh list -i -z)' \
+	--bind 'ctrl-f:change-prompt(  )+reload(fd -t d -E .local/share/Trash . ~ ~/.config)' \
+	--bind 'ctrl-d:execute(tmux kill-session -t $(echo {} | cut -c 5-))+change-prompt(⚡ )+reload(sesh list -i -H)'
+)
+
+
+if [ "$out" != "" ]; then tmux kill-session -t "$prev_session"; fi
