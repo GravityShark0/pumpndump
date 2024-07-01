@@ -806,7 +806,11 @@ awful.rules.rules = {
 	-- Scratchpad applications
 	{
 		rule_any = { class = { 'emacs', 'Emacs', 'scratchy' } },
-		properties = { tag = SCRATCH_ICON, floating = true },
+		properties = {
+			tag = SCRATCH_ICON,
+			floating = true,
+			placement = awful.placement.maximize,
+		},
 	},
 }
 -- }}}
@@ -825,6 +829,13 @@ client.connect_signal('manage', function(c)
 	end
 	-- To stop clients from getting included in the scratch tag when the scratch tag is open and a client is opened
 	c:tags({ c.first_tag })
+	-- if c.first_tag == awful.screen.focused().tags[9] then
+	-- 	naughty.notify({
+	-- 		title = tostring(c),
+	-- 		text = tostring(#c.first_tag:clients()),
+	-- 		-- text = tostring(awful.screen.focused().tags[9].master_count),
+	-- 	})
+	-- end
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
@@ -834,9 +845,16 @@ end)
 
 -- All floating are on top
 client.connect_signal('property::floating', function(c)
-	if c.floating then
+	if c.floating and not c.fullscreen then
 		c.ontop = true
-		awful.placement.centered(c)
+		-- local what = awful.placement.restore(c)
+
+		-- c:geometry()
+		-- naughty.notify({
+		-- 	title = tostring(c),
+		-- 	text = tostring(what),
+		-- 	-- text = tostring(awful.screen.focused().tags[9].master_count),
+		-- })
 	else
 		c.ontop = false
 	end
