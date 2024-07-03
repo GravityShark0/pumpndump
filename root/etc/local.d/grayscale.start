@@ -1,2 +1,0 @@
-#!/bin/sh
-nvidia-settings -a DigitalVibrance=-1024 > /dev/null
