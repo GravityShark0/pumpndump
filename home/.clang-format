@@ -2,3 +2,4 @@
 AccessModifierOffset: -8
 IndentWidth: 8
 ColumnLimit: 80
+BasedOnStyle: GNU

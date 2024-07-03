@@ -1,37 +1,44 @@
+# Doas with persist is the best
 app-admin/doas persist -pam
-x11-wm/awesome lua_single_target_luajit -lua_single_target_lua5-1
-x11-drivers/nvidia-drivers abi_x86_32
-x11-base/xorg-server -minimal udev
-# www-client/firefox hwaccel screencast system-png -hardened pgo libproxy -telemetry 
-# www-client/librewolf -eme-free hwaccel screencast system-1v1 system-png -hardened pgo libproxy -telemetry llvm_slot_17
+
+# IDK
+app-alternatives/ninja reference
+
+# Shemacs
+app-editors/emacs gui gtk xft gif harfbuzz jpeg pngsound svg tiff webp png dynamic-loading -jit libxml2 sound gpm sqlite
+
+# Cubey
+dev-util/vulkan-tools cube
+
+# Fonts
 media-fonts/noto-emoji icons
+media-fonts/nerd-fonts firacode ubuntu ubuntumono iosevkaterm hack jetbrainsmono
+
+# Support all the shit in fmg
+media-video/ffmpeg vorbis mp3 webp vaapi cuda hardcoded-tables kvazaar libaom
+media-video/obs-studio lua nvenc pulseaudio speex v4l lua_single_target_luajit pipewire
+
+# Pinting wid usbs
+# net-print/cups usb
+
+# Android yeah
+sys-fs/android-file-transfer-linux fuse
+
+# X11
+## Enable portl
+sys-apps/xdg-desktop-portal flatpak
+## Make the server work duh
 sys-auth/elogind policykit
 sys-auth/polkit -kde
-app-editors/emacs gui gtk xft gif harfbuzz jpeg pngsound svg tiff webp png dynamic-loading -jit libxml2 sound gpm sqlite
-# app-emulation/qemu gtk usbredir
-# app-emulation/libvirt pcap virt-network numa fuse macvtap vepa qemu
-# app-emulation/virt-manager gui
-media-video/obs-studio lua nvenc pulseaudio speex v4l lua_single_target_luajit pipewire
-# app-text/aspell l10n_en l10n_tl
-# virtual/wine -staging -proton
-# to allow for some other networks
-net-wireless/wpa_supplicant tkip
+x11-base/xorg-server udev -minimal
+## Only use the fastest lua
+x11-wm/awesome lua_single_target_luajit -lua_single_target_lua5-1
+## only good lightweight shit are from xfce
 xfce-base/thunar exif introspection libnotify -udisks pcre
-# media-gfx/imagemagick fontconfig hdri heif raw svg xml tiff
-xfce-extra/thunar-vcs-plugin -subversion
 xfce-base/tumbler epub ffmpeg gstreamer odf jpeg pdf raw vaapi cuda hardcoded-tables kvazaar libaom
-# dev-cpp/glog -libunwind
-sys-fs/android-file-transfer-linux fuse
-media-video/ffmpeg vorbis mp3 webp vaapi cuda hardcoded-tables kvazaar libaom
-# net-print/cups ssl usb
-# net-fs/samba acl cups -system-mitkrb5 client zeroconf regedit
-app-text/tesseract doc jpeg opencl png tiff webp static-libs
-dev-util/vulkan-tools cube
-media-fonts/nerd-fonts firacode ubuntu ubuntumono iosevkaterm hack jetbrainsmono
-app-alternatives/ninja reference
-sys-apps/xdg-desktop-portal flatpak
-net-libs/webkit-gtk jumbo-build examples -gamepad -aqua avif gstreamer introspection jpegxl -keyring lcms -pdf seccomp -spell -systemd -wayland X
-# x11-misc/picom opengl -config-file
 xfce-base/xfce4-settings -xklavier 
-app-text/zathura synctex
-# dev-qt/qtmultimedia opengl
+
+# Browser shit
+net-libs/webkit-gtk jumbo-build examples -gamepad -aqua avif gstreamer introspection jpegxl -keyring lcms -pdf seccomp -spell -systemd -wayland X
+www-client/firefox hwaccel screencast system-png -hardened pgo libproxy -telemetry 
+www-client/librewolf -eme-free hwaccel screencast system-1v1 system-png -hardened pgo libproxy -telemetry llvm_slot_17

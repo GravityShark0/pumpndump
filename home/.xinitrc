@@ -1,14 +1,12 @@
 #!/bin/sh
-# This script runs once
+# This script runs once when first opening X11
 
-# Darker screen when night time
-# gammastep &
-
-# Pipewire / Audio
+# Pipewire
 gentoo-pipewire-launcher &
 
-# Monitor setup
+# Setup monitors
 ~/.scripts/monitor/auto.sh &
 
+org &
+
 exec dbus-launch --exit-with-session awesome
-# exec dbus-launch --sh-syntax --exit-with-session awesome

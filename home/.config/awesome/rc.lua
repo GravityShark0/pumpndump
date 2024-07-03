@@ -590,8 +590,8 @@ clientkeys = gears.table.join(
 			end
 			c.floating = true
 
-			awful.placement.maximize(c, { honor_workarea = true, margins = beautiful.useless_gaps })
-			awful.placement.top(c)
+			local place = awful.placement.maximize + awful.placement.top
+			place(c, { honor_workarea = true, margins = 50 })
 			c.border_color = beautiful.border_scratch
 		end
 	end, { description = 'toggle client to scratchpad', group = 'client' }),
@@ -646,7 +646,11 @@ clientkeys = gears.table.join(
 	awful.key({ Modkey }, 'c', function(c)
 		c:kill()
 	end, { description = 'close', group = 'client' }),
-	awful.key({ Modkey }, 'space', awful.client.floating.toggle, { description = 'toggle floating', group = 'client' }),
+	awful.key({ Modkey }, 'space', function(c)
+		if not c.fullscreen then
+			awful.client.floating.toggle()
+		end
+	end, { description = 'toggle floating', group = 'client' }),
 	awful.key({ Modkey }, 'Return', function(c)
 		c:swap(awful.client.getmaster())
 	end, { description = 'move to master', group = 'client' }),
@@ -809,7 +813,7 @@ awful.rules.rules = {
 		properties = {
 			tag = SCRATCH_ICON,
 			floating = true,
-			placement = awful.placement.maximize,
+			placement = awful.placement.maximize + awful.placement.top,
 		},
 	},
 }
@@ -829,13 +833,15 @@ client.connect_signal('manage', function(c)
 	end
 	-- To stop clients from getting included in the scratch tag when the scratch tag is open and a client is opened
 	c:tags({ c.first_tag })
-	-- if c.first_tag == awful.screen.focused().tags[9] then
-	-- 	naughty.notify({
-	-- 		title = tostring(c),
-	-- 		text = tostring(#c.first_tag:clients()),
-	-- 		-- text = tostring(awful.screen.focused().tags[9].master_count),
-	-- 	})
-	-- end
+	if c.first_tag == awful.screen.focused().tags[9] then
+		local place = awful.placement.maximize + awful.placement.top
+		place(c, { honor_workarea = true, margins = 50 })
+		-- naughty.notify({
+		-- 	title = tostring(c),
+		-- 	text = tostring(#c.first_tag:clients()),
+		-- 	-- text = tostring(awful.screen.focused().tags[9].master_count),
+		-- })
+	end
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
@@ -845,29 +851,21 @@ end)
 
 -- All floating are on top
 client.connect_signal('property::floating', function(c)
-	if c.floating and not c.fullscreen then
+	if c.floating then
 		c.ontop = true
-		-- local what = awful.placement.restore(c)
-
-		-- c:geometry()
-		-- naughty.notify({
-		-- 	title = tostring(c),
-		-- 	text = tostring(what),
-		-- 	-- text = tostring(awful.screen.focused().tags[9].master_count),
-		-- })
 	else
 		c.ontop = false
 	end
 end)
 
 -- Make floating clients stay on top even after exiting fullscreen
-client.connect_signal('property::fullscreen', function(c)
-	if not c.fullscreen and c.floating then
-		c.ontop = true
-	else
-		c.ontop = false
-	end
-end)
+-- client.connect_signal('property::fullscreen', function(c)
+-- 	if not c.fullscreen and c.floating then
+-- 		c.ontop = true
+-- 	else
+-- 		c.ontop = false
+-- 	end
+-- end)
 
 -- Disable Mixmization
 client.connect_signal('property::maximized', function(c)

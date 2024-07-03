@@ -53,6 +53,8 @@ intel_uncore_frequency
 intel_uncore_frequency_common
 intel_vsec
 intel_wmi_thunderbolt
+ip_tables
+iptable_filter
 isofs
 iwlmvm
 iwlwifi

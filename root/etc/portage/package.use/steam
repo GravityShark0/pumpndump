@@ -59,4 +59,5 @@ sys-libs/pam abi_x86_32
 virtual/libiconv abi_x86_32
 x11-libs/xcb-util-keysyms abi_x86_32
 
+x11-drivers/nvidia-drivers abi_x86_32
 games-util/steam-launcher trayicon -joystick

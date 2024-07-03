@@ -1,6 +1,5 @@
 #!/bin/sh
-set -e
-[ -n "$TMUX" ]
+[ ! -n "$TMUX" ] && t && return
 prev_session=$(tmux display-message -p '#S')
 out=$(sesh list -i -H | fzf-tmux --ansi -p 80%,80% \
 	--no-sort --border-label ' sesh relinquish ' --prompt '⚡ '\
@@ -14,5 +13,7 @@ out=$(sesh list -i -H | fzf-tmux --ansi -p 80%,80% \
 	--bind 'ctrl-d:execute(tmux kill-session -t $(echo {} | cut -c 5-))+change-prompt(⚡ )+reload(sesh list -i -H)'
 )
 
-
-if [ "$out" != "" ]; then tmux kill-session -t "$prev_session"; fi
+sesh connect $out || return
+if [ "$out" != "" ]; then
+	tmux kill-session -t "$prev_session";
+fi
