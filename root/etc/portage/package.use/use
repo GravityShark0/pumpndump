@@ -42,3 +42,6 @@ xfce-base/xfce4-settings -xklavier
 net-libs/webkit-gtk jumbo-build examples -gamepad -aqua avif gstreamer introspection jpegxl -keyring lcms -pdf seccomp -spell -systemd -wayland X
 www-client/firefox hwaccel screencast system-png -hardened pgo libproxy -telemetry 
 www-client/librewolf -eme-free hwaccel screencast system-1v1 system-png -hardened pgo libproxy -telemetry llvm_slot_17
+
+# internets
+net-wireless/wpa_supplicant tkip
