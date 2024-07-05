@@ -4,7 +4,6 @@
                 devfs |                                 sysinit
                dhcpcd |      default                           
                 dmesg |                                 sysinit
-              elogind |      default                           
                  fsck | boot                                   
              hostname | boot                                   
               hwclock | boot                                   
@@ -12,7 +11,7 @@
               keymaps | boot                                   
             killprocs |                        shutdown        
     kmod-static-nodes |                                 sysinit
-                local | boot         nonetwork                 
+                local |      default                           
            localmount | boot                                   
              loopback | boot                                   
               modules | boot                                   
@@ -25,6 +24,7 @@
             savecache |                        shutdown        
               seedrng | boot                                   
                  swap | boot                                   
+            syncthing |      default                           
                sysctl | boot                                   
                 sysfs |                                 sysinit
  systemd-tmpfiles-setup | boot                                   
@@ -34,3 +34,4 @@
                   tlp |      default                           
                  udev |                                 sysinit
          udev-trigger |                                 sysinit
+       wpa_supplicant |      default                           

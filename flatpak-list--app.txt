@@ -1,30 +1,12 @@
-# Using the binary by gentoo forces me to install cups which I do not want.
-Brave Browser                 com.brave.Browser                     
-Heroic Games Launcher         com.heroicgameslauncher.hgl           
-
-# Needed for dealing with flatpak
-Flatseal                      com.github.tchx84.Flatseal            
-
-# Needs me to compile electron or manually update the app image which is a hassle
-WebCord                       io.github.spacingbat3.webcord         
-
-# Flatpak only application
-Pomodoro                      io.gitlab.idevecore.Pomodoro          
-
-# Breaks alot when not in flatpak
-Anki                          net.ankiweb.Anki                      
-
-# just too fat to bother
-Lutris                        net.lutris.Lutris                     
-Firefox                       org.mozilla.firefox                   
-
-# Creation tools, ordered from most to least used
-LibreOffice                   org.libreoffice.LibreOffice           
-Inkscape                      org.inkscape.Inkscape                 
-Easy Effects                    com.github.wwmm.easyeffects                   
-JamesDSP                        me.timschneeberger.jdsp4linux                 
-Helvum                          org.pipewire.Helvum                           
-Blender                         org.blender.Blender                           
-Audacity                        org.audacityteam.Audacity                     
-PDF Arranger                    com.github.jeromerobert.pdfarranger           
-Krita                         org.kde.krita                         
+com.brave.Browser
+com.github.tchx84.Flatseal
+com.heroicgameslauncher.hgl
+fyi.zoey.TeX-Match
+io.github.spacingbat3.webcord
+io.gitlab.idevecore.Pomodoro
+net.ankiweb.Anki
+net.lutris.Lutris
+org.inkscape.Inkscape
+org.kde.krita
+org.libreoffice.LibreOffice
+org.mozilla.firefox
