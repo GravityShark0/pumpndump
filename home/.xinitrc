@@ -5,8 +5,12 @@
 gentoo-pipewire-launcher &
 
 # Setup monitors
-~/.scripts/monitor/auto.sh &
+~/.scripts/monitor/auto.sh & 
+# Setup external monitor colors
+nvidia-settings -l &
 
-org &
+# Open org mode
+sleep 5 && org &
+
 
 exec dbus-launch --exit-with-session awesome

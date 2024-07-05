@@ -23,4 +23,4 @@ picom --animations -b
 #ibus-daemon -d -r
 
 # setting xrdb 
-settheme rosepine/dawn &
+settheme rose-pine/dawn &
