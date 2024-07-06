@@ -1,9 +1,9 @@
-[submodule "home/.config/awesome/net_widgets"]
-	path = home/.config/awesome/net_widgets
-	url = https://github.com/pltanton/net_widgets.git
 [submodule "home/.config/awesome/bling"]
 	path = home/.config/awesome/bling
 	url = https://github.com/BlingCorp/bling.git
+[submodule "home/.config/awesome/net_widgets"]
+	path = home/.config/awesome/net_widgets
+	url = https://github.com/pltanton/net_widgets.git
 [submodule "home/.config/awesome/awesome-wm-widgets"]
 	path = home/.config/awesome/awesome-wm-widgets
 	url = https://github.com/streetturtle/awesome-wm-widgets.git
@@ -22,6 +22,3 @@
 [submodule "home/.gnupg"]
 	path = home/.gnupg
 	url = gravity@clr:Git/gnupg.git
-[submodule "home/.config/awesome/awesome-wm-wdigets"]
-	path = home/.config/awesome/awesome-wm-wdigets
-	url = https://github.com/streetturtle/awesome-wm-widgets
