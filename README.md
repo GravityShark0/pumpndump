@@ -55,10 +55,6 @@ sudo cp ./root/etc/doas.conf.bak /etc/doas.conf
 sudo cp ./root/etc/fstab.bak /etc/fstab
 ```
 
-# install the flatpaks
-
-flatpak install flatpak-list--app.txt
-
 and it should be done,
 just don't forget the things like doing <prefix> + I in tmux to update packages
 and the world file should also be synced if you remove yuor original world file

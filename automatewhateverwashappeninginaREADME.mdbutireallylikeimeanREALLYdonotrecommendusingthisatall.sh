@@ -2,6 +2,7 @@
 
 #### GNU Stow
 # Pull in the submodules
+# MAKE SURE TO DO THIS BEFORE DELETING SHIT LIKE HOSTS AND RESOLV CAUSE YEAH
 git submodule update --init --recursive
 
 # to stop fish_variables from constantly updating
@@ -10,6 +11,9 @@ rm ~/.config/fish/fish_variables
 
 # to sync home/ to ~/ or /home/$USER/
 stow home --target=$HOME
+unlink use\ ls\ -a\ to\ see\ all
+sudo chmod 700 .gnupg --recursive
+sudo chmod 700 .ssh --recursive
 
 # to sync root/ to /
 # this is dangerous cause people could edit it that dont have the correct permissions (duh)
@@ -20,7 +24,3 @@ sudo cp root/etc/doas.conf.bak /etc/doas.conf
 
 # fstab cant be used as a symlink for obvious reasons
 sudo cp root/etc/fstab.bak /etc/fstab
-
-# install the flatpaks
-
-flatpak install flatpak-list--app.txt
