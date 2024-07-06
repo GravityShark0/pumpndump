@@ -5,6 +5,7 @@
 games-util/game-device-udev-rules
 sys-libs/libudev-compat
 
+app-editors/neovim **
 x11-misc/picom-ftlabs-generalanimation **
 x11-misc/picom-ftlabs **
 # x11-misc/picom **
