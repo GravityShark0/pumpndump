@@ -1,0 +1,6 @@
+[user]
+	email = alternativegravitational@protonmail.com
+	name = Gravity
+	signingkey = /home/gravity/.ssh/id_ed25519
+[gpg]
+	format = ssh

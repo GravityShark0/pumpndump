@@ -9,10 +9,10 @@
 	url = https://github.com/streetturtle/awesome-wm-widgets.git
 [submodule "home/.config/nvim"]
 	path = home/.config/nvim
-	url = https://github.com/GravityShark0/nvim-kick.git
+	url = git@github.com/GravityShark0/nvim-kick.git
 [submodule "home/.tmux/plugins/tpm"]
 	path = home/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "home/.config/yazi/plugins/relative-motions.yazi"]
-	path = home/.config/yazi/plugins/relative-motions.yazi
-	url = https://github.com/dedukun/relative-motions.yazi.git
+[submodule "home/.password-store"]
+	path = home/.password-store
+	url = git@github.com:GravityShark0/pass.git

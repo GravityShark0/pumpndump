@@ -7,13 +7,11 @@
 ### How 3 install
 
 ```bash
-git clone https://github.com/GravityShark0/pumpndump
+git clone https://github.com/GravityShark0/pumpndump ~/.dotfiles
 cd pumpndump
 ```
 
 #### GNU Stow
-
-````bash
 # Pull in the submodules
 git submodule update --init --recursive
 
