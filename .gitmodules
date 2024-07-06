@@ -10,10 +10,15 @@
 [submodule "home/.config/nvim"]
 	path = home/.config/nvim
 	url = git@github.com:GravityShark0/nvim-kick.git
-	git@github.com:matthewxe/coollittlewebsite.git
 [submodule "home/.tmux/plugins/tpm"]
 	path = home/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
 [submodule "home/.password-store"]
 	path = home/.password-store
 	url = gravity@clr:Git/pass.git
+[submodule "home/.ssh"]
+	path = home/.ssh
+	url = gravity@clr:Git/ssh.git
+[submodule "home/.gnupg"]
+	path = home/.gnupg
+	url = gravity@clr:Git/gnupg.git
