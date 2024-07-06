@@ -22,3 +22,6 @@
 [submodule "home/.gnupg"]
 	path = home/.gnupg
 	url = gravity@clr:Git/gnupg.git
+[submodule "home/.config/awesome/awesome-wm-wdigets"]
+	path = home/.config/awesome/awesome-wm-wdigets
+	url = https://github.com/streetturtle/awesome-wm-widgets
