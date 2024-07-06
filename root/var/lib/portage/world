@@ -11,6 +11,7 @@ app-eselect/eselect-repository
 app-misc/fastfetch
 app-misc/joshuto
 app-misc/keyd
+app-misc/khal
 app-misc/tmux
 app-portage/emlop
 app-portage/gentoolkit
@@ -21,6 +22,8 @@ app-shells/mksh
 app-shells/zoxide
 dev-debug/gdb
 dev-java/openjdk-jre-bin
+dev-lua/luarocks
+dev-python/pip
 dev-util/ccache
 dev-vcs/git
 games-util/gamemode
