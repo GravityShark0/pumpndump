@@ -12,7 +12,6 @@ app-eselect/eselect-repository
 app-misc/fastfetch
 app-misc/joshuto
 app-misc/keyd
-app-misc/khal
 app-misc/tmux
 app-portage/emlop
 app-portage/gentoolkit

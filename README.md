@@ -2,40 +2,67 @@
 
 ## This is a solution made by me to just "pump n' dump" my dot files and not doing anything after
 
+> Future Idea
+> Emacs for navigating my life and kakoune for coding
+> For
+
 > i dont know what pump n dump actually means but it sounds cool
 
 ### How 3 install
 
 ```bash
 git clone https://github.com/GravityShark0/pumpndump ~/.dotfiles
-cd pumpndump
+cd ~/.dotfiles
 ```
 
 #### GNU Stow
+
 # Pull in the submodules
+
+```bash
 git submodule update --init --recursive
+```
 
 # to stop fish_variables from constantly updating
+
+```bash
 git update-index --skip-worktree home/.config/fish/fish_variables
+```
 
 # to sync home/ to ~/ or /home/$USER/
+
+```bash
 stow home --target=$HOME
+```
 
 # to sync root/ to /
+
 # this is dangerous cause people could edit it that dont have the correct permissions (duh)
-stow root --target=/
+
+```bash
+sudo stow root --target=/
+```
 
 # doas.conf needs to be owned by root for it to work
-cp ./root/etc/doas.conf.bak /etc/doas.conf
+
+```bash
+sudo cp ./root/etc/doas.conf.bak /etc/doas.conf
+```
 
 # fstab cant be used as a symlink for obvious reasons
-cp ./root/etc/fstab.bak /etc/fstab
+
 ```bash
-````
+sudo cp ./root/etc/fstab.bak /etc/fstab
+```
+
+# install the flatpaks
+
+flatpak install flatpak-list--app.txt
 
 and it should be done,
 just don't forget the things like doing <prefix> + I in tmux to update packages
 and the world file should also be synced if you remove yuor original world file
+and probably change rc-update or somethin
 
 ### Root Requirements
 
