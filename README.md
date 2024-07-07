@@ -11,7 +11,10 @@
 ### How 3 install
 
 ```bash
-git clone https://github.com/GravityShark0/pumpndump ~/.pumpfiles
+# por me
+jit clone --recursive git@github.com:GravityShark0/pumpndump ~/.pumpfiles
+# por u
+git clone --recursive https://github.com/GravityShark0/pumpndump ~/.pumpfiles
 cd ~/.dotfiles
 ```
 

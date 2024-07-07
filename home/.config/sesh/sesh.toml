@@ -22,12 +22,12 @@ path = "~/.scripts"
 
 [[session]]
 name = "pumpndump 🧴"
-path = "~/Other/pumpndump"
+path = "~/.pumpfile"
 startup_command = "git status"
 
 [[session]]
 name = "portage config 🧴"
-path = "~/Other/pumpndump/root/etc/portage/"
+path = "~/.pumpfiles/root/etc/portage/"
 startup_command = "l"
 
 [[session]]
@@ -46,7 +46,7 @@ startup_command = "updatescript"
 
 [[session]]
 name = "soosh"
-startup_command = "ssh gravity@192.168.100.97"
+startup_command = "ssh gravity@clr"
 
 [[session]]
 path = "~/Code/coollittlewebsite"
