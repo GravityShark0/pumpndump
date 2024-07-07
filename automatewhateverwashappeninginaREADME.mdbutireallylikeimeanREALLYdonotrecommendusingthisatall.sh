@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# THINGS IN THE GIT REPO SHIT
+git remote set-url --add --push origin git@github:GravityShark0/pumpndump.git
+git remote set-url --add --push origin gravity@clr:Git/pumpndump.git
+
 # GNU Stow
 ## Pull in the submodules
 ## MAKE SURE TO DO THIS BEFORE DELETING SHIT LIKE HOSTS AND RESOLV CAUSE YEAH
