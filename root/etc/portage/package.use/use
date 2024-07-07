@@ -7,7 +7,7 @@ app-alternatives/ninja reference
 # Shemacs
 # app-editors/emacs gui gtk xft gif harfbuzz jpeg pngsound svg tiff webp png dynamic-loading jit libxml2 sound gpm sqlite
 app-emacs/emacs-common gui
-app-editors/emacs gui gtk 
+app-editors/emacs gui xft athena Xaw3d -gtk -motif 
 # app-editors/emacs gui gtk jit -motif -athena -aqua
 sys-devel/gcc jit
 
