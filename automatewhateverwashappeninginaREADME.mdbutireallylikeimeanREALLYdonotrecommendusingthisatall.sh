@@ -10,6 +10,7 @@ git update-index --skip-worktree home/.config/fish/fish_variables
 rm ~/.config/fish/fish_variables
 
 ## to sync home/ to ~/ or /home/$USER/
+mkdir ~/.config --parents
 mkdir ~/.tmux/plugins/ --parents
 stow home --target=$HOME || echo "=====FIX THAT CONFLICT YOURSELF=====" && returnunlink use\ ls\ -a\ to\ see\ all
 sudo chmod 700 .gnupg --recursive
