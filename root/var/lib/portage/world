@@ -6,7 +6,6 @@ app-admin/stow
 app-arch/deb2targz
 app-arch/p7zip
 app-arch/unrar
-app-editors/emacs
 app-editors/neovim
 app-emulation/wine-vanilla
 app-eselect/eselect-repository

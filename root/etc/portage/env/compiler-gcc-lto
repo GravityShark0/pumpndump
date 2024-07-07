@@ -5,10 +5,8 @@ FCFLAGS="${COMMON_FLAGS}"
 FFLAGS="${COMMON_FLAGS}"
 
 CC="gcc"
-CPP="cpp"
+CPP="gcc -E"
 CXX="g++"
 AR="ar"
 NM="nm"
 RANLIB="ranlib"
-
-FEATURES="${FEATURES}"

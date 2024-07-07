@@ -5,10 +5,11 @@ app-admin/doas persist -pam
 app-alternatives/ninja reference
 
 # Shemacs
-# required by app-editors/emacs-29.4::gentoo
-# required by emacs (argument)
->=app-emacs/emacs-common-1.10 gui
-app-editors/emacs gui gtk xft gif harfbuzz jpeg pngsound svg tiff webp png dynamic-loading jit libxml2 sound gpm sqlite
+# app-editors/emacs gui gtk xft gif harfbuzz jpeg pngsound svg tiff webp png dynamic-loading jit libxml2 sound gpm sqlite
+app-emacs/emacs-common gui
+app-editors/emacs gui gtk 
+# app-editors/emacs gui gtk jit -motif -athena -aqua
+sys-devel/gcc jit
 
 # Cubey
 dev-util/vulkan-tools cube
