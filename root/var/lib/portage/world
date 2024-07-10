@@ -26,7 +26,6 @@ app-shells/zoxide
 app-text/aspell
 dev-debug/gdb
 dev-java/openjdk-jre-bin
-dev-python/pip
 dev-util/ccache
 dev-vcs/git
 games-util/gamemode
@@ -41,7 +40,6 @@ media-gfx/feh
 media-gfx/maim
 media-libs/nvidia-vaapi-driver
 media-sound/pulsemixer
-media-video/guvcview
 media-video/mpv
 media-video/obs-studio
 media-video/pipewire
@@ -89,7 +87,6 @@ x11-base/xorg-fonts
 x11-base/xorg-server
 x11-drivers/nvidia-drivers
 x11-libs/libnotify
-x11-misc/gammastep
 x11-misc/picom-ftlabs-generalanimation
 x11-misc/rofi
 x11-misc/screenkey

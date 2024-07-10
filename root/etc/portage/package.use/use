@@ -11,10 +11,6 @@ app-editors/emacs athena dynamic-loading gui harfbuzz imagemagick jpeg png sound
 # Cubey
 dev-util/vulkan-tools cube
 
-# Lua does rock
-dev-lua/luarocks lua_single_target_luajit -lua_single_target_lua5-4
-
-
 # Fonts
 media-fonts/noto-emoji icons
 media-fonts/nerd-fonts firacode ubuntu ubuntumono iosevkaterm hack jetbrainsmono
@@ -50,3 +46,6 @@ www-client/librewolf -eme-free hwaccel screencast system-1v1 system-png -hardene
 
 # internets
 net-wireless/wpa_supplicant tkip
+
+# aspell
+app-text/aspell l10n_en
