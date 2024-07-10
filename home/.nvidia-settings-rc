@@ -2,7 +2,7 @@
 # /home/gravity/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA Settings utility
-# Generated on Sat Jul  6 22:39:06 2024
+# Generated on Wed Jul 10 12:45:50 2024
 #
 
 # ConfigProperties:
@@ -35,9 +35,9 @@ Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 [DPY:HDMI-0]/RedContrast=0.250000
 [DPY:HDMI-0]/GreenContrast=0.250000
 [DPY:HDMI-0]/BlueContrast=0.250000
-[DPY:HDMI-0]/RedGamma=0.428631
-[DPY:HDMI-0]/GreenGamma=0.428631
-[DPY:HDMI-0]/BlueGamma=0.428631
+[DPY:HDMI-0]/RedGamma=1.000000
+[DPY:HDMI-0]/GreenGamma=1.000000
+[DPY:HDMI-0]/BlueGamma=1.000000
 [DPY:HDMI-0]/Dithering=0
 [DPY:HDMI-0]/DitheringMode=0
 [DPY:HDMI-0]/DitheringDepth=0

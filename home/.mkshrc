@@ -4,7 +4,7 @@
 # export QT_IM_MODULE=ibus
 
 # ~/.local/bin is where you would put your user binaries
-export PATH=~/.local/bin:~/.scripts:$PATH
+export PATH=~/.local/bin:~/.scripts:~/.emacs.d/bin:$PATH
 
 # Wouldn't work otherwise
 export GPG_TTY=$(tty)

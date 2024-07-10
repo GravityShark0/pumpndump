@@ -1,5 +1,11 @@
 ---
 AccessModifierOffset: -8
-IndentWidth: 8
+# IndentWidth: 8
 ColumnLimit: 80
-BasedOnStyle: GNU
+
+BasedOnStyle: LLVM
+IndentWidth: 8
+UseTab: Always
+BreakBeforeBraces: Linux
+AllowShortIfStatementsOnASingleLine: false
+IndentCaseLabels: false

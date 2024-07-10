@@ -1,0 +1,11 @@
+#!/bin/sh
+
+saturation=$(nvidia-settings -t -q DigitalVibrance)
+if [ $saturation = "-1024" ]; then
+        nvidia-settings -a DigitalVibrance=0 &
+        nvidia-settings -a Brightness=0 &
+        nvidia-settings -a Contrast=0 &
+        nvidia-settings -a Gamma=1 &
+else
+        nvidia-settings -l
+fi

@@ -6,14 +6,14 @@ current_brightness=$(cat /sys/class/backlight/intel_backlight/actual_brightness)
 if [ "${1#"+"}" != "$1" ]; then
     brightness=$((current_brightness + (max_brightness / 100 * $1)))
     if [ "$brightness" -le 1 ]; then
-        echo 1 > /sys/class/backlight/intel_backlight/brightness
+        echo 1 >/sys/class/backlight/intel_backlight/brightness
     elif [[ "$brightness" -ge "$max_brightness" ]]; then
-        echo $max_brightness > /sys/class/backlight/intel_backlight/brightness
+        echo $max_brightness >/sys/class/backlight/intel_backlight/brightness
     fi
-    echo $brightness > /sys/class/backlight/intel_backlight/brightness
+    echo $brightness >/sys/class/backlight/intel_backlight/brightness
 elif [ "$1" -ge 1 ] || ! [ "$1" -le 100 ]; then
     brightness=$(((max_brightness / 100) * $1))
-    echo $brightness > /sys/class/backlight/intel_backlight/brightness
+    echo $brightness >/sys/class/backlight/intel_backlight/brightness
 else
     echo "Usage: monitorlight <brightness>\nbrightness: 1-100"
     exit
@@ -23,5 +23,5 @@ echo "${current_brightness} > ${brightness}"
 
 if [ $(cat /sys/class/backlight/intel_backlight/brightness) -lt 100 ]; then
     brightness=$(((max_brightness / 100) * 1))
-    echo $brightness > /sys/class/backlight/intel_backlight/brightness
+    echo $brightness >/sys/class/backlight/intel_backlight/brightness
 fi

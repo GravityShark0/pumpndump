@@ -10,7 +10,7 @@ out=$(
 		--bind 'ctrl-t:change-prompt(  )+reload(sesh list -i -t)' \
 		--bind 'ctrl-c:change-prompt(󰢻  )+reload(sesh list -i -c)' \
 		--bind 'ctrl-z:change-prompt(  )+reload(sesh list -i -z)' \
-		--bind 'ctrl-f:change-prompt(  )+reload(fd -t d -E .local/share/Trash . ~ ~/.config)' \
+		--bind 'ctrl-f:change-prompt(  )+reload(fd -t d .)' \
 		--bind 'ctrl-d:execute(tmux kill-session -t $(echo {} | cut -c 5-))+change-prompt(⚡ )+reload(sesh list -i -H)'
 )
 

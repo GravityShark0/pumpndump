@@ -75,6 +75,9 @@ Screenshot_ocr = 'ss-ocr'
 Screenshot_menu = 'screenshot'
 Lightdecrease = 'monitorlight +-5'
 Lightincrease = 'monitorlight +5'
+Discord = 'flatpak run io.github.spacingbat3.webcord'
+Org = 'org'
+Grayscale = 'grayscale-toggle'
 
 Browser = 'flatpak run com.brave.Browser'
 
@@ -453,6 +456,15 @@ globalkeys = gears.table.join(
 	end, { description = 'select previous preset layout', group = 'layout' }),
 
 	-- Standard program
+	awful.key({ Modkey }, 'g', function()
+		awful.spawn(Grayscale)
+	end, { description = 'toggle grayscale', group = 'launcher' }),
+	awful.key({ Modkey }, 'a', function()
+		awful.spawn(Org)
+	end, { description = 'open orgmode', group = 'launcher' }),
+	awful.key({ Modkey }, 'd', function()
+		awful.spawn(Discord)
+	end, { description = 'open discord', group = 'launcher' }),
 	awful.key({ Modkey }, 'q', function()
 		awful.spawn(Terminal)
 	end, { description = 'open a terminal', group = 'launcher' }),
@@ -591,7 +603,7 @@ clientkeys = gears.table.join(
 			c.floating = true
 
 			local place = awful.placement.maximize + awful.placement.top
-			place(c, { honor_workarea = true, margins = 50 })
+			place(c, { honor_workarea = true, margins = 10 })
 			c.border_color = beautiful.border_scratch
 		end
 	end, { description = 'toggle client to scratchpad', group = 'client' }),
@@ -809,9 +821,9 @@ awful.rules.rules = {
 
 	-- Scratchpad applications
 	{
-		rule_any = { class = { 'emacs', 'Emacs', 'scratchy' } },
+		rule_any = { tag = SCRATCH_ICON },
 		properties = {
-			tag = SCRATCH_ICON,
+			-- tag = SCRATCH_ICON,
 			floating = true,
 			placement = awful.placement.maximize + awful.placement.top,
 		},
@@ -835,7 +847,7 @@ client.connect_signal('manage', function(c)
 	c:tags({ c.first_tag })
 	if c.first_tag == awful.screen.focused().tags[9] then
 		local place = awful.placement.maximize + awful.placement.top
-		place(c, { honor_workarea = true, margins = 50 })
+		place(c, { honor_workarea = true, margins = 10 })
 		-- naughty.notify({
 		-- 	title = tostring(c),
 		-- 	text = tostring(#c.first_tag:clients()),

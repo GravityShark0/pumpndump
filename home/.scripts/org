@@ -1,7 +1,6 @@
 #!/bin/sh
 cd ~/Notes
+emacsclient --socket-name=/tmp/emacs$(id -u)/server --create-frame ~/Notes/index.org &
 # st -g 130x37 -c scratchy -e sh -c "echo 'e oaa' | nvim ~/Notes/index.org -s -;" &
 # st -g 133x29 -c scratchy -e sh -c "nvim ~/Notes/index.org" &
 # st -c scratchy -e sh -c "nvim ~/Notes/index.org" &
-emacsclient --socket-name=/tmp/emacs$(id -u)/server file &
-disown

@@ -22,7 +22,7 @@ path = "~/.scripts"
 
 [[session]]
 name = "pumpndump 🧴"
-path = "~/.pumpfile"
+path = "~/.pumpfiles"
 startup_command = "git status"
 
 [[session]]

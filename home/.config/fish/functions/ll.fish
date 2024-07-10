@@ -1,3 +1,4 @@
-function ll --wraps=ls --description 'List contents of directory using long format'
-  eza --icons --group-directories-first --sort=name -lh $argv
+function ll --wraps=ls --wraps='ls -l' --description 'alias ll ls -l'
+  ls -l $argv
+        
 end
