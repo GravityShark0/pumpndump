@@ -26,7 +26,6 @@ app-shells/zoxide
 app-text/aspell
 dev-debug/gdb
 dev-java/openjdk-jre-bin
-dev-lua/luarocks
 dev-python/pip
 dev-util/ccache
 dev-vcs/git

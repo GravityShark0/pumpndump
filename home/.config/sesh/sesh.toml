@@ -14,7 +14,7 @@ startup_command = "nvim sesh.toml"
 [[session]]
 name = "neovim config"
 path = "~/.config/nvim"
-startup_command = "vis"
+startup_command = "nvim"
 
 [[session]]
 name = "Scripts 📜"

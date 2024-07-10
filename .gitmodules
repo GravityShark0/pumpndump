@@ -1,6 +1,3 @@
-[submodule "home/.config/awesome/bling"]
-	path = home/.config/awesome/bling
-	url = https://github.com/BlingCorp/bling.git
 [submodule "home/.config/awesome/net_widgets"]
 	path = home/.config/awesome/net_widgets
 	url = https://github.com/pltanton/net_widgets.git
@@ -10,9 +7,6 @@
 [submodule "home/.config/nvim"]
 	path = home/.config/nvim
 	url = git@github.com:GravityShark0/nvim-kick.git
-[submodule "home/.tmux/plugins/tpm"]
-	path = home/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
 [submodule "home/.password-store"]
 	path = home/.password-store
 	url = gravity@clr:Git/pass.git
@@ -22,3 +16,6 @@
 [submodule "home/.gnupg"]
 	path = home/.gnupg
 	url = gravity@clr:Git/gnupg.git
+[submodule "home/.tmux/tmux-fingers"]
+	path = home/.tmux/tmux-fingers
+	url = https://github.com/Morantron/tmux-fingers

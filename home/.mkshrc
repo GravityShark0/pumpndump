@@ -10,7 +10,7 @@ export PATH=~/.local/bin:~/.scripts:~/.emacs.d/bin:$PATH
 export GPG_TTY=$(tty)
 
 # I like my go tidy
-export GOPATH=$HOME/Other/go
+export GOPATH=$HOME/.go
 export GOPROXY=https://proxy.golang.org
 export GOSUMDB=sum.golang.org
 

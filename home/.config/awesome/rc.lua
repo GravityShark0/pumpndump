@@ -1,8 +1,3 @@
--- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
--- pcall(require, 'luarocks.loader')
---- no luarocks
-
 -- Standard awesome library
 local awful = require('awful')
 require('awful.autofocus')
@@ -17,9 +12,8 @@ local wibox = require('wibox')
 local beautiful = require('beautiful')
 -- Notification library
 local naughty = require('naughty')
--- Bottom_right
+-- Make notifications appear in the bottom right
 naughty.config.defaults.position = 'bottom_right'
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -50,18 +44,10 @@ do
 	end)
 end
 -- }}}
-
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. 'grav.lua')
 
--- Extra utilities https://blingcorp.github.io/bling/#/
-local bling = require('bling')
--- bling.module.flash_focus.enable()
-
--- Terminal = '! (alacritty msg create-window) && alacritty'
--- Terminal = 'kitty -1'
--- Terminal = 'st -e $SHELL'
 Terminal = 'st'
 File_manager = 'joshuto'
 File_manager_cmd = Terminal .. ' -e ' .. File_manager
@@ -90,18 +76,11 @@ awful.layout.layouts = {
 	awful.layout.suit.tile,
 	awful.layout.suit.tile.bottom,
 	awful.layout.suit.magnifier,
-	awful.layout.suit.corner.nw,
 
 	-- More fun stuff
 	awful.layout.suit.fair,
-	bling.layout.equalarea,
-	bling.layout.deck,
 	awful.layout.suit.floating,
-
-	-- Same as the first one but its on the other side so
-	-- Its easier to switch to it
-	bling.layout.mstab,
-
+	-- awful.layout.suit.corner.nw,
 	-- awful.layout.suit.spiral,
 	-- awful.layout.suit.spiral.dwindle,
 	-- awful.layout.suit.fair.horizontal,
@@ -112,12 +91,8 @@ awful.layout.layouts = {
 	-- awful.layout.suit.corner.ne,
 	-- awful.layout.suit.corner.sw,
 	-- awful.layout.suit.corner.se,
-	-- bling.layout.centered,
-	-- bling.layout.vertical,
-	-- bling.layout.horizontal,
 }
 -- }}}
-
 -- {{{ Wibar
 -- Create a textclock widget
 Mytextclock = wibox.widget.textclock('%b %d, %H:%M ')
@@ -355,11 +330,8 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 end)
 -- }}}
-
 -- {{{ Key bindings
-
--- Global Keys {{{
-
+-- Global keys {{{
 function dump(o)
 	if type(o) == 'table' then
 		local s = '{ '
@@ -529,8 +501,7 @@ globalkeys = gears.table.join(
 	end)
 )
 -- }}}
-
--- {{{ Client Keys
+-- Client keys {{{
 local floating_resize_amount = 72
 local tiling_resize_factor = 0.05
 
@@ -701,8 +672,7 @@ clientkeys = gears.table.join(
 	--     { description = '(un)maximize horizontally', group = 'client' })
 )
 -- }}}
-
--- Client Buttons {{{
+-- Client mouse buttons {{{
 clientbuttons = gears.table.join(
 	awful.button({}, 1, function(c)
 		c:emit_signal('request::activate', 'mouse_click', { raise = true })
@@ -718,7 +688,6 @@ clientbuttons = gears.table.join(
 )
 
 -- }}}
-
 -- Tags {{{
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it work on any keyboard layout.
@@ -771,17 +740,13 @@ for i = 1, 9 do
 	)
 end
 -- }}}
-
 -- Set keys
 root.keys(globalkeys)
-
 -- }}}
-
 -- {{{ Rules
 -- Rules to apply to new clients (through the 'manage' signal).
 awful.rules.rules = {
-	-- All clients will match this rule.
-	{
+	{ -- All clients will match this rule. {{{
 		rule = {},
 		properties = {
 			border_width = beautiful.border_width,
@@ -793,46 +758,30 @@ awful.rules.rules = {
 			screen = awful.screen.preferred,
 			placement = awful.placement.no_overlap + awful.placement.no_offscreen,
 		},
-	},
-
-	-- Floating clients.
-	{
-		rule_any = {
-			-- instance = {},
-			class = {
-				'float',
-			},
-			-- role = {},
-		},
-		properties = { floating = true },
-	},
-
-	{
+	}, -- }}}
+	{ -- Floating clients {{{
 		rule = { floating = true },
+		properties = { placement = awful.placement.centered },
+	}, -- }}}
+	{ -- Scratchpad applications{{{
+		rule = { tag = SCRATCH_ICON },
 		properties = {
-			placement = awful.placement.centered,
-		},
-	},
-
-	{
-		rule_any = { class = { 'discord', 'armcord', 'ArmCord', 'WebCord', 'webcord' } },
-		properties = { tag = '5' },
-	},
-
-	-- Scratchpad applications
-	{
-		rule_any = { tag = SCRATCH_ICON },
-		properties = {
-			-- tag = SCRATCH_ICON,
 			floating = true,
 			placement = awful.placement.maximize + awful.placement.top,
 		},
-	},
+	}, -- }}}
+	{ -- Put Discord in 5 {{{
+		rule_any = { class = { 'discord', 'armcord', 'ArmCord', 'WebCord', 'webcord' } },
+		properties = { tag = '5' },
+	}, -- }}}
+	{ -- Put Emacs in Scratchpad{{{
+		rule = { class = 'Emacs' },
+		properties = { tag = SCRATCH_ICON },
+	}, -- }}}
 }
 -- }}}
-
 -- {{{ Signals
--- Signal function to execute when a new client appears.
+-- Signal function to execute when a new client appears.{{{
 client.connect_signal('manage', function(c)
 	-- Set the windows at the slave,
 	-- i.e. put it at the end of others instead of setting it master.
@@ -854,46 +803,34 @@ client.connect_signal('manage', function(c)
 		-- 	-- text = tostring(awful.screen.focused().tags[9].master_count),
 		-- })
 	end
-end)
-
--- Enable sloppy focus, so that focus follows mouse.
+end)-- }}}
+-- Enable sloppy focus, so that focus follows mouse.{{{
 client.connect_signal('mouse::enter', function(c)
 	c:emit_signal('request::activate', 'mouse_enter', { raise = false })
-end)
-
--- All floating are on top
+end)-- }}}
+-- All floating are on top{{{
 client.connect_signal('property::floating', function(c)
 	if c.floating then
 		c.ontop = true
 	else
 		c.ontop = false
 	end
-end)
-
--- Make floating clients stay on top even after exiting fullscreen
--- client.connect_signal('property::fullscreen', function(c)
--- 	if not c.fullscreen and c.floating then
--- 		c.ontop = true
--- 	else
--- 		c.ontop = false
--- 	end
--- end)
-
--- Disable Mixmization
-client.connect_signal('property::maximized', function(c)
-	c.maximized = false
-end)
-
--- Focus Color
+end)-- }}}
+-- Focus color{{{
 client.connect_signal('focus', function(c)
 	if c.first_tag.index == 9 then
 		c.border_color = beautiful.border_scratch
 	else
 		c.border_color = beautiful.border_focus
 	end
-end)
-
+end)-- }}}
+-- Unfocus border colors{{{
 client.connect_signal('unfocus', function(c)
 	c.border_color = beautiful.border_normal
-end)
+end)-- }}}
+-- Disable Mixmization{{{
+client.connect_signal('property::maximized', function(c)
+	c.maximized = false
+end)-- }}}
 -- }}}
+-- vim:foldmethod=marker:
