@@ -19,6 +19,3 @@
 [submodule "home/.tmux/tmux-fingers"]
 	path = home/.tmux/tmux-fingers
 	url = https://github.com/Morantron/tmux-fingers
-[submodule "home/.doom.d/modules/editor/meow"]
-	path = home/.doom.d/modules/editor/meow
-	url = https://github.com/Not-Leader/doom-meow

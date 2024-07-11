@@ -185,26 +185,9 @@ awful.screen.connect_for_each_screen(function(s)
 	-- set_wallpaper(s)
 
 	-- Each screen has its own tag table.
-	awful.tag({ '1', '2', '3', '4', '5', '6', '7', '8', SCRATCH_ICON }, s, awful.layout.layouts[1])
+	awful.tag({ '1', '2', '3', '4', '5', '6', '7', '8'}, s, awful.layout.layouts[1])
 
-	-- awful.tag.add('6', { s, layout = awful.layout.suit.floating })
-
-	-- Hides tag 6
-	-- local original_taglist_label = awful.widget.taglist.taglist_label
-	-- function awful.widget.taglist.taglist_label(tag, args, tb)
-	-- 	local text, bg, bg_image, icon, other_args = original_taglist_label(tag, args, tb)
-	--
-	-- 	-- Hide tags 11 and 12
-	-- 	if tag.index == 6 or tag.index == 12 then
-	-- 		text = ''
-	-- 	end
-	--
-	-- 	return text, bg, bg_image, icon, other_args
-	-- end
-
-	-- Create a promptbox for each screen
-	--- promptbox kinda sucks
-	--- s.mypromptbox = awful.widget.prompt()
+	awful.tag.add(SCRATCH_ICON , { s, layout = awful.layout.suit.floating })
 
 	-- Create an imagebox widget which will contain an icon indicating which layout we're using.
 	-- We need one layoutbox per screen.
@@ -759,6 +742,14 @@ awful.rules.rules = {
 			placement = awful.placement.no_overlap + awful.placement.no_offscreen,
 		},
 	}, -- }}}
+	{ -- Put Discord in 5 {{{
+		rule_any = { class = { 'WebCord', 'webcord', 'discord' } },
+		properties = { tag = '5' },
+	}, -- }}}
+	{ -- Put Org Emacs in Scratchpad{{{
+		rule = { name = 'scratchy' },
+		properties = { tag = SCRATCH_ICON },
+	}, -- }}}
 	{ -- Floating clients {{{
 		rule = { floating = true },
 		properties = { placement = awful.placement.centered },
@@ -769,14 +760,6 @@ awful.rules.rules = {
 			floating = true,
 			placement = awful.placement.maximize + awful.placement.top,
 		},
-	}, -- }}}
-	{ -- Put Discord in 5 {{{
-		rule_any = { class = { 'discord', 'armcord', 'ArmCord', 'WebCord', 'webcord' } },
-		properties = { tag = '5' },
-	}, -- }}}
-	{ -- Put Emacs in Scratchpad{{{
-		rule = { class = 'Emacs' },
-		properties = { tag = SCRATCH_ICON },
 	}, -- }}}
 }
 -- }}}
@@ -803,11 +786,11 @@ client.connect_signal('manage', function(c)
 		-- 	-- text = tostring(awful.screen.focused().tags[9].master_count),
 		-- })
 	end
-end)-- }}}
+end) -- }}}
 -- Enable sloppy focus, so that focus follows mouse.{{{
 client.connect_signal('mouse::enter', function(c)
 	c:emit_signal('request::activate', 'mouse_enter', { raise = false })
-end)-- }}}
+end) -- }}}
 -- All floating are on top{{{
 client.connect_signal('property::floating', function(c)
 	if c.floating then
@@ -815,7 +798,7 @@ client.connect_signal('property::floating', function(c)
 	else
 		c.ontop = false
 	end
-end)-- }}}
+end) -- }}}
 -- Focus color{{{
 client.connect_signal('focus', function(c)
 	if c.first_tag.index == 9 then
@@ -823,14 +806,14 @@ client.connect_signal('focus', function(c)
 	else
 		c.border_color = beautiful.border_focus
 	end
-end)-- }}}
+end) -- }}}
 -- Unfocus border colors{{{
 client.connect_signal('unfocus', function(c)
 	c.border_color = beautiful.border_normal
-end)-- }}}
+end) -- }}}
 -- Disable Mixmization{{{
 client.connect_signal('property::maximized', function(c)
 	c.maximized = false
-end)-- }}}
+end) -- }}}
 -- }}}
 -- vim:foldmethod=marker:

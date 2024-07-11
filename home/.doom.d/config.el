@@ -3,6 +3,8 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
+;; Scroll margins
+(setq scroll-margin 8)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
@@ -20,7 +22,7 @@
 ;;
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
-;;
+                                        ;a;
 
 (setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 20)
       doom-variable-pitch-font (font-spec :family "Ubuntu Nerd Font" :size 13))
@@ -42,6 +44,17 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Notes/")
+(setq org-archive-location "~/Notes/.archive/")
+
+;; RETURN will follow links in org-mode files
+(setq org-return-follows-link  t)
+
+;; Hide emphasis markers
+(setq org-hide-emphasis-markers t)
+
+;; Org-Roam
+(setq org-roam-directory (file-truename "~/Notes/wiki"))
+
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -75,24 +88,14 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-
-
-;; Org-Roam
-(setq org-roam-directory (file-truename "~/Notes/wiki"))
-
-;; Scroll margins
-(setq scroll-margin 8)
-
-;; Autosave
-(setq auto-save-default t
-      make-backup-files t)
-
 ;; Set the time delay (in seconds) for the which-key popup to appear. A value of
 ;; zero might cause issues so a non-zero value is recommended.
-(setq which-key-idle-delay 0)
-;; RETURN will follow links in org-mode files
-(setq org-return-follows-link  t)
-(let ((map company-active-map))
-  (define-key map (kbd "C-y") 'company-complete-selection)
-  (define-key map (kbd "RET") 'nil))
+(after! which-key
+  (setq which-key-idle-delay 0.1))
 
+;; Allow for C-y to accept company selection
+(after! company
+  (define-key company-active-map (kbd "RET") 'newline)
+  (define-key company-active-map (kbd "C-y") 'company-complete-selection))
+
+(define-key doom-leader-map (kbd ">") 'treemacs)
