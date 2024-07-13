@@ -1,0 +1,43 @@
+#colemak
+#curl mod
+#angle/wide mod
+y = [
+h = ]
+n = /
+#symbol mod
+# its arranged by tarmak so you can learn it as you go
+# 1a
+k = n
+l = e
+m = k
+# e = j
+# 1b
+j = m
+, = overloadt(alt, h, 200)
+# 2a
+z = overloadt(meta, x, 200)
+x = overloadt(control, c, 200)
+b = z
+# c = b
+# 2b
+e = f
+t = b
+f = t
+# x = j
+# 3
+s = r
+d = s
+c = overloadt(alt, d, 200)
+# 4
+u = j
+p = y
+' = o
+[ = '
+] = ;
+r = p
+# 5
+o = u
+; = i
+i = l
+. = overloadt(control, macro(,), 200)
+/ = overloadt(meta, ., 200)

@@ -1,0 +1,43 @@
+#colemak
+#curl mod
+#angle/wide mod
+y = [
+h = ]
+n = /
+#symbol mod
+# its arranged by tarmak so you can learn it as you go
+# 1a
+k = n
+l = e
+m = k
+# e = j
+# 1b
+j = m
+, = h
+# 2a
+z = x
+x = c
+b = z
+# c = b
+# 2b
+e = f
+t = b
+f = t
+# x = j
+# 3
+s = r
+d = s
+c = d
+# 4
+u = j
+p = y
+' = o
+[ = '
+] = ;
+r = p
+# 5
+o = u
+; = i
+i = l
+. = ,
+/ = .

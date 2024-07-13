@@ -1,13 +1,14 @@
-# 7 = =
-# 8 = 7
-# 9 = 8
-# 0 = 9
-# - = 0
-# = = -
+down = toggle(gaming)
 
-end = toggle(qwerty-wide)
+[gaming]
+tab = tab
+leftshift = layer(shift)
+capslock = layer(control)
 
-[qwerty-wide]
+w+e = 
+o+p =
+z+x =
+.+/ =
 
 j = h
 k = j

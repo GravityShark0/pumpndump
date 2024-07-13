@@ -81,6 +81,7 @@ sys-power/thermald
 sys-power/tlp
 sys-process/htop
 www-client/uget
+x11-apps/xinput
 x11-apps/xrandr
 x11-apps/xrdb
 x11-base/xorg-fonts

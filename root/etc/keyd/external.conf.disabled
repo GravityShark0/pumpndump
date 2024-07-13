@@ -1,0 +1,178 @@
+[ids]
+# 1c4f:0084
+
+# heavily based on seniply, but also extended upon
+# https://stevep99.github.io/seniply/
+# This is on a standard ansi tkl keyboard with CAWS
+[main]
+# Nice layers
+tab = layer(control)
+capslock = layer(extend)
+altgr = layer(symbols)
+
+# Fast chords
+w+e = esc
+o+p = backspace
+z+x = tab
+.+/ = enter
+
+include colemak-caws
+include qwerty-wide
+
+# Extend layer {{{
+[extend]
+# Left wand first row
+q = esc
+w = mute
+e = volumedown
+r = volumeup
+t = brightnessup
+# second row
+a = oneshot(shift)
+s = oneshot(meta)
+d = oneshot(alt)
+f = oneshot(control)
+g = brightnessdown
+# third row
+z = macro(C-x)
+x = macro(C-c)
+c = macro(C-d)
+v = macro(C-v)
+b = macro(C-z)
+# Right hand first row
+u = pageup
+i = home
+o = up
+p = end
+[ = capslock
+# second row
+j = pagedown
+k = left
+l = down
+; = right
+' = delete
+# third row
+m = enter
+, = backspace
+. = tab
+/ = compose
+n = print
+# }}}
+# Symbols layer {{{
+[symbols]
+q = !
+w = @
+e = #
+r = $
+t = %
+
+a = oneshot(shift)
+s = oneshot(meta)
+d = oneshot(alt)
+f = oneshot(control)
+g = ^
+
+b = noop
+z = \
+x = |
+c = & 
+v = noop
+
+u = +
+i = `
+o = :
+p = ;
+[ = *
+
+j = =
+k = (
+l = {
+; = [
+' = -
+
+m = _
+, = )
+. = }
+/ = ]
+n = ~
+# }}}
+# Numbers layer (extend+symbols) {{{
+[extend+symbols]
+q = noop
+w = noop
+e = noop
+r = noop
+t = numlock
+
+a = oneshot(shift)
+s = oneshot(meta)
+d = oneshot(alt)
+f = oneshot(control)
+g = grave
+
+b = noop
+z = compose
+x = tab
+c = backspace
+v = enter
+
+u = +
+i = 7
+o = 8
+p = 9
+[ = *
+
+j = =
+k = 4
+l = 5
+; = 6
+' = -
+
+m = 0
+, = 1
+. = 2
+/ = 3
+n = ~
+# }}}
+# Function layer (numbers+alt) {{{
+[extend+symbols+alt]
+q = pause
+w = previoussong
+e = play
+r = nextsong
+t = noop
+# t = brightnessup
+a = oneshot(shift)
+s = oneshot(meta)
+d = oneshot(alt)
+f = oneshot(control)
+g = noop
+# g = brightnessdown
+# z = volumedown
+# x = macro(C-C)
+# c = volumeup
+# v = macro(C-V)
+# b = mute
+z = noop
+x = noop
+c = noop
+v = noop
+b = noop
+
+u = f12
+i = f7
+o = f8
+p = f9
+[ = scrolllock
+j = f11
+k = f4
+l = f5
+; = f6
+' = kp0
+m = f10
+, = f1
+. = f2
+/ = f3
+n = kp1
+# }}}
+# vim:foldmethod=marker:

@@ -51,8 +51,7 @@ beautiful.init(gears.filesystem.get_configuration_dir() .. 'grav.lua')
 Terminal = 'st'
 File_manager = 'joshuto'
 File_manager_cmd = Terminal .. ' -e ' .. File_manager
-Launcher = 'runner'
-Alt_launcher = 'launcher'
+Launcher = 'launcher'
 Powermenu = 'powermenu'
 Screenshot = 'ss'
 Screenshot_window = 'ss-window'
@@ -185,9 +184,9 @@ awful.screen.connect_for_each_screen(function(s)
 	-- set_wallpaper(s)
 
 	-- Each screen has its own tag table.
-	awful.tag({ '1', '2', '3', '4', '5', '6', '7', '8'}, s, awful.layout.layouts[1])
+	awful.tag({ '1', '2', '3', '4', '5', '6', '7', '8', '9' }, s, awful.layout.layouts[1])
 
-	awful.tag.add(SCRATCH_ICON , { s, layout = awful.layout.suit.floating })
+	awful.tag.add(SCRATCH_ICON, { s, layout = awful.layout.suit.floating })
 
 	-- Create an imagebox widget which will contain an icon indicating which layout we're using.
 	-- We need one layoutbox per screen.
@@ -315,26 +314,61 @@ end)
 -- }}}
 -- {{{ Key bindings
 -- Global keys {{{
-function dump(o)
-	if type(o) == 'table' then
-		local s = '{ '
-		for k, v in pairs(o) do
-			if type(k) ~= 'number' then
-				k = '"' .. k .. '"'
-			end
-			s = s .. '[' .. k .. '] = ' .. dump(v) .. ','
-		end
-		return s .. '} '
-	else
-		return tostring(o)
-	end
-end
-
+-- function dump(o)
+-- 	if type(o) == 'table' then
+-- 		local s = '{ '
+-- 		for k, v in pairs(o) do
+-- 			if type(k) ~= 'number' then
+-- 				k = '"' .. k .. '"'
+-- 			end
+-- 			s = s .. '[' .. k .. '] = ' .. dump(v) .. ','
+-- 		end
+-- 		return s .. '} '
+-- 	else
+-- 		return tostring(o)
+-- 	end
+-- end
+--
 globalkeys = gears.table.join(
-
-	-- Scratchpad
+	-- Programs{{{
+	awful.key({ Modkey }, 'f', function()
+		awful.spawn(launcher)
+	end, { description = 'find application', group = 'launcher' }),
+	awful.key({ Modkey }, 'b', function()
+		awful.spawn(Browser)
+	end, { description = 'open a browser', group = 'launcher' }),
+	awful.key({ Modkey }, 'a', function()
+		awful.spawn(Org)
+	end, { description = 'open agenda', group = 'launcher' }),
+	-- Screenshots{{{
+	awful.key({ Modkey }, 's', function()
+		awful.spawn(Screenshot)
+	end, { description = 'take a selection screenshot', group = 'launcher' }),
+	awful.key({ Modkey, 'Shift' }, 's', function()
+		awful.spawn(Screenshot_window)
+	end, { description = 'take a window screenshot', group = 'launcher' }),
+	awful.key({ Modkey, 'Control' }, 's', function()
+		awful.spawn(Screenshot_desktop)
+	end, { description = 'take a desktop screenshot', group = 'launcher' }),
+	awful.key({ Modkey, 'Mod1' }, 's', function()
+		awful.spawn(Screenshot_ocr)
+	end, { description = 'take a tesseract selection', group = 'launcher' }),
+	awful.key({ Modkey, 'Shift', 'Control' }, 's', function()
+		awful.spawn(Screenshot_menu)
+	end, { description = 'open screenshot menu', group = 'launcher' }), -- }}}
+	awful.key({ Modkey }, 'd', function()
+		awful.spawn(Discord)
+	end, { description = 'open discord', group = 'launcher' }),
+	awful.key({ Modkey }, 't', function()
+		awful.spawn(Terminal)
+	end, { description = 'open a terminal', group = 'launcher' }),
+	awful.key({ Modkey, 'Shift' }, 't', function()
+		awful.spawn(File_manager_cmd)
+	end, { description = 'open a file manager', group = 'launcher' }),
+	-- }}}
+	-- Scratchpad{{{
 	awful.key({ Modkey }, '`', function()
-		local tag = awful.screen.focused().tags[9]
+		local tag = awful.screen.focused().tags[10]
 		local clients = tag:clients()
 		if clients[1] then
 			awful.tag.viewtoggle(tag)
@@ -345,18 +379,8 @@ globalkeys = gears.table.join(
 		elseif tag.selected == true then
 			awful.tag.viewtoggle(tag)
 		end
-	end, { description = 'toggle scratchpad', group = 'client' }),
-
-	awful.key({ Modkey }, 'b', function()
-		myscreen = awful.screen.focused()
-		myscreen.mywibox.visible = not myscreen.mywibox.visible
-	end, { description = 'toggle statusbar', group = 'awesome' }),
-	-- awful.key({ modkey }, 'g', hotkeys_popup.show_help, { description = 'show help', group = 'awesome' }),
-	awful.key({ Modkey }, 'Left', awful.tag.viewprev, { description = 'view previous', group = 'tag' }),
-	awful.key({ Modkey }, 'Right', awful.tag.viewnext, { description = 'view next', group = 'tag' }),
-	-- awful.key({ modkey }, 'Escape', awful.tag.history.restore, { description = 'go back', group = 'tag' }),
-
-	-- Focus client in given direction
+	end, { description = 'toggle scratchpad', group = 'client' }), -- }}}
+	-- Focus client in given direction{{{
 	awful.key({ Modkey }, 'h', function()
 		awful.client.focus.bydirection('left')
 	end, { description = 'focus client towards left', group = 'client' }),
@@ -376,16 +400,24 @@ globalkeys = gears.table.join(
 	awful.key({ Modkey }, ',', function()
 		awful.client.focus.byidx(-1)
 	end, { description = 'focus previous by index', group = 'client' }),
-
-	-- Monitors
+	-- }}}
+	-- Monitors{{{
 	awful.key({ Modkey }, ']', function()
 		awful.screen.focus_relative(1)
 	end, { description = 'focus the next screen', group = 'screen' }),
 	awful.key({ Modkey }, '[', function()
 		awful.screen.focus_relative(-1)
 	end, { description = 'focus the previous screen', group = 'screen' }),
-
-	-- Layout manipulation
+	-- }}}
+	-- Layout manipulation{{{
+	-- Uninimize
+	awful.key({ Modkey, 'Shift' }, 'n', function()
+		local c = awful.client.restore()
+		-- Focus restored client
+		if c then
+			c:emit_signal('request::activate', 'key.unminimize', { raise = true })
+		end
+	end, { description = 'restore minimized', group = 'client' }),
 	awful.key({ Modkey }, 'u', awful.client.urgent.jumpto, { description = 'jump to urgent client', group = 'client' }),
 	-- awful.key({ modkey, }, 'l', function() awful.tag.incmwfact(0.05) end,
 	--     { description = 'increase master width factor', group = 'layout' }),
@@ -409,54 +441,19 @@ globalkeys = gears.table.join(
 	awful.key({ Modkey, 'Shift' }, '\\', function()
 		awful.layout.inc(-1)
 	end, { description = 'select previous preset layout', group = 'layout' }),
-
-	-- Standard program
+	-- }}}
+	-- System{{{
 	awful.key({ Modkey }, 'g', function()
 		awful.spawn(Grayscale)
 	end, { description = 'toggle grayscale', group = 'launcher' }),
-	awful.key({ Modkey }, 'a', function()
-		awful.spawn(Org)
-	end, { description = 'open orgmode', group = 'launcher' }),
-	awful.key({ Modkey }, 'd', function()
-		awful.spawn(Discord)
-	end, { description = 'open discord', group = 'launcher' }),
-	awful.key({ Modkey }, 'q', function()
-		awful.spawn(Terminal)
-	end, { description = 'open a terminal', group = 'launcher' }),
-	awful.key({ Modkey, 'Shift' }, 'q', function()
-		awful.spawn(File_manager_cmd)
-	end, { description = 'open a file manager', group = 'launcher' }),
-	awful.key({ Modkey }, 's', function()
-		awful.spawn(Screenshot)
-	end, { description = 'take a selection screenshot', group = 'launcher' }),
-	awful.key({ Modkey, 'Shift' }, 's', function()
-		awful.spawn(Screenshot_window)
-	end, { description = 'take a window screenshot', group = 'launcher' }),
-	awful.key({ Modkey, 'Control' }, 's', function()
-		awful.spawn(Screenshot_desktop)
-	end, { description = 'take a desktop screenshot', group = 'launcher' }),
-	awful.key({ Modkey, 'Mod1' }, 's', function()
-		awful.spawn(Screenshot_ocr)
-	end, { description = 'take a tesseract selection', group = 'launcher' }),
-	awful.key({ Modkey, 'Shift', 'Control' }, 's', function()
-		awful.spawn(Screenshot_menu)
-	end, { description = 'open screenshot menu', group = 'launcher' }),
-	awful.key({ Modkey }, 't', function()
-		awful.spawn(Browser)
-	end, { description = 'open a browser', group = 'launcher' }),
-	awful.key({ Modkey }, 'w', function()
-		awful.spawn(Launcher)
-	end, { description = 'open a launcher', group = 'launcher' }),
-	awful.key({ Modkey, 'Shift' }, 'w', function()
-		awful.spawn(Alt_launcher)
-	end, { description = 'open an alternate launcher', group = 'launcher' }),
-
-	-- System
+	awful.key({ Modkey, 'Shift' }, 'b', function()
+		myscreen = awful.screen.focused()
+		myscreen.mywibox.visible = not myscreen.mywibox.visible
+	end, { description = 'toggle statusbar', group = 'awesome' }),
 	awful.key({ Modkey, 'Control' }, 'r', awesome.restart, { description = 'reload awesome', group = 'awesome' }),
 	awful.key({ Modkey, 'Shift' }, 'e', function()
 		awful.spawn(Powermenu)
 	end, { description = 'quit awesome', group = 'awesome' }),
-	-- awful.key({ Modkey, 'Shift' }, 'Escape', awesome.quit, { description = 'quit awesome', group = 'awesome' }),
 	-- Brightness
 	awful.key({}, 'XF86MonBrightnessUp', function()
 		awful.spawn(Lightdecrease)
@@ -465,14 +462,6 @@ globalkeys = gears.table.join(
 		awful.spawn(Lightincrease)
 	end, { description = 'decrease monitor brightness', group = 'screen' }),
 
-	-- Uninimize
-	awful.key({ Modkey, 'Shift' }, 'n', function()
-		local c = awful.client.restore()
-		-- Focus restored client
-		if c then
-			c:emit_signal('request::activate', 'key.unminimize', { raise = true })
-		end
-	end, { description = 'restore minimized', group = 'client' }),
 	awful.key({}, 'XF86AudioRaiseVolume', function()
 		volume_widget:inc(5)
 	end),
@@ -481,7 +470,7 @@ globalkeys = gears.table.join(
 	end),
 	awful.key({}, 'XF86AudioMute', function()
 		volume_widget:toggle()
-	end)
+	end) -- }}}
 )
 -- }}}
 -- Client keys {{{
@@ -539,10 +528,10 @@ end
 
 clientkeys = gears.table.join(
 	awful.key({ Modkey, 'Shift' }, '`', function(c)
-		local tag = client.focus.screen.tags[9]
+		local tag = client.focus.screen.tags[10]
 		local screen = awful.screen.focused()
-		local scratch = screen.tags[9]
-		if client.focus.first_tag.index == 9 then
+		local scratch = screen.tags[10]
+		if client.focus.first_tag.index == 10 then
 			c:move_to_tag(awful.screen.focused().selected_tag)
 			c.floating = false
 
@@ -683,7 +672,7 @@ for i = 1, 9 do
 			local screen = awful.screen.focused()
 			local tag = screen.tags[i]
 
-			local scratch = screen.tags[9]
+			local scratch = screen.tags[10]
 			if tag then
 				-- Allow scratchpad to remain visible while changing tags
 				if scratch.selected then
@@ -777,13 +766,13 @@ client.connect_signal('manage', function(c)
 	end
 	-- To stop clients from getting included in the scratch tag when the scratch tag is open and a client is opened
 	c:tags({ c.first_tag })
-	if c.first_tag == awful.screen.focused().tags[9] then
+	if c.first_tag == awful.screen.focused().tags[10] then
 		local place = awful.placement.maximize + awful.placement.top
 		place(c, { honor_workarea = true, margins = 10 })
 		-- naughty.notify({
 		-- 	title = tostring(c),
 		-- 	text = tostring(#c.first_tag:clients()),
-		-- 	-- text = tostring(awful.screen.focused().tags[9].master_count),
+		-- 	-- text = tostring(awful.screen.focused().tags[10].master_count),
 		-- })
 	end
 end) -- }}}
@@ -801,7 +790,7 @@ client.connect_signal('property::floating', function(c)
 end) -- }}}
 -- Focus color{{{
 client.connect_signal('focus', function(c)
-	if c.first_tag.index == 9 then
+	if c.first_tag.index == 10 then
 		c.border_color = beautiful.border_scratch
 	else
 		c.border_color = beautiful.border_focus
