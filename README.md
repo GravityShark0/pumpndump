@@ -90,3 +90,17 @@ go install github.com/joshmedeski/sesh@latest
 3. GTK Theme
 
 - [Catppuccin-Mocha-Standard-Mauve-Dark](https://github.com/catppuccin/gtk)
+
+### software to remember
+
+```
+app-editors/helix
+app-misc/ani-cli
+dev-vcs/gitui
+net-fs/sshfs
+net-wireless/iw
+sys-apps/smartmontools
+sys-fs/ncdu-bin
+sys-power/powerstat
+www-client/uget
+```

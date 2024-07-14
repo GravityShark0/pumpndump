@@ -42,10 +42,12 @@ startup_command = "nvim index.org"
 
 [[session]]
 name = "Update" 
+path = "~/"
 startup_command = "updatescript"
 
 [[session]]
 name = "soosh"
+path = "~/"
 startup_command = "ssh gravity@clr"
 
 [[session]]
