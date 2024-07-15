@@ -14,7 +14,7 @@ startup_command = "nvim sesh.toml"
 [[session]]
 name = "neovim config"
 path = "~/.config/nvim"
-startup_command = "nvim"
+startup_command = "vi"
 
 [[session]]
 name = "Scripts 📜"
@@ -34,11 +34,6 @@ startup_command = "l"
 name = "tmux config"
 path = "~/.tmux"
 startup_command = "nvim ~/.tmux.conf"
-
-[[session]]
-name = "Notes 📝"
-path = "~/Notes"
-startup_command = "nvim index.org"
 
 [[session]]
 name = "Update" 

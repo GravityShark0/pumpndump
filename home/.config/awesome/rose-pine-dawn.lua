@@ -17,7 +17,7 @@ local highlight_med = '#dfdad9'
 local highlight_high = '#cecacd'
 
 M.bg_normal = base
-M.bg_focus = overlay
+M.bg_focus = highlight_high
 M.bg_urgent = love
 M.bg_minimize = muted
 M.bg_systray = M.bg_normal
