@@ -2,47 +2,44 @@
 startup_command = "l"
 
 [[session]]
-name = "Code 💻"
+name = "COde 💻"
 path = "~/Code"
-startup_command = "l"
 
 [[session]]
-name = "sesh config"
-path = "~/.config/sesh"
-startup_command = "nvim sesh.toml"
-
-[[session]]
-name = "neovim config"
+name = "NEovim config  "
 path = "~/.config/nvim"
 startup_command = "vi"
 
 [[session]]
-name = "Scripts 📜"
+name = "SCripts 📜 "
 path = "~/.scripts"
 
 [[session]]
-name = "pumpndump 🧴"
-path = "~/.pumpfiles"
-startup_command = "git status"
+name = "SEsh config  "
+path = "~/.config/sesh"
+startup_command = "nvim sesh.toml"
 
 [[session]]
-name = "portage config 🧴"
+name = "POrtage config 🧴"
 path = "~/.pumpfiles/root/etc/portage/"
-startup_command = "l"
 
 [[session]]
-name = "tmux config"
+name = "TMux config  "
 path = "~/.tmux"
 startup_command = "nvim ~/.tmux.conf"
 
 [[session]]
-name = "Update" 
-path = "~/"
+name = "UPdate 󰚰 " 
 startup_command = "updatescript"
 
 [[session]]
-name = "soosh"
-path = "~/"
+name = "PUmpndump 🧴"
+path = "~/.pumpfiles"
+startup_command = "git status"
+
+[[session]]
+name = "SOosh 󰣀 "
+path = "~/.ssh/"
 startup_command = "ssh gravity@clr"
 
 [[session]]

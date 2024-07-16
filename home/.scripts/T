@@ -8,7 +8,8 @@ out=$(
 		--bind 'tab:down,btab:up' \
 		--bind 'ctrl-a:change-prompt(⚡ )+reload(sesh list -i -H)' \
 		--bind 'ctrl-t:change-prompt(  )+reload(sesh list -i -t)' \
-		--bind 'ctrl-f:change-prompt(  )+reload(fd -t d --format {//})' \
+		--bind 'ctrl-f:change-prompt(  )+reload(fd -t d --absolute-path | sed "s|$HOME|~|g")' \
+		--bind 'ctrl-f:change-prompt(  )+reload()' \
 		--bind 'ctrl-d:execute(tmux kill-session -t $(echo {} | cut -c 5-))+change-prompt(⚡ )+reload(sesh list -i -H)'
 )
 
