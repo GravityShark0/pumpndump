@@ -4,6 +4,7 @@
                 devfs |                                 sysinit
                dhcpcd |      default                           
                 dmesg |                                 sysinit
+        emacs.gravity |      default                           
                  fsck | boot                                   
              hostname | boot                                   
               hwclock | boot                                   
@@ -11,7 +12,7 @@
               keymaps | boot                                   
             killprocs |                        shutdown        
     kmod-static-nodes |                                 sysinit
-                local |      default                           
+                local | boot                                   
            localmount | boot                                   
              loopback | boot                                   
               modules | boot                                   

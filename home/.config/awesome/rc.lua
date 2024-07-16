@@ -332,7 +332,7 @@ end)
 globalkeys = gears.table.join(
 	-- Programs{{{
 	awful.key({ Modkey }, 'f', function()
-		awful.spawn(launcher)
+		awful.spawn(Launcher)
 	end, { description = 'find application', group = 'launcher' }),
 	awful.key({ Modkey }, 'b', function()
 		awful.spawn(Browser)

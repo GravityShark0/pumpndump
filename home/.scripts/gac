@@ -1,0 +1,4 @@
+#!/bin/sh
+# this is probably bad practice
+git add .
+git commit -S

@@ -1,11 +1,11 @@
 com.brave.Browser
 com.github.tchx84.Flatseal
 com.heroicgameslauncher.hgl
-fyi.zoey.TeX-Match
 io.github.spacingbat3.webcord
 io.gitlab.idevecore.Pomodoro
 net.ankiweb.Anki
 net.lutris.Lutris
+org.audacityteam.Audacity
 org.inkscape.Inkscape
 org.kde.krita
 org.libreoffice.LibreOffice
