@@ -1,2 +1,3 @@
 #!/bin/sh
-/usr/bin/emacsclient --socket-name=/tmp/emacs$(id -u)/server --create-frame --alternate-editor="/usr/bin/emacs" $@ &
+# /usr/bin/emacsclient --socket-name=/tmp/emacs$(id -u)/server --create-frame --alternate-editor="/usr/bin/emacs" $@ &
+/usr/bin/emacsclient --create-frame $@ &
