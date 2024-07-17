@@ -5,7 +5,6 @@ app-admin/stow
 app-arch/unrar
 app-editors/emacs
 app-editors/neovim
-app-emacs/emacs-daemon
 app-emulation/wine-vanilla
 app-eselect/eselect-repository
 app-misc/fastfetch

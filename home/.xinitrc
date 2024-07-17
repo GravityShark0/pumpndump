@@ -1,7 +1,8 @@
 #!/bin/sh
 # This script runs once when first opening X11
 # SHEMACS
-emacsclient --eval "(progn (setenv \"DBUS_SESSION_BUS_ADDRESS\" \"${DBUS_SESSION_BUS_ADDRESS}\")  (dbus-init-bus))"
+# emacsclient --eval "(progn (setenv \"DBUS_SESSION_BUS_ADDRESS\" \"${DBUS_SESSION_BUS_ADDRESS}\")  (dbus-init-bus))"
+emacs --daemon &
 
 # Pipewire
 gentoo-pipewire-launcher &
