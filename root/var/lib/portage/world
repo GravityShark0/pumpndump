@@ -38,6 +38,7 @@ media-video/mpv
 media-video/obs-studio
 media-video/pipewire
 media-video/wireplumber
+net-libs/nodejs
 net-misc/curl
 net-misc/openntpd
 net-misc/yt-dlp

@@ -1,6 +1,6 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here! Remember, you do not need to run 'doom
+;; Place your private configuration here! remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
 ;; Scroll margins
@@ -56,7 +56,13 @@
 (setq org-roam-directory (file-truename "~/Notes/wiki"))
 
 ;; Make the browser work
-(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "/usr/bin/flatpak run com.brave.Browser")
+(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "xdg-open")
+
+;; Allow for movement in softwrapped text
+(after! evil
+  (define-key evil-motion-state-map [remap evil-next-line] #'evil-next-visual-line)
+  (define-key evil-motion-state-map [remap evil-previous-line] #'evil-previous-visual-line)
+  )
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
