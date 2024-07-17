@@ -11,6 +11,15 @@ path = "~/.config/nvim"
 startup_command = "vi"
 
 [[session]]
+name = "POrtage config 🧴"
+path = "~/.pumpfiles/root/etc/portage/"
+
+[[session]]
+name = "PUmpndump 🧴"
+path = "~/.pumpfiles"
+startup_command = "git status"
+
+[[session]]
 name = "SCripts 📜 "
 path = "~/.scripts"
 
@@ -20,8 +29,9 @@ path = "~/.config/sesh"
 startup_command = "nvim sesh.toml"
 
 [[session]]
-name = "POrtage config 🧴"
-path = "~/.pumpfiles/root/etc/portage/"
+name = "SOosh 󰣀 "
+path = "~/.ssh/"
+startup_command = "ssh gravity@clr"
 
 [[session]]
 name = "TMux config  "
@@ -33,15 +43,6 @@ name = "UPdate 󰚰 "
 startup_command = "updatescript"
 
 [[session]]
-name = "PUmpndump 🧴"
-path = "~/.pumpfiles"
-startup_command = "git status"
-
-[[session]]
-name = "SOosh 󰣀 "
-path = "~/.ssh/"
-startup_command = "ssh gravity@clr"
-
-[[session]]
+name = "LIttle cool website" 
 path = "~/Code/coollittlewebsite"
 startup_script = "~/.config/sesh/scripts/coollittlewebsite.sh"

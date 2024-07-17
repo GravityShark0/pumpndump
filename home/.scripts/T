@@ -2,7 +2,7 @@
 [ ! -n "$TMUX" ] && t && return
 prev_session=$(tmux display-message -p '#S')
 out=$(
-	sesh list -i -H | fzf-tmux --ansi -p 80%,80% \
+	sesh list -i -H | fzf-tmux -x --ansi -p 80%,80% \
 		--no-sort --border-label ' sesh relinquish ' --prompt '⚡ ' \
 		--header '  ^a all ^t sessions ^c configs ^z zoxide ^f find ^d delete selected session' \
 		--bind 'tab:down,btab:up' \
