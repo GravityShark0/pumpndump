@@ -4,6 +4,7 @@ app-admin/pass
 app-admin/stow
 app-arch/unrar
 app-editors/emacs
+app-editors/helix
 app-editors/neovim
 app-emulation/wine-vanilla
 app-eselect/eselect-repository
