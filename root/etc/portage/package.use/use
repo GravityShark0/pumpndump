@@ -18,6 +18,8 @@ media-fonts/nerd-fonts firacode ubuntu ubuntumono iosevkaterm hack jetbrainsmono
 # Support all the shit in fmg
 media-video/ffmpeg vorbis mp3 webp vaapi cuda hardcoded-tables kvazaar libaom
 media-video/obs-studio lua nvenc pulseaudio speex v4l lua_single_target_luajit pipewire
+media-video/pipewire bluetooth
+net-wireless/bluez experimental
 
 # Pinting wid usbs
 # net-print/cups usb

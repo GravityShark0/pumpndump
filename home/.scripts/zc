@@ -1,0 +1,3 @@
+#!/bin/sh
+# zoxide connect
+z $@ && sesh connect .

@@ -1,16 +1,11 @@
 #!/bin/sh
-[ ! -n "$TMUX" ] && t && return
+# t is just this script without the kill-session
+[ ! -n "$TMUX" ] && {
+	t
+	return
+}
 prev_session=$(tmux display-message -p '#S')
-out=$(
-	sesh list -i -H | fzf-tmux -e --ansi -p 80%,80% \
-		--no-sort --border-label ' sesh ' --prompt '⚡ ' \
-		--header '  ^a all ^t sessions ^f find ^e execute selected session' \
-		--bind 'tab:down,btab:up' \
-		--bind 'ctrl-a:change-prompt(⚡ )+reload(sesh list -i -H)' \
-		--bind 'ctrl-t:change-prompt(  )+reload(sesh list -i -t)' \
-		--bind 'ctrl-f:change-prompt(  )+reload(fd -t d --absolute-path | sed "s|$HOME|~|g")' \
-		--bind 'ctrl-e:execute(tmux kill-session -t $(echo {} | cut -c 5-))+change-prompt(⚡ )+reload(sesh list -i -H)'
-)
+out=$(tmenu "sesh relinquish")
 
 sesh connect "$out" || return
 if [ "$out" != "" ]; then
