@@ -4,11 +4,9 @@
                 devfs |                                 sysinit
                dhcpcd |      default                           
                 dmesg |                                 sysinit
-        emacs.gravity |      default                           
                  fsck | boot                                   
              hostname | boot                                   
               hwclock | boot                                   
-                 keyd |      default                           
               keymaps | boot                                   
             killprocs |                        shutdown        
     kmod-static-nodes |                                 sysinit
