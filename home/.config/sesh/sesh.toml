@@ -8,7 +8,7 @@ path = "~/Code"
 [[session]]
 name = "NEovim config  "
 path = "~/.config/nvim"
-startup_command = "vi"
+startup_command = "git status"
 
 [[session]]
 name = "POrtage config 🧴"
