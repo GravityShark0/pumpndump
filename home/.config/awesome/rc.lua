@@ -443,6 +443,8 @@ globalkeys = gears.table.join(
 	end, { description = 'select previous preset layout', group = 'layout' }),
 	-- }}}
 	-- System{{{
+	awful.key({ Modkey }, 'Left', awful.tag.viewprev, { description = 'view previous', group = 'tag' }),
+	awful.key({ Modkey }, 'Right', awful.tag.viewnext, { description = 'view next', group = 'tag' }),
 	awful.key({ Modkey }, 'g', function()
 		awful.spawn(Grayscale)
 	end, { description = 'toggle grayscale', group = 'launcher' }),
