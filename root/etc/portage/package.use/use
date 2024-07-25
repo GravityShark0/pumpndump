@@ -6,7 +6,7 @@ app-alternatives/ninja reference
 
 # Shemacs
 app-emacs/emacs-common gui
-app-editors/emacs athena dynamic-loading gui harfbuzz imagemagick jpeg png sound sqlite webp xft Xaw3d jit -gtk -motif
+app-editors/emacs athena dynamic-loading gui harfbuzz imagemagick jpeg png sound sqlite webp xft Xaw3d -jit -gtk -motif
 
 # Cubey
 dev-util/vulkan-tools cube

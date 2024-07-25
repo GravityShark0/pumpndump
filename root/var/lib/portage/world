@@ -60,8 +60,10 @@ sys-fs/android-file-transfer-linux
 sys-fs/btrfs-progs
 sys-fs/dosfstools
 sys-fs/dwarfs-bin
+sys-fs/exfatprogs
 sys-fs/fuse-overlayfs
 sys-fs/fuse:0
+sys-fs/ntfs3g
 sys-fs/xfsprogs
 sys-kernel/gentoo-kernel-bin
 sys-kernel/linux-firmware
