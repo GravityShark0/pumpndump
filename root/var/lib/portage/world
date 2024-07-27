@@ -81,6 +81,7 @@ x11-misc/picom-ftlabs-generalanimation
 x11-misc/rofi
 x11-misc/screenkey
 x11-misc/xclip
+x11-misc/xdotool
 x11-terms/st-grav-flexipatch
 x11-wm/awesome
 xfce-base/xfce4-settings

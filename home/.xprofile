@@ -9,7 +9,8 @@
 # feh --bg-scale $background
 # Randomized wallpapers
 # backgrounds="$HOME/Media/Pictures/Wallpapers/main"
-backgrounds="$HOME/Media/Pictures/Wallpapers/rose-pine"
+# backgrounds="$HOME/Media/Pictures/Wallpapers/rose-pine"
+backgrounds="$HOME/Media/Pictures/Wallpapers/carniverous"
 feh --bg-scale $(find "$backgrounds" -type f | shuf -n 1) && echo "$backgrounds" >~/.recent_wallpapers.txt
 
 # Replace picom if its open

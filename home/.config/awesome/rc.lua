@@ -63,8 +63,13 @@ Lightincrease = 'monitorlight +5'
 Discord = 'flatpak run io.github.spacingbat3.webcord'
 Org = 'org'
 Grayscale = 'grayscale-toggle'
-
 Browser = 'flatpak run com.brave.Browser'
+Pomodoro = 'flatpak run io.gitlab.idevecore.Pomodoro'
+Anki = 'flatpak run net.ankiweb.Anki'
+Recorder = 'obs'
+RecordImmediately = 'obs --startrecording --minimize-to-tray'
+Music =
+	"flatpak 'run' '--command=brave' 'com.brave.Browser' '--profile-directory=Profile 1' '--app-id=cinhimbnkkaeohfgghhklpknlkffjgod'"
 
 -- Super key
 Modkey = 'Mod4'
@@ -331,6 +336,21 @@ end)
 --
 globalkeys = gears.table.join(
 	-- Programs{{{
+	awful.key({ Modkey }, 'r', function()
+		awful.spawn(Recorder)
+	end, { description = 'open Recorder', group = 'launcher' }),
+	awful.key({ Modkey, 'Shift' }, 'r', function()
+		awful.spawn(RecordImmediately)
+	end, { description = 'start recording immediately', group = 'launcher' }),
+	awful.key({ Modkey }, 'p', function()
+		awful.spawn(Pomodoro)
+	end, { description = 'open Pomodoro', group = 'launcher' }),
+	awful.key({ Modkey, 'Shift' }, 'p', function()
+		awful.spawn(Music)
+	end, { description = 'open Poor taste in music', group = 'launcher' }),
+	awful.key({ Modkey, 'Shift' }, 'a', function()
+		awful.spawn(Anki)
+	end, { description = 'open Anki', group = 'launcher' }),
 	awful.key({ Modkey }, 'f', function()
 		awful.spawn(Launcher)
 	end, { description = 'find application', group = 'launcher' }),
@@ -345,10 +365,10 @@ globalkeys = gears.table.join(
 		awful.spawn(Screenshot)
 	end, { description = 'take a selection screenshot', group = 'launcher' }),
 	awful.key({ Modkey, 'Shift' }, 's', function()
-		awful.spawn(Screenshot_window)
+		awful.spawn(Screenshot_desktop)
 	end, { description = 'take a window screenshot', group = 'launcher' }),
 	awful.key({ Modkey, 'Control' }, 's', function()
-		awful.spawn(Screenshot_desktop)
+		awful.spawn(Screenshot_window)
 	end, { description = 'take a desktop screenshot', group = 'launcher' }),
 	awful.key({ Modkey, 'Mod1' }, 's', function()
 		awful.spawn(Screenshot_ocr)
