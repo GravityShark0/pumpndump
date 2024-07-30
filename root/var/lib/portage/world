@@ -20,6 +20,7 @@ app-shells/mksh
 app-shells/zoxide
 app-text/aspell
 dev-java/openjdk-jre-bin
+dev-python/zstandard
 dev-util/ccache
 dev-vcs/git
 games-util/gamemode

@@ -697,7 +697,7 @@ for i = 1, 9 do
 			local scratch = screen.tags[10]
 			if tag then
 				-- Allow scratchpad to remain visible while changing tags
-				if scratch.selected then
+				if scratch and scratch.selected then
 					tag:view_only()
 					awful.tag.viewtoggle(scratch)
 				else
