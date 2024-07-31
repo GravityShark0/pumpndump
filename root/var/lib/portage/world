@@ -19,6 +19,7 @@ app-shells/fzf
 app-shells/mksh
 app-shells/zoxide
 app-text/aspell
+app-text/languagetool
 dev-java/openjdk-jre-bin
 dev-python/zstandard
 dev-util/ccache
