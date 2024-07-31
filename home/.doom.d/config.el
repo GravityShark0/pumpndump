@@ -56,7 +56,7 @@
 (setq org-roam-directory (file-truename "~/Notes/wiki"))
 
 ;; Make the browser work
-(setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "xdg-open")
+;; (setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "xdg-open")
 
 ;; Allow for movement in softwrapped text
 (after! evil

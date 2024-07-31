@@ -55,3 +55,6 @@ app-text/aspell l10n_en
 # uget
 net-misc/aria2 xmlrpc
 www-client/uget aria2 libnotify control-socket
+
+# what poppin
+app-text/poppler cairo
