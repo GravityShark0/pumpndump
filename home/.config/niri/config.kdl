@@ -194,12 +194,11 @@ binds { //{{{
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Q { spawn "alacritty"; }
-    Mod+Shift+Q { spawn "alacritty jo"; }
-    Mod+W { spawn "runner"; }
-    Mod+Shift+W { spawn "launcher"; }
+    Mod+T { spawn "alacritty"; }
+    Mod+Shift+T { spawn "alacritty jo"; }
+    Mod+W { spawn "launcher"; }
     Super+Alt+L { spawn "swaylock"; }
-    Mod+T { spawn "brave"; }
+    Mod+B { spawn "brave"; }
 
     // You can also use a shell:
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
