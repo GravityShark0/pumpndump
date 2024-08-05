@@ -25,7 +25,7 @@
                                         ;a;
 
 (setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 20)
-      doom-variable-pitch-font (font-spec :family "Ubuntu Nerd Font" :size 13))
+      doom-variable-pitch-font (font-spec :family "Ubuntu Sans Nerd Font" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to

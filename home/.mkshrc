@@ -15,7 +15,7 @@ export GOPROXY=https://proxy.golang.org
 export GOSUMDB=sum.golang.org
 
 # If in the tty and also the first tty, then do startx
-[ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ] && exec startx
+# [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ] && exec startx
 
 # Fish shell is my actual shell
 # [ -x /bin/fish ] && SHELL=/bin/fish exec fish
