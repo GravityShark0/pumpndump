@@ -16,6 +16,3 @@
 [submodule "home/.gnupg"]
 	path = home/.gnupg
 	url = gravity@clr:Git/gnupg.git
-[submodule "home/.tmux/tmux-fingers"]
-	path = home/.tmux/tmux-fingers
-	url = https://github.com/Morantron/tmux-fingers
