@@ -45,3 +45,10 @@
 ;; (unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
+
+;; (package! writegood-mode :disable t)
+
+(package! lsp-grammarly)
+(add-hook 'org-mode-local-vars-hook (lambda ()
+                                      (require 'lsp-grammarly)
+                                      (lsp)))

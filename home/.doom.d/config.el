@@ -39,13 +39,15 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type 'relative)
+;; (setq display-line-numbers-current-absolute t)
+(setq display-line-numbers-type 'visual)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Notes/")
 (setq org-archive-location "~/Notes/.archive/%s_archive::")
 
+;;
 ;; RETURN will follow links in org-mode files
 (setq org-return-follows-link  t)
 
@@ -54,9 +56,6 @@
 
 ;; Org-Roam
 (setq org-roam-directory (file-truename "~/Notes/wiki"))
-
-;; Make the browser work
-;; (setq browse-url-browser-function 'browse-url-generic browse-url-generic-program "xdg-open")
 
 ;; Allow for movement in softwrapped text
 (after! evil
@@ -98,6 +97,7 @@
 
 ;; Set the time delay (in seconds) for the which-key popup to appear. A value of
 ;; zero might cause issues so a non-zero value is recommended.
+
 (after! which-key
   (setq which-key-idle-delay 0.1))
 
@@ -106,4 +106,5 @@
   (define-key company-active-map (kbd "RET") 'newline)
   (define-key company-active-map (kbd "C-y") 'company-complete-selection))
 
+;; Key maps
 (define-key doom-leader-map (kbd ">") 'treemacs)
