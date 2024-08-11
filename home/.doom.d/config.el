@@ -45,23 +45,33 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Notes/")
-(setq org-archive-location "~/Notes/.archive/%s_archive::")
+;; Default
+(setq org-archive-location (concat org-directory "/.archive/%s_archive::"))
 
-;;
+;; Captures
+(setq org-default-notes-file (concat org-directory "/refile.org"))
+(setq org-capture-templates
+      (append org-capture-templates
+              '("r" "Refile" entry (file+headline org-default-notes-file "Refile") "* %?\n%U\n%i")))
+
 ;; RETURN will follow links in org-mode files
 (setq org-return-follows-link  t)
 
 ;; Hide emphasis markers
 (setq org-hide-emphasis-markers t)
 
+;; ltex lsp for org mode
+(add-hook 'org-mode-local-vars-hook (lambda ()
+                                      (require 'lsp-ltex)
+                                      (lsp)))
+;; ltex lsp for markdown
+(add-hook 'markdown-mode-local-vars-hook (lambda ()
+                                           (require 'lsp-ltex)
+                                           (lsp)))
+
+
 ;; Org-Roam
 (setq org-roam-directory (file-truename "~/Notes/wiki"))
-
-;; Allow for movement in softwrapped text
-(after! evil
-  (define-key evil-motion-state-map [remap evil-next-line] #'evil-next-visual-line)
-  (define-key evil-motion-state-map [remap evil-previous-line] #'evil-previous-visual-line)
-  )
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -97,6 +107,12 @@
 
 ;; Set the time delay (in seconds) for the which-key popup to appear. A value of
 ;; zero might cause issues so a non-zero value is recommended.
+;;
+;; Allow for movement in softwrapped text
+(after! evil
+  (define-key evil-motion-state-map [remap evil-next-line] #'evil-next-visual-line)
+  (define-key evil-motion-state-map [remap evil-previous-line] #'evil-previous-visual-line))
+
 
 (after! which-key
   (setq which-key-idle-delay 0.1))
