@@ -46,15 +46,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
-;; (package! writegood-mode :disable t)
+;; (package! lsp-grammarly)
 
 (package! lsp-ltex)
-(setq lsp-ltex-version "16.0.0")  ; make sure you have set this, see below
-;; ltex lsp for org mode
-(add-hook 'org-mode-local-vars-hook (lambda ()
-                                      (require 'lsp-ltex)
-                                      (lsp)))
-;; ltex lsp for markdown
-(add-hook 'markdown-mode-local-vars-hook (lambda ()
-                                           (require 'lsp-ltex)
-                                           (lsp)))

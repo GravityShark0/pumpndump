@@ -45,14 +45,12 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Notes/")
+
 ;; Default
 (setq org-archive-location (concat org-directory "/.archive/%s_archive::"))
 
 ;; Captures
 (setq org-default-notes-file (concat org-directory "/refile.org"))
-(setq org-capture-templates
-      (append org-capture-templates
-              '("r" "Refile" entry (file+headline org-default-notes-file "Refile") "* %?\n%U\n%i")))
 
 ;; RETURN will follow links in org-mode files
 (setq org-return-follows-link  t)
@@ -60,18 +58,18 @@
 ;; Hide emphasis markers
 (setq org-hide-emphasis-markers t)
 
-;; ltex lsp for org mode
-(add-hook 'org-mode-local-vars-hook (lambda ()
-                                      (require 'lsp-ltex)
-                                      (lsp)))
-;; ltex lsp for markdown
-(add-hook 'markdown-mode-local-vars-hook (lambda ()
-                                           (require 'lsp-ltex)
-                                           (lsp)))
-
-
 ;; Org-Roam
 (setq org-roam-directory (file-truename "~/Notes/wiki"))
+
+;; Org priorities
+(setq org-highest-priority ?A
+      org-default-priority ?E
+      org-lowest-priority ?E)
+(setq org-priority-faces '((?A . (:foreground "#b4637a"))
+                           (?B . (:foreground "#d7827e"))
+                           (?C . (:foreground "#ea9d34"))
+                           (?D . (:foreground "#907aa9"))
+                           (?E . (:foreground "#56949f"))))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -109,18 +107,59 @@
 ;; zero might cause issues so a non-zero value is recommended.
 ;;
 ;; Allow for movement in softwrapped text
-(after! evil
-  (define-key evil-motion-state-map [remap evil-next-line] #'evil-next-visual-line)
-  (define-key evil-motion-state-map [remap evil-previous-line] #'evil-previous-visual-line))
+;; Nakakatawa ka naman
+(after! org-capture
+  (add-to-list 'org-capture-templates
+               '("r" "Refile" entry (file+headline org-default-notes-file "Refile") "* %?\n%U\n%i")))
 
+(after! org-fancy-priorities
+  (setq org-fancy-priorities-list '((?A . "⚑")
+                                    (?B . "⬆")
+                                    (?C . "■")
+                                    (?D . "⬇")
+                                    (?E . "❄"))))
+
+(after! ispell
+  (setq ispell-dictionary "en_US,tl")
+  (ispell-hunspell-add-multi-dic "en_US,tl"))
+
+(after! lsp-ltex
+  (setq lsp-ltex-version "16.0.0")
+  (setq lsp-ltex-additional-rules-enable-picky-rules "true")
+  (setq lsp-ltex-language "en")
+  (setq lsp-ltex-mother-tongue "tl-PH" ))
+(add-hook 'org-mode-local-vars-hook (lambda ()
+                                      (require 'lsp-ltex)
+                                      (lsp-deferred)))
+(add-hook 'markdown-mode-local-vars-hook (lambda ()
+                                           (require 'lsp-ltex)
+                                           (lsp-deferred)))
+
+(add-hook 'spell-fu-mode-hook
+          (lambda ()
+            (spell-fu-dictionary-add (spell-fu-get-ispell-dictionary "en_US"))
+            (spell-fu-dictionary-add (spell-fu-get-ispell-dictionary "tl"))))
 
 (after! which-key
   (setq which-key-idle-delay 0.1))
 
-;; Allow for C-y to accept company selection
-(after! company
-  (define-key company-active-map (kbd "RET") 'newline)
-  (define-key company-active-map (kbd "C-y") 'company-complete-selection))
-
 ;; Key maps
+;; open treemacs with >
 (define-key doom-leader-map (kbd ">") 'treemacs)
+
+;; onlyrmove through visual lines
+(map! :after evil
+      :map evil-motion-state-map
+      [remap evil-next-line] #'evil-next-visual-line
+      [remap evil-previous-line] #'evil-previous-visual-line)
+
+;; Allow for C-y to accept company selection
+(map! :after company
+      :map company-active-map
+      "RET" #'newline
+      "C-y" #'company-complete-selection
+      "C-e" #'company-abort)
+
+(map! :leader
+      :desc "Open plan/schedule"
+      "n p" #'(lambda () (interactive) (find-file "~/Notes/assets/NewSchedule.jpg")))
