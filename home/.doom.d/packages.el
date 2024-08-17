@@ -49,8 +49,15 @@
 ;; (package! lsp-grammarly)
 
 (package! lsp-ltex)
+(package! cowsay)
+(package! xkcd)
+(package! el-fetch)
+(package! org-preview-html)
 
 ;; the ubuntu emacs package is not compiled with tree-sitter
 ;; (package! typst-ts-mode
 ;;   :recipe (:type git :host codeberg :repo "meow_king/typst-ts-mode"
 ;;            :files (:defaults "*.el")))
+
+;; I can never make this package look good
+;; (package! org-modern)

@@ -1,5 +1,6 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
+
 ;; Place your private configuration here! remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
@@ -25,7 +26,7 @@
                                         ;a;
 
 (setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 20)
-      doom-variable-pitch-font (font-spec :family "Ubuntu Sans Nerd Font" :size 13))
+      doom-variable-pitch-font (font-spec :family "Ubuntu Sans Nerd Font" :size 20))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -35,9 +36,48 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-rose-pine-dawn)
+;; (setq doom-theme 'doom-rose-pine-dawn)
+(setq doom-theme 'catppuccin)
 
-(setq fancy-splash-image "~/.doom.d/themes/marisa.png")
+;; (defun perseptionglasses-chaos-game-svg (vertices num-points filename)
+;;   "Generate a fractal using the chaos game and save it as an SVG.
+;; VERTICES is a list of vertices of the polygon.
+;; NUM-POINTS is the number of points to generate.
+;; FILENAME is the name of the output SVG file."
+;;   (let ((svg-header "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\" viewBox=\"0 0 300 300\">\n")
+;;         (svg-body "")
+;;         (svg-footer "</svg>\n")
+;;         (current-point (nth (random (length vertices)) vertices)))
+
+;;     ;; Generate points using the chaos game
+;;     (dotimes (_ num-points)
+;;       (setq current-point
+;;             (list (/ (+ (car current-point) (car (nth (random (length vertices)) vertices))) 2)
+;;                   (/ (+ (cadr current-point) (cadr (nth (random (length vertices)) vertices))) 2)))
+;;       (setq svg-body
+;;             (concat svg-body
+;;                     (format "<circle cx=\"%f\" cy=\"%f\" r=\"1\" fill=\"black\" />\n"
+;;                             (car current-point) (cadr current-point)))))
+
+;;     ;; Write the SVG content to a file
+;;     (with-temp-file filename
+;;       (insert svg-header)
+;;       (insert svg-body)
+;;       (insert svg-footer))))
+
+;; (defun perseptionglasses-generate-fractal (num-points filename)
+;;   "Generate a Sierpinski triangle using the chaos game and save it as an SVG.
+;; NUM-POINTS is the number of points to generate.
+;; FILENAME is the name of the output SVG file."
+;;   (let ((vertices '((150 50) (50 250) (250 250))))  ;; Vertices of the triangle
+;;     (perseptionglasses-chaos-game-svg vertices num-points filename)))
+
+;; ;; Example usage:
+;; (perseptionglasses-generate-fractal 10000 "~/sierpinski.svg")
+
+(setq fancy-splash-image "~/sierpinski.svg")
+
+;; (setq fancy-splash-image "~/.doom.d/themes/marisa-20.png")
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 ;; (setq display-line-numbers-current-absolute t)
@@ -59,19 +99,26 @@
 ;; Hide emphasis markers
 (setq org-hide-emphasis-markers t)
 
+;; Schedules
+(setq org-agenda-prefix-format
+      '((agenda . " %-12:c%?-12t% s")
+        (todo . " %i %-12:c")
+        (tags . " %i %-12:c")
+        (search . " %i %-12:c")))
+
 ;; Org-Roam
 (setq org-roam-directory (file-truename "~/Notes/wiki"))
 
 ;; Org priorities
-(setq org-highest-priority ?A
-      org-default-priority ?E
-      org-lowest-priority ?E)
-(setq org-priority-faces '((?A . (:foreground "#b4637a"))
-                           (?B . (:foreground "#d7827e"))
-                           (?C . (:foreground "#ea9d34"))
-                           (?D . (:foreground "#907aa9"))
-                           (?E . (:foreground "#56949f"))))
+(setq org-highest-priority ?A)
+(setq org-default-priority ?D)
+(setq org-lowest-priority ?E)
 
+;; Org when export
+(setq org-export-with-section-numbers nil)
+(setq org-export-with-toc nil)
+(setq org-export-with-date t)
+(setq org-latex-packages-alist '(("margin=1.5in" "geometry" nil)(" " "nopageno" t)))
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
@@ -113,28 +160,10 @@
   (add-to-list 'org-capture-templates
                '("r" "Refile" entry (file+headline org-default-notes-file "Refile") "* %?\n%U\n%i")))
 
-(after! org-fancy-priorities
-  (setq org-fancy-priorities-list '((?A . "⚑")
-                                    (?B . "⬆")
-                                    (?C . "■")
-                                    (?D . "⬇")
-                                    (?E . "❄"))))
 
 (after! ispell
   (setq ispell-dictionary "en_US,tl")
   (ispell-hunspell-add-multi-dic "en_US,tl"))
-
-(after! lsp-ltex
-  (setq lsp-ltex-version "16.0.0")
-  (setq lsp-ltex-additional-rules-enable-picky-rules "true")
-  (setq lsp-ltex-language "en")
-  (setq lsp-ltex-mother-tongue "tl-PH" ))
-(add-hook 'org-mode-local-vars-hook (lambda ()
-                                      (require 'lsp-ltex)
-                                      (lsp-deferred)))
-(add-hook 'markdown-mode-local-vars-hook (lambda ()
-                                           (require 'lsp-ltex)
-                                           (lsp-deferred)))
 
 (add-hook 'spell-fu-mode-hook
           (lambda ()
@@ -161,6 +190,102 @@
       "C-y" #'company-complete-selection
       "C-e" #'company-abort)
 
+;; (map! :leader
+;;       :desc "Variable Pitch Mode"
+;;       "t p" #'variable-pitch-mode)
+(map! :leader
+      :desc "Mixed Pitch Mode"
+      "t p" #'mixed-pitch-mode)
 (map! :leader
       :desc "Open plan/schedule"
       "n p" #'(lambda () (interactive) (find-file "~/Notes/assets/NewSchedule.jpg")))
+(map! :leader
+      :desc "Export to pdf"
+      "n e" #'org-latex-export-to-pdf)
+
+(after! org-fancy-priorities
+  (setq org-fancy-priorities-list '((?A . "⚑")
+                                    (?B . "⬆")
+                                    (?C . "■")
+                                    (?D . "⬇")
+                                    (?E . "❄")))
+  (setq org-priority-faces '((?A . (:foreground "#b4637a"))
+                             (?B . (:foreground "#d7827e"))
+                             (?C . (:foreground "#ea9d34"))
+                             (?D . (:foreground "#907aa9"))
+                             (?E . (:foreground "#56949f")))))
+
+;; (after! org-modern
+;;   (setq org-modern-label-border 0.3)
+;;   (setq org-modern-priority
+;;         (quote ((?A . "⚑")
+;;                 (?B . "⬆")
+;;                 (?C . "■")
+;;                 (?D . "⬇")
+;;                 (?E . "❄"))))
+;;   (setq org-modern-priority-faces
+;;         (quote ((?A :background \"red\"
+;;                  :foreground \"yellow\"))))
+
+;;   (setq org-modern-priority-faces
+;;         (quote((?A :background "#b4637a")
+;;                (?B :background "#d7827e")
+;;                (?C :background "#ea9d34")
+;;                (?D :background "#907aa9")
+;;                (?E :background "#56949f"))))
+;;   ;; Minimal UI
+;;   ;; (package-initialize)
+;;   ;; (menu-bar-mode -1)
+;;   ;; (tool-bar-mode -1)
+;;   ;; (scroll-bar-mode -1)
+
+;;   ;; Choose some fonts
+;;   ;; (set-face-attribute 'default nil :family "Iosevka")
+;;   ;; (set-face-attribute 'variable-pitch nil :family "Iosevka Aile")
+;;   ;; (set-face-attribute 'org-modern-symbol nil :family "Iosevka")
+
+;;   ;; Add frame borders and window dividers
+;;   (modify-all-frames-parameters
+;;    '((right-divider-width . 40)
+;;      (internal-border-width . 40)))
+;;   (dolist (face '(window-divider
+;;                   window-divider-first-pixel
+;;                   window-divider-last-pixel))
+;;     (face-spec-reset-face face)
+;;     (set-face-foreground face (face-attribute 'default :background)))
+;;   (set-face-background 'fringe (face-attribute 'default :background))
+
+;;   (setq
+;;    ;; Edit settings
+;;    org-auto-align-tags nil
+;;    org-tags-column 0
+;;    org-catch-invisible-edits 'show-and-error
+;;    org-special-ctrl-a/e t
+;;    org-insert-heading-respect-content t
+
+;;    ;; Org styling, hide markup etc.
+;;    org-hide-emphasis-markers t
+;;    org-pretty-entities t
+
+;;    ;; Agenda styling
+;;    org-agenda-tags-column 0
+;;    org-agenda-block-separator ?-)
+
+;;   ;; Ellipsis styling
+;;   (setq org-ellipsis "…")
+;;   (set-face-attribute 'org-ellipsis nil :inherit 'default :box nil)
+
+;;   (global-org-modern-mode))
+
+
+(after! lsp-ltex
+  (setq lsp-ltex-version "16.0.0")
+  (setq lsp-ltex-additional-rules-enable-picky-rules "true")
+  (setq lsp-ltex-language "en")
+  (setq lsp-ltex-mother-tongue "tl-PH" ))
+(add-hook 'org-mode-local-vars-hook (lambda ()
+                                      (require 'lsp-ltex)
+                                      (lsp-deferred)))
+(add-hook 'markdown-mode-local-vars-hook (lambda ()
+                                           (require 'lsp-ltex)
+                                           (lsp-deferred)))
