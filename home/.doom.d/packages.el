@@ -49,7 +49,6 @@
 ;; (package! lsp-grammarly)
 
 (package! lsp-ltex)
-(package! cowsay)
 (package! xkcd)
 (package! el-fetch)
 (package! org-preview-html)

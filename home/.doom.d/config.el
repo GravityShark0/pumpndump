@@ -22,7 +22,6 @@
 ;;
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
-                                        ;a;
 
 (setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 20)
       doom-variable-pitch-font (font-spec :family "Ubuntu Sans Nerd Font" :size 20))
@@ -81,6 +80,7 @@
 (setq org-export-with-toc nil)
 (setq org-export-with-date t)
 (setq org-latex-packages-alist '(("margin=1.5in" "geometry" nil)(" " "nopageno" t)))
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
@@ -152,15 +152,14 @@
       "C-y" #'company-complete-selection
       "C-e" #'company-abort)
 
-;; (map! :leader
-;;       :desc "Variable Pitch Mode"
-;;       "t p" #'variable-pitch-mode)
 (map! :leader
       :desc "Mixed Pitch Mode"
       "t p" #'mixed-pitch-mode)
+
 (map! :leader
       :desc "Open plan/schedule"
       "n p" #'(lambda () (interactive) (find-file "~/Notes/assets/NewSchedule.jpg")))
+
 (map! :leader
       :desc "Export to pdf"
       "n e" #'org-latex-export-to-pdf)
@@ -176,6 +175,18 @@
                              (?C . (:foreground "#ea9d34"))
                              (?D . (:foreground "#907aa9"))
                              (?E . (:foreground "#56949f")))))
+
+(after! lsp-ltex
+  (setq lsp-ltex-version "16.0.0")
+  (setq lsp-ltex-additional-rules-enable-picky-rules "true")
+  (setq lsp-ltex-language "en")
+  (setq lsp-ltex-mother-tongue "tl-PH" ))
+(add-hook 'org-mode-local-vars-hook (lambda ()
+                                      (require 'lsp-ltex)
+                                      (lsp-deferred)))
+(add-hook 'markdown-mode-local-vars-hook (lambda ()
+                                           (require 'lsp-ltex)
+                                           (lsp-deferred)))
 
 ;; (after! org-modern
 ;;   (setq org-modern-label-border 0.3)
@@ -216,38 +227,10 @@
 ;;     (face-spec-reset-face face)
 ;;     (set-face-foreground face (face-attribute 'default :background)))
 ;;   (set-face-background 'fringe (face-attribute 'default :background))
-
 ;;   (setq
 ;;    ;; Edit settings
 ;;    org-auto-align-tags nil
 ;;    org-tags-column 0
 ;;    org-catch-invisible-edits 'show-and-error
-;;    org-special-ctrl-a/e t
-;;    org-insert-heading-respect-content t
-
-;;    ;; Org styling, hide markup etc.
-;;    org-hide-emphasis-markers t
-;;    org-pretty-entities t
-
-;;    ;; Agenda styling
-;;    org-agenda-tags-column 0
-;;    org-agenda-block-separator ?-)
-
-;;   ;; Ellipsis styling
-;;   (setq org-ellipsis "…")
-;;   (set-face-attribute 'org-ellipsis nil :inherit 'default :box nil)
-
+;;    org-special-ctrl-a/e
 ;;   (global-org-modern-mode))
-
-
-(after! lsp-ltex
-  (setq lsp-ltex-version "16.0.0")
-  (setq lsp-ltex-additional-rules-enable-picky-rules "true")
-  (setq lsp-ltex-language "en")
-  (setq lsp-ltex-mother-tongue "tl-PH" ))
-(add-hook 'org-mode-local-vars-hook (lambda ()
-                                      (require 'lsp-ltex)
-                                      (lsp-deferred)))
-(add-hook 'markdown-mode-local-vars-hook (lambda ()
-                                           (require 'lsp-ltex)
-                                           (lsp-deferred)))
