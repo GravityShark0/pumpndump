@@ -1,6 +1,5 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-
 ;; Place your private configuration here! remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
@@ -36,48 +35,11 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; (setq doom-theme 'doom-rose-pine-dawn)
-(setq doom-theme 'catppuccin)
+(setq doom-theme 'doom-rose-pine-dawn)
+;; (setq doom-theme 'catppuccin)
 
-;; (defun perseptionglasses-chaos-game-svg (vertices num-points filename)
-;;   "Generate a fractal using the chaos game and save it as an SVG.
-;; VERTICES is a list of vertices of the polygon.
-;; NUM-POINTS is the number of points to generate.
-;; FILENAME is the name of the output SVG file."
-;;   (let ((svg-header "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"300\" height=\"300\" viewBox=\"0 0 300 300\">\n")
-;;         (svg-body "")
-;;         (svg-footer "</svg>\n")
-;;         (current-point (nth (random (length vertices)) vertices)))
+(setq fancy-splash-image "~/.doom.d/themes/marisa-20.png")
 
-;;     ;; Generate points using the chaos game
-;;     (dotimes (_ num-points)
-;;       (setq current-point
-;;             (list (/ (+ (car current-point) (car (nth (random (length vertices)) vertices))) 2)
-;;                   (/ (+ (cadr current-point) (cadr (nth (random (length vertices)) vertices))) 2)))
-;;       (setq svg-body
-;;             (concat svg-body
-;;                     (format "<circle cx=\"%f\" cy=\"%f\" r=\"1\" fill=\"black\" />\n"
-;;                             (car current-point) (cadr current-point)))))
-
-;;     ;; Write the SVG content to a file
-;;     (with-temp-file filename
-;;       (insert svg-header)
-;;       (insert svg-body)
-;;       (insert svg-footer))))
-
-;; (defun perseptionglasses-generate-fractal (num-points filename)
-;;   "Generate a Sierpinski triangle using the chaos game and save it as an SVG.
-;; NUM-POINTS is the number of points to generate.
-;; FILENAME is the name of the output SVG file."
-;;   (let ((vertices '((150 50) (50 250) (250 250))))  ;; Vertices of the triangle
-;;     (perseptionglasses-chaos-game-svg vertices num-points filename)))
-
-;; ;; Example usage:
-;; (perseptionglasses-generate-fractal 10000 "~/sierpinski.svg")
-
-(setq fancy-splash-image "~/sierpinski.svg")
-
-;; (setq fancy-splash-image "~/.doom.d/themes/marisa-20.png")
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 ;; (setq display-line-numbers-current-absolute t)
