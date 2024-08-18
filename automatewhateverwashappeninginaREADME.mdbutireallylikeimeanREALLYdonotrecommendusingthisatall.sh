@@ -1,8 +1,12 @@
 #!/bin/sh
 
 # THINGS IN THE GIT REPO SHIT
-git remote set-url --add --push origin git@github:GravityShark0/pumpndump.git
-git remote set-url --add --push origin gravity@clr:Git/pumpndump.git
+# git remote set-url --add --push origin git@github:GravityShark0/pumpndump.git
+# git remote set-url --add --push origin gravity@clr:Git/pumpndump.git
+sh .gitconfig
+
+# git remote set-url --add --push origin git@github.com:GravityShark0/nvim-kick.git
+# git remote set-url --add --push origin gravity@clr:Git/nvim.git
 
 # GNU Stow
 ## Pull in the submodules

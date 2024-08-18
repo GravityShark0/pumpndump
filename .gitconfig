@@ -1,3 +1,2 @@
-[remote "origin"]
-	pushurl = git@github.com:GravityShark0/pumpndump.git
-	pushurl = gravity@clr:Git/pumpndump.git
+git remote set-url --add --push origin git@github:GravityShark0/pumpndump.git
+gt remote set-url --add --push origin gravity@clr:Git/pumpndump.git
