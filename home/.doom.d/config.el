@@ -24,7 +24,8 @@
 ;; accept. For example:
 
 (setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 20)
-      doom-variable-pitch-font (font-spec :family "Ubuntu Sans Nerd Font" :size 20))
+      doom-variable-pitch-font (font-spec :family "Iosevka Aile" :size 20))
+;; doom-variable-pitch-font (font-spec :family "Ubuntu Sans Nerd Font" :size 20))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -35,7 +36,6 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-rose-pine-dawn)
-;; (setq doom-theme 'catppuccin)
 
 (setq fancy-splash-image "~/.doom.d/themes/marisa-20.png")
 
@@ -120,8 +120,11 @@
 ;; Nakakatawa ka naman
 (after! org-capture
   (add-to-list 'org-capture-templates
+               '("s" "School todo" entry (file+headline (concat org-directory "/school_todo.org") "Refile") "* %?\n%U\n%i"))
+  (add-to-list 'org-capture-templates
+               '("R" "Reminders" entry (file+headline (concat org-directory "/reminders.org") "Refile") "* %?\n%U\n%i"))
+  (add-to-list 'org-capture-templates
                '("r" "Refile" entry (file+headline org-default-notes-file "Refile") "* %?\n%U\n%i")))
-
 
 (after! ispell
   (setq ispell-dictionary "en_US,tl")
@@ -158,7 +161,7 @@
 
 (map! :leader
       :desc "Open plan/schedule"
-      "n p" #'(lambda () (interactive) (find-file "~/Notes/assets/NewSchedule.jpg")))
+      "n p" #'(lambda () (interactive) (find-file "~/Notes/assets/Grade11Schedule.jpg")))
 
 (map! :leader
       :desc "Export to pdf"
