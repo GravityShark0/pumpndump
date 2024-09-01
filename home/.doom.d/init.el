@@ -68,7 +68,7 @@
        ;;word-wrap         ; soft wrapping with language-aware indent
 
        :emacs
-       dired             ; making dired pretty [functional]
+       (dired +dirvish +icons) ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
        ibuffer           ; interactive buffer management
        undo              ; persistent, smarter undo for your inevitable mistakes
@@ -97,7 +97,7 @@
        (eval +overlay)   ; run code, run (also, repls)
        lookup            ; navigate your code and its documentation
        lsp               ; M-x vscode
-       magit             ; a git porcelain for Emacs
+       ;; magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;; pass              ; password manager for nerds
        pdf               ; pdf enhancements
