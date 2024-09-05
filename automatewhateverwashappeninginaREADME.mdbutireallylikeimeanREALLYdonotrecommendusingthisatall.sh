@@ -9,8 +9,8 @@ sh .gitconfig
 # git remote set-url --add --push origin gravity@clr:Git/nvim.git
 
 # steven hosts
-curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts > ./root/etc/hosts
-cat ./root/etc/hosts.template >> ./root/etc/hosts
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts >./root/etc/hosts
+cat ./root/etc/hosts.template >>./root/etc/hosts
 sudo cp ./root/etc/hosts /etc/hosts
 
 # GNU Stow
