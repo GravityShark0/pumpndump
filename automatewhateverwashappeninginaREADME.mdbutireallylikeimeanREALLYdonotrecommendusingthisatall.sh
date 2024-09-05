@@ -8,10 +8,15 @@ sh .gitconfig
 # git remote set-url --add --push origin git@github.com:GravityShark0/nvim-kick.git
 # git remote set-url --add --push origin gravity@clr:Git/nvim.git
 
+# steven hosts
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts > ./root/etc/hosts
+cat ./root/etc/hosts.template >> ./root/etc/hosts
+sudo cp ./root/etc/hosts /etc/hosts
+
 # GNU Stow
 ## Pull in the submodules
 ## MAKE SURE TO DO THIS BEFORE DELETING SHIT LIKE HOSTS AND RESOLV CAUSE YEAH
-## git submodule update --init --recursive
+# git submodule update --init --recursive
 
 ## to stop fish_variables from constantly updating
 git update-index --skip-worktree home/.config/fish/fish_variables
@@ -23,8 +28,8 @@ git update-index --skip-worktree home/.gnupg
 mkdir ~/.config --parents
 mkdir ~/.tmux/plugins/ --parents
 stow home --target=$HOME || echo "=====FIX THAT CONFLICT YOURSELF=====" && unlink ~/use\ ls\ -a\ to\ see\ all
-sudo chmod 700 .gnupg --recursive
-sudo chmod 700 .ssh --recursive
+sudo chmod 700 ~/.gnupg --recursive
+sudo chmod 700 ~/.ssh --recursive
 
 ## to sync root/ to /
 ## this is dangerous cause people could edit it that dont have the correct permissions (duh)

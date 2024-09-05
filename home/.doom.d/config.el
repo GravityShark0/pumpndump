@@ -1,5 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
+(setq shell-file-name (executable-find "bash"))
+
 ;; Place your private configuration here! remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
@@ -24,7 +26,7 @@
 ;; accept. For example:
 
 (setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 20)
-      doom-variable-pitch-font (font-spec :family "Iosevka Aile" :size 20))
+      doom-variable-pitch-font (font-spec :family "Iosevka Etoile" :size 20))
 ;; doom-variable-pitch-font (font-spec :family "Ubuntu Sans Nerd Font" :size 20))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
@@ -158,9 +160,9 @@
       [remap evil-next-line] #'evil-next-visual-line
       [remap evil-previous-line] #'evil-previous-visual-line)
 
-(map! :leader
-      :desc "Mixed Pitch Mode"
-      "t p" #'mixed-pitch-mode)
+;; (map! :leader
+;;       :desc "Mixed Pitch Mode"
+;;       "t p" #'mixed-pitch-mode)
 
 (map! :leader
       :desc "Open plan/schedule"

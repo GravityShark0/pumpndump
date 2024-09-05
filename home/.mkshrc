@@ -20,4 +20,4 @@ export GOSUMDB=sum.golang.org
 # Fish shell is my actual shell
 # [ -x /bin/fish ] && SHELL=/bin/fish exec fish
 # I like to live dangerously
-# SHELL=/bin/fish exec fish
+SHELL=/bin/fish exec fish

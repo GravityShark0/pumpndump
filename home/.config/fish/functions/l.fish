@@ -1,4 +1,3 @@
 function l --wraps=ls --description 'alias l ls'
-  ls $argv
-        
+  eza --icons --long --all --sort=time --time=accessed $argv
 end
