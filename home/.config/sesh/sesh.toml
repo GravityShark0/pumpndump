@@ -45,4 +45,4 @@ startup_command = "updatescript"
 [[session]]
 name = "LIttle cool website" 
 path = "~/Code/coollittlewebsite"
-startup_script = "~/.config/sesh/scripts/coollittlewebsite.sh"
+startup_command = "~/.config/sesh/scripts/coollittlewebsite.sh"

@@ -5,9 +5,6 @@
 # git remote set-url --add --push origin gravity@clr:Git/pumpndump.git
 sh .gitconfig
 
-# git remote set-url --add --push origin git@github.com:GravityShark0/nvim-kick.git
-# git remote set-url --add --push origin gravity@clr:Git/nvim.git
-
 # steven hosts
 curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts >./root/etc/hosts
 cat ./root/etc/hosts.template >>./root/etc/hosts

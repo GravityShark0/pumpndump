@@ -5,9 +5,9 @@ sesh list -i -H | fzf-tmux -e --ansi -p 80%,80% \
         --bind 'tab:down,btab:up' \
         --bind 'ctrl-a:change-prompt(⚡ )+reload(sesh list -iH)' \
         --bind 'ctrl-t:change-prompt(  )+reload(sesh list -it)' \
-        \
-        --bind 'ctrl-f:change-prompt(  )+reload(fd -td)' \
-        --bind 'ctrl-k:execute(tmux kill-session -t $(echo {} | cut -c 5-))+change-prompt(⚡ )+reload(sesh list -i -H)' # --bind 'ctrl-f:change-prompt(  )+reload(fd -td --absolute-path | sed -E "s|$HOME|~|g; s|.*|\x1b[36m \x1b[0m&\x1b[0m|")' \
+        --bind 'ctrl-f:change-prompt(  )+reload(fd -Htd -cnever)' \
+        --bind 'ctrl-k:execute(tmux kill-session -t $(echo {} | cut -c 5-))+change-prompt(⚡ )+reload(sesh list -i -H )'
+# --bind 'ctrl-f:change-prompt(  )+reload(fd -td --absolute-path | sed -E "s|$HOME|~|g; s|.*|\x1b[36m \x1b[0m&\x1b[0m|")' \
 # --bind 'ctrl-f:change-prompt(  )+reload(fd -td --absolute-path | sed -E "s|$HOME|~|g; s|.*|\x1b[36m \x1b[0m&\x1b[0m|")' \
 # --bind 'ctrl-f:change-prompt(  )+reload(fd -td -a | sed "s|$HOME|~|g")' \
 # --bind 'ctrl-f:change-prompt(  )+reload(fd -td)' \
