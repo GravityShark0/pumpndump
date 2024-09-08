@@ -48,6 +48,7 @@
 
 ;; (package! lsp-grammarly)
 
+(package! with-editor)
 (package! lsp-ltex)
 (package! xkcd)
 (package! el-fetch)

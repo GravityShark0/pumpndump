@@ -1,5 +1,6 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
+;; Resolve bad $SHELL
 (setq shell-file-name (executable-find "bash"))
 
 ;; Place your private configuration here! remember, you do not need to run 'doom
@@ -48,40 +49,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/Notes")
-
-;; Default
-(setq org-archive-location (concat org-directory "/.archive/%s_archive::"))
-
-;; Captures
-(setq org-default-notes-file (concat org-directory "/refile.org"))
-
-;; RETURN will follow links in org-mode files
-(setq org-return-follows-link  t)
-
-;; Hide emphasis markers
-(setq org-hide-emphasis-markers t)
-
-;; Schedules
-(setq org-agenda-prefix-format
-      '((agenda . " %-12:c%?-12t% s")
-        (todo . " %i %-12:c")
-        (tags . " %i %-12:c")
-        (search . " %i %-12:c")))
-
-;; Org-Roam
-(setq org-roam-directory (file-truename "~/Notes/wiki"))
-
-;; Org priorities
-(setq org-highest-priority ?A)
-(setq org-default-priority ?D)
-(setq org-lowest-priority ?E)
-
-;; Org when export
-(setq org-export-with-section-numbers nil)
-(setq org-export-with-toc nil)
-(setq org-export-with-date t)
-(setq org-latex-packages-alist '(("margin=1.5in" "geometry" nil)(" " "nopageno" t)))
+(setq org-directory "~/Notes/")
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -115,62 +83,61 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; Set the time delay (in seconds) for the which-key popup to appear. A value of
-;; zero might cause issues so a non-zero value is recommended.
-;;
-;; Allow for movement in softwrapped text
 ;; Nakakatawa ka naman
+
+;;; Package configs
+(after! org
+  ;; Default
+  (setq org-archive-location (concat org-directory ".archive/%s_archive::"))
+  ;; Captures
+  (setq org-default-notes-file (concat org-directory "refile.org"))
+  ;; RETURN will follow links in org-mode files
+  (setq org-return-follows-link  t)
+  ;; Hide emphasis markers
+  (setq org-hide-emphasis-markers t)
+  ;; Schedules
+  (setq org-agenda-prefix-format
+        '((agenda . " %-12:c%?-12t% s")
+          (todo . " %i %-12:c")
+          (tags . " %i %-12:c")
+          (search . " %i %-12:c")))
+  ;; Org-Roam
+  (setq org-roam-directory (file-truename "~/Notes/wiki"))
+  ;; Org priorities
+  (setq org-highest-priority ?A)
+  (setq org-default-priority ?D)
+  (setq org-lowest-priority ?E)
+  ;; Org when export
+  (setq org-export-with-section-numbers nil)
+  (setq org-export-with-toc nil)
+  (setq org-export-with-date t)
+  (setq org-latex-packages-alist '(("margin=1.5in" "geometry" nil)(" " "nopageno" t))))
+
+;; Org capture templates
 (after! org-capture
   (add-to-list 'org-capture-templates
-               '("s" "School todo" entry (file+headline (concat org-directory "/school_todo.org") "Refile") "* %?\n%U\n%i"))
+               '("s" "School todo" entry (file (concat org-directory "/school_todo.org")) "* %?\n%U\n%i"))
   (add-to-list 'org-capture-templates
-               '("R" "Reminders" entry (file+headline (concat org-directory "/reminders.org") "Refile") "* %?\n%U\n%i"))
+               '("R" "Reminders" entry (file (concat org-directory "/reminders.org") "Refile") "* %?\n%U\n%i"))
   (add-to-list 'org-capture-templates
-               '("r" "Refile" entry (file+headline org-default-notes-file "Refile") "* %?\n%U\n%i")))
+               '("r" "Refile" entry (file org-default-notes-file) "* %?\n%U\n%i")))
 
+;; Configure to allow both english and tagalog in spell checking
 (after! ispell
   (setq ispell-dictionary "en_US,tl")
   (ispell-hunspell-add-multi-dic "en_US,tl"))
-
 (add-hook 'spell-fu-mode-hook
           (lambda ()
             (spell-fu-dictionary-add (spell-fu-get-ispell-dictionary "en_US"))
             (spell-fu-dictionary-add (spell-fu-get-ispell-dictionary "tl"))))
 
+;; Make which-key faster
 (after! which-key
   (setq which-key-idle-delay 0.1))
+
+;; Don't use return to confirm
 (after! corfu
   (setq +corfu-want-ret-to-confirm nil))
-
-;;; Key maps
-;; Allow for C-y to accept company selection
-(map! :after corfu
-      :map corfu-map
-      "C-y" #'corfu-complete
-      "C-e" #'corfu-quit)
-
-;; open treemacs with >
-;; (map! :after treemacs
-;;       :leader
-;;       ">" #'treemacs)
-
-;; onlyrmove through visual lines
-(map! :after evil
-      :map evil-motion-state-map
-      [remap evil-next-line] #'evil-next-visual-line
-      [remap evil-previous-line] #'evil-previous-visual-line)
-
-;; (map! :leader
-;;       :desc "Mixed Pitch Mode"
-;;       "t p" #'mixed-pitch-mode)
-
-(map! :leader
-      :desc "Open plan/schedule"
-      "n p" #'(lambda () (interactive) (find-file "~/Notes/assets/Grade11Schedule.jpg")))
-
-(map! :leader
-      :desc "Export to pdf"
-      "n e" #'org-latex-export-to-pdf)
 
 (after! org-fancy-priorities
   (setq org-fancy-priorities-list '((?A . "⚑")
@@ -184,38 +151,48 @@
                              (?D . (:foreground "#907aa9"))
                              (?E . (:foreground "#56949f")))))
 
-(after! lsp-ltex
+(use-package lsp-ltex
+  :hook ((org-mode . (lambda ()
+                       (require 'lsp-ltex)
+                       (lsp-deferred)))
+         (markdown-mode . (lambda ()
+                            (require 'lsp-ltex)
+                            (lsp-deferred))))
+  :init
   (setq lsp-ltex-version "16.0.0")
   (setq lsp-ltex-additional-rules-enable-picky-rules "true")
   (setq lsp-ltex-language "en")
   (setq lsp-ltex-mother-tongue "tl-PH" ))
-(add-hook 'org-mode-local-vars-hook (lambda ()
-                                      (require 'lsp-ltex)))
-;; (lsp-deferred)))
-(add-hook 'markdown-mode-local-vars-hook (lambda ()
-                                           (require 'lsp-ltex)))
-;; (lsp-deferred)))
 
+;;; Key maps
+;; Allow for C-y to accept company selection
+(map! :after corfu
+      :map corfu-map
+      "C-y" #'corfu-insert
+      "C-e" #'corfu-quit)
 
-;;; Custom commands
-(defun calculate-pomodoro-time (input)
-  "Calculate how long it would take for how many pomodoros"
-  (interactive "nHow many pomodoros: ")
-  (let ((pomodoro 25)
-        (shortbreak 5)
-        (longbreak 15)
-        (longbreakinterval 4)
-        (mins 0))
-    (dotimes (i input)
-      (if (= (% (+ i 1) longbreakinterval) 0)
-          (setq mins (+ mins pomodoro longbreak)))
-      (setq mins (+ mins pomodoro shortbreak)))
-    (let* ((current-time (current-time))
-           (time-delta (* mins 60))
-           (future-time (time-add current-time (seconds-to-time time-delta)))
-           (hours (/ mins 60))
-           (remaining-minutes (% mins 60))
-           (longing (format "%d:%d" hours remaining-minutes)))
-      (print (format "%s long, ends %s" longing (format-time-string "%I:%M%p" future-time))))))
-;; How many pomodoros: 9
-;; "5:50 long, ends 3:03PM"
+;; (map! :after treemacs
+;;       :leader
+;;       ">" #'treemacs)
+
+;; Only move through visual lines
+(map! :after evil
+      :map evil-motion-state-map
+      [remap evil-next-line] #'evil-next-visual-line
+      [remap evil-previous-line] #'evil-previous-visual-line)
+
+(map! :leader
+      :desc "Mixed Pitch Mode"
+      "t p" #'mixed-pitch-mode)
+
+(map! :leader
+      :desc "Open plan/schedule"
+      "n p" #'(lambda () (interactive) (find-file "~/Notes/assets/Grade11Schedule.jpg")))
+
+(map! :leader
+      :desc "Export to pdf"
+      "n e" #'org-latex-export-to-pdf)
+
+;;; Various silly things
+;; (load! "silly/pomodoro.el")
+;; (load! "silly/plot.el")

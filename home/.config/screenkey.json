@@ -1,10 +1,10 @@
 {
     "no_systray": false,
-    "timeout": 2.0,
+    "timeout": 0.5,
     "recent_thr": 0.1,
     "compr_cnt": 5,
     "ignore": [],
-    "position": "top",
+    "position": "bottom",
     "persist": false,
     "window": false,
     "font_desc": "Ubuntu Nerd Font Propo Medium 10",

@@ -30,12 +30,10 @@ startup_command = "nvim sesh.toml"
 
 [[session]]
 name = "SOosh 󰣀 "
-path = "~/.ssh/"
 startup_command = "ssh gravity@clr"
 
 [[session]]
 name = "TMux config  "
-path = "~/.tmux"
 startup_command = "nvim ~/.tmux.conf"
 
 [[session]]
