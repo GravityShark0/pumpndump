@@ -129,13 +129,15 @@
 (after! ispell
   (setq ispell-program-name "hunspell")
   (setq ispell-dictionary "en_US,tl")
-  (setq ispell-personal-dictionary "~/.hunspell_personal")
+  ;; mkdir -p ~/.emacs.d/.local/etc/ispell && touch ~/.emacs.d/.local/etc/ispell/.pws && chmod 660 ~/.emacs.d/.local/etc/ispell/.pws
+  (setq ispell-personal-dictionary "~/.emacs.d/.local/etc/ispell/.pws")
   (ispell-set-spellchecker-params)
   (ispell-hunspell-add-multi-dic "en_US,tl"))
 (add-hook 'spell-fu-mode-hook
           (lambda ()
             (spell-fu-dictionary-add (spell-fu-get-ispell-dictionary "en_US"))
             (spell-fu-dictionary-add (spell-fu-get-ispell-dictionary "tl"))))
+
 
 ;; Make which-key faster
 (after! which-key
