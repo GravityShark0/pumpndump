@@ -111,7 +111,10 @@
   (setq org-export-with-section-numbers nil)
   (setq org-export-with-toc nil)
   (setq org-export-with-date t)
-  (setq org-latex-packages-alist '(("margin=1.5in" "geometry" nil)(" " "nopageno" t))))
+  (setq org-latex-packages-alist '(("margin=1.5in" "geometry" nil)(" " "nopageno" t)))
+  ;; Set closed timestamp when closing
+  (setq org-log-done 'time)
+  )
 
 ;; Org capture templates
 (after! org-capture
@@ -124,7 +127,10 @@
 
 ;; Configure to allow both english and tagalog in spell checking
 (after! ispell
+  (setq ispell-program-name "hunspell")
   (setq ispell-dictionary "en_US,tl")
+  (setq ispell-personal-dictionary "~/.hunspell_personal")
+  (ispell-set-spellchecker-params)
   (ispell-hunspell-add-multi-dic "en_US,tl"))
 (add-hook 'spell-fu-mode-hook
           (lambda ()
@@ -151,13 +157,12 @@
                              (?D . (:foreground "#907aa9"))
                              (?E . (:foreground "#56949f")))))
 
+;; (lsp-deferred)))
 (use-package lsp-ltex
   :hook ((org-mode . (lambda ()
-                       (require 'lsp-ltex)
-                       (lsp-deferred)))
-         (markdown-mode . (lambda ()
-                            (require 'lsp-ltex)
-                            (lsp-deferred))))
+                       (require 'lsp-ltex))))
+  (markdown-mode . (lambda ()
+                     (require 'lsp-ltex)))
   :init
   (setq lsp-ltex-version "16.0.0")
   (setq lsp-ltex-additional-rules-enable-picky-rules "true")
