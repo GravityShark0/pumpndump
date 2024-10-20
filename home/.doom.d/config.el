@@ -136,8 +136,8 @@
 (add-hook 'spell-fu-mode-hook
           (lambda ()
             (spell-fu-dictionary-add (spell-fu-get-ispell-dictionary "en_US"))
-            (spell-fu-dictionary-add (spell-fu-get-ispell-dictionary "tl"))))
-
+            (spell-fu-dictionary-add (spell-fu-get-ispell-dictionary "tl"))
+            (spell-fu-dictionary-add (spell-fu-get-ispell-dictionary "en_US,tl"))))
 
 ;; Make which-key faster
 (after! which-key
