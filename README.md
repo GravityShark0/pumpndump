@@ -104,3 +104,4 @@ sys-fs/ncdu-bin
 sys-power/powerstat
 www-client/uget
 ```
+- [etckeeper](https://wiki.gentoo.org/wiki/Etckeeper)
